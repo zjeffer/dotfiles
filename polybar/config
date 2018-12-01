@@ -1,0 +1,298 @@
+;
+;###---custom polybar---###
+;
+
+
+[colors]
+background = #40404040
+foreground = #ffffffff
+primary = #ffb52a
+secondary = #f05
+alert = #bd2c40
+dim-value = 0.0
+
+##############################################################################################
+##############################################################################################
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+##############################################################################################
+##############################################################################################
+
+[bar/custom]
+monitor = ${env:MONITOR:eDP-1-1}
+width = 100%
+height = 40
+offset-x = 0
+offset-y = 0
+
+radius-bottom = 3
+
+underline-size = 4
+
+;override-redirect = true
+wm-restack = bspwm
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 0
+padding-right = 1
+module-margin-left = 1
+module-margin-right = 0
+
+font-0 = Monospace:weight=bold:size=12;3
+font-1 = Material Icons:style=Regular:pixelsize=13;4
+font-2 = Unifont:pixelsize=15;3
+font-3 = Unifont:pixelsize=15;4
+
+;The modules that wil be displayed
+modules-left = bspwm xwindow
+modules-center = 
+modules-right = player-mpris-tail pulseaudio battery cpu memory temperature date nm-launcher system-usb-udev updates-arch-combined powermenu
+
+
+tray-position = right
+tray-padding = 0
+
+tray-transparent = true
+tray-background = ${colors.background}
+
+##############################################################################################
+##############################################################################################
+
+;shows the focused window
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:46:..%
+
+##############################################################################################
+##############################################################################################
+
+[module/bspwm]
+
+;ws-icon-0 = browser;
+;ws-icon-1 = mpd;
+;ws-icon-2 = term;
+;ws-icon-3 = code;
+;ws-icon-4 = games;
+;ws-icon-default = 
+
+type = internal/bspwm
+
+
+label-focused = %name%
+label-focused-background = #444
+label-focused-padding = 2
+label-focused-underline = #bbb
+label-occupied = %name%
+label-occupied-padding = 2
+label-occupied-background = #333
+label-urgent = %name%
+label-urgent-background = #333
+label-urgent-padding = 2
+label-empty = %name%
+label-empty-foreground = #333
+label-empty-background = #222
+label-empty-padding = 2
+
+
+
+##############################################################################################
+##############################################################################################
+
+[module/popup-brightness]
+type = custom/script
+exec = ~/.config/polybar/scripts/brightness/popup-brightness
+interval = 0.4
+
+
+##############################################################################################
+##############################################################################################
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+;format-disconnected = <label-disconnected>
+format-connected = <label-connected>
+
+label-connected = 
+;label-disconnected = 
+
+##############################################################################################
+##############################################################################################
+
+[module/date]
+type = internal/date
+interval = 5
+
+time = %H:%M
+date = %d/%m/%y
+
+label = %date% %time%
+
+
+##############################################################################################
+##############################################################################################
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+
+format-volume = <bar-volume>
+label-volume-foreground = ${root.foreground}
+
+;format-muted-prefix = 
+format-muted-foreground = ${colors.foreground}
+label-muted = 
+label-padding = 0
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground}
+
+##############################################################################################
+##############################################################################################
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP0
+full-at = 94
+poll-interval = 1
+
+time-format = %H:%M
+label-charging = %percentage%%
+label-discharging = %percentage%% %time%
+;label-full = 
+label-full =
+label-charging-underline = #5f0
+
+format-charging = <label-charging>
+format-discharging = <label-discharging>  
+format-full = <label-full>
+
+##############################################################################################
+##############################################################################################
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 85
+
+format = <label>
+format-warn = <label-warn>
+
+
+label = %temperature-c%
+label-underline = #fb0
+label-warn = %temperature-c%
+
+##############################################################################################
+##############################################################################################
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open = 
+;label-open-foreground = ${colors.secondary}
+label-open-foreground = #10FF20
+label-close = 
+label-close-foreground = #10FF20
+label-separator = |
+
+menu-0-0 = 
+menu-0-0-foreground = #10FF20
+menu-0-0-exec = menu-open-1
+menu-0-1 = 
+menu-0-1-foreground = #10FF20
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = 
+menu-1-0-foreground = #10FF20
+menu-1-0-exec = reboot
+
+menu-2-0 = 
+menu-2-0-foreground = #10FF20
+menu-2-0-exec = shutdown -P now
+
+##############################################################################################
+##############################################################################################
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-underline = #37f
+label = %percentage_used:2%%
+
+##############################################################################################
+##############################################################################################
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+format = <label>
+label = %percentage:2%%
+label-underline = #f20
+
+##############################################################################################
+##############################################################################################
+
+[module/player-mpris-tail]
+type = custom/script
+exec = ~/.config/polybar/scripts/player/player-mpris-tail.py -f ' {:artist:t15:{artist}:}{:artist: - :}{:t20:{title}:}{:-title:t20:{filename}:} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py previous:}⏮%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py play-pause:}%{T4}{icon-reversed}%{T-}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py next:}⏭%{A}'
+tail = true
+label = %output%
+
+
+##############################################################################################
+##############################################################################################
+
+[module/nm-launcher]
+type = custom/script
+exec = ~/.config/polybar/scripts/nm-applet/applet.sh
+label = %output%
+interval = 0.5
+click-left = nm-connection-editor
+click-middle = ~/.config/polybar/scripts/nm-applet/applet.sh --ssid
+click-right = ~/.config/polybar/scripts/nm-applet/applet.sh --vpn
+
+##############################################################################################
+##############################################################################################
+
+[module/system-usb-udev]
+type = custom/script
+exec = ~/.config/polybar/scripts/system-usb-udev/system-usb-udev.sh
+label = %output%
+tail = true
+click-left = ~/.config/polybar/scripts/system-usb-udev/system-usb-udev.sh --mount
+click-right = ~/.config/polybar/scripts/system-usb-udev/system-usb-udev.sh --unmount
+
+##############################################################################################
+##############################################################################################
+
+[module/updates-arch-combined]
+type = custom/script
+exec = ~/.config/polybar/scripts/arch-updates/updates-arch-combined.sh
+interval = 600
+label = %output%
+click-left = konsole -e "yay -Syyu"

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+pbrightness=$( cat ~/.config/polybar/scripts/brightness/prev-brightness )
+brightness=$( cat /sys/class/backlight/intel_backlight/brightness )
+if [ "$pbrightness" != "$brightness" ];
+then
+    fill=$(( $brightness / (46) ))
+    empty=$(( 20 - $fill ))
+    FILL=$( awk 'BEGIN {while (c++<'$fill') printf "─"}' )
+    EMPTY=$( awk 'BEGIN {while (c++<'$empty') printf "─"}' )
+    echo ' '$FILL'┼'$EMPTY
+    echo "$brightness" > ~/.config/polybar/scripts/brightness/prev-brightness
+else
+    echo ""
+fi
