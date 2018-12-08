@@ -3,7 +3,7 @@
 
 killall easystroke
 killall xcape
-#killall compton
+killall compton
 
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
