@@ -22,7 +22,7 @@ margin-bottom = 0
 ##############################################################################################
 
 [bar/custom]
-monitor = ${env:MONITOR:eDP-1-1}
+monitor = ${env:MONITOR}
 width = 1870
 height = 30
 offset-x = 25
@@ -42,18 +42,20 @@ foreground = ${colors.foreground}
 
 padding-left = 0
 padding-right = 1
-module-margin-left = 1
-module-margin-right = 0
+module-margin-left = 0
+module-margin-right = 1
 
 font-0 = Monospace:weight=bold:size=12;3
 font-1 = Material Icons:style=Regular:pixelsize=12;3
 font-2 = Unifont:pixelsize=13;2
 font-3 = Unifont:pixelsize=13;3
+font-4 = Font Awesome 5 Free:style=Solid:pixelsize=12;3
+font-5 = Material Icons:style=Regular:pixelsize=14;4
 
 ;The modules that wil be displayed
-modules-left = bspwm 
+modules-left = bspwm player-mpris-tail
 modules-center = 
-modules-right = player-mpris-tail pulseaudio battery cpu memory temperature date nm-launcher updates-arch-combined powermenu
+modules-right = pulseaudio battery cpu memory temperature date nm-launcher updates-arch-combined powermenu
 
 
 tray-position = right
@@ -128,6 +130,7 @@ label-volume-foreground = ${root.foreground}
 ;format-muted-prefix = 
 format-muted-foreground = ${colors.foreground}
 label-muted = 
+label-muted-font = 6
 label-padding = 0
 
 bar-volume-width = 6
@@ -191,10 +194,9 @@ label-warn-underline = #f00
 [module/powermenu]
 type = custom/menu
 
-format-spacing = 1
+format-padding = 0
 
 label-open = 
-;label-open-foreground = ${colors.secondary}
 label-open-foreground = #10FF20
 label-close = 
 label-close-foreground = #10FF20
@@ -239,7 +241,7 @@ label-underline = #f20
 
 [module/player-mpris-tail]
 type = custom/script
-exec = ~/.config/polybar/scripts/player/player-mpris-tail.py -f ' {:artist:t20:{artist}:}{:artist: - :}{:t25:{title}:}{:-title:t25:{filename}:} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py previous:}⏮%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py play-pause:}%{T4}{icon-reversed}%{T-}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py next:}⏭%{A}'
+exec = ~/.config/polybar/scripts/player/player-mpris-tail.py -f ' %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py previous:}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py play-pause:}%{T5}{icon-reversed}%{T-}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py next:}%{A} %{T6}%{T-} {:artist:t30:{artist}:}{:artist: - :}{:t50:{title}:}{:-title:t50:{filename}:}'
 tail = true
 label = %output%
 
