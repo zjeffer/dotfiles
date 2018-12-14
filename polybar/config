@@ -115,6 +115,7 @@ time = %H:%M
 date = %d-%m-%y
 
 label = %date% %time%
+label-underline = #ddd
 
 
 ##############################################################################################
@@ -223,7 +224,7 @@ menu-2-0-exec = shutdown -P now
 [module/memory]
 type = internal/memory
 interval = 2
-format-underline = #37f
+format-underline = #28f
 label = %percentage_used:2%%
 
 ##############################################################################################
@@ -263,7 +264,7 @@ click-right = ~/.config/polybar/scripts/nm-applet/applet.sh --vpn
 
 [module/updates-arch-combined]
 type = custom/script
-exec = ~/.config/polybar/scripts/arch-updates/updates-arch-combined.sh
-interval = 600
+exec = CHECKUPDATES_DB=$(mktemp -d) ~/.config/polybar/scripts/arch-updates/updates-arch-combined.sh
+interval = 150
 label = %output%
 click-left = konsole -e "yay -Syyu"
