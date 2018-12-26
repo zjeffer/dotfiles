@@ -4,12 +4,13 @@
 
 
 [colors]
-background = #77404040
+background = #ff404040
 foreground = #ffffffff
 primary = #ffb52a
 secondary = #f05
 alert = #bd2c40
 dim-value = 0.0
+accent = #2277cc
 
 ##############################################################################################
 ##############################################################################################
@@ -24,7 +25,7 @@ margin-bottom = 0
 [bar/custom]
 monitor = ${env:MONITOR}
 width = 1870
-height = 30
+height = 25
 offset-x = 25
 offset-y = 12
 
@@ -43,25 +44,24 @@ foreground = ${colors.foreground}
 padding-left = 0
 padding-right = 1
 module-margin-left = 0
-module-margin-right = 1
+module-margin-right = 0
 
 font-0 = Monospace:weight=bold:size=12;3
-font-1 = Material Icons:style=Regular:pixelsize=12;3
+font-1 = Material Icons:style=Regular:pixelsize=12;4
 font-2 = Unifont:pixelsize=13;2
 font-3 = Unifont:pixelsize=13;3
 font-4 = Font Awesome 5 Free:style=Solid:pixelsize=12;3
 font-5 = Material Icons:style=Regular:pixelsize=14;4
+font-6 = Inconsolata for Powerline:size=18:antialias=true;3
 
 ;The modules that wil be displayed
 modules-left = bspwm player-mpris-tail
 modules-center = 
-modules-right = pulseaudio battery cpu memory temperature date nm-launcher updates-arch-combined powermenu
+modules-right = pulseaudio battery cpu memory temperature  nm-launcher updates-arch-combined date powermenu
 
 
 tray-position = right
 tray-padding = 0
-
-tray-transparent = true
 tray-background = ${colors.background}
 
 ##############################################################################################
@@ -87,17 +87,22 @@ label = %title:0:46:..%
 type = internal/bspwm
 
 
-label-focused = %name%
+;label-focused = %index%
+label-focused = 
+label-focused-foreground = ${colors.accent}
 label-focused-background = #444
 label-focused-padding = 1
-label-focused-underline = #28f
-label-occupied = %name%
+;label-focused-underline = ${colors.accent}
+
+label-occupied = 
 label-occupied-padding = 1
 label-occupied-background = #333
-label-urgent = %name%
+
+label-urgent = 
 label-urgent-background = #333
 label-urgent-padding = 1
-label-empty = %name%
+
+label-empty = 
 label-empty-foreground = #333
 label-empty-background = #222
 label-empty-padding = 1
@@ -115,7 +120,16 @@ time = %H:%M
 date = %d-%m-%y
 
 label = %date% %time%
-label-underline = #ddd
+label-padding = 1
+;label-underline = #ddd
+
+format-prefix = %{T7}%{T-}
+format-prefix-foreground = ${colors.accent}
+format-prefix-background = ${colors.background}
+format-suffix = %{T7}%{T-}
+format-suffix-foreground = ${colors.background}
+format-suffix-background = ${colors.accent}
+format-background = ${colors.accent}
 
 
 ##############################################################################################
@@ -126,20 +140,21 @@ type = internal/pulseaudio
 sink = alsa_output.pci-0000_00_1f.3.analog-stereo
 
 format-volume = <bar-volume>
-label-volume-foreground = ${root.foreground}
-
-;format-muted-prefix = 
 format-muted-foreground = ${colors.foreground}
 label-muted = 
 label-muted-font = 6
-label-padding = 0
+label-padding = 1
+
+
+format-volume-padding = 1
+format-muted-padding = 1
 
 bar-volume-width = 6
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-0 = #10FF20
+bar-volume-foreground-1 = #10FF20
+bar-volume-foreground-2 = #10FF20
+bar-volume-foreground-3 = #10FF20
+bar-volume-foreground-4 = #10FF20
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 
@@ -167,11 +182,27 @@ label-charging = %percentage%%
 label-discharging = %percentage%% %time%
 ;label-full = 
 label-full =
-label-charging-underline = #5f0
+;label-charging-underline = #5f0
 
 format-charging = <label-charging>
 format-discharging = <label-discharging>  
 format-full = <label-full>
+
+format-charging-prefix = %{T7}%{T-}
+format-charging-prefix-foreground = ${colors.accent}
+format-charging-prefix-background = ${colors.background}
+format-charging-suffix = %{T7}%{T-}
+format-charging-suffix-foreground = ${colors.background}
+format-charging-suffix-background = ${colors.accent}
+format-charging-background = ${colors.accent}
+
+format-discharging-prefix = %{T7}%{T-}
+format-discharging-prefix-foreground = ${colors.accent}
+format-discharging-prefix-background = ${colors.background}
+format-discharging-suffix = %{T7}%{T-}
+format-discharging-suffix-foreground = ${colors.background}
+format-discharging-suffix-background = ${colors.accent}
+format-discharging-background = ${colors.accent}
 
 ##############################################################################################
 ##############################################################################################
@@ -181,13 +212,23 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 80
 
+label-padding = 1
+format-prefix = %{T7}%{T-}
+format-prefix-foreground = ${colors.accent}
+format-prefix-background = ${colors.background}
+format-suffix = %{T7}%{T-}
+format-suffix-foreground = ${colors.background}
+format-suffix-background = ${colors.accent}
+format-background = ${colors.accent}
 format = <label>
 format-warn = <label-warn>
 
+
+
 label = %temperature-c%
-label-underline = #fb0
+;label-underline = #fb0
 label-warn = %temperature-c%
-label-warn-underline = #f00
+;label-warn-underline = #f00
 
 ##############################################################################################
 ##############################################################################################
@@ -195,17 +236,19 @@ label-warn-underline = #f00
 [module/powermenu]
 type = custom/menu
 
-format-padding = 0
-
 label-open = 
 label-open-foreground = #10FF20
+
 label-close = 
 label-close-foreground = #10FF20
 label-separator = |
 
+
 menu-0-0 = 
 menu-0-0-foreground = #10FF20
 menu-0-0-exec = menu-open-1
+
+menu-0-1-padding-left = 1
 menu-0-1 = 
 menu-0-1-foreground = #10FF20
 menu-0-1-exec = menu-open-2
@@ -224,8 +267,17 @@ menu-2-0-exec = shutdown -P now
 [module/memory]
 type = internal/memory
 interval = 2
-format-underline = #28f
+;format-underline = #28f
 label = %percentage_used:2%%
+
+label-padding = 1
+format-prefix = %{T7}%{T-}
+format-prefix-foreground = ${colors.accent}
+format-prefix-background = ${colors.background}
+format-suffix = %{T7}%{T-}
+format-suffix-foreground = ${colors.background}
+format-suffix-background = ${colors.accent}
+format-background = ${colors.accent}
 
 ##############################################################################################
 ##############################################################################################
@@ -235,7 +287,16 @@ type = internal/cpu
 interval = 1
 format = <label>
 label = %percentage:2%%
-label-underline = #f20
+;label-underline = #f20
+
+label-padding = 1
+format-prefix = %{T7}%{T-}
+format-prefix-foreground = ${colors.accent}
+format-prefix-background = ${colors.background}
+format-suffix = %{T7}%{T-}
+format-suffix-foreground = ${colors.background}
+format-suffix-background = ${colors.accent}
+format-background = ${colors.accent}
 
 ##############################################################################################
 ##############################################################################################
@@ -259,6 +320,16 @@ click-left = nm-connection-editor
 click-middle = ~/.config/polybar/scripts/nm-applet/applet.sh --ssid
 click-right = ~/.config/polybar/scripts/nm-applet/applet.sh --vpn
 
+
+label-padding = 1
+format-prefix = %{T7}%{T-}
+format-prefix-foreground = ${colors.accent}
+format-prefix-background = ${colors.background}
+format-suffix = %{T7}%{T-}
+format-suffix-foreground = ${colors.background}
+format-suffix-background = ${colors.accent}
+format-background = ${colors.accent}
+
 ##############################################################################################
 ##############################################################################################
 
@@ -268,3 +339,12 @@ exec = CHECKUPDATES_DB=$(mktemp -d) ~/.config/polybar/scripts/arch-updates/updat
 interval = 150
 label = %output%
 click-left = konsole -e "yay -Syyu"
+
+label-padding = 1
+format-prefix = %{T7}%{T-}
+format-prefix-foreground = ${colors.accent}
+format-prefix-background = ${colors.background}
+format-suffix = %{T7}%{T-}
+format-suffix-foreground = ${colors.background}
+format-suffix-background = ${colors.accent}
+format-background = ${colors.accent}
