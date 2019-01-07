@@ -1,10 +1,10 @@
 #!/bin/sh
 
 
-killall easystroke
 killall xcape
 killall compton
 killall dunst
+killall xbindkeys
 
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
@@ -37,4 +37,4 @@ pkill -USR1 -x sxhkd &
 libinput-gestures-setup restart &
 xcape -e 'Super_L=Super_L|space' &
 compton --config ~/.config/compton.conf 2>~/.config/.compton.err &
-easystroke &
+xbindkeys &

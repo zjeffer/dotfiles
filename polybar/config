@@ -4,7 +4,7 @@
 
 
 [colors]
-background = #ff404040
+background = #ff555555
 foreground = #ffffffff
 primary = #ffb52a
 secondary = #f05
@@ -90,20 +90,20 @@ type = internal/bspwm
 ;label-focused = %index%
 label-focused = 
 label-focused-foreground = ${colors.accent}
-label-focused-background = #444
+label-focused-background = #555
 label-focused-padding = 1
 ;label-focused-underline = ${colors.accent}
 
 label-occupied = 
 label-occupied-padding = 1
-label-occupied-background = #333
+label-occupied-background = ${colors.background}
 
 label-urgent = 
-label-urgent-background = #333
+label-urgent-background = ${colors.background}
 label-urgent-padding = 1
 
 label-empty = 
-label-empty-foreground = #333
+label-empty-foreground = ${colors.background}
 label-empty-background = #222
 label-empty-padding = 1
 
@@ -183,6 +183,8 @@ label-discharging = %percentage%% %time%
 ;label-full = 
 label-full =
 ;label-charging-underline = #5f0
+label-discharging-padding = 1
+label-charging-padding = 1
 
 format-charging = <label-charging>
 format-discharging = <label-discharging>  
@@ -266,7 +268,7 @@ menu-2-0-exec = shutdown -P now
 
 [module/memory]
 type = internal/memory
-interval = 2
+interval = 5
 ;format-underline = #28f
 label = %percentage_used:2%%
 
@@ -284,7 +286,7 @@ format-background = ${colors.accent}
 
 [module/cpu]
 type = internal/cpu
-interval = 1
+interval = 2
 format = <label>
 label = %percentage:2%%
 ;label-underline = #f20
@@ -315,7 +317,7 @@ label = %output%
 type = custom/script
 exec = ~/.config/polybar/scripts/nm-applet/applet.sh
 label = %output%
-interval = 0.5
+interval = 5
 click-left = nm-connection-editor
 click-middle = ~/.config/polybar/scripts/nm-applet/applet.sh --ssid
 click-right = ~/.config/polybar/scripts/nm-applet/applet.sh --vpn
@@ -336,7 +338,7 @@ format-background = ${colors.accent}
 [module/updates-arch-combined]
 type = custom/script
 exec = CHECKUPDATES_DB=$(mktemp -d) ~/.config/polybar/scripts/arch-updates/updates-arch-combined.sh
-interval = 150
+interval = 100
 label = %output%
 click-left = konsole -e "yay -Syyu"
 

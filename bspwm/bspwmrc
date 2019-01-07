@@ -26,6 +26,7 @@ bspc rule -a spectacle floating=on follow=on
 bspc rule -a 'Friends List' state=floating
 bspc rule -a Wfica_Seamless state=floating
 bspc rule -a 'Citrix maximized probe window' state=floating
+bspc rule -a Soffice state=tiled
 
 
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1
@@ -38,6 +39,11 @@ unset mouse
 
 feh --bg-fill ~/Pictures/DnA7hZgU8AAxfxC.jpg:large.jpg &
 
+
+
+xbindkeys &
+redshift &
+numlockx &
 statnot &
 ~/.config/activePlayer/mediaplayers.sh 2>~/.config/activePlayer/.mediaplayer.err &
 compton --config ~/.config/compton.conf 2>~/.config/.compton.err &
