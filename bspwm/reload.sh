@@ -1,10 +1,10 @@
 #!/bin/sh
 
 
-killall xcape
-killall compton
-killall dunst
-killall xbindkeys
+killall xcape 2>/dev/null
+killall compton 2>/dev/null
+killall dunst 2>/dev/null
+killall xbindkeys 2>/dev/null
 
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto

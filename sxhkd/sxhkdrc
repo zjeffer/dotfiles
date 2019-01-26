@@ -20,7 +20,7 @@ super + z
 
 #sublime
 super + q
-	subl &
+	code &
 
 # dolphin 
 super + x
@@ -44,7 +44,7 @@ ctrl + shift + Escape
 
 # make sxhkd reload its configuration files and restart polybar:
 super + Escape
-	~/.config/bspwm/reload.sh &
+	~/.config/bspwm/reload.sh &>/home/zjeffer/.config/bspwm/.reload.err
 
 #
 ########################################## bspwm hotkeys ##########################################
@@ -159,11 +159,19 @@ super + ctrl + shift + space
 
 
 #Change window size
-alt + {minus,equal}
-	bspc config -d focused right_padding $((`bspc config -d focused right_padding` {+,-} 20 )); \
-	bspc config -d focused left_padding $((`bspc config -d focused left_padding` {+,-} 20 )); \
-	bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` {+,-} 20 )); \
-	bspc config -d focused top_padding $((`bspc config -d focused top_padding` {+,-} 20 ));
+
+
+alt + equal
+	bspc config -d focused left_padding $((`bspc config -d focused left_padding` - 20 )); \
+    bspc config -d focused right_padding $((`bspc config -d focused right_padding` - 20 )); \
+    bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` - 20 )); \
+    bspc config -d focused top_padding $((`bspc config -d focused top_padding` - 20 ));
+
+alt + minus
+	bspc config -d focused left_padding $((`bspc config -d focused left_padding` + 20 )); \
+    bspc config -d focused right_padding $((`bspc config -d focused right_padding` + 20 )); \
+    bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` + 20 )); \
+    bspc config -d focused top_padding $((`bspc config -d focused top_padding` + 20 ));
 
 #Change window gap
 super + {minus,equal}

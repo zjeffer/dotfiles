@@ -4,13 +4,13 @@
 
 
 [colors]
-background = #ff555555
-foreground = #ffffffff
-primary = #ffb52a
+background = #2e3440
+foreground = #fff
+primary = #4c566a
 secondary = #f05
 alert = #bd2c40
 dim-value = 0.0
-accent = #2277cc
+accent = #bf616a
 
 ##############################################################################################
 ##############################################################################################
@@ -90,7 +90,7 @@ type = internal/bspwm
 ;label-focused = %index%
 label-focused = 
 label-focused-foreground = ${colors.accent}
-label-focused-background = #555
+label-focused-background = ${colors.primary}
 label-focused-padding = 1
 ;label-focused-underline = ${colors.accent}
 
@@ -104,7 +104,7 @@ label-urgent-padding = 1
 
 label-empty = 
 label-empty-foreground = ${colors.background}
-label-empty-background = #222
+label-empty-background = #222225
 label-empty-padding = 1
 
 
@@ -238,29 +238,31 @@ label-warn = %temperature-c%
 [module/powermenu]
 type = custom/menu
 
-label-open = 
-label-open-foreground = #10FF20
 
-label-close = 
-label-close-foreground = #10FF20
+label-open = %{T6}%{T-}
+label-open-foreground = #88ff77
+
+
+label-close = %{T6}%{T-}
+label-close-foreground = #88ff77
 label-separator = |
 
 
-menu-0-0 = 
-menu-0-0-foreground = #10FF20
+menu-0-0 = %{T6}%{T-}
+menu-0-0-foreground = #88ff77
 menu-0-0-exec = menu-open-1
 
 menu-0-1-padding-left = 1
-menu-0-1 = 
-menu-0-1-foreground = #10FF20
+menu-0-1 = %{T6}%{T-}
+menu-0-1-foreground = #88ff77
 menu-0-1-exec = menu-open-2
 
-menu-1-0 = 
-menu-1-0-foreground = #10FF20
+menu-1-0 = %{T6}%{T-}
+menu-1-0-foreground = #88ff77
 menu-1-0-exec = reboot
 
-menu-2-0 = 
-menu-2-0-foreground = #10FF20
+menu-2-0 = %{T6}%{T-}
+menu-2-0-foreground = #88ff77
 menu-2-0-exec = shutdown -P now
 
 ##############################################################################################
@@ -337,7 +339,7 @@ format-background = ${colors.accent}
 
 [module/updates-arch-combined]
 type = custom/script
-exec = CHECKUPDATES_DB=$(mktemp -d) ~/.config/polybar/scripts/arch-updates/updates-arch-combined.sh
+exec = export CHECKUPDATES_DB=$(mktemp -d) && ~/.config/polybar/scripts/arch-updates/updates-arch-combined.sh && rm -rf "$CHECKUPDATES_DB"
 interval = 100
 label = %output%
 click-left = konsole -e "yay -Syyu"
