@@ -320,9 +320,9 @@ type = custom/script
 exec = ~/.config/polybar/scripts/nm-applet/applet.sh
 label = %output%
 interval = 5
-click-left = nm-connection-editor
-click-middle = ~/.config/polybar/scripts/nm-applet/applet.sh --ssid
-click-right = ~/.config/polybar/scripts/nm-applet/applet.sh --vpn
+click-left = nm-connection-editor &
+click-middle = ~/.config/polybar/scripts/nm-applet/applet.sh --ssid &
+click-right = ~/.config/polybar/scripts/nm-applet/applet.sh --vpn &
 
 
 label-padding = 1
@@ -342,7 +342,7 @@ type = custom/script
 exec = export CHECKUPDATES_DB=$(mktemp -d) && ~/.config/polybar/scripts/arch-updates/updates-arch-combined.sh && rm -rf "$CHECKUPDATES_DB"
 interval = 100
 label = %output%
-click-left = konsole -e "yay -Syyu"
+click-left = konsole -e "yay -Syyu" &
 
 label-padding = 1
 format-prefix = %{T7}%{T-}
