@@ -12,7 +12,7 @@ super + shift + Return
 
 # program launcher
 super + space
-	rofi -show run
+	rofi -show run -show-icons icon-theme Papirus-Light
 
 # firefox
 super + z
@@ -32,7 +32,7 @@ Print
 
 #scrot
 super + Print
-	scrot -q 100 '%Y-%m-%d_scrot.png' -e 'mv $f ~/Pictures/Screenshots/'
+	scrot -q 100 '%Y-%m-%d_%H:%M_scrot.png' -e 'mv $f ~/Pictures/Screenshots/'
 
 #spotify
 super + a
