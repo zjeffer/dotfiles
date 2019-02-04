@@ -12,7 +12,7 @@ super + shift + Return
 
 # program launcher
 super + space
-	rofi -show run -show-icons icon-theme Papirus-Light
+	rofi -show run -show-icons
 
 # firefox
 super + z
