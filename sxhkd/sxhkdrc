@@ -2,13 +2,13 @@
 ########################################## wm independent hotkeys ##########################################
 #
 
-# terminal emulator
+# gnome terminal
 super + Return
-	konsole &
-
-#gnome terminal
-super + shift + Return
 	gnome-terminal &
+
+# konsole terminal
+super + shift + Return
+	konsole &
 
 # program launcher
 super + space
@@ -72,7 +72,7 @@ super + g
 
 #balance the nodes
 super + b
-	bspc node any -B
+	bspc node @/ -B
 
 #
 ########################################## state/flags ##########################################
@@ -150,12 +150,12 @@ super + ctrl + shift + space
 #
 
 # expand a window by moving one of its side outward
-#super + alt + {Left, Down, Up, Right}
-	#bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+super + alt + {Left, Down, Up, Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-#super + alt + shift + {Left, Down, Up, Right}
-	#bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+super + alt + shift + {Left, Down, Up, Right}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 
 #Change window size

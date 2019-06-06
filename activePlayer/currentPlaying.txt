@@ -1,1 +1,1 @@
-org.mpris.MediaPlayer2.plasma-browser-integration
+org.mpris.MediaPlayer2.spotify

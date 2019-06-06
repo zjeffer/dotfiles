@@ -57,7 +57,7 @@ font-6 = Inconsolata for Powerline:size=18:antialias=true;3
 ;The modules that wil be displayed
 modules-left = bspwm player-mpris-tail
 modules-center = 
-modules-right = pulseaudio battery cpu memory temperature  nm-launcher updates-arch-combined date powermenu
+modules-right = pulseaudio battery cpu memory temperature nm-launcher updates-arch-combined date powermenu
 
 
 tray-position = right
@@ -67,7 +67,7 @@ tray-background = ${colors.background}
 ##############################################################################################
 ##############################################################################################
 
-;shows the focused window
+;shows the focused window 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:46:..%
@@ -293,6 +293,21 @@ format = <label>
 label = %percentage:2%%
 ;label-underline = #f20
 
+label-padding = 1 
+format-prefix = %{T7}%{T-}
+format-prefix-foreground = ${colors.accent}
+format-prefix-background = ${colors.background}
+format-suffix = %{T7}%{T-}
+format-suffix-foreground = ${colors.background}
+format-suffix-background = ${colors.accent}
+format-background = ${colors.accent}
+
+##############################################################################################
+##############################################################################################
+
+[module/disk-usage]
+
+
 label-padding = 1
 format-prefix = %{T7}%{T-}
 format-prefix-foreground = ${colors.accent}
@@ -307,7 +322,8 @@ format-background = ${colors.accent}
 
 [module/player-mpris-tail]
 type = custom/script
-exec = ~/.config/polybar/scripts/player/player-mpris-tail.py -f ' %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py previous:}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py play-pause:}%{T5}{icon-reversed}%{T-}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py next:}%{A} %{T6}%{T-} {:artist:t30:{artist}:}{:artist: - :}{:t50:{title}:}{:-title:t50:{filename}:}'
+exec = ~/.config/polybar/scripts/player/player-mpris-tail.py -f ' %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py previous:}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py play-pause:}%{T5}{icon-reversed}%{T-}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py next:}%{A} {:artist:t30:{artist}:}{:artist: - :}{:t50:{title}:}{:-title:t50:{filename}:}'
+##Optional icon:  %{T6}%{T-}
 tail = true
 label = %output%
 
@@ -340,7 +356,7 @@ format-background = ${colors.accent}
 [module/updates-arch-combined]
 type = custom/script
 exec = export CHECKUPDATES_DB=$(mktemp -d) && ~/.config/polybar/scripts/arch-updates/updates-arch-combined.sh && rm -rf "$CHECKUPDATES_DB"
-interval = 100
+interval = 1200
 label = %output%
 click-left = konsole -e "yay -Syyu" &
 

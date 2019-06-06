@@ -4,8 +4,8 @@ killall xcape 2>/dev/null
 killall easystroke
 sxhkd 2>~/.config/sxhkd/.sxhkd.err &
 
-bspc monitor eDP-1-1 -d  1 2 3 4
-bspc monitor HDMI-1-1 -d 1 2 3 4
+bspc monitor eDP-1-1 -d  1 2 3 4 5
+bspc monitor HDMI-1-1 -d 1 2 3 4 5
 bspc wm -O eDP-1-1 HDMI-1-1
 
 bspc config window_gap           25
@@ -17,16 +17,27 @@ bspc config gapless_monocle      true
 bspc config removal_adjustment   true
 bspc config focus_follows_pointer true
 bspc config automatic_scheme 	 alternate
+bspc config pointer_motion_interval 40
+
+#javafx:
+#bspc config honor_size_hints 	 true
+bspc config honor_size_hints 	 false
 
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a spectacle floating=on follow=on
-#bspc rule -a Steam state=floating
 bspc rule -a 'Friends List' state=floating
+bspc rule -a 'Steam - News' state=floating
 bspc rule -a Wfica_Seamless state=floating
 bspc rule -a 'Citrix maximized probe window' state=floating
-bspc rule -a Soffice state=tiled
+bspc rule -a '*:libreofficedev' state=tiled
+bspc rule -a '*:soffice' state=floating
+bspc rule -a mijnlieff.Mijnlieff state=floating
+bspc rule -a mijnlieff.interactive.matchmaking.Matchmaking state=floating
+bspc rule -a mijnlieff.* state=floating
+bspc rule -a mijnlieff.interactive.boardConfiguration.BoardConfiguration state=floating
+bspc rule -a simplescreenrecorder state=floating
 
 
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1
@@ -34,10 +45,12 @@ xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Natural Scrolling Enabled
 
 for mouse in `xinput | grep 'Corsair' | grep 'pointer' | sed 's/.*id=\([0-9]*\).*/\1/g'`; do
 	xinput set-prop $mouse "libinput Accel Profile Enabled" 0, 1 2>/dev/null
+	xinput set-prop $mouse "libinput Accel Speed" -0.5 2>/dev/null
 done
 unset mouse
 
-feh --bg-fill ~/Pictures/DnA7hZgU8AAxfxC.jpg:large.jpg &
+feh --bg-fill ~/Pictures/photo-1511108988782-9a5c10cbc062.jpg &
+
 
 
 
@@ -51,3 +64,7 @@ $HOME/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
 libinput-gestures-setup start &
 xcape -e 'Super_L=Super_L|space' &
 easystroke &
+
+if acpi -a | grep 'off'; then
+	cpupower frequency-set -g powersave
+fi
