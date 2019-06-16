@@ -1,6 +1,7 @@
 *.err
 currentPlaying.txt
-
+activePlayer/currentPlaying.txt
+.gitignore
 .directory
 .vscode/
 Android Open Source Project/

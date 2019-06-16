@@ -10,6 +10,10 @@ case $1 in
 		cmd='/org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous';;
 	'stop')
 		cmd='/org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop';;
+	'skipForward')
+		cmd='/org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Seek 5000000';;
+	'skipBackward')
+		cmd='/org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Seek -5000000';;
 	*)
 esac
 

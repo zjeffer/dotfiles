@@ -1,1 +1,0 @@
-org.mpris.MediaPlayer2.spotify

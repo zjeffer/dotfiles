@@ -215,6 +215,13 @@ XF86AudioPrev
 XF86AudioStop
 	~/.config/activePlayer/control.sh stop
 
+shift + XF86AudioNext
+	~/.config/activePlayer/control.sh skipForward
+
+shift + XF86AudioPrev
+	~/.config/activePlayer/control.sh skipBackward
+
+
 ########################################## BRIGHTNESS ##########################################
 
 # Brightness goes up
