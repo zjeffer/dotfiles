@@ -51,9 +51,6 @@ unset mouse
 
 feh --bg-fill ~/Pictures/photo-1511108988782-9a5c10cbc062.jpg &
 
-
-
-
 xbindkeys &
 redshift &
 numlockx &

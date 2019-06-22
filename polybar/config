@@ -214,7 +214,9 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 80
 
+
 label-padding = 1
+label-warn-padding = 1
 format-prefix = %{T7}%{T-}
 format-prefix-foreground = ${colors.accent}
 format-prefix-background = ${colors.background}
@@ -222,15 +224,25 @@ format-suffix = %{T7}%{T-}
 format-suffix-foreground = ${colors.background}
 format-suffix-background = ${colors.accent}
 format-background = ${colors.accent}
+
+format-warn-prefix = %{T7}%{T-}
+format-warn-prefix-foreground = ${colors.accent}
+format-warn-prefix-background = ${colors.background}
+format-warn-suffix = %{T7}%{T-}
+format-warn-suffix-foreground = ${colors.background}
+format-warn-suffix-background = ${colors.accent}
+format-warn-background = ${colors.accent}
+format-warn-foreground = #73151E
+
 format = <label>
 format-warn = <label-warn>
-
-
 
 label = %temperature-c%
 ;label-underline = #fb0
 label-warn = %temperature-c%
 ;label-warn-underline = #f00
+
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input
 
 ##############################################################################################
 ##############################################################################################
