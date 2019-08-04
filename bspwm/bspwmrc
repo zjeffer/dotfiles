@@ -60,7 +60,7 @@ compton --config ~/.config/compton.conf 2>~/.config/.compton.err &
 $HOME/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
 libinput-gestures-setup start &
 xcape -e 'Super_L=Super_L|space' &
-easystroke &
+# easystroke &
 
 if acpi -a | grep 'off'; then
 	cpupower frequency-set -g powersave

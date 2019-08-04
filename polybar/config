@@ -57,7 +57,7 @@ font-6 = Inconsolata for Powerline:size=18:antialias=true;3
 ;The modules that wil be displayed
 modules-left = bspwm player-mpris-tail
 modules-center = 
-modules-right = pulseaudio battery cpu memory temperature nm-launcher updates-arch-combined date powermenu
+modules-right = pulseaudio battery cpu memory temperature nm-launcher updates-arch-combined date time powermenu
 
 
 tray-position = right
@@ -116,10 +116,9 @@ label-empty-padding = 1
 type = internal/date
 interval = 5
 
-time = %H:%M
-date = %d-%m-%y
+date = %a %d-%m-%y
 
-label = %date% %time%
+label = %date%
 label-padding = 1
 ;label-underline = #ddd
 
@@ -131,6 +130,23 @@ format-suffix-foreground = ${colors.background}
 format-suffix-background = ${colors.accent}
 format-background = ${colors.accent}
 
+##############################################################################################
+##############################################################################################
+
+[module/time]
+type = internal/date
+interval = 5
+time = %H:%M
+label = %time%
+label-padding = 1
+
+format-prefix = %{T7}%{T-}
+format-prefix-foreground = ${colors.accent}
+format-prefix-background = ${colors.background}
+format-suffix = %{T7}%{T-}
+format-suffix-foreground = ${colors.background}
+format-suffix-background = ${colors.accent}
+format-background = ${colors.accent}
 
 ##############################################################################################
 ##############################################################################################

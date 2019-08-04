@@ -12,7 +12,7 @@ super + shift + Return
 
 # program launcher
 super + space
-	rofi -show run -show-icons
+	rofi -show drun -show-icons
 
 # firefox
 super + z
