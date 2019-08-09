@@ -14,11 +14,36 @@ accent = #bf616a
 red = #bf616a
 orange = #d08770
 yellow = #ebcb8b
-green = #a3be8c
+#wifi = #a3be8c
 greenblue = #8fbcbb
-lightblue = #88c0d0
+#date = #88c0d0
 darkblue = #81a1c1
 purple = #b48ead
+
+nord0 =  #2e3440
+nord1 =  #3b4252
+nord2 =  #434c5e
+nord3 =  #4c566a
+nord4 =  #d8dee9
+nord5 =  #e5e9f0
+nord6 =  #eceff4
+nord7 =  #8fbcbb
+#cpu =  #88c0d0
+#ram =  #81a1c1
+#temp = #5e81ac
+nord11 = #bf616a
+nord12 = #d08770
+nord13 = #ebcb8b
+#wifi = #a3be8c
+nord15 = #b48ead
+
+cpu = #bf616a
+ram = #a3be8c
+temp = #d08770
+wifi = #5e81ac
+date = #8fbcbb
+time = #7fd189
+
 
 ##############################################################################################
 ##############################################################################################
@@ -97,10 +122,10 @@ type = internal/bspwm
 
 ;label-focused = %index%
 label-focused = 
-label-focused-foreground = ${colors.red}
+label-focused-foreground = ${colors.nord11}
 label-focused-background = ${colors.primary}
 label-focused-padding = 1
-;label-focused-underline = ${colors.red}
+;label-focused-underline = ${colors.nord11}
 
 label-occupied = 
 label-occupied-padding = 1
@@ -131,12 +156,12 @@ label-padding-left = 1
 ;label-underline = #ddd
 
 format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.lightblue}
-format-prefix-background = ${colors.green}
+format-prefix-foreground = ${colors.date}
+format-prefix-background = ${colors.wifi}
 format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.lightblue}
-format-suffix-background = ${colors.lightblue}
-format-background = ${colors.lightblue}
+format-suffix-foreground = ${colors.date}
+format-suffix-background = ${colors.date}
+format-background = ${colors.date}
 
 ##############################################################################################
 ##############################################################################################
@@ -150,7 +175,7 @@ label-padding = 1
 
 format-prefix = %{T7}%{T-}
 format-prefix-foreground = ${colors.purple}
-format-prefix-background = ${colors.lightblue}
+format-prefix-background = ${colors.date}
 format-suffix = %{T7}%{T-}
 format-suffix-foreground = ${colors.background}
 format-suffix-background = ${colors.purple}
@@ -242,14 +267,14 @@ warn-temperature = 90
 label-padding = 1
 label-warn-padding = 1
 format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.yellow}
-format-prefix-background = ${colors.orange}
-format-background = ${colors.yellow}
+format-prefix-foreground = ${colors.temp}
+format-prefix-background = ${colors.ram}
+format-background = ${colors.temp}
 
 format-warn-prefix = %{T7}%{T-}
-format-warn-prefix-foreground = ${colors.yellow}
-format-warn-prefix-background = ${colors.orange}
-format-warn-background = ${colors.yellow}
+format-warn-prefix-foreground = ${colors.temp}
+format-warn-prefix-background = ${colors.ram}
+format-warn-background = ${colors.temp}
 format-warn-foreground = #73151E
 
 format = <label>
@@ -306,10 +331,10 @@ label = %percentage_used:2%%
 
 label-padding = 1
 format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.orange}
-format-prefix-background = ${colors.red}
+format-prefix-foreground = ${colors.ram}
+format-prefix-background = ${colors.cpu}
 
-format-background = ${colors.orange}
+format-background = ${colors.ram}
 
 ##############################################################################################
 ##############################################################################################
@@ -323,10 +348,10 @@ label = %percentage:2%%
 
 label-padding = 1 
 format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.red}
+format-prefix-foreground = ${colors.cpu}
 format-prefix-background = ${colors.background}
 
-format-background = ${colors.red}
+format-background = ${colors.cpu}
 
 
 ##############################################################################################
@@ -355,12 +380,12 @@ click-right = ~/.config/polybar/scripts/nm-applet/applet.sh --vpn &
 
 label-padding-left = 1
 format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.green}
-format-prefix-background = ${colors.yellow}
+format-prefix-foreground = ${colors.wifi}
+format-prefix-background = ${colors.temp}
 format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.green}
-format-suffix-background = ${colors.green}
-format-background = ${colors.green}
+format-suffix-foreground = ${colors.wifi}
+format-suffix-background = ${colors.wifi}
+format-background = ${colors.wifi}
 
 
 ##############################################################################################
@@ -374,6 +399,6 @@ label = %output%
 click-left = konsole -e "yay -Syyu" &
 
 format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.green}
-format-suffix-background = ${colors.green}
-format-background = ${colors.green}
+format-suffix-foreground = ${colors.wifi}
+format-suffix-background = ${colors.wifi}
+format-background = ${colors.wifi}
