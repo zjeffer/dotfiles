@@ -4,13 +4,21 @@
 
 
 [colors]
-background = #2e3440
+background = #434c5e
 foreground = #fff
 primary = #4c566a
 secondary = #f05
 alert = #bd2c40
 dim-value = 0.0
 accent = #bf616a
+red = #bf616a
+orange = #d08770
+yellow = #ebcb8b
+green = #a3be8c
+greenblue = #8fbcbb
+lightblue = #88c0d0
+darkblue = #81a1c1
+purple = #b48ead
 
 ##############################################################################################
 ##############################################################################################
@@ -57,7 +65,7 @@ font-6 = Inconsolata for Powerline:size=18:antialias=true;3
 ;The modules that wil be displayed
 modules-left = bspwm player-mpris-tail
 modules-center = 
-modules-right = pulseaudio battery cpu memory temperature nm-launcher updates-arch-combined date time powermenu
+modules-right = pulseaudio battery cpu memory temperature nm-launcher network-usage updates-arch-combined date time powermenu
 
 
 tray-position = right
@@ -89,10 +97,10 @@ type = internal/bspwm
 
 ;label-focused = %index%
 label-focused = 
-label-focused-foreground = ${colors.accent}
+label-focused-foreground = ${colors.red}
 label-focused-background = ${colors.primary}
 label-focused-padding = 1
-;label-focused-underline = ${colors.accent}
+;label-focused-underline = ${colors.red}
 
 label-occupied = 
 label-occupied-padding = 1
@@ -119,16 +127,16 @@ interval = 5
 date = %a %d-%m-%y
 
 label = %date%
-label-padding = 1
+label-padding-left = 1
 ;label-underline = #ddd
 
 format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.accent}
-format-prefix-background = ${colors.background}
+format-prefix-foreground = ${colors.lightblue}
+format-prefix-background = ${colors.green}
 format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.background}
-format-suffix-background = ${colors.accent}
-format-background = ${colors.accent}
+format-suffix-foreground = ${colors.lightblue}
+format-suffix-background = ${colors.lightblue}
+format-background = ${colors.lightblue}
 
 ##############################################################################################
 ##############################################################################################
@@ -141,12 +149,12 @@ label = %time%
 label-padding = 1
 
 format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.accent}
-format-prefix-background = ${colors.background}
+format-prefix-foreground = ${colors.purple}
+format-prefix-background = ${colors.lightblue}
 format-suffix = %{T7}%{T-}
 format-suffix-foreground = ${colors.background}
-format-suffix-background = ${colors.accent}
-format-background = ${colors.accent}
+format-suffix-background = ${colors.purple}
+format-background = ${colors.purple}
 
 ##############################################################################################
 ##############################################################################################
@@ -207,20 +215,20 @@ format-discharging = <label-discharging>
 format-full = <label-full>
 
 format-charging-prefix = %{T7}%{T-}
-format-charging-prefix-foreground = ${colors.accent}
+format-charging-prefix-foreground = ${colors.darkblue}
 format-charging-prefix-background = ${colors.background}
 format-charging-suffix = %{T7}%{T-}
 format-charging-suffix-foreground = ${colors.background}
-format-charging-suffix-background = ${colors.accent}
-format-charging-background = ${colors.accent}
+format-charging-suffix-background = ${colors.darkblue}
+format-charging-background = ${colors.darkblue}
 
 format-discharging-prefix = %{T7}%{T-}
-format-discharging-prefix-foreground = ${colors.accent}
+format-discharging-prefix-foreground = ${colors.darkblue}
 format-discharging-prefix-background = ${colors.background}
 format-discharging-suffix = %{T7}%{T-}
 format-discharging-suffix-foreground = ${colors.background}
-format-discharging-suffix-background = ${colors.accent}
-format-discharging-background = ${colors.accent}
+format-discharging-suffix-background = ${colors.darkblue}
+format-discharging-background = ${colors.darkblue}
 
 ##############################################################################################
 ##############################################################################################
@@ -228,26 +236,20 @@ format-discharging-background = ${colors.accent}
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 80
+warn-temperature = 90
 
 
 label-padding = 1
 label-warn-padding = 1
 format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.accent}
-format-prefix-background = ${colors.background}
-format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.background}
-format-suffix-background = ${colors.accent}
-format-background = ${colors.accent}
+format-prefix-foreground = ${colors.yellow}
+format-prefix-background = ${colors.orange}
+format-background = ${colors.yellow}
 
 format-warn-prefix = %{T7}%{T-}
-format-warn-prefix-foreground = ${colors.accent}
-format-warn-prefix-background = ${colors.background}
-format-warn-suffix = %{T7}%{T-}
-format-warn-suffix-foreground = ${colors.background}
-format-warn-suffix-background = ${colors.accent}
-format-warn-background = ${colors.accent}
+format-warn-prefix-foreground = ${colors.yellow}
+format-warn-prefix-background = ${colors.orange}
+format-warn-background = ${colors.yellow}
 format-warn-foreground = #73151E
 
 format = <label>
@@ -304,12 +306,10 @@ label = %percentage_used:2%%
 
 label-padding = 1
 format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.accent}
-format-prefix-background = ${colors.background}
-format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.background}
-format-suffix-background = ${colors.accent}
-format-background = ${colors.accent}
+format-prefix-foreground = ${colors.orange}
+format-prefix-background = ${colors.red}
+
+format-background = ${colors.orange}
 
 ##############################################################################################
 ##############################################################################################
@@ -323,27 +323,11 @@ label = %percentage:2%%
 
 label-padding = 1 
 format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.accent}
+format-prefix-foreground = ${colors.red}
 format-prefix-background = ${colors.background}
-format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.background}
-format-suffix-background = ${colors.accent}
-format-background = ${colors.accent}
 
-##############################################################################################
-##############################################################################################
+format-background = ${colors.red}
 
-[module/disk-usage]
-
-
-label-padding = 1
-format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.accent}
-format-prefix-background = ${colors.background}
-format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.background}
-format-suffix-background = ${colors.accent}
-format-background = ${colors.accent}
 
 ##############################################################################################
 ##############################################################################################
@@ -362,21 +346,22 @@ label = %output%
 [module/nm-launcher]
 type = custom/script
 exec = ~/.config/polybar/scripts/nm-applet/applet.sh
-label = %output%
+label = %output% 
 interval = 5
 click-left = nm-connection-editor &
 click-middle = ~/.config/polybar/scripts/nm-applet/applet.sh --ssid &
 click-right = ~/.config/polybar/scripts/nm-applet/applet.sh --vpn &
 
 
-label-padding = 1
+label-padding-left = 1
 format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.accent}
-format-prefix-background = ${colors.background}
+format-prefix-foreground = ${colors.green}
+format-prefix-background = ${colors.yellow}
 format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.background}
-format-suffix-background = ${colors.accent}
-format-background = ${colors.accent}
+format-suffix-foreground = ${colors.green}
+format-suffix-background = ${colors.green}
+format-background = ${colors.green}
+
 
 ##############################################################################################
 ##############################################################################################
@@ -388,11 +373,7 @@ interval = 1200
 label = %output%
 click-left = konsole -e "yay -Syyu" &
 
-label-padding = 1
-format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.accent}
-format-prefix-background = ${colors.background}
 format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.background}
-format-suffix-background = ${colors.accent}
-format-background = ${colors.accent}
+format-suffix-foreground = ${colors.green}
+format-suffix-background = ${colors.green}
+format-background = ${colors.green}

@@ -49,7 +49,7 @@ for mouse in `xinput | grep 'Corsair' | grep 'pointer' | sed 's/.*id=\([0-9]*\).
 done
 unset mouse
 
-feh --bg-fill ~/Pictures/photo-1511108988782-9a5c10cbc062.jpg &
+feh --bg-fill ~/Pictures/trees.jpg &
 
 xbindkeys &
 redshift &

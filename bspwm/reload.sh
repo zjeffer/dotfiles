@@ -27,7 +27,7 @@ bspc monitor eDP-1-1 -d  1 2 3 4 5
 bspc monitor HDMI-1-1 -d 1 2 3 4 5
 bspc wm -O eDP-1-1 HDMI-1-1
 
-feh --bg-fill ~/Pictures/photo-1511108988782-9a5c10cbc062.jpg &
+feh --bg-fill ~/Pictures/trees.jpg &
 
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
