@@ -12,13 +12,6 @@ alert = #bd2c40
 dim-value = 0.0
 accent = #bf616a
 red = #bf616a
-orange = #d08770
-yellow = #ebcb8b
-#wifi = #a3be8c
-greenblue = #8fbcbb
-#date = #88c0d0
-darkblue = #81a1c1
-purple = #b48ead
 
 nord0 =  #2e3440
 nord1 =  #3b4252
@@ -28,13 +21,13 @@ nord4 =  #d8dee9
 nord5 =  #e5e9f0
 nord6 =  #eceff4
 nord7 =  #8fbcbb
-#cpu =  #88c0d0
-#ram =  #81a1c1
-#temp = #5e81ac
+nord8 =  #88c0d0
+nord9 =  #81a1c1
+nord10 = #5e81ac
 nord11 = #bf616a
 nord12 = #d08770
 nord13 = #ebcb8b
-#wifi = #a3be8c
+nord14 = #a3be8c
 nord15 = #b48ead
 
 cpu = #bf616a
@@ -42,7 +35,7 @@ ram = #a3be8c
 temp = #d08770
 wifi = #5e81ac
 date = #8fbcbb
-time = #7fd189
+time = #b48ead
 
 
 ##############################################################################################
@@ -174,12 +167,12 @@ label = %time%
 label-padding = 1
 
 format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.purple}
+format-prefix-foreground = ${colors.time}
 format-prefix-background = ${colors.date}
 format-suffix = %{T7}%{T-}
 format-suffix-foreground = ${colors.background}
-format-suffix-background = ${colors.purple}
-format-background = ${colors.purple}
+format-suffix-background = ${colors.time}
+format-background = ${colors.time}
 
 ##############################################################################################
 ##############################################################################################
