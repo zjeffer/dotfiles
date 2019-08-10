@@ -36,6 +36,7 @@ temp = #d08770
 wifi = #5e81ac
 date = #8fbcbb
 time = #b48ead
+battery = #2e3440
 
 
 ##############################################################################################
@@ -233,20 +234,20 @@ format-discharging = <label-discharging>
 format-full = <label-full>
 
 format-charging-prefix = %{T7}%{T-}
-format-charging-prefix-foreground = ${colors.darkblue}
+format-charging-prefix-foreground = ${colors.battery}
 format-charging-prefix-background = ${colors.background}
 format-charging-suffix = %{T7}%{T-}
 format-charging-suffix-foreground = ${colors.background}
-format-charging-suffix-background = ${colors.darkblue}
-format-charging-background = ${colors.darkblue}
+format-charging-suffix-background = ${colors.battery}
+format-charging-background = ${colors.battery}
 
 format-discharging-prefix = %{T7}%{T-}
-format-discharging-prefix-foreground = ${colors.darkblue}
+format-discharging-prefix-foreground = ${colors.battery}
 format-discharging-prefix-background = ${colors.background}
 format-discharging-suffix = %{T7}%{T-}
 format-discharging-suffix-foreground = ${colors.background}
-format-discharging-suffix-background = ${colors.darkblue}
-format-discharging-background = ${colors.darkblue}
+format-discharging-suffix-background = ${colors.battery}
+format-discharging-background = ${colors.battery}
 
 ##############################################################################################
 ##############################################################################################
