@@ -335,10 +335,9 @@ format-background = ${colors.ram}
 
 [module/cpu]
 type = internal/cpu
-interval = 2
+interval = 1
 format = <label>
 label = %percentage:2%%
-;label-underline = #f20
 
 label-padding = 1 
 format-prefix = %{T7}%{T-}
@@ -390,7 +389,7 @@ type = custom/script
 exec = export CHECKUPDATES_DB=$(mktemp -d) && ~/.config/polybar/scripts/arch-updates/updates-arch-combined.sh && rm -rf "$CHECKUPDATES_DB"
 interval = 1200
 label = %output%
-click-left = konsole -e "yay -Syyu" &
+click-left = gnome-terminal -- yay -Syyu &
 
 format-suffix = %{T7}%{T-}
 format-suffix-foreground = ${colors.wifi}
