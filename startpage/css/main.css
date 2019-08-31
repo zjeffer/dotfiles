@@ -247,7 +247,7 @@ li:nth-child(2n) {
 
 
     #bottom-div {
-        width: 40%;
+        width: 500px;
     }
 }
 
@@ -255,7 +255,7 @@ li:nth-child(2n) {
 
 
     #bottom-div {
-        width: 20%;
+        width: 500px;
     }
 
     /* #links-container {
