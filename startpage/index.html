@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Startpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="center-div">
+        <div id="clock-div">
+            <h1 id="clock"></h1>
+        </div>
+        <form class="search-form" action="https://start.duckduckgo.com">
+            <div class="search-bar-wrapper">
+                <input class="search-bar" name="q" type="text" title="Search" />
+                <button class="search-bar-btn" type="submit" title="Search">&#128270;</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Todo's -->
+    <div id="bottom-div">
+        <input class="search-bar" id="todoInput" placeholder="Add New Todo" type="text">
+        <ul id="todoList">
+        </ul>
+    </div>
+
+
+    <noscript>
+        <style>
+            #clock {
+                display: none;
+            }
+        </style>
+    </noscript>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
