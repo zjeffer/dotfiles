@@ -84,7 +84,7 @@ font-6 = Inconsolata for Powerline:size=18:antialias=true;3
 ;The modules that wil be displayed
 modules-left = bspwm player-mpris-tail
 modules-center = 
-modules-right = pulseaudio battery cpu memory temperature nm-launcher network-usage updates-arch-combined date time powermenu
+modules-right = pulseaudio battery cpu memory temperature nm-launcher updates-arch-combined date time powermenu
 
 
 tray-position = right

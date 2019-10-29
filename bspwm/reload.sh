@@ -12,6 +12,7 @@ xrandr --output eDP-1-1 --primary
 
 monitorName=`cat /sys/devices/pci0000:00/0000:00:02.0/drm/card1/card1-HDMI-A-1/edid | parse-edid  | grep -i "modelname" | sed "s/\\tModelName //gi" | sed "s/\"//g"`
 xrandr --output HDMI-1-1 --right-of eDP-1-1
+xrandr --output DP-1-1 --left-of eDP-1-1
 unset monitorName
 
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1
@@ -25,7 +26,8 @@ unset mouse
 
 bspc monitor eDP-1-1 -d  1 2 3 4 5
 bspc monitor HDMI-1-1 -d 1 2 3 4 5
-bspc wm -O eDP-1-1 HDMI-1-1
+bspc monitor DP-1-1 -d 1 2 3 4 5
+bspc wm -O DP-1-1 eDP-1-1 HDMI-1-1
 
 feh --bg-fill ~/Pictures/trees.jpg &
 
