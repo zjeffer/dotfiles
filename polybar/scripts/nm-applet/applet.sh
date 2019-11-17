@@ -5,7 +5,7 @@ ssid() {
 	length=$(cat ~/.config/polybar/scripts/nm-applet/curr_ssid | tr -d '\n' | wc -m)
 	if [[ $length -lt 1 ]]; then
 		if nmcli connection show 2>&1 | grep -ivq 'error'; then
-			echo `nmcli connection show | sed -n '1!p' | grep -iv '\--' | awk '{print $1}' | head -1` > ~/.config/polybar/scripts/nm-applet/curr_ssid
+			echo `nmcli -t -f NAME c show --active` > ~/.config/polybar/scripts/nm-applet/curr_ssid
 		else
 			echo '' > ~/.config/polybar/scripts/nm-applet/curr_ssid
 		fi
