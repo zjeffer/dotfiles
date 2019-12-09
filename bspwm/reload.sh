@@ -2,7 +2,7 @@
 
 
 killall xcape 2>/dev/null
-killall compton 2>/dev/null
+killall picom 2>/dev/null
 killall dunst 2>/dev/null
 killall xbindkeys 2>/dev/null
 
@@ -18,7 +18,7 @@ unset monitorName
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Natural Scrolling Enabled' 1
 
-for mouse in `xinput | grep 'Corsair' | grep 'pointer' | sed 's/.*id=\([0-9]*\).*/\1/g'`; do
+for mouse in `xinput | grep 'Logitech' | grep 'pointer' | sed 's/.*id=\([0-9]*\).*/\1/g'`; do
 	xinput set-prop $mouse "libinput Accel Profile Enabled" 0, 1 2>/dev/null
 	xinput set-prop $mouse "libinput Accel Speed" -0.5 2>/dev/null
 done
@@ -52,5 +52,5 @@ pkill -USR1 -x sxhkd &
 ~/.config/polybar/launch.sh &
 libinput-gestures-setup restart &
 xcape -e 'Super_L=Super_L|space' &
-compton --config ~/.config/compton.conf 2>~/.config/.compton.err &
+picom --config ~/.config/compton.conf 2>~/.config/.compton.err &
 xbindkeys &>~/.config/bspwm/.reload.err

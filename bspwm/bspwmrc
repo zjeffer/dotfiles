@@ -44,7 +44,7 @@ bspc rule -a simplescreenrecorder state=floating
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Natural Scrolling Enabled' 1
 
-for mouse in `xinput | grep 'Corsair' | grep 'pointer' | sed 's/.*id=\([0-9]*\).*/\1/g'`; do
+for mouse in `xinput | grep 'Logitech' | grep 'pointer' | sed 's/.*id=\([0-9]*\).*/\1/g'`; do
 	xinput set-prop $mouse "libinput Accel Profile Enabled" 0, 1 2>/dev/null
 	xinput set-prop $mouse "libinput Accel Speed" -0.5 2>/dev/null
 done
@@ -55,9 +55,9 @@ feh --bg-fill ~/Pictures/trees.jpg &
 xbindkeys &
 redshift-gtk &
 numlockx &
-statnot &
+# statnot &
 ~/.config/activePlayer/mediaplayers.sh 2>~/.config/activePlayer/.mediaplayer.err &
-compton --config ~/.config/compton.conf 2>~/.config/.compton.err &
+picom --config ~/.config/compton.conf 2>~/.config/.compton.err &
 $HOME/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
 libinput-gestures-setup start &
 xcape -e 'Super_L=Super_L|space' &
