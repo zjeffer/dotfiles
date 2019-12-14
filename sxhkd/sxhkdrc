@@ -223,6 +223,12 @@ shift + XF86AudioNext
 shift + XF86AudioPrev
 	~/.config/activePlayer/control.sh skipBackward
 
+button10
+	~/.config/activePlayer/control.sh next
+
+button11
+	~/.config/activePlayer/control.sh previous
+
 
 ########################################## BRIGHTNESS ##########################################
 

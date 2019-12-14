@@ -24,10 +24,10 @@ for mouse in `xinput | grep 'Logitech' | grep 'pointer' | sed 's/.*id=\([0-9]*\)
 done
 unset mouse
 
-bspc monitor eDP-1-1 -d  1 2 3 4 5
+bspc monitor eDP-1 -d  1 2 3 4 5
 bspc monitor HDMI-1-1 -d 1 2 3 4 5
 bspc monitor DP-1-1 -d 1 2 3 4 5
-bspc wm -O DP-1-1 eDP-1-1 HDMI-1-1
+bspc wm -O DP-1-1 eDP-1 HDMI-1-1
 
 feh --bg-fill ~/Pictures/trees.jpg &
 
