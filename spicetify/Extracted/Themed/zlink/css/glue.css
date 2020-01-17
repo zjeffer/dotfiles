@@ -7490,7 +7490,7 @@ pre code {
  .button.button-red {
   padding-top: 1px;
   border-radius: 16px;
-  background: #cd1a2b;
+  background: var(--modspotify_miscellaneous_bg);
   transition-property: transform, box-shadow, color, background-color;
 }
  .button.button-red {
@@ -7506,7 +7506,7 @@ pre code {
   color:  var(--modspotify_main_fg);
 }
  .button.button-red.contextmenu-active,  .button.button-red:not(:disabled):hover {
-  background-color: #e22134;
+  background-color: var(--modspotify_miscellaneous_hover_bg);
 }
 .button.button-red:not(:disabled):hover:active {
   color: var(--modspotify_pressing_button_fg);
@@ -8858,7 +8858,7 @@ pre code {
  .button.button-large.button-red {
   padding-top: 1px;
   border-radius: 24px;
-  background: #cd1a2b;
+  background: var(--modspotify_miscellaneous_bg);
   transition-property: transform, box-shadow, color, background-color;
 }
  .button.button-large.button-red {
@@ -8874,7 +8874,7 @@ pre code {
   color:  var(--modspotify_main_fg);
 }
  .button.button-large.button-red.contextmenu-active,  .button.button-large.button-red:not(:disabled):hover {
-  background-color: #e22134;
+  background-color: var(--modspotify_miscellaneous_hover_bg);
 }
 .button.button-large.button-red:not(:disabled):hover:active {
   color: var(--modspotify_pressing_button_fg);
@@ -10227,7 +10227,7 @@ pre code {
  .button.button-small.button-red {
   padding-top: 1px;
   border-radius: 12px;
-  background: #cd1a2b;
+  background: var(--modspotify_miscellaneous_bg);
   transition-property: transform, box-shadow, color, background-color;
 }
  .button.button-small.button-red {
@@ -10243,7 +10243,7 @@ pre code {
   color:  var(--modspotify_main_fg);
 }
  .button.button-small.button-red.contextmenu-active,  .button.button-small.button-red:not(:disabled):hover {
-  background-color: #e22134;
+  background-color: var(--modspotify_miscellaneous_hover_bg);
 }
 .button.button-small.button-red:not(:disabled):hover:active {
   color: var(--modspotify_pressing_button_fg);
@@ -12030,10 +12030,10 @@ textarea.form-control {
 .has-error .checkbox,
 .has-error .radio-inline,
 .has-error .checkbox-inline {
-  color: #cd1a2b;
+  color: var(--modspotify_miscellaneous_bg);
 }
  .has-error .form-control {
-  border-color: #cd1a2b;
+  border-color: var(--modspotify_miscellaneous_bg);
   box-shadow: inset 0 1px 1px rgba(var(--modspotify_rgb_cover_overlay_and_shadow),0.075);
 }
  .has-error .form-control:focus {
@@ -14632,7 +14632,7 @@ a.list-group-item.active .list-group-item-text {
 }
 
  .alert-danger {
-  background-color: #cd1a2b;
+  background-color: var(--modspotify_miscellaneous_bg);
 }
 .alert-danger .alert-link {
   color:  var(--modspotify_main_fg);
@@ -14709,7 +14709,7 @@ a.list-group-item.active .list-group-item-text {
 }
 
  .label-danger {
-  background-color: #cd1a2b;
+  background-color: var(--modspotify_miscellaneous_bg);
 }
  .label-danger[href]:hover,  .label-danger[href]:focus {
   background-color: #a01422;
@@ -19496,7 +19496,7 @@ th {
   color: var(--modspotify_sidebar_indicator_and_hover_button_bg);
 }
 .trend-mark.trend-down {
-  color: #cd1a2b;
+  color: var(--modspotify_miscellaneous_bg);
 }
 
 /*
@@ -20416,7 +20416,7 @@ th {
   line-height: inherit;
 }
 .nft-enabled .tl-feedback .button.spoticon-ban-active-16 {
-  color: #cd1a2b;
+  color: var(--modspotify_miscellaneous_bg);
   visibility: visible;
 }
 
