@@ -10,7 +10,9 @@ bspc monitor DP1 -d 1 2 3 4 5
 bspc wm -O DP1 eDP1 HDMI1
 
 bspc config window_gap           25
-bspc config border_width		 0
+bspc config border_width	 3
+bspc config normal_border_color	 \#3b4252
+bspc config focused_border_color \#5e81ac
 
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
@@ -40,9 +42,9 @@ bspc rule -a mijnlieff.* state=floating
 bspc rule -a mijnlieff.interactive.boardConfiguration.BoardConfiguration state=floating
 bspc rule -a simplescreenrecorder state=floating
 
-xrandr --output eDP-1-1 --set "Broadcast RGB" "Full"
-xrandr --output HDMI-1-1 --set "Broadcast RGB" "Full"
-xrandr --output DP-1-1 --set "Broadcast RGB" "Full"
+xrandr --output eDP1 --set "Broadcast RGB" "Full"
+xrandr --output HDMI1 --set "Broadcast RGB" "Full"
+xrandr --output DP1 --set "Broadcast RGB" "Full"
 
 
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1

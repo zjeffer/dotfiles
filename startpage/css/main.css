@@ -21,24 +21,26 @@
 }
 
 /* Elements */
-a {
-    text-decoration: none;
-}
+
 
 html,
 body {
     margin: 0;
-    padding: 0;
+    padding: 10;
     height: 100%;
     font-weight: 300;
+    font-family: Roboto-Light;
+}
+
+a {
+    text-decoration: none;
 }
 
 
 body {
     background-color: #2e3440;
     color: #ddd;
-    /* display: flex; */
-    flex-direction: column;
+    display: block;
     align-items: center;
     justify-content: center;
 }
@@ -72,6 +74,17 @@ li:nth-child(2n) {
 }
 
 /* Classes */
+
+.center {
+    position: absolute;
+    width: 60vw;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
 
 .search-form,
 .clock-div {
@@ -122,6 +135,14 @@ li:nth-child(2n) {
     border-color: #888;
 }
 
+.bottom-div {
+    background-color: #2e3440;
+    color: #ddd;
+    width: 50%;
+    padding-top: 100px;
+    margin: auto;
+}
+
 
 
 .blue {
@@ -146,34 +167,6 @@ li:nth-child(2n) {
 }
 
 /* IDs */
-#clock {
-    font-family: Roboto;
-}
-
-#center-div {
-    /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-column-end: 5;
-    grid-column-start: 1; */
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    width: 50%;
-    margin: auto;
-    margin-top: 15%;
-}
-
-#bottom-div {
-    background-color: #2e3440;
-    color: #ddd;
-    width: 40%;
-    padding-top: 100px;
-    margin: auto;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-}
 
 #todoInput {
     box-shadow: 2px 0px 5px 1px #222;
@@ -203,11 +196,11 @@ li:nth-child(2n) {
         row-gap: 5vh;
     } */
 
-    #center-div {
+    .center {
         width: 95%;
     }
 
-    #bottom-div {
+    .bottom-div {
         width: 60%;
     }
 
@@ -217,7 +210,7 @@ li:nth-child(2n) {
 
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 768px) {
 
     /* #links-container {
         column-gap: 3vw;
@@ -228,34 +221,24 @@ li:nth-child(2n) {
         row-gap: 5vh;
     } */
     
-    #center-div {
+    .center {
         width: 50%;
     }
 
-    #bottom-div {
+    .bottom-div {
         width: 50%;
     }
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 1200px) {
 
-    /* #links-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-    } */
-
-
-    #bottom-div {
-        width: 500px;
+    .center {
+        width: 70%;
     }
-}
 
-@media only screen and (min-width: 1200px) {
-
-
-    #bottom-div {
-        width: 500px;
+    .bottom-div {
+        width: 80%;
     }
 
     /* #links-container {

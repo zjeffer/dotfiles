@@ -279,7 +279,7 @@ label = %temperature-c%
 label-warn = %temperature-c%
 ;label-warn-underline = #f00
 
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 
 ##############################################################################################
 ##############################################################################################
@@ -352,7 +352,7 @@ format-background = ${colors.cpu}
 
 [module/player-mpris-tail]
 type = custom/script
-exec = ~/.config/polybar/scripts/player/player-mpris-tail.py -f ' %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py previous:}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py play-pause:}%{T5}{icon-reversed}%{T-}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py next:}%{A} {:artist:t30:{artist}:}{:artist: - :}{:t50:{title}:}{:-title:t50:{filename}:}'
+exec = ~/.config/polybar/scripts/player/player-mpris-tail.py -b playerctld -f ' %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py previous:}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py play-pause:}%{T5}{icon-reversed}%{T-}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py next:}%{A} {:artist:t30:{artist}:}{:artist: - :}{:t50:{title}:}{:-title:t50:{filename}:}'
 ##Optional icon:  %{T6}%{T-}
 tail = true
 label = %output%
@@ -368,7 +368,6 @@ label = %output%
 interval = 5
 click-left = nm-connection-editor &
 click-middle = ~/.config/polybar/scripts/nm-applet/applet.sh --ssid &
-click-right = ~/.config/polybar/scripts/nm-applet/applet.sh --vpn &
 
 
 label-padding-left = 1
