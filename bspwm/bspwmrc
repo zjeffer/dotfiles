@@ -41,6 +41,7 @@ bspc rule -a mijnlieff.interactive.matchmaking.Matchmaking state=floating
 bspc rule -a mijnlieff.* state=floating
 bspc rule -a mijnlieff.interactive.boardConfiguration.BoardConfiguration state=floating
 bspc rule -a simplescreenrecorder state=floating
+bspc rule -a processing-core-PApplet state=tiled
 
 xrandr --output eDP1 --set "Broadcast RGB" "Full"
 xrandr --output HDMI1 --set "Broadcast RGB" "Full"
@@ -56,14 +57,14 @@ for mouse in `xinput | grep 'Logitech' | grep 'pointer' | sed 's/.*id=\([0-9]*\)
 done
 unset mouse
 
-feh --bg-fill ~/Pictures/trees.jpg &
+feh --bg-fill ~/Pictures/ESnflJn.jpg &
 
 xbindkeys &
 redshift-gtk &
 numlockx &
 # statnot &
 ~/.config/activePlayer/mediaplayers.sh 2>~/.config/activePlayer/.mediaplayer.err &
-picom --config ~/.config/compton.conf 2>~/.config/.compton.err &
+compton --config ~/.config/compton/compton.conf 2>~/.config/.compton.err &
 $HOME/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
 libinput-gestures-setup start &
 xcape -e 'Super_L=Super_L|space' &

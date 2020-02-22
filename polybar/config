@@ -36,7 +36,6 @@ temp = #d08770
 wifi = #5e81ac
 date = #8fbcbb
 time = #b48ead
-battery = #2e3440
 
 
 ##############################################################################################
@@ -119,19 +118,20 @@ label-focused = 
 label-focused-foreground = ${colors.nord11}
 label-focused-background = ${colors.primary}
 label-focused-padding = 1
-;label-focused-underline = ${colors.nord11}
 
 label-occupied = 
 label-occupied-padding = 1
+label-occupied-foreground = ${colors.foreground}
 label-occupied-background = ${colors.background}
 
 label-urgent = 
+label-urgent-foreground = ${colors.foreground}
 label-urgent-background = ${colors.background}
 label-urgent-padding = 1
 
 label-empty = 
-label-empty-foreground = ${colors.background}
-label-empty-background = #222225
+label-empty-foreground = ${colors.foreground}
+label-empty-background = ${colors.nord0}
 label-empty-padding = 1
 
 
@@ -234,20 +234,20 @@ format-discharging = <label-discharging>
 format-full = <label-full>
 
 format-charging-prefix = %{T7}%{T-}
-format-charging-prefix-foreground = ${colors.battery}
+format-charging-prefix-foreground = ${colors.nord0}
 format-charging-prefix-background = ${colors.background}
 format-charging-suffix = %{T7}%{T-}
 format-charging-suffix-foreground = ${colors.background}
-format-charging-suffix-background = ${colors.battery}
-format-charging-background = ${colors.battery}
+format-charging-suffix-background = ${colors.nord0}
+format-charging-background = ${colors.nord0}
 
 format-discharging-prefix = %{T7}%{T-}
-format-discharging-prefix-foreground = ${colors.battery}
+format-discharging-prefix-foreground = ${colors.nord0}
 format-discharging-prefix-background = ${colors.background}
 format-discharging-suffix = %{T7}%{T-}
 format-discharging-suffix-foreground = ${colors.background}
-format-discharging-suffix-background = ${colors.battery}
-format-discharging-background = ${colors.battery}
+format-discharging-suffix-background = ${colors.nord0}
+format-discharging-background = ${colors.nord0}
 
 ##############################################################################################
 ##############################################################################################

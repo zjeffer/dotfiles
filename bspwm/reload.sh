@@ -3,6 +3,7 @@
 
 killall xcape 2>/dev/null
 killall picom 2>/dev/null
+killall compton 2>/dev/null
 killall dunst 2>/dev/null
 killall xbindkeys 2>/dev/null
 
@@ -32,7 +33,7 @@ xrandr --output HDMI1 --set "Broadcast RGB" "Full"
 xrandr --output DP1 --set "Broadcast RGB" "Full"
 
 
-feh --bg-fill ~/Pictures/trees.jpg &
+feh --bg-fill ~/Pictures/ESnflJn.jpg &
 
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
@@ -49,11 +50,13 @@ bspc rule -a mijnlieff.interactive.matchmaking.Matchmaking state=floating
 bspc rule -a mijnlieff.* state=floating
 bspc rule -a mijnlieff.interactive.boardConfiguration.BoardConfiguration state=floating
 bspc rule -a simplescreenrecorder state=floating
+bspc rule -a processing-core-PApplet state=tiled
 
 
 pkill -USR1 -x sxhkd &
 ~/.config/polybar/launch.sh &
 libinput-gestures-setup restart &
 xcape -e 'Super_L=Super_L|space' &
-picom --config ~/.config/compton.conf 2>~/.config/.compton.err &
+compton --config ~/.config/compton/compton.conf 2>~/.config/.compton.err &
+# picom --config ~/.config/compton.conf 2>~/.config/.compton.err &
 xbindkeys &>~/.config/bspwm/.reload.err

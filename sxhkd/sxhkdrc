@@ -43,7 +43,7 @@ super + a
 ctrl + shift + Escape
 	ksysguard
 
-# make sxhkd reload its configuration files and restart polybar:
+# make sxhkd reload its configuration files and restart polybar
 super + Escape
 	~/.config/bspwm/reload.sh &>/home/zjeffer/.config/bspwm/.reload.err
 
@@ -74,6 +74,10 @@ super + g
 #balance the nodes
 super + b
 	bspc node @/ -B
+
+#sxhkd documentation
+super + question
+	sxhkd-ref
 
 
 
