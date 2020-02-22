@@ -1,7 +1,8 @@
 #!/bin/sh
 
 killall xcape 2>/dev/null
-killall easystroke
+# killall easystroke 2>/dev/null
+killall dunst 2>/dev/null
 sxhkd 2>~/.config/sxhkd/.sxhkd.err &
 
 bspc monitor eDP1 -d  1 2 3 4 5
@@ -36,10 +37,6 @@ bspc rule -a Wfica_Seamless state=floating
 bspc rule -a 'Citrix maximized probe window' state=floating
 #bspc rule -a '*:libreofficedev' state=tiled
 #bspc rule -a '*:soffice' state=floating
-bspc rule -a mijnlieff.Mijnlieff state=floating
-bspc rule -a mijnlieff.interactive.matchmaking.Matchmaking state=floating
-bspc rule -a mijnlieff.* state=floating
-bspc rule -a mijnlieff.interactive.boardConfiguration.BoardConfiguration state=floating
 bspc rule -a simplescreenrecorder state=floating
 bspc rule -a processing-core-PApplet state=tiled
 
@@ -62,7 +59,7 @@ feh --bg-fill ~/Pictures/ESnflJn.jpg &
 xbindkeys &
 redshift-gtk &
 numlockx &
-# statnot &
+dunst &
 ~/.config/activePlayer/mediaplayers.sh 2>~/.config/activePlayer/.mediaplayer.err &
 compton --config ~/.config/compton/compton.conf 2>~/.config/.compton.err &
 $HOME/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &

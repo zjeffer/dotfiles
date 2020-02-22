@@ -1,0 +1,191 @@
+#      _                 _            
+#   __| |_   _ _ __  ___| |_ _ __ ___ 
+#  / _` | | | | '_ \/ __| __| '__/ __|
+# | (_| | |_| | | | \__ \ |_| | | (__ 
+#  \__,_|\__,_|_| |_|___/\__|_|  \___|
+# 
+
+
+
+[global]
+    ### Display ###
+
+    # Which monitor should the notifications be displayed on.
+    monitor = 0
+
+    # Display notification on focused monitor.
+    follow = mouse
+
+    # The geometry of the window:
+    #   [{width}]x{height}[+/-{x}+/-{y}]
+    geometry = "500x20-25+60"
+
+    # Show how many messages are currently hidden (because of geometry).
+    indicate_hidden = yes
+
+    # Shrink window if it's smaller than the width.  Will be ignored if
+    # width is 0.
+    shrink = no
+
+    # The transparency of the window.  Range: [0; 100].
+    transparency = 0
+
+    # The height of the entire notification.
+    notification_height = 0
+
+    # Draw a line of "separator_height" pixel height between two notifications.
+    separator_height = 2
+
+    # Padding between text and separator.
+    padding = 10
+
+    # Horizontal padding.
+    horizontal_padding = 8
+
+	# frame settings
+    frame_width = 3
+    frame_color = "#333333"
+
+    # Define a color for the separator.
+    separator_color = frame
+
+    # Sort messages by urgency.
+    sort = yes
+
+    # Don't remove messages, if the user is idle (no mouse or keyboard input)
+    idle_threshold = 15
+
+    ### Text ###
+
+    font = Monospace 12
+
+    # The spacing between lines.
+    line_height = 0
+
+    # notification markup
+    # full: Allow a small subset of html markup in notifications:
+    #        <b>bold</b>
+    #        <i>italic</i>
+    #        <s>strikethrough</s>
+    #        <u>underline</u>
+    markup = full
+
+    # The format of the message.  Possible variables are:
+    #   %a  appname
+    #   %s  summary
+    #   %b  body
+    #   %i  iconname (including its path)
+    #   %I  iconname (without its path)
+    #   %p  progress value if set ([  0%] to [100%]) or nothing
+    #   %n  progress value if set without any extra characters
+    #   %%  Literal %
+    # Markup is allowed
+    format = "<b>%s</b>\n%b"
+
+    # Alignment of message text.
+    alignment = left
+
+    # Show age of message if message is older than show_age_threshold seconds
+    show_age_threshold = -1
+
+    # Split notifications into multiple lines if they don't fit into geometry
+    word_wrap = yes
+
+    # When word_wrap is set to no, specify where to ellipsize long lines.
+    ellipsize = middle
+
+    # Ignore newlines '\n' in notifications.
+    ignore_newline = no
+
+    # Merge multiple notifications with the same content
+    stack_duplicates = true
+
+    # Hide the count of merged notifications with the same content
+    hide_duplicate_count = false
+
+    # Display indicators for URLs (U) and actions (A).
+    show_indicators = no
+
+    ### Icons ###
+
+    # Align icons left/right/off
+    icon_position = left
+
+    # Scale larger icons down to this size, set to 0 to disable
+    max_icon_size = 64
+
+    # Paths to default icons.
+    icon_path = /usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/16x16/devices/:/usr/share/icons/Papirus-Dark/16x16/actions/
+
+    ### History ###
+
+    # Should a notification popped up from history be sticky or timeout
+    # as if it would normally do.
+    sticky_history = yes
+
+    # Maximum amount of notifications kept in history
+    history_length = 5
+
+    ### Misc/Advanced ###
+
+    # dmenu path.
+    dmenu = /usr/bin/dmenu -p dunst:
+
+    # Browser for opening urls in context menu.
+    browser = /usr/bin/firefox -new-tab
+
+    # Always run rule-defined scripts, even if the notification is suppressed
+    always_run_script = true
+
+    # Define the title of the windows spawned by dunst
+    title = Dunst
+
+    # Define the class of the windows spawned by dunst
+    class = Dunst
+
+    # Print a notification on startup.
+    startup_notification = false
+
+    ### Legacy
+
+    force_xinerama = false
+
+[experimental]
+    # Calculate the dpi to use on a per-monitor basis.
+    per_monitor_dpi = false
+
+[shortcuts]
+
+    # Close notification.
+    # close = ctrl+space
+
+    # Close all notifications.
+    close_all = ctrl+space
+
+    # Redisplay last message(s).
+    history = ctrl+shift+KP_Add
+
+    # Context menu.
+    # context = ctrl+shift+alt+m
+
+[urgency_low]
+
+    background = "#434c5e"
+    foreground = "#ffffff"
+    timeout = 2
+    #icon = /path/to/icon
+
+[urgency_normal]
+
+    background = "#8fbcbb"
+    foreground = "#111111"
+    timeout = 5
+    #icon = /path/to/icon
+
+[urgency_critical]
+
+    background = "#bd2c40"
+    foreground = "#ffffff"
+    frame_color = "#ff0000"
+    timeout = 5
+    #icon = /path/to/icon
