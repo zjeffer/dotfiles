@@ -56,6 +56,7 @@ bspc rule -a processing-core-PApplet state=tiled
 pkill -USR1 -x sxhkd &
 ~/.config/polybar/launch.sh &
 libinput-gestures-setup restart &
+dunst &
 xcape -e 'Super_L=Super_L|space' &
 compton --config ~/.config/compton/compton.conf 2>~/.config/.compton.err &
 # picom --config ~/.config/compton.conf 2>~/.config/.compton.err &

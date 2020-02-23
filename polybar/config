@@ -37,6 +37,25 @@ wifi = #5e81ac
 date = #8fbcbb
 time = #b48ead
 
+##############################################################################################
+##############################################################################################
+
+
+;Include files
+include-file = ~/.config/polybar/modules/audio
+include-file = ~/.config/polybar/modules/battery
+include-file = ~/.config/polybar/modules/cpu
+include-file = ~/.config/polybar/modules/date
+include-file = ~/.config/polybar/modules/memory
+include-file = ~/.config/polybar/modules/network
+include-file = ~/.config/polybar/modules/player
+include-file = ~/.config/polybar/modules/powermenu
+include-file = ~/.config/polybar/modules/temperature
+include-file = ~/.config/polybar/modules/time
+include-file = ~/.config/polybar/modules/updates
+include-file = ~/.config/polybar/modules/wm
+
+
 
 ##############################################################################################
 ##############################################################################################
@@ -83,7 +102,7 @@ font-6 = Inconsolata for Powerline:size=18:antialias=true;3
 ;The modules that wil be displayed
 modules-left = bspwm player-mpris-tail
 modules-center = 
-modules-right = pulseaudio battery cpu memory temperature nm-launcher updates-arch-combined date time powermenu
+modules-right = microphone pulseaudio battery cpu memory temperature nm-launcher updates-arch-combined date time powermenu
 
 
 tray-position = right
@@ -92,305 +111,3 @@ tray-background = ${colors.background}
 
 ##############################################################################################
 ##############################################################################################
-
-;shows the focused window 
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:46:..%
-
-##############################################################################################
-##############################################################################################
-
-[module/bspwm]
-
-;ws-icon-0 = browser;
-;ws-icon-1 = mpd;
-;ws-icon-2 = term;
-;ws-icon-3 = code;
-;ws-icon-4 = games;
-;ws-icon-default = 
-
-type = internal/bspwm
-
-
-;label-focused = %index%
-label-focused = 
-label-focused-foreground = ${colors.nord11}
-label-focused-background = ${colors.primary}
-label-focused-padding = 1
-
-label-occupied = 
-label-occupied-padding = 1
-label-occupied-foreground = ${colors.foreground}
-label-occupied-background = ${colors.background}
-
-label-urgent = 
-label-urgent-foreground = ${colors.foreground}
-label-urgent-background = ${colors.background}
-label-urgent-padding = 1
-
-label-empty = 
-label-empty-foreground = ${colors.foreground}
-label-empty-background = ${colors.nord0}
-label-empty-padding = 1
-
-
-##############################################################################################
-##############################################################################################
-
-
-[module/date]
-type = internal/date
-interval = 5
-
-date = %a %d-%m-%y
-
-label = %date%
-label-padding-left = 1
-;label-underline = #ddd
-
-format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.date}
-format-prefix-background = ${colors.wifi}
-format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.date}
-format-suffix-background = ${colors.date}
-format-background = ${colors.date}
-
-##############################################################################################
-##############################################################################################
-
-[module/time]
-type = internal/date
-interval = 5
-time = %H:%M
-label = %time%
-label-padding = 1
-
-format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.time}
-format-prefix-background = ${colors.date}
-format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.background}
-format-suffix-background = ${colors.time}
-format-background = ${colors.time}
-
-##############################################################################################
-##############################################################################################
-
-[module/pulseaudio]
-type = internal/pulseaudio
-sink = alsa_output.pci-0000_00_1f.3.analog-stereo
-
-format-volume = <bar-volume>
-format-muted-foreground = ${colors.foreground}
-label-muted = 
-label-muted-font = 6
-label-padding = 1
-
-
-format-volume-padding = 1
-format-muted-padding = 1
-
-bar-volume-width = 6
-bar-volume-foreground-0 = #10FF20
-bar-volume-foreground-1 = #10FF20
-bar-volume-foreground-2 = #10FF20
-bar-volume-foreground-3 = #10FF20
-bar-volume-foreground-4 = #10FF20
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground}
-
-##############################################################################################
-##############################################################################################
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP0
-full-at = 94
-poll-interval = 1
-
-time-format = %H:%M
-label-charging = %percentage%%
-label-discharging = %percentage%% %time%
-;label-full = 
-label-full =
-;label-charging-underline = #5f0
-label-discharging-padding = 1
-label-charging-padding = 1
-
-format-charging = <label-charging>
-format-discharging = <label-discharging>  
-format-full = <label-full>
-
-format-charging-prefix = %{T7}%{T-}
-format-charging-prefix-foreground = ${colors.nord0}
-format-charging-prefix-background = ${colors.background}
-format-charging-suffix = %{T7}%{T-}
-format-charging-suffix-foreground = ${colors.background}
-format-charging-suffix-background = ${colors.nord0}
-format-charging-background = ${colors.nord0}
-
-format-discharging-prefix = %{T7}%{T-}
-format-discharging-prefix-foreground = ${colors.nord0}
-format-discharging-prefix-background = ${colors.background}
-format-discharging-suffix = %{T7}%{T-}
-format-discharging-suffix-foreground = ${colors.background}
-format-discharging-suffix-background = ${colors.nord0}
-format-discharging-background = ${colors.nord0}
-
-##############################################################################################
-##############################################################################################
-
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 90
-
-
-label-padding = 1
-label-warn-padding = 1
-format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.temp}
-format-prefix-background = ${colors.ram}
-format-background = ${colors.temp}
-
-format-warn-prefix = %{T7}%{T-}
-format-warn-prefix-foreground = ${colors.temp}
-format-warn-prefix-background = ${colors.ram}
-format-warn-background = ${colors.temp}
-format-warn-foreground = #73151E
-
-format = <label>
-format-warn = <label-warn>
-
-label = %temperature-c%
-;label-underline = #fb0
-label-warn = %temperature-c%
-;label-warn-underline = #f00
-
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
-
-##############################################################################################
-##############################################################################################
-
-[module/powermenu]
-type = custom/menu
-
-
-label-open = %{T6}%{T-}
-label-open-foreground = #88ff77
-
-
-label-close = %{T6}%{T-}
-label-close-foreground = #88ff77
-label-separator = |
-
-
-menu-0-0 = %{T6}%{T-}
-menu-0-0-foreground = #88ff77
-menu-0-0-exec = menu-open-1
-
-menu-0-1-padding-left = 1
-menu-0-1 = %{T6}%{T-}
-menu-0-1-foreground = #88ff77
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = %{T6}%{T-}
-menu-1-0-foreground = #88ff77
-menu-1-0-exec = reboot
-
-menu-2-0 = %{T6}%{T-}
-menu-2-0-foreground = #88ff77
-menu-2-0-exec = shutdown -P now
-
-##############################################################################################
-##############################################################################################
-
-[module/memory]
-type = internal/memory
-interval = 5
-;format-underline = #28f
-label = %percentage_used:2%%
-
-label-padding = 1
-format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.ram}
-format-prefix-background = ${colors.cpu}
-
-format-background = ${colors.ram}
-
-##############################################################################################
-##############################################################################################
-
-[module/cpu]
-type = internal/cpu
-interval = 1
-format = <label>
-label = %percentage:2%%
-
-label-padding = 1 
-format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.cpu}
-format-prefix-background = ${colors.background}
-
-format-background = ${colors.cpu}
-
-
-##############################################################################################
-##############################################################################################
-
-[module/player-mpris-tail]
-type = custom/script
-exec = ~/.config/polybar/scripts/player/player-mpris-tail.py -b playerctld -f ' %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py previous:}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py play-pause:}%{T5}{icon-reversed}%{T-}%{A} %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py next:}%{A} {:artist:t30:{artist}:}{:artist: - :}{:t50:{title}:}{:-title:t50:{filename}:}'
-##Optional icon:  %{T6}%{T-}
-tail = true
-label = %output%
-
-
-##############################################################################################
-##############################################################################################
-
-[module/nm-launcher]
-type = custom/script
-exec = ~/.config/polybar/scripts/nm-applet/applet.sh
-label = %output% 
-interval = 5
-click-left = nm-connection-editor &
-click-middle = ~/.config/polybar/scripts/nm-applet/applet.sh --ssid &
-
-
-label-padding-left = 1
-format-prefix = %{T7}%{T-}
-format-prefix-foreground = ${colors.wifi}
-format-prefix-background = ${colors.temp}
-format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.wifi}
-format-suffix-background = ${colors.wifi}
-format-background = ${colors.wifi}
-
-
-##############################################################################################
-##############################################################################################
-
-[module/updates-arch-combined]
-type = custom/script
-exec = export CHECKUPDATES_DB=$(mktemp -d) && ~/.config/polybar/scripts/arch-updates/updates-arch-combined.sh && rm -rf "$CHECKUPDATES_DB"
-interval = 1200
-label = %output%
-click-left = gnome-terminal -- yay -Syyu &
-
-format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.wifi}
-format-suffix-background = ${colors.wifi}
-format-background = ${colors.wifi}

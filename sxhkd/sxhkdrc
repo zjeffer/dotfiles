@@ -208,6 +208,7 @@ XF86AudioLowerVolume
 	pactl set-sink-volume 0 -5%
 	#amixer set Master 2.5%-,5%-
 
+
 ########################################## MEDIA KEYS ##########################################
 
 XF86AudioPlay
@@ -242,6 +243,9 @@ shift + button10
 
 shift + button11
 	~/.config/activePlayer/control.sh skipBackward
+
+ctrl + shift + super + m
+	pulseaudio-ctl mute-input
 
 
 ########################################## BRIGHTNESS ##########################################

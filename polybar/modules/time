@@ -1,0 +1,14 @@
+[module/time]
+type = internal/date
+interval = 5
+time = %H:%M
+label = %time%
+label-padding = 1
+
+format-prefix = %{T7}%{T-}
+format-prefix-foreground = ${colors.time}
+format-prefix-background = ${colors.date}
+format-suffix = %{T7}%{T-}
+format-suffix-foreground = ${colors.background}
+format-suffix-background = ${colors.time}
+format-background = ${colors.time}

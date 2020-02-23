@@ -1,0 +1,40 @@
+;shows the focused window 
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:46:..%
+
+##############################################################################################
+##############################################################################################
+
+[module/bspwm]
+
+;ws-icon-0 = browser;
+;ws-icon-1 = mpd;
+;ws-icon-2 = term;
+;ws-icon-3 = code;
+;ws-icon-4 = games;
+;ws-icon-default = 
+
+type = internal/bspwm
+
+
+;label-focused = %index%
+label-focused = 
+label-focused-foreground = ${colors.nord11}
+label-focused-background = ${colors.primary}
+label-focused-padding = 1
+
+label-occupied = 
+label-occupied-padding = 1
+label-occupied-foreground = ${colors.foreground}
+label-occupied-background = ${colors.background}
+
+label-urgent = 
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.background}
+label-urgent-padding = 1
+
+label-empty = 
+label-empty-foreground = ${colors.foreground}
+label-empty-background = ${colors.nord0}
+label-empty-padding = 1

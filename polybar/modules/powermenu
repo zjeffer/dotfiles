@@ -1,0 +1,29 @@
+[module/powermenu]
+type = custom/menu
+
+
+label-open = %{T6}%{T-}
+label-open-foreground = #88ff77
+
+
+label-close = %{T6}%{T-}
+label-close-foreground = #88ff77
+label-separator = |
+
+
+menu-0-0 = %{T6}%{T-}
+menu-0-0-foreground = #88ff77
+menu-0-0-exec = menu-open-1
+
+menu-0-1-padding-left = 1
+menu-0-1 = %{T6}%{T-}
+menu-0-1-foreground = #88ff77
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = %{T6}%{T-}
+menu-1-0-foreground = #88ff77
+menu-1-0-exec = reboot
+
+menu-2-0 = %{T6}%{T-}
+menu-2-0-foreground = #88ff77
+menu-2-0-exec = shutdown -P now

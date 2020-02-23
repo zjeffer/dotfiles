@@ -1,0 +1,17 @@
+[module/date]
+type = internal/date
+interval = 5
+
+date = %a %d-%m-%y
+
+label = %date%
+label-padding-left = 1
+;label-underline = #ddd
+
+format-prefix = %{T7}%{T-}
+format-prefix-foreground = ${colors.date}
+format-prefix-background = ${colors.wifi}
+format-suffix = %{T7}%{T-}
+format-suffix-foreground = ${colors.date}
+format-suffix-background = ${colors.date}
+format-background = ${colors.date}

@@ -1,0 +1,39 @@
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+
+format-volume = <bar-volume>
+format-muted-foreground = ${colors.foreground}
+label-muted = 
+label-muted-font = 6
+label-padding = 1
+
+
+format-volume-padding = 1
+format-muted-padding = 1
+
+bar-volume-width = 6
+bar-volume-foreground-0 = #10FF20
+bar-volume-foreground-1 = #10FF20
+bar-volume-foreground-2 = #10FF20
+bar-volume-foreground-3 = #10FF20
+bar-volume-foreground-4 = #10FF20
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground}
+
+[module/microphone]
+
+type = custom/script
+exec = $HOME/.config/polybar/scripts/microphone/microphone.sh
+
+click-left = pulseaudio-ctl mute-input
+interval = 1
