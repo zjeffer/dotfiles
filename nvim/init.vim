@@ -1,6 +1,7 @@
 "
 " General Settings
 "
+syntax on
 set noswapfile " disable swapfiles
 set number     " show line numbers
 set expandtab  " always indent using spaces
@@ -31,8 +32,6 @@ Plug 'lighttiger2505/deoplete-vim-lsp' " language server support for deoplete
 Plug 'billyvg/tigris.nvim', { 'do': './install.sh' } " better js highlight
 call plug#end()
 
-" TODO
-"
 
 " NERDTree settings
 " automatically open nerdtree if we open a directory

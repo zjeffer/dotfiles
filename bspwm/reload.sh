@@ -10,9 +10,9 @@ killall xbindkeys 2>/dev/null
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 
-xrandr --output eDP1 --primary
-xrandr --output HDMI1 --right-of eDP1
-xrandr --output DP1 --left-of eDP1
+xrandr --output eDP-1-1 --primary
+xrandr --output HDMI-1-1 --right-of eDP-1-1
+xrandr --output DP-1-1 --left-of eDP-1-1
 
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Natural Scrolling Enabled' 1
@@ -23,14 +23,14 @@ for mouse in `xinput | grep 'Logitech' | grep 'pointer' | sed 's/.*id=\([0-9]*\)
 done
 unset mouse
 
-bspc monitor eDP1 -d  1 2 3 4 5
-bspc monitor HDMI1 -d 1 2 3 4 5
-bspc monitor DP1 -d 1 2 3 4 5
-bspc wm -O DP1 eDP1 HDMI1
+bspc monitor eDP-1-1 -d  1 2 3 4 5
+bspc monitor HDMI-1-1 -d 1 2 3 4 5
+bspc monitor DP-1-1 -d 1 2 3 4 5
+bspc wm -O DP-1-1 eDP-1-1 HDMI-1-1
 
-xrandr --output eDP1 --set "Broadcast RGB" "Full"
-xrandr --output HDMI1 --set "Broadcast RGB" "Full"
-xrandr --output DP1 --set "Broadcast RGB" "Full"
+xrandr --output eDP-1-1 --set "Broadcast RGB" "Full"
+xrandr --output HDMI-1-1 --set "Broadcast RGB" "Full"
+xrandr --output DP-1-1 --set "Broadcast RGB" "Full"
 
 
 feh --bg-fill ~/Pictures/ESnflJn.jpg &

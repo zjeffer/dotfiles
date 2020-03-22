@@ -5,10 +5,10 @@ killall xcape 2>/dev/null
 killall dunst 2>/dev/null
 sxhkd 2>~/.config/sxhkd/.sxhkd.err &
 
-bspc monitor eDP1 -d  1 2 3 4 5
-bspc monitor HDMI1 -d 1 2 3 4 5
-bspc monitor DP1 -d 1 2 3 4 5
-bspc wm -O DP1 eDP1 HDMI1
+bspc monitor eDP-1-1 -d  1 2 3 4 5
+bspc monitor HDMI-1-1 -d 1 2 3 4 5
+bspc monitor DP-1-1 -d 1 2 3 4 5
+bspc wm -O DP-1-1 eDP-1-1 HDMI-1-1
 
 bspc config window_gap           25
 bspc config border_width	 3
@@ -21,7 +21,7 @@ bspc config gapless_monocle      true
 bspc config removal_adjustment   true
 bspc config focus_follows_pointer true
 bspc config automatic_scheme 	 alternate
-bspc config pointer_motion_interval 40
+bspc config pointer_motion_interval 17
 
 #javafx:
 #bspc config honor_size_hints 	 true
@@ -40,9 +40,9 @@ bspc rule -a 'Citrix maximized probe window' state=floating
 bspc rule -a simplescreenrecorder state=floating
 bspc rule -a processing-core-PApplet state=tiled
 
-xrandr --output eDP1 --set "Broadcast RGB" "Full"
-xrandr --output HDMI1 --set "Broadcast RGB" "Full"
-xrandr --output DP1 --set "Broadcast RGB" "Full"
+xrandr --output eDP-1-1 --set "Broadcast RGB" "Full"
+xrandr --output HDMI-1-1 --set "Broadcast RGB" "Full"
+xrandr --output DP-1-1 --set "Broadcast RGB" "Full"
 
 
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1
