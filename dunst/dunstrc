@@ -44,7 +44,7 @@
 
 	# frame settings
     frame_width = 3
-    frame_color = "#333333"
+    frame_color = "#5e81ac" 
 
     # Define a color for the separator.
     separator_color = frame

@@ -3,7 +3,7 @@ type = custom/script
 exec = export CHECKUPDATES_DB=$(mktemp -d) && ~/.config/polybar/scripts/arch-updates/updates-arch-combined.sh && rm -rf "$CHECKUPDATES_DB"
 interval = 1200
 label = %output%
-click-left = gnome-terminal -- yay -Syyu &
+click-left = gnome-terminal -- yay -Syyu & 2>>~/.config/polybar/.polybar.err 
 
 format-suffix = %{T7}%{T-}
 format-suffix-foreground = ${colors.wifi}

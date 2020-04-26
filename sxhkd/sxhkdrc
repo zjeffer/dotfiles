@@ -13,7 +13,7 @@ super + shift + Return
 
 # program launcher
 super + space
-	rofi -show drun -show-icons
+	rofi -show drun -modi "window,drun" -show-icons -theme ~/.config/rofi/themes/launcher.rasi -location 0 -yoffset 0 -xoffset 0
 
 # firefox
 super + z
@@ -30,6 +30,10 @@ super + x
 #spectacle
 Print
 	spectacle &
+
+#discord
+super + d
+    discord &
 
 #scrot
 super + Print

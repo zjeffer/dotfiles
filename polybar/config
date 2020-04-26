@@ -49,7 +49,7 @@ include-file = ~/.config/polybar/modules/date
 include-file = ~/.config/polybar/modules/memory
 include-file = ~/.config/polybar/modules/network
 include-file = ~/.config/polybar/modules/player
-include-file = ~/.config/polybar/modules/powermenu
+include-file = ~/.config/polybar/modules/powermenu-rofi
 include-file = ~/.config/polybar/modules/temperature
 include-file = ~/.config/polybar/modules/time
 include-file = ~/.config/polybar/modules/updates
@@ -101,7 +101,7 @@ font-6 = Inconsolata for Powerline:size=18:antialias=true;3
 ;The modules that wil be displayed
 modules-left = bspwm player-mpris-tail
 modules-center = 
-modules-right = microphone pulseaudio battery cpu memory temperature nm-launcher updates-arch-combined date time powermenu
+modules-right = microphone pulseaudio battery cpu memory temperature nm-launcher updates-arch-combined date time powermenu-rofi
 
 
 tray-position = right

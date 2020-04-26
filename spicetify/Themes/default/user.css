@@ -610,3 +610,8 @@ and add little glowing effect
 .LeftSidebarNewPlaylistButton__text {
 	display: none !important;
 }
+
+.tl-popularity {
+	width: 12em;
+	text-align: right;
+}

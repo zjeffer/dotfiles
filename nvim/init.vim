@@ -5,11 +5,12 @@ syntax on
 set noswapfile " disable swapfiles
 set number     " show line numbers
 set expandtab  " always indent using spaces
-set tabstop=4  " use 2 spaces for indenting
+set tabstop=4  " use 4 spaces for indenting
 set autoindent " automatically follow indentation
 set visualbell " dont startle me with this shit...
 set nowrap	   " dont wrap lines
-set nohlsearch " dont hightlight searches
+set nohlsearch " dont highlight searches
+set mouse=a    " allow mouse control
 
 "
 " Settings when not in vscode
@@ -30,7 +31,18 @@ Plug 'prabirshrestha/async.vim' " depend for vim-lsp
 Plug 'prabirshrestha/vim-lsp'   " langue server protocol support
 Plug 'lighttiger2505/deoplete-vim-lsp' " language server support for deoplete
 Plug 'billyvg/tigris.nvim', { 'do': './install.sh' } " better js highlight
+Plug 'vim-airline/vim-airline' " airline theme engine
+Plug 'vim-airline/vim-airline-themes' " airline themes
+Plug 'arcticicestudio/nord-vim' " nord theme
 call plug#end()
+
+
+augroup nord-theme-overrides
+  autocmd!
+  " Use lighter color as foreground color for all comments.
+  autocmd ColorScheme nord highlight Comment ctermfg=15 guifg=#6e7c99
+augroup END
+
 
 
 " NERDTree settings
@@ -71,6 +83,13 @@ let g:NERDTreeIndicatorMapCustom = {
 " deoplete settings
 let g:deoplete#enable_at_startup = 1
 
+
+" Automatically displays all buffers when there's only one tab open
+let g:airline#extensions#tabline#enabled = 1
+
+" for arrows in bar
+let g:airline_powerline_fonts = 1
+
 " For javascript language server
 if (executable('javascript-typescript-stdio'))
     augroup LspJavascript
@@ -82,6 +101,12 @@ if (executable('javascript-typescript-stdio'))
       \ })
     augroup END
 endif
+
+
+let g:nord_italic = 1
+colorscheme nord
+set termguicolors " correct colors
+
 
 " supertab settings 
 let g:SuperTabDefaultCompletionType = "<c-n>"
