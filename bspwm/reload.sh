@@ -14,11 +14,13 @@ xrandr --output eDP-1-1 --primary
 xrandr --output HDMI-1-1 --right-of eDP-1-1
 xrandr --output DP-1-1 --left-of eDP-1-1
 
-xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1
-xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Natural Scrolling Enabled' 1
+xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1 &
+xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Natural Scrolling Enabled' 1 &
+xinput set-prop ""'libinput Horizontal Scroll Enabled' 0 &
 
-for mouse in `xinput | grep 'Logitech' | grep 'pointer' | sed 's/.*id=\([0-9]*\).*/\1/g'`; do
+for mouse in `xinput | grep 'Logitech G502' | grep 'pointer' | sed 's/.*id=\([0-9]*\).*/\1/g'`; do
 	xinput set-prop $mouse "libinput Accel Profile Enabled" 0, 1 2>/dev/null
+    xinput set-prop $mouse "libinput Horizontal Scroll Enabled" 0 2>/dev/null
 	xinput set-prop $mouse "libinput Accel Speed" -0.5 2>/dev/null
 done
 unset mouse

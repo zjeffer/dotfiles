@@ -614,4 +614,17 @@ and add little glowing effect
 .tl-popularity {
 	width: 12em;
 	text-align: right;
+	font-feature-settings: "tnum";
+    letter-spacing: 0;
+}
+
+.AlbumRoot__content .Table__table tr th:last-child {
+	text-align: center;
+}
+
+.AlbumRoot__content .Table__table tr td:last-child {
+	width: 12em;
+	text-align: right;
+	font-feature-settings: "tnum";
+    letter-spacing: 0;
 }
