@@ -6,6 +6,7 @@ set noswapfile " disable swapfiles
 set number     " show line numbers
 set expandtab  " always indent using spaces
 set tabstop=4  " use 4 spaces for indenting
+set shiftwidth=4
 set autoindent " automatically follow indentation
 set visualbell " dont startle me with this shit...
 set nowrap	   " dont wrap lines
