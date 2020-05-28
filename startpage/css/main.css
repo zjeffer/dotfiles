@@ -22,12 +22,10 @@
 
 /* Elements */
 
-
 html,
 body {
     margin: 0;
     padding: 10;
-    height: 100%;
     font-weight: 300;
     font-family: Roboto-Light;
 }
@@ -40,9 +38,6 @@ a {
 body {
     background-color: #2e3440;
     color: #ddd;
-    display: block;
-    align-items: center;
-    justify-content: center;
 }
 
 ul {
@@ -75,13 +70,22 @@ li:nth-child(2n) {
 
 /* Classes */
 
+.o-container {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+
+}
+
 .center {
-    position: absolute;
+    display: block;
+    position: relative;
     width: 60vw;
-    top: 50vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
     text-align: center;
+    margin: 0 auto;
+    margin-top: 40vh;
+    /* transform: translateY(-100%); */
 }
 
 
@@ -139,8 +143,8 @@ li:nth-child(2n) {
     background-color: #2e3440;
     color: #ddd;
     width: 50%;
-    padding-top: 100px;
     margin: auto;
+    margin-top: 50px;
 }
 
 

@@ -39,6 +39,8 @@ bspc rule -a 'Citrix maximized probe window' state=floating
 #bspc rule -a '*:soffice' state=floating
 bspc rule -a simplescreenrecorder state=floating
 bspc rule -a processing-core-PApplet state=tiled
+bspc rule -a vlc:vlc state=floating layer=above border=off
+
 
 xrandr --output eDP-1-1 --set "Broadcast RGB" "Full"
 xrandr --output HDMI-1-1 --set "Broadcast RGB" "Full"
