@@ -26,7 +26,7 @@ configuration {
 
     menu-window-padding: 10px 15px;
     menu-inputbar-margin: 10px 0px;
-    menu-prompt-padding: 10px 20px 10px 20px;
+    menu-prompt-padding: 10px 20px;
     menu-prompt-margin: 0px 0px 0px -2px;
     menu-element-border: 18px;
     menu-element-padding: 3px 8px -1px -40px;

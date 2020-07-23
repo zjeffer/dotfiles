@@ -35,7 +35,7 @@ xrandr --output HDMI-1-1 --set "Broadcast RGB" "Full"
 xrandr --output DP-1-1 --set "Broadcast RGB" "Full"
 
 
-feh --bg-fill ~/Pictures/ESnflJn.jpg &
+feh --bg-fill ~/Pictures/Wallpapers/ESnflJn.jpg &
 
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on

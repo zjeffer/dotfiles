@@ -187,5 +187,5 @@
     background = "#bd2c40"
     foreground = "#ffffff"
     frame_color = "#ff0000"
-    timeout = 5
+    timeout = 10
     #icon = /path/to/icon

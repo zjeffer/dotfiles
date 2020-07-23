@@ -2,7 +2,7 @@
 type = custom/script
 exec = ~/.config/polybar/scripts/nm-applet/applet.sh
 label = %output% 
-interval = 5
+interval = 2
 click-left = nm-connection-editor &
 click-middle = ~/.config/polybar/scripts/nm-applet/applet.sh --ssid &
 

@@ -57,7 +57,7 @@ for mouse in `xinput | grep 'Logitech G502' | grep 'pointer' | sed 's/.*id=\([0-
 done
 unset mouse
 
-feh --bg-fill ~/Pictures/ESnflJn.jpg &
+feh --bg-fill ~/Pictures/Wallpapers/ESnflJn.jpg &
 
 xbindkeys &
 redshift-gtk &
