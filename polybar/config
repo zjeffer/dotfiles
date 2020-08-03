@@ -106,7 +106,7 @@ modules-right = microphone pulseaudio battery cpu memory temperature nm-launcher
 
 tray-position = right
 tray-padding = 0
-tray-background = ${colors.background}
+#tray-background = ${colors.background}
 
 ##############################################################################################
 ##############################################################################################

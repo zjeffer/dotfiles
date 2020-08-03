@@ -3,6 +3,7 @@
 killall xcape 2>/dev/null
 # killall easystroke 2>/dev/null
 killall dunst 2>/dev/null
+killall devmon 2>/dev/null
 sxhkd 2>~/.config/sxhkd/.sxhkd.err &
 
 bspc monitor eDP-1-1 -d  1 2 3 4 5
@@ -39,8 +40,9 @@ bspc rule -a 'Citrix maximized probe window' state=floating
 #bspc rule -a '*:soffice' state=floating
 bspc rule -a simplescreenrecorder state=floating
 bspc rule -a processing-core-PApplet state=tiled
-bspc rule -a vlc:vlc state=floating layer=above border=off
+#bspc rule -a vlc:vlc state=floating layer=above border=off
 
+bspc config external_rules_command "/home/zjeffer/.config/bspwm/rules/vlc.sh"
 
 xrandr --output eDP-1-1 --set "Broadcast RGB" "Full"
 xrandr --output HDMI-1-1 --set "Broadcast RGB" "Full"
@@ -48,7 +50,6 @@ xrandr --output DP-1-1 --set "Broadcast RGB" "Full"
 
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1 &
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Natural Scrolling Enabled' 1 &
-xinput set-prop ""'libinput Horizontal Scroll Enabled' 0 &
 
 for mouse in `xinput | grep 'Logitech G502' | grep 'pointer' | sed 's/.*id=\([0-9]*\).*/\1/g'`; do
 	xinput set-prop $mouse "libinput Accel Profile Enabled" 0, 1 2>/dev/null
@@ -68,6 +69,7 @@ compton --config ~/.config/compton/compton.conf 2>~/.config/.compton.err &
 $HOME/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
 libinput-gestures-setup start &
 xcape -e 'Super_L=Super_L|space' &
+devmon &
 # easystroke &
 
 if acpi -a | grep 'off'; then

@@ -6,6 +6,8 @@ killall picom 2>/dev/null
 killall compton 2>/dev/null
 killall dunst 2>/dev/null
 killall xbindkeys 2>/dev/null
+killall sxhkd 2>/dev/null
+killall devmon 2>/dev/null
 
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
@@ -16,7 +18,6 @@ xrandr --output DP-1-1 --left-of eDP-1-1
 
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1 &
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Natural Scrolling Enabled' 1 &
-xinput set-prop ""'libinput Horizontal Scroll Enabled' 0 &
 
 for mouse in `xinput | grep 'Logitech G502' | grep 'pointer' | sed 's/.*id=\([0-9]*\).*/\1/g'`; do
 	xinput set-prop $mouse "libinput Accel Profile Enabled" 0, 1 2>/dev/null
@@ -35,6 +36,7 @@ xrandr --output HDMI-1-1 --set "Broadcast RGB" "Full"
 xrandr --output DP-1-1 --set "Broadcast RGB" "Full"
 
 
+
 feh --bg-fill ~/Pictures/Wallpapers/ESnflJn.jpg &
 
 bspc rule -a mplayer2 state=floating
@@ -47,14 +49,12 @@ bspc rule -a Wfica_Seamless state=floating
 bspc rule -a 'Citrix maximized probe window' state=floating
 #bspc rule -a '*:libreofficedev' state=tiled
 #bspc rule -a '*:soffice' state=floating
-bspc rule -a mijnlieff.Mijnlieff state=floating
-bspc rule -a mijnlieff.interactive.matchmaking.Matchmaking state=floating
-bspc rule -a mijnlieff.* state=floating
-bspc rule -a mijnlieff.interactive.boardConfiguration.BoardConfiguration state=floating
 bspc rule -a simplescreenrecorder state=floating
 bspc rule -a processing-core-PApplet state=tiled
 
+bspc config external_rules_command "/home/zjeffer/.config/bspwm/rules/vlc.sh"
 
+sxhkd &
 pkill -USR1 -x sxhkd &
 ~/.config/polybar/launch.sh &
 libinput-gestures-setup restart &
@@ -63,3 +63,4 @@ xcape -e 'Super_L=Super_L|space' &
 compton --config ~/.config/compton/compton.conf 2>~/.config/.compton.err &
 # picom --config ~/.config/compton.conf 2>~/.config/.compton.err &
 xbindkeys &>~/.config/bspwm/.reload.err
+devmon &
