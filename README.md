@@ -2,7 +2,9 @@
 
 These are my dotfiles for my bspwm rice, using Arch Linux
 
-![](https://i.imgur.com/3M38KTg.png )
-![](https://i.imgur.com/l5gsEyW.jpg )
-![](https://i.imgur.com/xLqopTq.png )
-![](https://i.imgur.com/97I5OMj.jpg )
+![](https://i.imgur.com/7zpJ2LV.png )
+![](https://i.imgur.com/SyDqUAx.png )
+![](https://i.imgur.com/J96wPsY.png )
+![](https://i.imgur.com/lJjJqPO.png )
+![](https://i.imgur.com/tzLfn8v.png )
+![](https://i.imgur.com/msiNUed.png )
