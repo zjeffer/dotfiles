@@ -49,7 +49,7 @@ ctrl + shift + Escape
 
 # make sxhkd reload its configuration files and restart polybar
 super + Escape
-	~/.config/bspwm/reload.sh &>/home/zjeffer/.config/bspwm/.reload.err
+	~/.config/bspwm/bspwmrc &>/home/zjeffer/.config/bspwm/.reload.err
 
 #
 ########################################## bspwm hotkeys ##########################################

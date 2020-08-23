@@ -1,16 +1,50 @@
 #!/bin/sh
 
-killall xcape 2>/dev/null
-# killall easystroke 2>/dev/null
+##### for reset: kill everything to avoid duplicates
+killall sxhkd 2>/dev/null
+#pkill -USR1 -x sxhkd &
+killall xbindkeys 2>/dev/null
+killall redshift-gtk 2>/dev/null
+killall numlockx 2>/dev/null
 killall dunst 2>/dev/null
+killall mediaplayers.sh 2>/dev/null
+killall compton 2>/dev/null
+killall polybar 2>/dev/null
+killall libinput-gestures-setup 2>/dev/null
+killall xcape 2>/dev/null
 killall devmon 2>/dev/null
-sxhkd 2>~/.config/sxhkd/.sxhkd.err &
+killall feh 2>/dev/null
 
+##### xrandr settings
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+
+xrandr --output eDP-1-1 --primary
+xrandr --output HDMI-1-1 --right-of eDP-1-1
+xrandr --output DP-1-1 --left-of eDP-1-1
+
+xrandr --output eDP-1-1 --set "Broadcast RGB" "Full"
+xrandr --output HDMI-1-1 --set "Broadcast RGB" "Full"
+xrandr --output DP-1-1 --set "Broadcast RGB" "Full"
+
+##### bspwm desktop settings
 bspc monitor eDP-1-1 -d  1 2 3 4 5
 bspc monitor HDMI-1-1 -d 1 2 3 4 5
 bspc monitor DP-1-1 -d 1 2 3 4 5
 bspc wm -O DP-1-1 eDP-1-1 HDMI-1-1
 
+##### mouse xinput settings
+xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1 &
+xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Natural Scrolling Enabled' 1 &
+
+for mouse in `xinput | grep 'Logitech G502' | grep 'pointer' | sed 's/.*id=\([0-9]*\).*/\1/g'`; do
+	xinput set-prop $mouse "libinput Accel Profile Enabled" 0, 1 2>/dev/null
+    xinput set-prop $mouse "libinput Horizontal Scroll Enabled" 0 2>/dev/null
+	xinput set-prop $mouse "libinput Accel Speed" -0.5 2>/dev/null
+done
+unset mouse
+
+##### bspc configurations
 bspc config window_gap           25
 bspc config border_width	 3
 bspc config normal_border_color	 \#3b4252
@@ -23,55 +57,58 @@ bspc config removal_adjustment   true
 bspc config focus_follows_pointer true
 bspc config automatic_scheme 	 alternate
 bspc config pointer_motion_interval 17
+bspc config external_rules_command "/home/zjeffer/.config/bspwm/rules/vlc.sh"
+bspc config honor_size_hints 	 true
 
-#javafx:
-#bspc config honor_size_hints 	 true
-bspc config honor_size_hints 	 false
-
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
+##### bspc rules
 bspc rule -a Screenkey manage=off
 bspc rule -a spectacle floating=on follow=on
 bspc rule -a 'Friends List' state=floating
 bspc rule -a 'Steam - News' state=floating
-bspc rule -a Wfica_Seamless state=floating
 bspc rule -a 'Citrix maximized probe window' state=floating
-#bspc rule -a '*:libreofficedev' state=tiled
-#bspc rule -a '*:soffice' state=floating
 bspc rule -a simplescreenrecorder state=floating
 bspc rule -a processing-core-PApplet state=tiled
-#bspc rule -a vlc:vlc state=floating layer=above border=off
 
-bspc config external_rules_command "/home/zjeffer/.config/bspwm/rules/vlc.sh"
 
-xrandr --output eDP-1-1 --set "Broadcast RGB" "Full"
-xrandr --output HDMI-1-1 --set "Broadcast RGB" "Full"
-xrandr --output DP-1-1 --set "Broadcast RGB" "Full"
+##### run programs:
+#sxhkd: keyboard shortcut daemon
+sxhkd 2>~/.config/sxhkd/.sxhkd.err &
 
-xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1 &
-xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Natural Scrolling Enabled' 1 &
-
-for mouse in `xinput | grep 'Logitech G502' | grep 'pointer' | sed 's/.*id=\([0-9]*\).*/\1/g'`; do
-	xinput set-prop $mouse "libinput Accel Profile Enabled" 0, 1 2>/dev/null
-    xinput set-prop $mouse "libinput Horizontal Scroll Enabled" 0 2>/dev/null
-	xinput set-prop $mouse "libinput Accel Speed" -0.5 2>/dev/null
-done
-unset mouse
-
-feh --bg-fill ~/Pictures/Wallpapers/ESnflJn.jpg &
-
+#xbindkeys
 xbindkeys &
-redshift-gtk &
-numlockx &
-dunst &
-~/.config/activePlayer/mediaplayers.sh 2>~/.config/activePlayer/.mediaplayer.err &
-compton --config ~/.config/compton/compton.conf 2>~/.config/.compton.err &
-$HOME/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
-libinput-gestures-setup start &
-xcape -e 'Super_L=Super_L|space' &
-devmon &
-# easystroke &
 
+#redshift-gtk: adapts screen color depending on time of day 
+redshift-gtk &
+
+#numlockx: numlock on at startup
+numlockx &
+
+#dunst: notificatoin daemon
+dunst &
+
+#activePlayer: keeps the current active player in a file, so it can be played using mouse keys
+~/.config/activePlayer/mediaplayers.sh 2>~/.config/activePlayer/.mediaplayer.err &
+
+#compton: compositor
+compton --config ~/.config/compton/compton.conf 2>~/.config/.compton.err &
+
+#polybar: top bar
+~/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
+
+#libinput-gestures: touchpad gestures
+libinput-gestures-setup start &
+
+#xcape: set left super key to super+space, used for bringing up application launcher
+xcape -e 'Super_L=Super_L|space' &
+
+#devmon: Automounts and unmounts optical and removable drives
+devmon &
+
+#if the laptop is running on battery when booting, immediately set the cpu governor to powersave
 if acpi -a | grep 'off'; then
 	cpupower frequency-set -g powersave
 fi
+
+#feh: set desktop background
+feh --bg-fill ~/Pictures/Wallpapers/ESnflJn.jpg &
+
