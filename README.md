@@ -104,6 +104,7 @@ More info below images.
 * ttf-liberation 
 * ttf-material-icons-git
 * ttf-roboto
+* ttf-unifont
 * noto-fonts
 * noto-fonts-emoji
 * nerd-fonts-hermit
