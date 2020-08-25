@@ -91,6 +91,11 @@ More info below images.
 ### GPU Drivers
 `yay -S nvidia nvidia-utils lib32-nvidia-utils`
 
+### CPU settings
+* `yay -S cpupower`
+* Set `governor='performance'` in `/etc/default/cpupower` to change the default governor.
+* Enable the service at boot: `sudo systemctl enable cpupower.service`
+
 ### Other packages
 `yay -S git npm python2 python ruby php xclip neofetch cava kcolorchooser ksysguard spectacle simplescreenrecorder htop gparted numlockx redshift xcape powerline powerline-common powerline-fonts polkit-kde-agent light gucharmap`
 
