@@ -27,7 +27,7 @@ More info below images.
 	* `webkit_theme = litarvan`
 ### Bootloader
 * [rEFInd](https://wiki.archlinux.org/index.php/REFInd) with [Ursa-Major theme](https://github.com/kgoettler/ursamajor-rEFInd)
-* yay -S `refind intel-ucode efibootmgr
+* yay -S `refind intel-ucode efibootmgr`
 
 ### Zsh
 * `yay -S zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting`
@@ -80,6 +80,7 @@ More info below images.
 * `yay -S qt5-styleplugins`
 * `yay -S xcursor-breeze` for Breeze (light and dark) cursor theme
 * `yay -S plasma-browser-integration` for media control in the browser
+* `yay -S lxappearance` to set the global theme, icon theme and cursor theme.
 
 ### Spotify
 `yay -S spotify spicetify-cli`
@@ -91,7 +92,7 @@ More info below images.
 `yay -S nvidia nvidia-utils lib32-nvidia-utils`
 
 ### Other packages
-`yay -S git npm python2 python ruby php xclip neofetch cava kcolorchooser ksysguard spectacle simplescreenrecorder htop gparted numlockx lxappearance redshift xcape powerline powerline-common powerline-fonts polkit-kde-agent light gucharmap`
+`yay -S git npm python2 python ruby php xclip neofetch cava kcolorchooser ksysguard spectacle simplescreenrecorder htop gparted numlockx redshift xcape powerline powerline-common powerline-fonts polkit-kde-agent light gucharmap`
 
 # Fonts:
 * ttf-bitstream-vera 
