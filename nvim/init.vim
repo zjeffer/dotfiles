@@ -68,7 +68,7 @@ call NERDTreeHighlightFile('css',    'Red', 'none', 'cyan', '#151515')
 call NERDTreeHighlightFile('js',     'green', 'none', '#ffa500', '#151515')
 
 " NERDTree git icons
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",

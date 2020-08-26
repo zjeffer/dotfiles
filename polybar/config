@@ -96,7 +96,7 @@ font-2 = Unifont:pixelsize=13;2
 font-3 = Unifont:pixelsize=13;3
 font-4 = Font Awesome 5 Free:style=Solid:pixelsize=12;3
 font-5 = Material Icons:style=Regular:pixelsize=14;4
-font-6 = Inconsolata for Powerline:size=18:antialias=true;3
+font-6 = PowerlineSymbols:size=18:antialias=true;5
 
 ;The modules that wil be displayed
 modules-left = bspwm player-mpris-tail
