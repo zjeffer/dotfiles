@@ -84,7 +84,8 @@ More info below images.
 * `yay -S lxappearance` to set the global theme, icon theme and cursor theme.
 
 ### Spotify
-* `yay -S spotify spicetify-cli`
+* `yay -S spotify spicetify-cli spicetify-themes-git`
+* Fix permissions: [Solution](https://github.com/khanhas/spicetify-cli/wiki/Installation#spotify-installed-from-aur)
 * Set spotify data file to folder on different drive: [Solution](https://community.spotify.com/t5/Desktop-Linux/Spotify-downloads-to-the-wrong-folder/m-p/4854706/highlight/true#M19161)
 
 ### Mouse driver (Logitech G502)
