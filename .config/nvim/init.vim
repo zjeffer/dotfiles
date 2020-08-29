@@ -12,7 +12,7 @@ set visualbell " dont startle me with this shit...
 set nowrap	   " dont wrap lines
 set nohlsearch " dont highlight searches
 set mouse=a    " allow mouse control
-
+set ignorecase " case insensitive search
 "
 " Settings when not in vscode
 "
