@@ -92,6 +92,9 @@ export ARCHFLAGS="-arch x86_64"
 #ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+#nvidia shader cache: instead of ~/.nv/, choose different folder:
+export __GL_SHADER_DISK_CACHE_PATH=/tmp/zjeffer/nvidia/
+
 #Set personal aliases, overriding those provided by oh-my-zsh libs,
 #plugins, and themes. Aliases can be placed here, though oh-my-zsh
 #users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -102,7 +105,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # ~/.zshrc
 #
 
-
+#default WINE prefix
 export WINEPREFIX=/media/SamsungSSD/wine/
 
 # Lines configured by zsh-newuser-install
