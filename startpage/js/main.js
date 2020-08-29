@@ -47,11 +47,12 @@ searchBarElement.value = '';
 
 
 function refreshList() {
-    let items = JSON.parse(localStorage.getItem('items'));
+    let items = JSON.parse(localStorage.getItem("items")) || [];
     $('ul').empty();
-    items.forEach(item => {
-        $('ul').append("<li>" + item + "</li>");
-    });
+    items.forEach((item) => {
+		$("ul").append("<li>" + item + "</li>");
+	});
+    
 }
 
 $(document).ready(function () {
@@ -64,7 +65,7 @@ $(document).ready(function () {
 $("#todoList").on("click", "li", function () {
     $(this).toggleClass("done");
     let index = $(this).index();
-    let items = JSON.parse(localStorage.getItem('items'));
+    let items = JSON.parse(localStorage.getItem('items')) ;
     items.splice(index, 1);
     localStorage.setItem('items', JSON.stringify(items));
     $(this).fadeOut(500, function () {
@@ -77,7 +78,7 @@ $("#todoList").on("click", "li", function () {
 $("#todoInput").keypress(function (event) {
     if (event.which === 13 && $(this).val().length !== 0) {
         let value = $(this).val();
-        let items = JSON.parse(localStorage.getItem('items'));
+        let items = JSON.parse(localStorage.getItem("items")) || [];
         items.push(value);
         localStorage.setItem('items', JSON.stringify(items));
         refreshList();
