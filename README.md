@@ -59,8 +59,9 @@ More info below images.
 `yay -S gnome-terminal` 
 
 ### File manager
-`yay -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman gvfs ntfs-3g tumbler`
-`yay -S ranger highlight w3m`
+* `yay -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman gvfs ntfs-3g tumbler`
+* `yay -S ranger highlight w3m`
+* Add `inode/directory=thunar.desktop` to `~/.config/mimeapps.list` under `[Default Applications] 
 
 ### Media
 * `yay -S vlc vlc-pause-click-plugin`
