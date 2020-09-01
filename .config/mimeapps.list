@@ -18,6 +18,9 @@ video/mp4=vlc.desktop;mpv.desktop;
 application/x-shellscript=visual-studio-code.desktop;
 application/x-trash=sublime_text.desktop;
 image/jpeg=gimp.desktop;feh.desktop;
+image/png=org.kde.gwenview.desktop;feh.desktop;
+application/xml=sublime_text.desktop;
+application/dash+xml=sublime_text.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop

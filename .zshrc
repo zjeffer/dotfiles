@@ -143,6 +143,13 @@ export SUDO_ASKPASS=~/.config/rofi/scripts/askpass/askpass.sh
 
 export QT_QPA_PLATFORMTHEME=gtk2
 
+#less history file
+export LESSHISTSIZE=0
+export LESSHISTFILE=-
+
+#wget alias: put hsts file in ~/.config/wget/wget-hsts
+alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
+
 ###############################################
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

@@ -17,6 +17,7 @@
 .config/spicetify/Extracted/
 .config/spicetify/Extracted/*
 .config/spicetify/Raw/*
+.config/wget/
 .config/wireshark/*
 .directory
 .dmrc
