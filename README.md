@@ -28,6 +28,7 @@ More info below images.
 ### Bootloader
 * [rEFInd](https://wiki.archlinux.org/index.php/REFInd) with [Ursa-Major theme](https://github.com/kgoettler/ursamajor-rEFInd)
 * yay -S `refind intel-ucode efibootmgr`
+* `sudo refind-install`
 
 ### Zsh
 * `yay -S zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting`
