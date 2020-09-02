@@ -101,9 +101,14 @@ More info below images.
 * Set `governor='performance'` in `/etc/default/cpupower` to change the default governor.
 * Enable the service at boot: `sudo systemctl enable cpupower.service`
 
-### Other packages
-`yay -S git npm python2 python ruby php xclip neofetch cava kcolorchooser ksysguard spectacle simplescreenrecorder htop gparted numlockx redshift xcape powerline powerline-common powerline-fonts polkit-kde-agent light gucharmap`
-
+### Other
+* `yay -S git npm python2 python ruby php xclip neofetch cava kcolorchooser ksysguard spectacle simplescreenrecorder htop gparted numlockx redshift xcape powerline powerline-common powerline-fonts polkit-kde-agent light gucharmap`
+* Stop rtkit-daemon log spam: 
+	* Create `/etc/systemd/system/rtkit-daemon.service.d/override.conf`
+	```
+	[Service]
+	LogLevelMax=notice
+	```
 # Fonts:
 * ttf-bitstream-vera 
 * ttf-dejavu 
