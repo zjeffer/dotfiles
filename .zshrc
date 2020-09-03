@@ -130,6 +130,7 @@ alias df='df -h'
 alias ka='killall'
 alias vim='nvim'
 alias sudo='sudo -A'
+alias feh='feh --auto-zoom'
 
 
 
