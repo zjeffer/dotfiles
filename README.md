@@ -51,11 +51,13 @@ More info below images.
 ### Firefox
 * `yay -S firefox`
 * Make Firefox ignore GTK theme:
-	* Go to about:config, set `widget.content.gtk-theme-override` to something like `Breeze:light` (make sure Breeze theme is installed)
+	* Go to about:config, set `widget.content.gtk-theme-override` to something like `Breeze:light` (make sure Breeze theme is installed).
 * Right click immediately picks the first option, fix:
 	* Go to about:config, set `ui.context_menus.after_mouseup` to `true`.
 * Disable full screen warning: 
-	* Go to about:config, set `full-screen-api.warning.timeout` to 0
+	* Go to about:config, set `full-screen-api.warning.timeout` to `0`.
+* Enable GFX webrender:
+	* Go to about:config, set `gfx.webrender.all` to `true`.
 ### Terminal
 `yay -S gnome-terminal` 
 
