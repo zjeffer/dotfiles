@@ -18,7 +18,7 @@ logout=""
 # Variable passed to rofi
 options="$shutdown\n$reboot\n$lock\n$suspend"
 
-chosen="$(echo -e "$options" | $rofi_command -p "UP - $uptime" -dmenu -selected-row 0)"
+chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0)"
 case $chosen in
     $shutdown)
         shutdown -P now

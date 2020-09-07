@@ -13,7 +13,7 @@ super + shift + Return
 
 # program launcher
 super + space
-	rofi -show drun -modi "window,drun" -show-icons -theme ~/.config/rofi/themes/launcher.rasi -location 0 -yoffset 0 -xoffset 0
+	~/.config/rofi/scripts/launcher.sh
 
 # firefox
 super + z

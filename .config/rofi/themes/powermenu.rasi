@@ -24,27 +24,25 @@ configuration {
     icon-font-small: "Hurmit Nerd Font Mono 24";
     option-6-listview-spacing: 10px;
 
-    menu-window-padding: 10px 15px;
-    menu-inputbar-margin: 10px 0px;
-    menu-prompt-padding: 10px 20px;
-    menu-prompt-margin: 0px 0px 0px -2px;
-    menu-element-border: 18px;
-    menu-element-padding: 3px 8px -1px -40px;
+    window-padding: 10px;
+    element-padding: 23px 28px 19px -20px;
 
     accent:           #a3be8c;
     background:       #3b4252;
     background-light: #4c566a;
-    foreground:       #E4E4E4;
+    foreground:       #eceff4;
     on:               #44ad4d;
-    off:              #e34039;
+    off:              #bf616a;
 }
 
 /* ########### */
 
-#window {
-    width: 20%;
-    height: 16%;
+
+window {
+    width: 387px;
     border-color: @accent;
+    padding: @window-padding;
+    children: [ horibox ];
 }
 
 /* ########### */
@@ -55,83 +53,34 @@ configuration {
     font: @icon-font;
 }
 
-#horibox {
+horibox {
     children: [ listview ];
 }
-#listview {
+listview {
     layout: horizontal;
 }
-#element {
-    padding: @option-element-padding;
-    background-color: @background-light;
-}
-#element.selected {
-    background-color: @accent;
-    text-color: @background;
-}
+
 
 /* ########### */
 
 * {
     font: @text-font;
 }
-#window {
-    padding: @menu-window-padding;
-    children: [ inputbar, horibox ];
-}
-#inputbar {
-    children: [ textbox-prompt-colon, prompt ];
-    margin: @menu-inputbar-margin;
-}
-prompt,
-textbox-prompt-colon {
-    padding: @menu-prompt-padding;
-    border: 2px;
-    border-color: @accent;
-}
-#prompt {
-    margin: @menu-prompt-margin;
-    background-color: @background-light;
-    text-color: @accent;
-}
-#textbox-prompt-colon {
-    expand: false;
-    str: "System";
-    background-color: @accent;
-    text-color: @background;
-}
-#horibox {
+
+horibox {
     padding: 0px;
 }
-#listview {
+listview {
     spacing: @option-6-listview-spacing;
     lines: 4;
 }
-#element {
+element {
     font: @icon-font;
-    border: @menu-element-border;
-    padding: @menu-element-padding;
-    border-color: @background-light;
+    padding: @element-padding;
 }
-#element.selected {
-    border-color: @accent;
-}
-element.active,
-element.selected.urgent {
-    background-color: @on;
+element.selected {
+    background-color: @accent;
     text-color: @background;
-    border-color: @on;
 }
-element.selected.urgent {
-    border-color: @accent;
-}
-element.urgent,
-element.selected.active {
-    background-color: @off;
-    text-color: @background;
-    border-color: @off;
-}
-element.selected.active {
-    border-color: @accent;
-}
+
 

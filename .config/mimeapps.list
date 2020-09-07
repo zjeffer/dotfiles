@@ -1,6 +1,6 @@
 [Added Associations]
 application/octet-stream=sublime_text.desktop;
-text/plain=sublime_text.desktop;
+text/plain=visual-studio-code.desktop;sublime_text.desktop;
 application/json=sublime_text.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;

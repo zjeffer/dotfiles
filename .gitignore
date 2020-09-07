@@ -5,8 +5,10 @@
 .bashrc
 .cache/
 .cmake/
+.config/QtProject*
 .config/nvim/plugged/
 .config/polybar/scripts/nm-applet/curr_ssid
+.config/qalculate/
 .config/ranger/colorschemes/__init__.py
 .config/ranger/colorschemes/__pycache__/
 .config/ranger/commands*
@@ -18,7 +20,7 @@
 .config/spicetify/Extracted/*
 .config/spicetify/Raw/*
 .config/wget/
-.config/wireshark/*
+.config/wireshark/
 .directory
 .dmrc
 .factorio/
