@@ -55,7 +55,10 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_CONFIG_DIRS=/etc/xdg
 
-exec /usr/lib/polkit-kde-authentication-agent-1 &
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh) 
+export SSH_AUTO_SOCK
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 exec light-locker &
 
 exec bspwm 2>>~/.config/bspwm/.bspwm.err
