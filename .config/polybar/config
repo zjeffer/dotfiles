@@ -11,7 +11,7 @@ secondary = #f05
 alert = #bd2c40
 dim-value = 0.0
 accent = #bf616a
-red = #bf616a
+
 
 nord0 =  #2e3440
 nord1 =  #3b4252
@@ -30,12 +30,16 @@ nord13 = #ebcb8b
 nord14 = #a3be8c
 nord15 = #b48ead
 
+red=${colors.nord11}
+green=${colors.nord14}
+
 cpu = #bf616a
 ram = #a3be8c
 temp = #d08770
 wifi = #5e81ac
 date = #8fbcbb
 time = #b48ead
+power = ${colors.nord4}
 
 ##############################################################################################
 ##############################################################################################
@@ -86,7 +90,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 padding-left = 0
-padding-right = 1
+padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
@@ -97,6 +101,7 @@ font-3 = Unifont:pixelsize=13;3
 font-4 = Font Awesome 5 Free:style=Solid:pixelsize=12;3
 font-5 = Material Icons:style=Regular:pixelsize=14;4
 font-6 = PowerlineSymbols:size=18:antialias=true;5
+font-7 = Font Awesome 5 Free:style=Solid:pixelsize=12;2
 
 ;The modules that wil be displayed
 modules-left = bspwm player-mpris-tail
@@ -106,7 +111,7 @@ modules-right = microphone pulseaudio battery cpu memory temperature nm-launcher
 
 tray-position = right
 tray-padding = 0
-#tray-background = ${colors.background}
+tray-background = ${colors.power}
 
 ##############################################################################################
 ##############################################################################################

@@ -1,9 +1,9 @@
 [module/powermenu-rofi]
 type = custom/text
-
-content = %{T6}%{T-}
-content-foreground = #88ff77
-content-padding-left = 1
+content-background = ${colors.power}
+content = %{T8}%{T-}
+content-foreground = ${colors.background}
+content-padding = 1
 
 click-left = /home/zjeffer/.config/rofi/scripts/powermenu.sh &
 

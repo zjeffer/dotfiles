@@ -9,6 +9,6 @@ format-prefix = %{T7}%{T-}
 format-prefix-foreground = ${colors.time}
 format-prefix-background = ${colors.date}
 format-suffix = %{T7}%{T-}
-format-suffix-foreground = ${colors.background}
+format-suffix-foreground = ${colors.power}
 format-suffix-background = ${colors.time}
 format-background = ${colors.time}
