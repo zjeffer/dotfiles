@@ -119,15 +119,6 @@ let g:tigris#enabled = 1
 " Keybindings
 "
 
-" disable the arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
 
 
 " open and close NERDTree
