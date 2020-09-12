@@ -151,8 +151,3 @@ export LESSHISTFILE=-
 #wget alias: put hsts file in ~/.config/wget/wget-hsts
 alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
 
-###############################################
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/zjeffer/.sdkman"
-[[ -s "/home/zjeffer/.sdkman/bin/sdkman-init.sh" ]] && source "/home/zjeffer/.sdkman/bin/sdkman-init.sh"

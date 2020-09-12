@@ -14,7 +14,7 @@ application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 application/x-blender=sublime_text.desktop;
-video/mp4=vlc.desktop;mpv.desktop;
+video/mp4=mpv.desktop;vlc.desktop;
 application/x-shellscript=visual-studio-code.desktop;
 application/x-trash=sublime_text.desktop;
 image/jpeg=org.kde.gwenview.desktop;gimp.desktop;feh.desktop;
@@ -23,6 +23,7 @@ application/xml=sublime_text.desktop;
 application/dash+xml=sublime_text.desktop;
 inode/symlink=sublime_text.desktop;
 video/x-matroska=vlc.desktop;
+video/mpeg=vlc.desktop;mpv.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop

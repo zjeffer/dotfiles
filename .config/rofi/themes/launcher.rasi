@@ -9,6 +9,7 @@
 configuration {
     font:                           "Noto Sans 14";
     display-drun: 					"";
+    display-dmenu:                  "";
     display-calc:	                "🖩";
     lines:                          10;
 }

@@ -8,8 +8,6 @@
  */
 
 configuration {
-    show-icons: true;
-    icon-theme: "Papirus";
     location: 3;
     yoffset: 60;
     xoffset: -25;  
@@ -18,28 +16,26 @@ configuration {
 
 
 * {
-    /* General */
-    text-font: "Comfortaa 12";
+    /* Fonts */
     icon-font: "Hurmit Nerd Font Mono 32";
-    icon-font-small: "Hurmit Nerd Font Mono 24";
-    option-6-listview-spacing: 10px;
 
+    /* Spacing */
+    listview-spacing: 10px;
     window-padding: 10px;
-    element-padding: 23px 28px 19px -20px;
+    element-padding: 20px 28px 16px -10px;
 
+    /* Colors */
     accent:           #a3be8c;
     background:       #3b4252;
     background-light: #4c566a;
     foreground:       #eceff4;
-    on:               #44ad4d;
-    off:              #bf616a;
 }
 
 /* ########### */
 
 
 window {
-    width: 387px;
+    width: 371px;
     border-color: @accent;
     padding: @window-padding;
     children: [ horibox ];
@@ -63,20 +59,14 @@ listview {
 
 /* ########### */
 
-* {
-    font: @text-font;
-}
-
-horibox {
-    padding: 0px;
-}
 listview {
-    spacing: @option-6-listview-spacing;
+    spacing: @listview-spacing;
     lines: 4;
 }
 element {
     font: @icon-font;
     padding: @element-padding;
+    background-color: @background-light;
 }
 element.selected {
     background-color: @accent;

@@ -80,8 +80,8 @@ super + b
 	bspc node @/ -B
 
 #sxhkd documentation
-super + question
-	sxhkd-ref
+super + slash
+	~/.config/sxhkd/sxhkd-help.sh
 
 
 
