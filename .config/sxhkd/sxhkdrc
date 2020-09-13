@@ -252,17 +252,6 @@ ctrl + shift + super + m
 	pulseaudio-ctl mute-input
 
 
-########################################## BRIGHTNESS ##########################################
-
-# Brightness goes up
-super + F12
-	light -A 10
-
-# Brightness goes down
-super + F11
-	light -U 10
-
-
 ########################################## LOCK ##########################################
 
 super + l
