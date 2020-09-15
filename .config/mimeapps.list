@@ -24,6 +24,7 @@ application/dash+xml=sublime_text.desktop;
 inode/symlink=sublime_text.desktop;
 video/x-matroska=vlc.desktop;
 video/mpeg=vlc.desktop;mpv.desktop;
+application/pdf=firefox.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop
