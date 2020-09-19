@@ -98,6 +98,12 @@ export __GL_SHADER_DISK_CACHE_PATH=/tmp/zjeffer/nvidia/
 #cuda cache path
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
+#npm
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+
+#java
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+
 #Set personal aliases, overriding those provided by oh-my-zsh libs,
 #plugins, and themes. Aliases can be placed here, though oh-my-zsh
 #users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -134,7 +140,7 @@ alias ka='killall'
 alias vim='nvim'
 alias sudo='sudo -A'
 alias feh='feh --auto-zoom'
-
+alias gs='git status'
 
 
 bindkey "^[[1;3C" forward-word

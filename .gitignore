@@ -6,6 +6,7 @@
 .cache/
 .cmake/
 .config/QtProject*
+.config/npm/
 .config/nvim/plugged/
 .config/polybar/scripts/nm-applet/curr_ssid
 .config/qalculate/
@@ -41,6 +42,7 @@
 .nvidia-settings-rc
 .oh-my-zsh/
 .pki/
+.processing/
 .pulse-cookie
 .ssh/
 .steam/

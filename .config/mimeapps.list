@@ -23,8 +23,10 @@ application/xml=sublime_text.desktop;
 application/dash+xml=sublime_text.desktop;
 inode/symlink=sublime_text.desktop;
 video/x-matroska=vlc.desktop;
-video/mpeg=vlc.desktop;mpv.desktop;
+video/mpeg=mpv.desktop;vlc.desktop;
 application/pdf=firefox.desktop;
+image/bmp=org.kde.gwenview.desktop;
+text/x-tex=visual-studio-code.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop
@@ -40,3 +42,4 @@ application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 inode/directory=thunar.desktop
 x-scheme-handler/msteams=teams.desktop
+image/bmp=org.kde.gwenview.desktop

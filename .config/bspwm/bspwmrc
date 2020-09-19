@@ -50,7 +50,7 @@ bspc rule -a 'Friends List' state=floating
 bspc rule -a 'Steam - News' state=floating
 bspc rule -a 'Citrix maximized probe window' state=floating
 bspc rule -a simplescreenrecorder state=floating
-bspc rule -a processing-core-PApplet state=tiled
+bspc rule -a 'processing-core-PApplet' state=floating focus=off
 
 
 ##### run programs:
