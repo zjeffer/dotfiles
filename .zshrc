@@ -92,8 +92,11 @@ export ARCHFLAGS="-arch x86_64"
 #ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+#####        CLEAN UP HOME FOLDER       ######
 #nvidia shader cache: instead of ~/.nv/, choose different folder:
 export __GL_SHADER_DISK_CACHE_PATH=/tmp/zjeffer/nvidia/
+
+alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
 
 #cuda cache path
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
@@ -103,6 +106,20 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 #java
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+
+#sqlite
+export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
+alias sqlite3='sqlite3 -init "$XDG_CONFIG_HOME"/sqlite3/sqliterc'
+
+#GTK2
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+
+
+
+
+
+
+
 
 #Set personal aliases, overriding those provided by oh-my-zsh libs,
 #plugins, and themes. Aliases can be placed here, though oh-my-zsh

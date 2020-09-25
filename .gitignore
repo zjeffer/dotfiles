@@ -32,6 +32,7 @@
 .gtkrc-2.0
 .histfile
 .icons/
+.java/
 .local/
 .mono/
 .mozilla/
