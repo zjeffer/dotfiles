@@ -7,6 +7,7 @@
 .cmake/
 .config/QtProject*
 .config/npm/
+.config/nvidia/
 .config/nvim/plugged/
 .config/polybar/scripts/nm-applet/curr_ssid
 .config/qalculate/
