@@ -58,11 +58,6 @@ bspc rule -a 'processing-core-PApplet' state=floating focus=off
 killall sxhkd 2>/dev/null
 sxhkd &>>~/.config/sxhkd/.sxhkd.err &
 
-
-#redshift-gtk: adapts screen color depending on time of day 
-#killall redshift-gtk 2>/dev/null
-#redshift-gtk &
-
 #dunst: notification daemon
 killall dunst 2>/dev/null
 dunst &
