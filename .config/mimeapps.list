@@ -43,3 +43,4 @@ application/x-extension-xht=firefox.desktop
 inode/directory=thunar.desktop
 x-scheme-handler/msteams=teams.desktop
 image/bmp=org.kde.gwenview.desktop
+x-scheme-handler/figma=figma-linux.desktop

@@ -6,6 +6,7 @@
 .cache/
 .cmake/
 .config/QtProject*
+.config/kcharselectrc
 .config/npm/
 .config/nvidia/
 .config/nvim/plugged/

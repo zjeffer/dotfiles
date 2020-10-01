@@ -128,14 +128,11 @@ body.remotebar .view-player .player-bar-wrapper {
 
 /*Fixed player bar height and add cool shadow under*/
 .view-player {
-	height: 87px !important;
+	height: 140px !important;
 	box-shadow: 0 -10px 40px rgba(0,0,0,0.5) !important;
 }
 
-/*
-Make cover image in player bar bigger and change position it abit
-Also padding tilte and artist to correct position
-*/
+/* Changes to small now-playing cover image and text next to it*/
 .view-player .now-playing,
 .view-player .now-playing-container,
 .view-player .now-playing .cover-image-container {
@@ -145,9 +142,8 @@ Also padding tilte and artist to correct position
 
 .view-player .now-playing .cover-image-container {
 	position: absolute !important;
+	top: 0;
 	overflow: visible !important;
-	bottom: 55px !important;
-	left: -70px !important;
 }
 .view-player .now-playing .cover-image-container .cover-image {
 	width: 120px !important;
@@ -160,8 +156,34 @@ Also padding tilte and artist to correct position
 .view-player .now-playing-container .caption {
 	height: 100% !important;
 	align-content: center !important;
-	padding-left: 70px !important;
 }
+
+/* Image position */
+.view-player .now-playing .cover-image-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: unset;
+}
+
+/* Remove toggle button */
+.view-player .now-playing .cover-image-link .toggle-cover-size {
+	display: none;
+}
+
+.view-player .now-playing .cover-image-link-wrapper {
+	flex: unset;
+	height: unset;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Text position */
+.view-player .now-playing-container .caption .text-container {
+	margin-left: 140px !important;
+}
+
 
 @media (min-width: 1200px){
 	.view-player .now-playing-container {
@@ -188,7 +210,7 @@ Expand when hovering on windows's left edge
 .sidebar {
 	/*Widen the hover zone here*/
 	min-width: 20px !important;
-	width: 20px !important;
+	width: 40px !important;
 	transition-duration: .5s !important;
 	transition-timing-function: cubic-bezier(.3,0,0,1) !important;
 	opacity: 0;
@@ -268,22 +290,42 @@ Move progress bar to bottom of window
 	position: absolute !important;
 	width: 100% !important;
 	height: 100% !important;
-	bottom: (-87/2px) !important;
-	margin : 0 0 0 0 !important;
+	bottom: -82px !important;
+	margin : 0 !important;
 	z-index: 9999 !important;
 }
 
-.view-player .player-controls-container .progress-container .progress-bar {
-	margin-top: -6px !important;
-	top: 100% !important;
-}
-
+/* Progressbar styling */
 .view-player .player-controls-container .progress-container .progress-bar .inner {
-	top: 100% !important;
-	margin-top: -4px !important;
-	border-radius: 0 2px 2px 0 !important;
+	border-radius: 6px 6px 0 0  !important;
 	background-color: var(--modspotify_main_fg);
 }
+
+/* Progressbar height */
+.view-player .player-controls-container .progress-container .progress-bar {
+	position: absolute;
+	bottom: -12px;
+}
+
+.view-player .player-controls-container .progress-container .progress-bar,
+.view-player .player-controls-container .progress-container .progress-bar .inner {
+	height: 12px;
+	top: unset;
+}
+
+.view-player .player-controls-container .progress-container .progress-bar-wrapper {
+	height: unset;
+}
+
+/* Progressbar circle */
+.view-player .player-controls-container .progress-container .progress-bar .inner .handle {
+	right: -8px;
+	height: 16px;
+	width: 16px;
+	top: -2px;
+}
+
+
 
 /* Add round corner for Gerne and Mood cards */
 .gc-image-container,
@@ -601,15 +643,37 @@ and add little glowing effect
 	color: var(--modspotify_main_bg) !important;
 }
 
-/* Display usable add playlist button */
+/* Changes to add playlist button */
 .LeftSidebarNewPlaylistButton__button {
-	padding: 0 168px !important;
-	padding-right: 40px;
+	margin-left: 24px !important;
+	padding: 0;
+	width: 64px;
 }
 
 .LeftSidebarNewPlaylistButton__text {
 	display: none !important;
 }
+
+
+.LeftSidebar {
+	min-height: unset;
+}
+
+.LeftSidebar__scroll-section {
+	flex: unset;
+}
+
+#view-navigation-bar {
+	flex: unset;
+}
+
+.Rootlist__content {
+	margin-bottom: 0px;
+}
+
+
+
+/* Extension: numberOfPlays.js */
 
 .tl-popularity {
 	width: 12em;
@@ -628,3 +692,5 @@ and add little glowing effect
 	font-feature-settings: "tnum";
     letter-spacing: 0;
 }
+
+/* End of extension*/
