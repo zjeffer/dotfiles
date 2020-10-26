@@ -5,7 +5,9 @@
 .bashrc
 .cache/
 .cmake/
+.config/Emby Theater/
 .config/QtProject*
+.config/glade.conf
 .config/kcharselectrc
 .config/npm/
 .config/nvidia/
@@ -35,6 +37,7 @@
 .histfile
 .icons/
 .java/
+.kodi/
 .local/
 .mono/
 .mozilla/
@@ -47,11 +50,15 @@
 .pki/
 .processing/
 .pulse-cookie
+.python_history
 .ssh/
 .steam/
 .steampath
 .steampid
+.vmware/
+.vscode-react-native/
 .vscode/
+.wget-hsts
 .xbindkeysrc
 .xprofile
 .xsession-errors

@@ -325,6 +325,62 @@ Move progress bar to bottom of window
 	top: -2px;
 }
 
+/* Footer font size changes */
+/* middle controls */
+.view-player .player-controls-container .controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* margin-top: 0 !important; */
+	margin: 0 auto !important;
+	max-width: 400px;
+}
+
+#player-anchor {
+	display: none;
+}
+
+/* Track title */
+.view-player .track {
+	font-size: 16px;
+}
+
+/* Artist */
+.view-player .artist {
+	font-size: 14px;
+}
+
+/* Shuffle and repeat */
+.view-player .player-controls-container .controls .button-repeat:before, 
+.view-player .player-controls-container .controls .button-shuffle:before {
+	font-size: 24px;
+	padding-left: 0;
+	position: relative;
+	text-align: center;
+}
+
+/* Little circle below shuffle and repeat */
+.view-player .player-controls-container .controls .button-repeat:after, 
+.view-player .player-controls-container .controls .button-shuffle:after {
+	
+}
+ 
+/* next and previous */
+.view-player .player-controls-container .controls .next:before, 
+.view-player .player-controls-container .controls .previous:before {
+	font-size: 24px;
+	padding: 0 8px;
+}
+
+/* play */
+.view-player .player-controls-container .controls .button-play:before {
+	font-size: 24px !important;
+	padding-left: 13.5px !important;
+	padding-top: 9px !important;
+}
+
+
+
 
 
 /* Add round corner for Gerne and Mood cards */

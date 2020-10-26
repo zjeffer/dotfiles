@@ -18,7 +18,7 @@ video/mp4=vlc.desktop;mpv.desktop;
 application/x-shellscript=visual-studio-code.desktop;
 application/x-trash=sublime_text.desktop;
 image/jpeg=org.kde.gwenview.desktop;gimp.desktop;feh.desktop;
-image/png=org.kde.gwenview.desktop;feh.desktop;
+image/png=org.kde.gwenview.desktop;gimp.desktop;feh.desktop;
 application/xml=sublime_text.desktop;
 application/dash+xml=sublime_text.desktop;
 inode/symlink=sublime_text.desktop;
@@ -27,6 +27,12 @@ video/mpeg=mpv.desktop;vlc.desktop;
 application/pdf=org.gnome.Evince.desktop;firefox.desktop;
 image/bmp=org.kde.gwenview.desktop;
 text/x-tex=visual-studio-code.desktop;
+text/x-csharp=sublime_text.desktop;visual-studio-code.desktop;
+application/x-desktop=sublime_text.desktop;
+application/x-subrip=sublime_text.desktop;
+application/x-virtualbox-vdi=virtualbox.desktop;
+application/x-vmware-vmdisk=vmware-workstation.desktop;
+application/x-vmware-vm=vmware-workstation.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop
@@ -44,3 +50,5 @@ inode/directory=thunar.desktop
 x-scheme-handler/msteams=teams.desktop
 image/bmp=org.kde.gwenview.desktop
 x-scheme-handler/figma=figma-linux.desktop
+x-scheme-handler/etcher=balena-etcher-electron.desktop
+application/x-vmware-vmdisk=vmware-workstation.desktop

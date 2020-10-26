@@ -63,7 +63,7 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+    git 
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -114,9 +114,14 @@ alias sqlite3='sqlite3 -init "$XDG_CONFIG_HOME"/sqlite3/sqliterc'
 #GTK2
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 
+#android
+export ANDROID_SDK_HOME="$XDG_CONFIG_HOME"/android
+export ANDROID_AVD_HOME="$XDG_DATA_HOME"/android/
+export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME"/android/
+export ADB_VENDOR_KEY="$XDG_CONFIG_HOME"/android
 
-
-
+#wget
+export WGETRC="$XDG_CONFIG_HOME/wget"
 
 
 
