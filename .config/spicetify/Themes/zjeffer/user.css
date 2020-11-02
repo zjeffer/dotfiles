@@ -7,7 +7,7 @@
 .Card:not(.Card--artist) .Card__image,
 .Card:not(.Card--artist) .Card__image-wrapper {
 	border-radius: 10px !important;
-	overflow: hidden !important
+	overflow: hidden !important;
 }
 
 /*Hide some annoying elements like profile name and pic, upgrade button and device connect bar at bottom, new playlist button*/
@@ -25,8 +25,7 @@ body.remotebar .view-player .player-bar-wrapper {
 
 /*Exclude these elements from draggable property because it stops them from clickable*/
 .profile-items-container,
-.profile
- {
+.profile {
 	-webkit-app-region: no-drag !important;
 }
 
@@ -59,15 +58,15 @@ body.remotebar .view-player .player-bar-wrapper {
 .Card:not(.Card--artist) .Card__image-wrapper {
 	transition-property: transform box-shadow !important;
 	transition-duration: 1s !important;
-	transition-timing-function: cubic-bezier(.3,0,0,1) !important;
-	box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+	transition-timing-function: cubic-bezier(0.3, 0, 0, 1) !important;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .card-image-hit-area:not(.no-hover):hover .card-image-content-wrapper,
 .GlueCard__image-hit-area-counter-scale:hover .GlueCard__image-wrapper,
 .Card:not(.Card--artist) .Card__image-hit-area-counter-scale:hover .Card__image-wrapper {
 	transform: translateY(-10px);
-	box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .card-image-hit-area .card-button-add,
@@ -86,10 +85,10 @@ body.remotebar .view-player .player-bar-wrapper {
 .Card__image-hit-area .Card__play-button,
 .Card__image-hit-area .Card__add-button,
 .Card__image-hit-area .Card__more-button,
-.Card__image-hit-area .Card__overlay  {
+.Card__image-hit-area .Card__overlay {
 	transition-property: all !important;
 	transition-duration: 1s !important;
-	transition-timing-function: cubic-bezier(.3,0,0,1) !important;
+	transition-timing-function: cubic-bezier(0.3, 0, 0, 1) !important;
 	opacity: 0 !important;
 }
 .card-image-hit-area:not(.no-hover):hover .card-button-add,
@@ -129,7 +128,7 @@ body.remotebar .view-player .player-bar-wrapper {
 /*Fixed player bar height and add cool shadow under*/
 .view-player {
 	height: 140px !important;
-	box-shadow: 0 -10px 40px rgba(0,0,0,0.5) !important;
+	box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* Changes to small now-playing cover image and text next to it*/
@@ -149,7 +148,7 @@ body.remotebar .view-player .player-bar-wrapper {
 	width: 120px !important;
 	height: 120px !important;
 	position: absolute !important;
-	box-shadow: 0 5px 10px rgba(0,0,0,0.5) !important;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5) !important;
 	background-size: cover !important;
 }
 
@@ -184,13 +183,11 @@ body.remotebar .view-player .player-bar-wrapper {
 	margin-left: 140px !important;
 }
 
-
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
 	.view-player .now-playing-container {
 		min-width: 500px;
 	}
 }
-
 
 .view-player .now-playing-container {
 	z-index: 9998 !important;
@@ -211,8 +208,8 @@ Expand when hovering on windows's left edge
 	/*Widen the hover zone here*/
 	min-width: 20px !important;
 	width: 40px !important;
-	transition-duration: .5s !important;
-	transition-timing-function: cubic-bezier(.3,0,0,1) !important;
+	transition-duration: 0.5s !important;
+	transition-timing-function: cubic-bezier(0.3, 0, 0, 1) !important;
 	opacity: 0;
 }
 
@@ -227,8 +224,8 @@ Expand when hovering on windows's left edge
 	padding-bottom: 60px !important;
 	opacity: 0 !important;
 	transition-property: opacity !important;
-	transition-duration: .5s !important;
-	transition-timing-function: cubic-bezier(.3,0,0,1) !important;
+	transition-duration: 0.5s !important;
+	transition-timing-function: cubic-bezier(0.3, 0, 0, 1) !important;
 }
 
 /* Playlist content */
@@ -237,7 +234,7 @@ Expand when hovering on windows's left edge
 }
 
 .sidebar:hover .sidebar-navbar.sidebar-scroll-element {
-	opacity: 1!important;
+	opacity: 1 !important;
 }
 
 .view-player .player-controls-container,
@@ -245,23 +242,22 @@ Expand when hovering on windows's left edge
 	overflow: visible !important;
 }
 
-.view-player .player-controls-container .controls .button-play{
-	height:50px !important;
-	border-radius:50px !important;
+.view-player .player-controls-container .controls .button-play {
+	height: 50px !important;
+	border-radius: 50px !important;
 	background: transparent !important;
-	box-shadow:0 0 0 0 !important;
-	width:50px !important;
+	box-shadow: 0 0 0 0 !important;
+	width: 50px !important;
 	overflow: visible !important;
-	box-shadow: 0 5px 15px rgba(0,0,0,0.7) !important;
-	transition:none 0.3s cubic-bezier(.3,0,.7,1);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7) !important;
+	transition: none 0.3s cubic-bezier(0.3, 0, 0.7, 1);
 }
 
-.view-player .player-controls-container .controls .button-play:before{
-	font-size:18px !important;
+.view-player .player-controls-container .controls .button-play:before {
+	font-size: 18px !important;
 	padding-left: 16px !important;
 	padding-top: 9px !important;
 }
-
 
 .view-player .player-controls-container {
 	position: absolute !important;
@@ -270,9 +266,9 @@ Expand when hovering on windows's left edge
 
 .view-player .player-controls-container .controls {
 	width: 100% !important;
-	height: 100%  !important;
+	height: 100% !important;
 	align-items: center !important;
-	margin-top : 0px !important;
+	margin-top: 0px !important;
 }
 
 /*
@@ -291,13 +287,13 @@ Move progress bar to bottom of window
 	width: 100% !important;
 	height: 100% !important;
 	bottom: -82px !important;
-	margin : 0 !important;
+	margin: 0 !important;
 	z-index: 9999 !important;
 }
 
 /* Progressbar styling */
 .view-player .player-controls-container .progress-container .progress-bar .inner {
-	border-radius: 6px 6px 0 0  !important;
+	border-radius: 6px 6px 0 0 !important;
 	background-color: var(--modspotify_main_fg);
 }
 
@@ -326,7 +322,7 @@ Move progress bar to bottom of window
 }
 
 /*  */
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
 	/* Footer font size changes */
 	/* middle controls */
 	.view-player .player-controls-container .controls {
@@ -351,7 +347,6 @@ Move progress bar to bottom of window
 	.view-player .artist {
 		font-size: 14px;
 	}
-	
 
 	/* Shuffle and repeat */
 	.view-player .player-controls-container .controls .button-repeat,
@@ -362,7 +357,7 @@ Move progress bar to bottom of window
 	}
 
 	/* the repeat & shuffle icons themselves */
-	.view-player .player-controls-container .controls .button-repeat:before, 
+	.view-player .player-controls-container .controls .button-repeat:before,
 	.view-player .player-controls-container .controls .button-shuffle:before {
 		font-size: 24px;
 		padding-left: 0;
@@ -371,15 +366,15 @@ Move progress bar to bottom of window
 	}
 
 	/* Little circle below shuffle and repeat */
-	.view-player .player-controls-container .controls .button-repeat:after, 
+	.view-player .player-controls-container .controls .button-repeat:after,
 	.view-player .player-controls-container .controls .button-shuffle:after {
 		width: 6px !important;
 		height: 6px !important;
 		bottom: -5px !important;
 	}
-	
+
 	/* next and previous buttons */
-	.view-player .player-controls-container .controls .next:before, 
+	.view-player .player-controls-container .controls .next:before,
 	.view-player .player-controls-container .controls .previous:before {
 		font-size: 24px;
 		padding: 0 8px;
@@ -391,7 +386,6 @@ Move progress bar to bottom of window
 		padding-left: 13.5px !important;
 		padding-top: 9px !important;
 	}
-
 
 	/* Right controls: buttons */
 	.view-player .extra-controls-container .button {
@@ -413,7 +407,7 @@ Move progress bar to bottom of window
 	}
 
 	/* Right controls: the volume icon */
-	.view-player .extra-controls-container .volumebar-container .button{
+	.view-player .extra-controls-container .volumebar-container .button {
 		margin-right: 4px !important;
 	}
 
@@ -442,9 +436,6 @@ Move progress bar to bottom of window
 	}
 }
 
-
-
-
 /* Add round corner for Gerne and Mood cards */
 .gc-image-container,
 .gc-image {
@@ -461,27 +452,27 @@ Collage of 3 album covers is usually seen in Browse and Chart.
 }
 
 .card-puff__image-wrapper {
-  overflow: visible;
+	overflow: visible;
 }
 
 .card-puff__card-image {
-	box-shadow: 5px 0 30px rgba(0,0,0,0.7);
+	box-shadow: 5px 0 30px rgba(0, 0, 0, 0.7);
 	overflow: visible;
 }
 
 .card-puff__title-container {
-	background-color: rgba(0,0,0,0) !important;
+	background-color: rgba(0, 0, 0, 0) !important;
 	align-items: start !important;
 }
 
 .card-puff.pressed .card-puff__image-wrapper,
 .card-puff.pressed .card-puff__info-container {
-  opacity: 0.7 !important;
+	opacity: 0.7 !important;
 }
 
 .card-puff__title {
 	padding: 5px 10px 5px 10px !important;
-	background-color: rgba(var(--modspotify_rgb_cover_overlay_and_shadow),0.8) !important;
+	background-color: rgba(var(--modspotify_rgb_cover_overlay_and_shadow), 0.8) !important;
 	border-radius: 10px 10px 0 0 !important;
 	text-align: left !important;
 	width: 100% !important;
@@ -515,7 +506,7 @@ form, so I move last cover to the right 20px and first one to the left 20px
 }
 
 .glue-page-header__sticky {
-  	padding-top: 60px !important;
+	padding-top: 60px !important;
 }
 
 /*
@@ -530,7 +521,6 @@ meaningless followers number
 .carousel .card.card-type-playlist.image-loaded .card-info-subtitle-metadata {
 	display: none !important;
 }
-
 
 /*
 In top of Browse usually has bunch of Playlist or Album cards,
@@ -557,15 +547,15 @@ Change text color in playlist
 .tl-cell:not(.tl-number),
 .tl-cell a:link,
 .tl-highlight {
-  color: var(--modspotify_secondary_fg);
+	color: var(--modspotify_secondary_fg);
 }
 
 .card-type-album .card-info-title,
 .card-type-track .card-info-title,
 .card-type-collection-album .card-info-title,
 .card-type-episode .card-info-title {
-  	font-size: 15px;
-  	font-weight: 900 !important;
+	font-size: 15px;
+	font-weight: 900 !important;
 	text-align: center !important;
 	width: 100% !important;
 }
@@ -610,7 +600,7 @@ Change text color in playlist
 /* Spice up Fullscreen mode */
 #view-player .album-art .album-art__image {
 	border-radius: 30px !important;
-	box-shadow: 0 10px 70px rgba(var(--modspotify_rgb_cover_overlay_and_shadow),.5) !important;
+	box-shadow: 0 10px 70px rgba(var(--modspotify_rgb_cover_overlay_and_shadow), 0.5) !important;
 }
 
 #view-player .album-art .album-art__image .card-image-content-wrapper,
@@ -644,11 +634,11 @@ and add little glowing effect
 	width: 100% !important;
 }
 
-.nav.navbar-nav .active  a::after{
+.nav.navbar-nav .active a::after {
 	box-shadow: 0 0px 20px !important;
 }
 
-.nav.navbar-nav a:focus:not(.button):active::after{
+.nav.navbar-nav a:focus:not(.button):active::after {
 	background-color: var(--modspotify_pressing_fg) !important;
 }
 
@@ -657,8 +647,8 @@ and add little glowing effect
 	min-width: 15px !important;
 	width: 15px !important;
 	transition-property: all !important;
-	transition-duration: .5s !important;
-	transition-timing-function: cubic-bezier(.3,0,0,1) !important;
+	transition-duration: 0.5s !important;
+	transition-timing-function: cubic-bezier(0.3, 0, 0, 1) !important;
 	opacity: 0;
 }
 
@@ -673,10 +663,10 @@ and add little glowing effect
 
 .with-buddy-list #view-buddy-list {
 	position: absolute;
-    right: 0px;
-    display: flex;
-    z-index: 999999;
-    height: 100%;
+	right: 0px;
+	display: flex;
+	z-index: 999999;
+	height: 100%;
 }
 
 /* Notification bar */
@@ -689,7 +679,7 @@ and add little glowing effect
 
 /* Small cover Big cover mechanism */
 .now-playing.cover-size-transition.active.image-expanded .cover-image {
-    width: 10px !important;
+	width: 10px !important;
 	height: 10px !important;
 }
 .now-playing.cover-size-transition.active.image-expanded .caption {
@@ -712,13 +702,13 @@ and add little glowing effect
 .content-top-bar__profile-menu-button .dropdown {
 	position: fixed !important;
 	right: 200px !important;
-    top: 10px !important;
+	top: 10px !important;
 	-webkit-app-region: no-drag !important;
 }
 
 /* Small tooltip */
 #tooltip {
-	box-shadow: 0 0 10px rgba(0,0,0,0.5) !important;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
 	border-radius: 5px !important;
 }
 
@@ -750,10 +740,10 @@ and add little glowing effect
 }
 
 .tracklist-podcast .tl-progress .row-progress__bar {
-    background-color: var(--modspotify_main_fg);
+	background-color: var(--modspotify_main_fg);
 }
 
-.Header__background-color{
+.Header__background-color {
 	background-color: var(--modspotify_main_bg) !important;
 }
 
@@ -772,7 +762,6 @@ and add little glowing effect
 	display: none !important;
 }
 
-
 .LeftSidebar {
 	min-height: unset;
 }
@@ -789,15 +778,13 @@ and add little glowing effect
 	margin-bottom: 0px;
 }
 
-
-
 /* Extension: numberOfPlays.js */
 
 .tl-popularity {
 	width: 12em;
 	text-align: right;
 	font-feature-settings: "tnum";
-    letter-spacing: 0;
+	letter-spacing: 0;
 }
 
 .AlbumRoot__content .Table__table tr th:last-child {
@@ -808,7 +795,7 @@ and add little glowing effect
 	width: 12em;
 	text-align: right;
 	font-feature-settings: "tnum";
-    letter-spacing: 0;
+	letter-spacing: 0;
 }
 
 /* End of extension*/
