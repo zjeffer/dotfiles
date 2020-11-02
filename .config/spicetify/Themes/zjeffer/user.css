@@ -325,60 +325,122 @@ Move progress bar to bottom of window
 	top: -2px;
 }
 
-/* Footer font size changes */
-/* middle controls */
-.view-player .player-controls-container .controls {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	/* margin-top: 0 !important; */
-	margin: 0 auto !important;
-	max-width: 400px;
-}
+/*  */
+@media (min-width: 1200px){
+	/* Footer font size changes */
+	/* middle controls */
+	.view-player .player-controls-container .controls {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		/* margin-top: 0 !important; */
+		margin: 0 auto !important;
+		max-width: 400px;
+	}
 
-#player-anchor {
-	display: none;
-}
+	#player-anchor {
+		display: none;
+	}
 
-/* Track title */
-.view-player .track {
-	font-size: 16px;
-}
+	/* Track title */
+	.view-player .track {
+		font-size: 16px;
+	}
 
-/* Artist */
-.view-player .artist {
-	font-size: 14px;
-}
-
-/* Shuffle and repeat */
-.view-player .player-controls-container .controls .button-repeat:before, 
-.view-player .player-controls-container .controls .button-shuffle:before {
-	font-size: 24px;
-	padding-left: 0;
-	position: relative;
-	text-align: center;
-}
-
-/* Little circle below shuffle and repeat */
-.view-player .player-controls-container .controls .button-repeat:after, 
-.view-player .player-controls-container .controls .button-shuffle:after {
+	/* Artist */
+	.view-player .artist {
+		font-size: 14px;
+	}
 	
-}
- 
-/* next and previous */
-.view-player .player-controls-container .controls .next:before, 
-.view-player .player-controls-container .controls .previous:before {
-	font-size: 24px;
-	padding: 0 8px;
-}
 
-/* play */
-.view-player .player-controls-container .controls .button-play:before {
-	font-size: 24px !important;
-	padding-left: 13.5px !important;
-	padding-top: 9px !important;
-}
+	/* Shuffle and repeat */
+	.view-player .player-controls-container .controls .button-repeat,
+	.view-player .player-controls-container .controls .button-shuffle {
+		/* make sure the little circle below these buttons are visible */
+		/* is there a better way to fix this? */
+		overflow: unset !important;
+	}
 
+	/* the repeat & shuffle icons themselves */
+	.view-player .player-controls-container .controls .button-repeat:before, 
+	.view-player .player-controls-container .controls .button-shuffle:before {
+		font-size: 24px;
+		padding-left: 0;
+		position: relative;
+		text-align: center;
+	}
+
+	/* Little circle below shuffle and repeat */
+	.view-player .player-controls-container .controls .button-repeat:after, 
+	.view-player .player-controls-container .controls .button-shuffle:after {
+		width: 6px !important;
+		height: 6px !important;
+		bottom: -5px !important;
+	}
+	
+	/* next and previous buttons */
+	.view-player .player-controls-container .controls .next:before, 
+	.view-player .player-controls-container .controls .previous:before {
+		font-size: 24px;
+		padding: 0 8px;
+	}
+
+	/* play */
+	.view-player .player-controls-container .controls .button-play:before {
+		font-size: 24px !important;
+		padding-left: 13.5px !important;
+		padding-top: 9px !important;
+	}
+
+
+	/* Right controls: buttons */
+	.view-player .extra-controls-container .button {
+		margin-left: 24px !important;
+		margin-right: 0 !important;
+		overflow: unset !important;
+	}
+
+	/* Right controls: the button's icon */
+	.view-player .extra-controls-container .button::before {
+		font-size: 24px !important;
+		padding: 0 !important;
+	}
+
+	/* Right controls: the volume slider */
+	.view-player .extra-controls-container .volumebar-container {
+		/* Make volume slider longer */
+		width: 120px;
+	}
+
+	/* Right controls: the volume icon */
+	.view-player .extra-controls-container .volumebar-container .button{
+		margin-right: 4px !important;
+	}
+
+	/* Right controls: the volume slider's bar  */
+	.view-player .extra-controls-container .volumebar-container .volumebar-slider .progress-bar {
+		/* adjust thickness */
+		height: 8px !important;
+		/* readjust position */
+		margin-top: -6px !important;
+	}
+
+	/* Right controls: the volume slider's handle */
+	.view-player .extra-controls-container .volumebar-container .volumebar-slider .progress-bar .handle {
+		/* adjust the handle's position */
+		top: -4px !important;
+		right: -8px !important;
+		/* adjust the handle's size */
+		height: 14px !important;
+		width: 14px !important;
+	}
+
+	/* Right controls: the connect popup */
+	.view-player .extra-controls-container .ConnectPopup {
+		margin-left: 36px !important;
+		bottom: 42px !important;
+	}
+}
 
 
 
