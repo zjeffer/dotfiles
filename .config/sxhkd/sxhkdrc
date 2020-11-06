@@ -233,21 +233,6 @@ shift + XF86AudioNext
 shift + XF86AudioPrev
 	~/.config/activePlayer/control.sh skipBackward
 
-button10
-	~/.config/activePlayer/control.sh next
-
-button11
-	~/.config/activePlayer/control.sh previous
-
-button12
-	~/.config/activePlayer/control.sh play-pause
-
-shift + button10
-	~/.config/activePlayer/control.sh skipForward
-
-shift + button11
-	~/.config/activePlayer/control.sh skipBackward
-
 ctrl + shift + super + m
 	pulseaudio-ctl mute-input
 
