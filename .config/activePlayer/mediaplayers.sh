@@ -19,5 +19,5 @@ while true ; do
 			fi
 		done
 	fi
-	sleep 1
+	sleep 0.5
 done
