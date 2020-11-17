@@ -7,6 +7,7 @@
 .cmake/
 .config/Emby Theater/
 .config/QtProject*
+.config/Raspberry Pi/
 .config/glade.conf
 .config/kcharselectrc
 .config/npm/
@@ -56,6 +57,7 @@
 .steampath
 .steampid
 .vmware/
+.vnc/
 .vscode-react-native/
 .vscode/
 .wget-hsts
