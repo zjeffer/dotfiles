@@ -9,7 +9,7 @@
 configuration {
     font:                           "Noto Sans 14";
     show-icons:                     true;
-    display-drun: 					"";
+    display-drun: 					"🔍";
     display-calc:	                "🖩";
     lines:                          10;
 }
