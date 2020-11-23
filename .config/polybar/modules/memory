@@ -1,6 +1,6 @@
 [module/memory]
 type = internal/memory
-interval = 5
+interval = 2
 ;format-underline = #28f
 label = %percentage_used:2%%
 
