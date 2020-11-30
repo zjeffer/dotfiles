@@ -240,4 +240,4 @@ ctrl + shift + super + m
 ########################################## LOCK ##########################################
 
 super + l
-	slock
+    light-locker-command -l
