@@ -121,7 +121,7 @@ export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME"/android/
 export ADB_VENDOR_KEY="$XDG_CONFIG_HOME"/android
 
 #wget
-export WGETRC="$XDG_CONFIG_HOME/wget"
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 
 
 
