@@ -454,6 +454,10 @@
   # Multiple patterns can be combined with '|': '~(|/foo)|/bar/baz/*'.
   #typeset -g POWERLEVEL9K_VCS_DISABLED_WORKDIR_PATTERN='~'
 
+  # Don't show the GitHub icon
+  typeset -g POWERLEVEL9K_VCS_GIT_GITHUB_ICON='' 
+
+
   # Disable the default Git status formatting.
   typeset -g POWERLEVEL9K_VCS_DISABLE_GITSTATUS_FORMATTING=true
   # Install our own Git status formatter.
