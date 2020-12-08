@@ -1,3 +1,12 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -70,8 +79,6 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-
-
 #User configuration
 export DEFAULT_USER = zjeffer prompt_context(){}
 export MANPATH="/usr/local/man:$MANPATH"
@@ -123,19 +130,6 @@ export ADB_VENDOR_KEY="$XDG_CONFIG_HOME"/android
 #wget
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 
-
-
-
-#Set personal aliases, overriding those provided by oh-my-zsh libs,
-#plugins, and themes. Aliases can be placed here, though oh-my-zsh
-#users are encouraged to define aliases within the ZSH_CUSTOM folder.
-#For a full list of active aliases, run `alias`.
-
-
-#
-# ~/.zshrc
-#
-
 #default WINE prefix
 export WINEPREFIX=/media/SamsungSSD/wine/
 
@@ -153,6 +147,7 @@ promptinit
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Aliases
 alias ls='ls --color=auto'
 alias la='ls -la'
 alias ll='ls -l'
@@ -163,6 +158,8 @@ alias vim='nvim'
 alias sudo='sudo -A'
 alias feh='feh --auto-zoom'
 alias gs='git status'
+#wget alias: put hsts file in ~/.config/wget/wget-hsts
+alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
 
 
 bindkey "^[[1;3C" forward-word
@@ -179,6 +176,5 @@ export QT_QPA_PLATFORMTHEME=gtk2
 export LESSHISTSIZE=0
 export LESSHISTFILE=-
 
-#wget alias: put hsts file in ~/.config/wget/wget-hsts
-alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
-
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
