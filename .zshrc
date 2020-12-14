@@ -133,6 +133,9 @@ export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 #default WINE prefix
 export WINEPREFIX=/media/SamsungSSD/wine/
 
+#rust cargo
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/histfile
 HISTSIZE=1000
