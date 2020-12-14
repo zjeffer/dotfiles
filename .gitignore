@@ -29,6 +29,7 @@
 .config/wireshark/
 .directory
 .dmrc
+.dotnet/
 .factorio/
 .fehbg
 .gem/
