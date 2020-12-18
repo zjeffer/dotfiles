@@ -12,6 +12,9 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/zjeffer/.oh-my-zsh"
+export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
+export ZSH_COMPDUMP="$ZSH_CACHE_DIR/zcompdump-$HOST-$ZSH_VERSION"
+export ZDOTDIR="$ZSH_CACHE_DIR"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -141,11 +144,6 @@ HISTFILE=~/.cache/histfile
 HISTSIZE=1000
 SAVEHIST=1000
 # End of lines configured by zsh-newuser-install
-
-autoload -Uz compinit promptinit
-compinit
-promptinit
-
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
