@@ -1,7 +1,7 @@
 [module/updates-arch-combined]
 type = custom/script
 exec = export CHECKUPDATES_DB=$(mktemp -d) && ~/.config/polybar/scripts/arch-updates/updates-arch-combined.sh && rm -rf "$CHECKUPDATES_DB"
-interval = 1200
+interval = 600
 label = %output%
 click-left = gnome-terminal -- paru -Syyu & 2>>~/.config/polybar/.polybar.err 
 

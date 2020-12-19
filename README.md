@@ -15,10 +15,10 @@ More info below images.
 
 # Packages
 ### Bspwm
-`yay -S bspwm-git sxhkd-git feh xorg xorg-server xorg-xinit xinit-xsession`
+`paru -S bspwm-git sxhkd-git feh xorg xorg-server xorg-xinit xinit-xsession`
 
 ### LightDM
-* `yay -S lightdm lightdm-webkit2-greeter lightdm-theme-litarvan`
+* `paru -S lightdm lightdm-webkit2-greeter lightdm-theme-litarvan`
 * In `/etc/lightdm/lightdm.conf`:
 	* `greeter-session=lightdm-webkit2-greeter`
 	* `session-wrapper=/etc/lightdm/Xsession`
@@ -27,29 +27,29 @@ More info below images.
 	* `webkit_theme = litarvan`
 ### Bootloader
 * [rEFInd](https://wiki.archlinux.org/index.php/REFInd) with [Ursa-Major theme](https://github.com/kgoettler/ursamajor-rEFInd)
-* yay -S `refind intel-ucode efibootmgr`
+* paru -S `refind intel-ucode efibootmgr`
 * `sudo refind-install`
 
 ### Zsh
-* `yay -S zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting`
+* `paru -S zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting`
 * [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
 
-### Pacman/yay
-* Get `yay` from [here](https://github.com/Jguer/yay)
+### Pacman/paru
+* Get `paru` from [here](https://github.com/Jguer/paru)
 * Uncomment `Color` in `/etc/pacman.conf`
 * Enable the multilib repo in `/etc/pacman.conf`
 
 ### Vim
-* `yay -S vim vim-plug neovim`
+* `paru -S vim vim-plug neovim`
 * `sudo npm install -g neovim`
 * `python3 -m pip install --upgrade pynvim`
 * `gem install neovim`
 
 ### Compton
-`yay -S compton-tryone-git`
+`paru -S compton-tryone-git`
 
 ### Firefox
-* `yay -S firefox`
+* `paru -S firefox`
 * Make Firefox ignore GTK theme:
 	* Go to about:config, set `widget.content.gtk-theme-override` to something like `Breeze:light` (make sure Breeze theme is installed).
 * Right click immediately picks the first option, fix:
@@ -59,52 +59,52 @@ More info below images.
 * Enable GFX webrender:
 	* Go to about:config, set `gfx.webrender.all` to `true`.
 ### Terminal
-`yay -S gnome-terminal` 
+`paru -S gnome-terminal` 
 
 ### File manager
-* `yay -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman gvfs ntfs-3g tumbler`
-* `yay -S ranger highlight w3m`
+* `paru -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman gvfs ntfs-3g tumbler`
+* `paru -S ranger highlight w3m`
 * Add `inode/directory=thunar.desktop` to `~/.config/mimeapps.list` under `[Default Applications] 
 
 ### Media
-* `yay -S vlc vlc-pause-click-plugin`
-* `yay -S qt5-tools` (needed for qdbus commands)
-* `yay -S pulseaudio pulseaudio-ctl pulseaudio-alsa alsa-libs pavucontrol`
+* `paru -S vlc vlc-pause-click-plugin`
+* `paru -S qt5-tools` (needed for qdbus commands)
+* `paru -S pulseaudio pulseaudio-ctl pulseaudio-alsa alsa-libs pavucontrol`
 
 #### Fix pulseaudio volume adjust delay
 * https://community.spotify.com/t5/Desktop-Linux/Delay-when-changing-volume/m-p/1843731#M2065
 * Set `enable-deferred-volume` to `no` (and uncomment) in `/etc/pulse/daemon.conf`. 
 
 ### Networking
-`yay -S networkmanager networkmanager-applet nm-connection-editor`
+`paru -S networkmanager networkmanager-applet nm-connection-editor`
 
 ### Themes
-* `yay -S nordic-polar-theme-git nordic-theme-git`
+* `paru -S nordic-polar-theme-git nordic-theme-git`
 * [Nord theme in gnome-terminal](https://github.com/arcticicestudio/nord-gnome-terminal)
 * [Nord theme in vim](https://github.com/arcticicestudio/nord-vim)
-* `yay -S qt5-styleplugins`
-* `yay -S xcursor-breeze` for Breeze (light and dark) cursor theme
-* `yay -S plasma-browser-integration` for media control in the browser
-* `yay -S lxappearance` to set the global theme, icon theme and cursor theme.
+* `paru -S qt5-styleplugins`
+* `paru -S xcursor-breeze` for Breeze (light and dark) cursor theme
+* `paru -S plasma-browser-integration` for media control in the browser
+* `paru -S lxappearance` to set the global theme, icon theme and cursor theme.
 
 ### Spotify
-* `yay -S spotify spicetify-cli spicetify-themes-git`
+* `paru -S spotify spicetify-cli spicetify-themes-git`
 * Fix permissions: [Solution](https://github.com/khanhas/spicetify-cli/wiki/Installation#spotify-installed-from-aur)
 * Set spotify data file to folder on different drive: [Solution](https://community.spotify.com/t5/Desktop-Linux/Spotify-downloads-to-the-wrong-folder/m-p/4854706/highlight/true#M19161)
 
 ### Mouse driver (Logitech G502)
-`yay -S piper-git`
+`paru -S piper-git`
 
 ### GPU Drivers
-`yay -S nvidia nvidia-utils lib32-nvidia-utils`
+`paru -S nvidia nvidia-utils lib32-nvidia-utils`
 
 ### CPU settings
-* `yay -S cpupower`
+* `paru -S cpupower`
 * Set `governor='performance'` in `/etc/default/cpupower` to change the default governor.
 * Enable the service at boot: `sudo systemctl enable cpupower.service`
 
 ### Other
-* `yay -S git npm python2 python ruby php xclip neofetch cava kcolorchooser ksysguard spectacle simplescreenrecorder htop gparted numlockx redshift xcape powerline powerline-common powerline-fonts polkit-kde-agent light gucharmap`
+* `paru -S git npm python2 python ruby php xclip neofetch cava kcolorchooser ksysguard spectacle simplescreenrecorder htop gparted numlockx redshift xcape powerline powerline-common powerline-fonts polkit-kde-agent light gucharmap`
 * Stop rtkit-daemon log spam: 
 	* Create `/etc/systemd/system/rtkit-daemon.service.d/override.conf`
 	```
