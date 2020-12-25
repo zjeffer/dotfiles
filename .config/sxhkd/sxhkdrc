@@ -169,24 +169,9 @@ super + alt + shift + {Left, Down, Up, Right}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 
-#Change window size
-
-
-alt + equal
-	bspc config -d focused left_padding $((`bspc config -d focused left_padding` - 20 )); \
-    bspc config -d focused right_padding $((`bspc config -d focused right_padding` - 20 )); \
-    bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` - 20 )); \
-    bspc config -d focused top_padding $((`bspc config -d focused top_padding` - 20 ));
-
-alt + minus
-	bspc config -d focused left_padding $((`bspc config -d focused left_padding` + 20 )); \
-    bspc config -d focused right_padding $((`bspc config -d focused right_padding` + 20 )); \
-    bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` + 20 )); \
-    bspc config -d focused top_padding $((`bspc config -d focused top_padding` + 20 ));
-
 #Change window gap
 super + {minus,equal}
-	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5 ))
+	bspc config -d focused window_gap {25, 0}
 
 #reset
 super + r

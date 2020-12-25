@@ -1,6 +1,6 @@
 [Added Associations]
 application/octet-stream=sublime_text.desktop;
-text/plain=sublime_text.desktop;visual-studio-code.desktop;
+text/plain=visual-studio-code.desktop;sublime_text.desktop;
 application/json=sublime_text.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
@@ -18,7 +18,7 @@ video/mp4=vlc.desktop;mpv.desktop;
 application/x-shellscript=visual-studio-code.desktop;
 application/x-trash=sublime_text.desktop;
 image/jpeg=org.kde.gwenview.desktop;gimp.desktop;feh.desktop;
-image/png=gimp.desktop;org.kde.gwenview.desktop;feh.desktop;
+image/png=org.kde.gwenview.desktop;gimp.desktop;feh.desktop;
 application/xml=sublime_text.desktop;
 application/dash+xml=visual-studio-code.desktop;sublime_text.desktop;
 inode/symlink=sublime_text.desktop;
@@ -33,6 +33,8 @@ application/x-subrip=sublime_text.desktop;
 application/x-virtualbox-vdi=virtualbox.desktop;
 application/x-vmware-vmdisk=vmware-workstation.desktop;
 application/x-vmware-vm=vmware-workstation.desktop;
+text/x-c++src=visual-studio-code.desktop;
+image/svg+xml=sublime_text.desktop;org.inkscape.Inkscape.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop

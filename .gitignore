@@ -4,6 +4,7 @@
 .bash_profile
 .bashrc
 .cache/
+.cargo/
 .cmake/
 .config/Emby Theater/
 .config/QtProject*
