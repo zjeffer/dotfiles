@@ -9,6 +9,7 @@
 .config/Emby Theater/
 .config/QtProject*
 .config/Raspberry Pi/
+.config/flashpoint-launcher/
 .config/glade.conf
 .config/godot/
 .config/kcharselectrc
