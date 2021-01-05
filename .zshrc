@@ -149,6 +149,7 @@ SAVEHIST=1000
 [[ $- != *i* ]] && return
 
 # Aliases
+alias sudo='sudo '
 alias ls='ls --color=auto'
 alias la='ls -la'
 alias ll='ls -l'
@@ -158,8 +159,8 @@ alias ka='killall'
 alias vim='nvim'
 alias sudo='sudo -A'
 alias feh='feh --auto-zoom'
+alias dmesg='sudo dmesg -H --color'
 alias gs='git status'
-#wget alias: put hsts file in ~/.config/wget/wget-hsts
 alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
 
 
