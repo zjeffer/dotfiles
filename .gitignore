@@ -37,6 +37,7 @@
 .fehbg
 .gem/
 .gitignore
+.gnome/
 .gnupg/
 .gtkrc-2.0
 .histfile
