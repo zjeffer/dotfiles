@@ -1,4 +1,5 @@
 *.err
+.thunderbird/
 .Xauthority
 .bash_logout
 .bash_profile
