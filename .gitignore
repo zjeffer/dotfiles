@@ -1,5 +1,4 @@
 *.err
-.thunderbird/
 .Xauthority
 .bash_logout
 .bash_profile
@@ -13,6 +12,7 @@
 .config/flashpoint-launcher/
 .config/glade.conf
 .config/godot/
+.config/gwe/
 .config/kcharselectrc
 .config/npm/
 .config/nvidia/
@@ -62,6 +62,7 @@
 .steam/
 .steampath
 .steampid
+.thunderbird/
 .vmware/
 .vnc/
 .vscode-react-native/
