@@ -1,6 +1,6 @@
 [Added Associations]
 application/octet-stream=sublime_text.desktop;
-text/plain=visual-studio-code.desktop;sublime_text.desktop;
+text/plain=visual-studio-code.desktop;sublime_text.desktop;godot.desktop;
 application/json=sublime_text.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
@@ -55,3 +55,4 @@ x-scheme-handler/figma=figma-linux.desktop
 x-scheme-handler/etcher=balena-etcher-electron.desktop
 application/x-vmware-vmdisk=vmware-workstation.desktop
 x-scheme-handler/postman=Postman.desktop
+text/plain=godot.desktop
