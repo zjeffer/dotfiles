@@ -33,7 +33,7 @@ nord15 = #b48ead
 red=${colors.nord11}
 green=${colors.nord14}
 orange=${colors.nord12}
-blue=${colors.nord12}
+blue=${colors.nord10}
 turkoise=${colors.nord7}
 purple=${colors.nord15}
 
