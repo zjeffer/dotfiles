@@ -32,13 +32,17 @@ nord15 = #b48ead
 
 red=${colors.nord11}
 green=${colors.nord14}
+orange=${colors.nord12}
+blue=${colors.nord12}
+turkoise=${colors.nord7}
+purple=${colors.nord15}
 
-cpu = #bf616a
-ram = #a3be8c
-temp = #d08770
-wifi = #5e81ac
-date = #8fbcbb
-time = #b48ead
+cpu = ${colors.red}
+ram = ${colors.green}
+temp = ${colors.orange}
+wifi = ${colors.blue}
+date = ${colors.turkoise}
+time = ${colors.purple}
 power = ${colors.nord6}
 
 ##############################################################################################
