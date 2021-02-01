@@ -35,6 +35,7 @@ application/x-vmware-vmdisk=vmware-workstation.desktop;
 application/x-vmware-vm=vmware-workstation.desktop;
 text/x-c++src=visual-studio-code.desktop;sublime_text.desktop;
 image/svg+xml=sublime_text.desktop;org.inkscape.Inkscape.desktop;
+application/x-ms-dos-executable=wine.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop
