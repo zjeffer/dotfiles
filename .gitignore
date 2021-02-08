@@ -1,5 +1,6 @@
 *.err
 .Xauthority
+.config/FortiClient/
 .bash_logout
 .bash_profile
 .bashrc
