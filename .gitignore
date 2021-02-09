@@ -26,6 +26,7 @@
 .config/ranger/commands*
 .config/ranger/rifle.conf
 .config/ranger/scope.sh
+.config/simplescreenrecorder/
 .config/spicetify/Backup/*
 .config/spicetify/CustomApps/*
 .config/spicetify/Extracted/
