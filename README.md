@@ -33,6 +33,7 @@ More info below images.
 ### Zsh
 * `paru -S zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting`
 * [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
+* [powerlevel10k](https://github.com/romkatv/powerlevel10k#get-started)
 
 ### Pacman/paru
 * Get `paru` from [here](https://github.com/Jguer/paru)
