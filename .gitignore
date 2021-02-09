@@ -1,6 +1,5 @@
 *.err
 .Xauthority
-.config/FortiClient/
 .bash_logout
 .bash_profile
 .bashrc
@@ -8,8 +7,10 @@
 .cargo/
 .cmake/
 .config/Emby Theater/
+.config/FortiClient/
 .config/QtProject*
 .config/Raspberry Pi/
+.config/enchant/
 .config/flashpoint-launcher/
 .config/glade.conf
 .config/godot/
