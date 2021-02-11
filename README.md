@@ -29,10 +29,12 @@ More info below images.
 * [rEFInd](https://wiki.archlinux.org/index.php/REFInd) with [Ursa-Major theme](https://github.com/kgoettler/ursamajor-rEFInd)
 * paru -S `refind intel-ucode efibootmgr`
 * `sudo refind-install`
+* Boot options: `root=/dev/nvme0n1p1 rw quiet splash loglevel=4 vga=current udev.log_priority=3 vt.global_cursor_default=0 nvidia-drm.modeset=1 nowatchdog audit=0 initrd=intel-ucode.img`
 
 ### Zsh
 * `paru -S zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting`
 * [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
+* [powerlevel10k](https://github.com/romkatv/powerlevel10k#get-started)
 
 ### Pacman/paru
 * Get `paru` from [here](https://github.com/Jguer/paru)
@@ -97,6 +99,9 @@ More info below images.
 
 ### GPU Drivers
 `paru -S nvidia nvidia-utils lib32-nvidia-utils`
+
+Enable DRM KMS to eliminate tearing: https://wiki.archlinux.org/index.php/NVIDIA#DRM_kernel_mode_setting
+Don't forget the pacman hook!
 
 ### CPU settings
 * `paru -S cpupower`
