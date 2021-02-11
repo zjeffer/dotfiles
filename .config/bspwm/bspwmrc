@@ -69,14 +69,14 @@ killall mediaplayers.sh 2>/dev/null
 #compton: compositor
 killall compton 2>/dev/null; compton --config ~/.config/compton/compton.conf &>>~/.config/compton/.compton.err &
 
+#nm-applet
+killall nm-applet 2>/dev/null
+nm-applet &
+
 #polybar: top bar
 killall polybar 2>/dev/null
 ~/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
 
-
-#nm-applet
-killall nm-applet 2>/dev/null
-nm-applet &
 
 #libinput-gestures: touchpad gestures
 libinput-gestures-setup restart

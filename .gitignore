@@ -15,6 +15,7 @@
 .config/glade.conf
 .config/godot/
 .config/gwe/
+.config/jupyter/
 .config/kcharselectrc
 .config/npm/
 .config/nvidia/
@@ -54,6 +55,7 @@
 .mysql/
 .mysql_history
 .npm/
+.nuget/
 .nv/
 .nvidia-settings-rc
 .oh-my-zsh/
@@ -65,6 +67,7 @@
 .steam/
 .steampath
 .steampid
+.templateengine/
 .thunderbird/
 .vmware/
 .vnc/

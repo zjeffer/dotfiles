@@ -1,6 +1,6 @@
 [Added Associations]
 application/octet-stream=sublime_text.desktop;
-text/plain=visual-studio-code.desktop;sublime_text.desktop;godot.desktop;
+text/plain=sublime_text.desktop;visual-studio-code.desktop;godot.desktop;
 application/json=sublime_text.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
@@ -36,6 +36,8 @@ application/x-vmware-vm=vmware-workstation.desktop;
 text/x-c++src=visual-studio-code.desktop;sublime_text.desktop;
 image/svg+xml=sublime_text.desktop;org.inkscape.Inkscape.desktop;
 application/x-ms-dos-executable=wine.desktop;
+text/css=visual-studio-code.desktop;
+application/x-ipynb+json=visual-studio-code.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop
@@ -56,4 +58,3 @@ x-scheme-handler/figma=figma-linux.desktop
 x-scheme-handler/etcher=balena-etcher-electron.desktop
 application/x-vmware-vmdisk=vmware-workstation.desktop
 x-scheme-handler/postman=Postman.desktop
-text/plain=godot.desktop
