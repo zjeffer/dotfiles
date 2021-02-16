@@ -167,7 +167,8 @@ alias feh='feh --auto-zoom'
 alias dmesg='sudo dmesg -H --color'
 alias gs='git status'
 alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
-
+alias paru='paru --bottomup'
+alias yay='paru'
 
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
