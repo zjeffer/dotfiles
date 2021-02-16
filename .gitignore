@@ -20,6 +20,7 @@
 .config/npm/
 .config/nvidia/
 .config/nvim/plugged/
+.config/obs-studio/
 .config/polybar/scripts/nm-applet/curr_ssid
 .config/qalculate/
 .config/ranger/colorschemes/__init__.py
@@ -47,6 +48,7 @@
 .gtkrc-2.0
 .histfile
 .icons/
+.ipython/
 .java/
 .kodi/
 .local/
@@ -62,6 +64,7 @@
 .pki/
 .processing/
 .pulse-cookie
+.putty/
 .python_history
 .ssh/
 .steam/
