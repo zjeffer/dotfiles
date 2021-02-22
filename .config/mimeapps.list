@@ -39,6 +39,8 @@ application/x-ms-dos-executable=wine.desktop;
 text/css=visual-studio-code.desktop;
 application/x-ipynb+json=visual-studio-code.desktop;
 text/markdown=visual-studio-code.desktop;
+text/x-java=visual-studio-code.desktop;
+audio/mp4=vlc.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop
