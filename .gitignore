@@ -1,5 +1,6 @@
 *.err
 .Xauthority
+.aspnet/
 .bash_logout
 .bash_profile
 .bashrc
@@ -17,6 +18,7 @@
 .config/gwe/
 .config/jupyter/
 .config/kcharselectrc
+.config/lsp-plugins/
 .config/npm/
 .config/nvidia/
 .config/nvim/plugged/
@@ -38,6 +40,7 @@
 .config/wireshark/
 .directory
 .dmrc
+.docker/
 .dotnet/
 .factorio/
 .fehbg
@@ -52,6 +55,7 @@
 .java/
 .kodi/
 .local/
+.microsoft/
 .mono/
 .mozilla/
 .mysql/
@@ -76,6 +80,7 @@
 .vnc/
 .vscode-react-native/
 .vscode/
+.vsdbg/
 .wget-hsts
 .xbindkeysrc
 .xprofile
