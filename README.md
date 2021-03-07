@@ -12,6 +12,11 @@ More info below images.
 ![](https://i.imgur.com/tzLfn8v.png )
 ![](https://i.imgur.com/msiNUed.png )
 
+# Special thanks
+
+* adi1090x: https://github.com/adi1090x for his amazing work with customization
+* `/r/unixporn`: http://www.reddit.com/r/unixporn and their discord
+* The Nord theme creators at https://www.nordtheme.com
 
 # Packages
 ### Bspwm
