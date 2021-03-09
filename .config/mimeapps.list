@@ -41,6 +41,9 @@ application/x-ipynb+json=visual-studio-code.desktop;
 text/markdown=visual-studio-code.desktop;
 text/x-java=visual-studio-code.desktop;
 audio/mp4=vlc.desktop;
+image/webp=gimp.desktop;
+audio/x-vorbis+ogg=vlc.desktop;
+application/vnd.openxmlformats-officedocument.presentationml.presentation=libreoffice-impress.desktop;org.gnome.FileRoller.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop

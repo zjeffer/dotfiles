@@ -10,6 +10,9 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+# Add .NET Core SDK tools
+export PATH=$PATH:$HOME/.dotnet/tools
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/zjeffer/.oh-my-zsh"
 export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
