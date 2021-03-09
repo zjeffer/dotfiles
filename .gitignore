@@ -1,6 +1,8 @@
 *.err
+*.log
 .Xauthority
 .aspnet/
+.azuredatastudio/
 .bash_logout
 .bash_profile
 .bashrc
@@ -11,6 +13,7 @@
 .config/FortiClient/
 .config/QtProject*
 .config/Raspberry Pi/
+.config/azuredatastudio/
 .config/enchant/
 .config/flashpoint-launcher/
 .config/glade.conf
@@ -70,6 +73,9 @@
 .pulse-cookie
 .putty/
 .python_history
+.rubberband.wisdom.d
+.rubberband.wisdom.d/
+.sqlsecrets/
 .ssh/
 .steam/
 .steampath
@@ -78,6 +84,7 @@
 .thunderbird/
 .vmware/
 .vnc/
+.vpython*
 .vscode-react-native/
 .vscode/
 .vsdbg/
@@ -86,6 +93,7 @@
 .xprofile
 .xsession-errors
 .xsession-errors.old
+.yarnrc
 .zcompdump
 .zcompdump-127-5.8
 .zcompdump-Arch-5.8
