@@ -10,14 +10,14 @@ while true ; do
 			bool=1
 		fi
 	done
-	if [[ $bool == 1 ]]; then
-		for m in `qdbus | egrep -i 'org.mpris.MediaPlayer2|plasma.browser_integration'` ; do
-			if [[ `qdbus $m /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlaybackStatus` == 'Paused' ]]; then
-				echo $m > ~/.config/activePlayer/currentPlaying.txt
-				bool=0
-				break
-			fi
-		done
-	fi
+	#if [[ $bool == 1 ]]; then
+	#	for m in `qdbus | egrep -i 'org.mpris.MediaPlayer2|plasma.browser_integration'` ; do
+	#		if [[ `qdbus $m /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlaybackStatus` == 'Paused' ]]; then
+	#			echo $m > ~/.config/activePlayer/currentPlaying.txt
+	#			bool=0
+	#			break
+	#		fi
+	#	done
+	#fi
 	sleep 0.5
 done
