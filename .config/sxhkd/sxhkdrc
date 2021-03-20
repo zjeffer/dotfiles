@@ -13,11 +13,15 @@ super + shift + Return
 
 # program launcher
 super + space
-	~/.config/rofi/scripts/launcher.sh
+	~/.config/rofi/scripts/launcher.sh &
 
 # firefox
 super + z
-	firefox
+	firefox &
+
+# chromium
+super + shift + z
+    chromium &
 
 #sublime
 super + q
@@ -45,7 +49,7 @@ super + a
 
 #system monitor
 ctrl + shift + Escape
-	ksysguard
+	ksysguard &
 
 # make sxhkd reload its configuration files and restart polybar
 super + Escape

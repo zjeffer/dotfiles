@@ -22,6 +22,7 @@
 .config/jupyter/
 .config/kcharselectrc
 .config/lsp-plugins/
+.config/mimeapps.list
 .config/npm/
 .config/nvidia/
 .config/nvim/plugged/
