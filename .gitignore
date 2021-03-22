@@ -11,6 +11,7 @@
 .cmake/
 .config/Emby Theater/
 .config/FortiClient/
+.config/PulseEffects/
 .config/QtProject*
 .config/Raspberry Pi/
 .config/azuredatastudio/
