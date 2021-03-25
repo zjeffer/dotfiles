@@ -58,6 +58,8 @@
 .icons/
 .ipython/
 .java/
+.jupyter/
+.keras/
 .kodi/
 .local/
 .microsoft/
@@ -290,6 +292,7 @@ mpv/
 neofetch/
 networkmanagement.notifyrc
 nextjs-nodejs/
+nltk_data/
 obs-studio/*
 ocs-manager/
 okularpartrc
