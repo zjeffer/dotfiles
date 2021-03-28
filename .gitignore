@@ -9,6 +9,7 @@
 .cache/
 .cargo/
 .cmake/
+.config/Element/
 .config/Emby Theater/
 .config/FortiClient/
 .config/PulseEffects/

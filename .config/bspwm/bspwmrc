@@ -60,8 +60,8 @@ dunst &
 killall mediaplayers.sh 2>/dev/null
 ~/.config/activePlayer/mediaplayers.sh 2>~/.config/activePlayer/.mediaplayer.err &
 
-#compton: compositor
-killall compton 2>/dev/null; compton --config ~/.config/compton/compton.conf &>>~/.config/compton/.compton.err &
+#picom: compositor
+killall picom 2>/dev/null; picom --experimental-backends --config ~/.config/picom/picom.conf &>>~/.config/picom/.picom.err &
 
 #nm-applet
 killall nm-applet 2>/dev/null
