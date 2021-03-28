@@ -82,11 +82,6 @@ xcape -e 'Super_L=Super_L|space' &
 #devmon: Automounts and unmounts optical and removable drives
 #devmon &
 
-#if the laptop is running on battery when booting, immediately set the cpu governor to powersave
-if acpi -a | grep 'off'; then
-	cpupower frequency-set -g powersave
-fi
-
 #feh: set desktop background
 ~/.fehbg &
 
