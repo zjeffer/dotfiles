@@ -5,10 +5,6 @@ xrandr --auto
 xrandr --dpi 96
 xsetroot -cursor_name left_ptr
 
-# xrandr --output eDP-1-1 --primary
-# xrandr --output HDMI-1-1 --right-of eDP-1-1
-# xrandr --output DP-1-1 --left-of eDP-1-1
-
 #turn off screen saver
 xset s off -dpms
 
@@ -62,4 +58,3 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec light-locker &
 
 exec bspwm 2>>~/.config/bspwm/.bspwm.err
-
