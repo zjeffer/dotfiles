@@ -8,17 +8,8 @@ label = %title:0:46:..%
 
 [module/bspwm]
 
-;ws-icon-0 = browser;
-;ws-icon-1 = mpd;
-;ws-icon-2 = term;
-;ws-icon-3 = code;
-;ws-icon-4 = games;
-;ws-icon-default = 
-
 type = internal/bspwm
 
-
-;label-focused = %index%
 label-focused = 
 label-focused-foreground = ${colors.nord11}
 label-focused-background = ${colors.primary}
