@@ -45,7 +45,7 @@ bspc rule -a 'Citrix maximized probe window' state=floating
 bspc rule -a simplescreenrecorder state=floating
 bspc rule -a 'processing-core-PApplet' state=floating focus=off
 bspc rule -a 'Tk' state=floating
-
+bspc rule -a 'Toplevel' state=floating
 
 ##### run programs:
 #sxhkd: keyboard shortcut daemon
