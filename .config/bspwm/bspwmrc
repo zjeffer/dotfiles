@@ -61,7 +61,7 @@ killall mediaplayers.sh 2>/dev/null
 ~/.config/activePlayer/mediaplayers.sh 2>~/.config/activePlayer/.mediaplayer.err &
 
 #picom: compositor
-killall picom 2>/dev/null; picom --experimental-backends --config ~/.config/picom/picom.conf &>>~/.config/picom/.picom.err &
+killall -qw picom 2>/dev/null; picom --experimental-backends --config ~/.config/picom/picom.conf &>>~/.config/picom/.picom.err &
 
 #nm-applet
 killall nm-applet 2>/dev/null
