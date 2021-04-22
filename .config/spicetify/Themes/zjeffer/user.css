@@ -321,6 +321,11 @@ Move progress bar to bottom of window
 	top: -2px;
 }
 
+/* When playing remotely, the bar jumps up. This fixes that: */
+body.remotebar .view-player .player-bar-wrapper {
+	height: 100% !important;
+}
+
 /*  */
 @media (min-width: 1200px) {
 	/* Footer font size changes */
