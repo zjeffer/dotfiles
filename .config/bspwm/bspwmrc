@@ -56,6 +56,10 @@ sxhkd &>>~/.config/sxhkd/.sxhkd.err &
 killall dunst 2>/dev/null
 dunst &
 
+#polybar: top bar
+killall polybar 2>/dev/null
+~/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
+
 #activePlayer: keeps the current active player in a file, so it can be played using mouse keys
 killall mediaplayers.sh 2>/dev/null
 ~/.config/activePlayer/mediaplayers.sh 2>~/.config/activePlayer/.mediaplayer.err &
@@ -66,10 +70,6 @@ killall -qw picom 2>/dev/null; picom --experimental-backends --config ~/.config/
 #nm-applet
 killall nm-applet 2>/dev/null
 nm-applet &
-
-#polybar: top bar
-killall polybar 2>/dev/null
-~/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
 
 
 #libinput-gestures: touchpad gestures
