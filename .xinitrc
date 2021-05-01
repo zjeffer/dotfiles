@@ -8,6 +8,9 @@ xsetroot -cursor_name left_ptr
 #turn off screen saver
 xset s off -dpms
 
+# change repeating speed
+xset r rate 200 30
+
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
