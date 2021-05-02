@@ -94,7 +94,7 @@ export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 
 # disable less history file in ~/
-export LESSHISTFILE="-"
+export LESSHISTFILE=-
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/histfile
