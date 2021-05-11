@@ -53,7 +53,7 @@
     sort = yes
 
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
-    idle_threshold = 15
+    idle_threshold = 0
 
     ### Text ###
 
