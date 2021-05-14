@@ -9,12 +9,15 @@
 .cache/
 .cargo/
 .cmake/
+.config/Code - OSS
+.config/Code/
 .config/Element/
 .config/Emby Theater/
 .config/FortiClient/
 .config/PulseEffects/
 .config/QtProject*
 .config/Raspberry Pi/
+.config/VSCodium/
 .config/azuredatastudio/
 .config/enchant/
 .config/flashpoint-launcher/
@@ -90,6 +93,7 @@
 .vmware/
 .vnc/
 .vpython*
+.vscode-oss/
 .vscode-react-native/
 .vscode/
 .vsdbg/
