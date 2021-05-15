@@ -24,6 +24,7 @@
 .config/glade.conf
 .config/godot/
 .config/gwe/
+.config/jellyfin.org/
 .config/jupyter/
 .config/kcharselectrc
 .config/lsp-plugins/
