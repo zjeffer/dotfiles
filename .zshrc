@@ -106,7 +106,6 @@ SAVEHIST=1000
 [[ $- != *i* ]] && return
 
 # Aliases
-alias sudo='sudo '
 alias ls='ls --color=auto'
 alias la='ls -la'
 alias ll='ls -l'
