@@ -14,6 +14,7 @@
 .config/Element/
 .config/Emby Theater/
 .config/FortiClient/
+.config/Netron/
 .config/PulseEffects/
 .config/QtProject*
 .config/Raspberry Pi/
