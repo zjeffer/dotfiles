@@ -28,6 +28,7 @@
 .config/jellyfin.org/
 .config/jupyter/
 .config/kcharselectrc
+.config/kdenlive*
 .config/lsp-plugins/
 .config/mimeapps.list
 .config/npm/
