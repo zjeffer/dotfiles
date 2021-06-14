@@ -96,6 +96,9 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 # disable less history file in ~/
 export LESSHISTFILE="/dev/null"
 
+# pylint
+export PYLINTHOME="$XDG_CACHE_HOME"/pylint 
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/histfile
 HISTSIZE=1000
