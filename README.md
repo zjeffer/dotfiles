@@ -71,7 +71,7 @@ More info below images.
 ### File manager
 * `paru -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman gvfs ntfs-3g tumbler`
 * `paru -S ranger highlight w3m`
-* Add `inode/directory=thunar.desktop` to `~/.config/mimeapps.list` under `[Default Applications] 
+* Add `inode/directory=thunar.desktop` to `~/.config/mimeapps.list` under `[Default Applications]` 
 
 ### Media
 * `paru -S vlc vlc-pause-click-plugin`
