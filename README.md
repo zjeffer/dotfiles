@@ -32,7 +32,7 @@ More info below images.
 	* `webkit_theme = litarvan`
 ### Bootloader
 * [rEFInd](https://wiki.archlinux.org/index.php/REFInd) with [Ursa-Major theme](https://github.com/kgoettler/ursamajor-rEFInd)
-* paru -S `refind intel-ucode efibootmgr`
+* `paru -S refind intel-ucode efibootmgr`
 * `sudo refind-install`
 * Boot options: `root=/dev/nvme0n1p1 rw quiet splash loglevel=4 vga=current udev.log_priority=3 vt.global_cursor_default=0 nvidia-drm.modeset=1 nowatchdog audit=0 initrd=intel-ucode.img`
 
