@@ -29,7 +29,7 @@ super + q
 
 # dolphin 
 super + x
-	thunar &
+	dolphin &
 
 #spectacle
 Print
