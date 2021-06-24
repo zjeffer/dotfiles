@@ -53,7 +53,7 @@ More info below images.
 * `gem install neovim`
 
 ### Compton
-`paru -S compton-tryone-git`
+`paru -S picom-tryone-git`
 
 ### Firefox
 * `paru -S firefox`
@@ -105,7 +105,7 @@ More info below images.
 ### GPU Drivers
 `paru -S nvidia nvidia-utils lib32-nvidia-utils`
 
-Enable DRM KMS to eliminate tearing: https://wiki.archlinux.org/index.php/NVIDIA#DRM_kernel_mode_setting
+Enable DRM KMS to eliminate tearing: https://wiki.archlinux.org/index.php/NVIDIA#DRM_kernel_mode_setting.
 Don't forget the pacman hook!
 
 ### CPU settings
