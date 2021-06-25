@@ -30,6 +30,8 @@ More info below images.
 	* `display-setup-script=/etc/lightdm/display_setup.sh`
 * In `/etc/lightdm/lightdm-webkit2-greeter.conf`:
 	* `webkit_theme = litarvan`
+* `systemctl enable lightdm`
+
 ### Bootloader
 * [rEFInd](https://wiki.archlinux.org/index.php/REFInd) with [Ursa-Major theme](https://github.com/kgoettler/ursamajor-rEFInd)
 * `paru -S refind intel-ucode efibootmgr`
@@ -51,6 +53,7 @@ More info below images.
 * `sudo npm install -g neovim`
 * `python3 -m pip install --upgrade pynvim`
 * `gem install neovim`
+* In nvim: `:PlugUpdate`
 
 ### Compton
 `paru -S picom-tryone-git`
