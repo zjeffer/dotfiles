@@ -85,6 +85,9 @@ More info below images.
 * https://community.spotify.com/t5/Desktop-Linux/Delay-when-changing-volume/m-p/1843731#M2065
 * Set `enable-deferred-volume` to `no` (and uncomment) in `/etc/pulse/daemon.conf`. 
 
+#### Fix pulseaudio pop on idle
+* https://askubuntu.com/a/1266632/852424
+
 ### Networking
 `paru -S networkmanager networkmanager-applet nm-connection-editor`
 
