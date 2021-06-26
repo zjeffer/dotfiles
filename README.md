@@ -135,7 +135,7 @@ Don't forget the pacman hook!
 * ttf-hack
 * ttf-inconsolata
 * ttf-liberation 
-* ttf-material-icons-git
+* ttf-material-design-icons
 * ttf-roboto
 * ttf-unifont
 * noto-fonts
