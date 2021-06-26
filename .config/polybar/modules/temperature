@@ -25,4 +25,4 @@ label = %temperature-c%
 label-warn = %temperature-c%
 ;label-warn-underline = #f00
 
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input
+hwmon-path = /sys/devices/virtual/thermal/thermal_zone0/hwmon1/temp1_input
