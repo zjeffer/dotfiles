@@ -30,6 +30,8 @@ More info below images.
 	* `display-setup-script=/etc/lightdm/display_setup.sh`
 * In `/etc/lightdm/lightdm-webkit2-greeter.conf`:
 	* `webkit_theme = litarvan`
+* `systemctl enable lightdm`
+
 ### Bootloader
 * [rEFInd](https://wiki.archlinux.org/index.php/REFInd) with [Ursa-Major theme](https://github.com/kgoettler/ursamajor-rEFInd)
 * `paru -S refind intel-ucode efibootmgr`
@@ -51,6 +53,7 @@ More info below images.
 * `sudo npm install -g neovim`
 * `python3 -m pip install --upgrade pynvim`
 * `gem install neovim`
+* In nvim: `:PlugUpdate`
 
 ### Compton
 `paru -S picom-tryone-git`
@@ -81,6 +84,9 @@ More info below images.
 #### Fix pulseaudio volume adjust delay
 * https://community.spotify.com/t5/Desktop-Linux/Delay-when-changing-volume/m-p/1843731#M2065
 * Set `enable-deferred-volume` to `no` (and uncomment) in `/etc/pulse/daemon.conf`. 
+
+#### Fix pulseaudio pop on idle
+* https://askubuntu.com/a/1266632/852424
 
 ### Networking
 `paru -S networkmanager networkmanager-applet nm-connection-editor`

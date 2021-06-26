@@ -122,7 +122,7 @@ body.remotebar .view-player .player-bar-wrapper {
 /*Spice up search input background*/
 .SearchInput__input {
 	color: var(--modspotify_secondary_fg);
-	background-color: rgba(var(--modspotify_rgb_scrollbar_fg_and_selected_row_bg), 0.5) !important;
+	background-color: rgba(var(--modspotify_rgb_card), 0.5) !important;
 }
 
 /*Fixed player bar height and add cool shadow under*/
@@ -294,7 +294,7 @@ Move progress bar to bottom of window
 /* Progressbar styling */
 .view-player .player-controls-container .progress-container .progress-bar .inner {
 	border-radius: 6px 6px 0 0 !important;
-	background-color: var(--modspotify_main_fg);
+	background-color: var(--modspotify_text);
 }
 
 /* Progressbar height */
@@ -477,7 +477,7 @@ Collage of 3 album covers is usually seen in Browse and Chart.
 
 .card-puff__title {
 	padding: 5px 10px 5px 10px !important;
-	background-color: rgba(var(--modspotify_rgb_cover_overlay_and_shadow), 0.8) !important;
+	background-color: rgba(var(--modspotify_rgb_shadow), 0.8) !important;
 	border-radius: 10px 10px 0 0 !important;
 	text-align: left !important;
 	width: 100% !important;
@@ -503,7 +503,7 @@ form, so I move last cover to the right 20px and first one to the left 20px
 /**/
 .glue-page-header__background-color {
 	background-image: none !important;
-	background: var(--modspotify_main_bg);
+	background: var(--modspotify_main);
 }
 
 .glue-page-header__background-overlay {
@@ -541,7 +541,7 @@ Button with text Play
 */
 .button.button-green,
 .GlueButton.GlueButton--style-green {
-	color: var(--modspotify_main_bg) !important;
+	color: var(--modspotify_main) !important;
 }
 
 /*
@@ -552,7 +552,7 @@ Change text color in playlist
 .tl-cell:not(.tl-number),
 .tl-cell a:link,
 .tl-highlight {
-	color: var(--modspotify_secondary_fg);
+	color: var(--modspotify_subtext);
 }
 
 .card-type-album .card-info-title,
@@ -578,7 +578,7 @@ Change text color in playlist
 }
 
 .GlueHeader__background-overlay {
-	background: var(--modspotify_main_bg) !important;
+	background: var(--modspotify_main) !important;
 }
 
 /* Move navigation buttons and search field to the right and down */
@@ -605,7 +605,7 @@ Change text color in playlist
 /* Spice up Fullscreen mode */
 #view-player .album-art .album-art__image {
 	border-radius: 30px !important;
-	box-shadow: 0 10px 70px rgba(var(--modspotify_rgb_cover_overlay_and_shadow), 0.5) !important;
+	box-shadow: 0 10px 70px rgba(var(--modspotify_rgb_shadow), 0.5) !important;
 }
 
 #view-player .album-art .album-art__image .card-image-content-wrapper,
@@ -644,7 +644,7 @@ and add little glowing effect
 }
 
 .nav.navbar-nav a:focus:not(.button):active::after {
-	background-color: var(--modspotify_pressing_fg) !important;
+	background-color: var(--modspotify_button-active) !important;
 }
 
 /* Friend sidebar */
@@ -719,7 +719,7 @@ and add little glowing effect
 
 .lyrics-lines-container,
 .message-container {
-	color: var(--modspotify_secondary_fg) !important;
+	color: var(--modspotify_subtext) !important;
 }
 
 /* Home page */
@@ -737,23 +737,23 @@ and add little glowing effect
 }
 
 .tl-row.selected:hover .tl-cell {
-	background: var(--modspotify_scrollbar_fg_and_selected_row_bg) !important;
+	background: var(--modspotify_selected-row) !important;
 }
 
 .GlueTableRow--is-selected {
-	background-color: var(--modspotify_scrollbar_fg_and_selected_row_bg) !important;
+	background-color: var(--modspotify_selected-row) !important;
 }
 
 .tracklist-podcast .tl-progress .row-progress__bar {
-	background-color: var(--modspotify_main_fg);
+	background-color: var(--modspotify_text);
 }
 
 .Header__background-color {
-	background-color: var(--modspotify_main_bg) !important;
+	background-color: var(--modspotify_main) !important;
 }
 
 .Button--style-green {
-	color: var(--modspotify_main_bg) !important;
+	color: var(--modspotify_main) !important;
 }
 
 /* Changes to add playlist button */
