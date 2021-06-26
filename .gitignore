@@ -49,6 +49,7 @@
 .config/spicetify/Extracted/
 .config/spicetify/Extracted/*
 .config/spicetify/Raw/*
+.config/tuxedo-control-center/
 .config/wget/
 .config/wireshark/
 .directory

@@ -1,8 +1,6 @@
 #!/bin/sh
 
-xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
-xrandr --dpi 96
 xsetroot -cursor_name left_ptr
 
 #turn off screen saver

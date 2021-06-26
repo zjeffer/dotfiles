@@ -2,19 +2,19 @@
 
 ##### xrandr settings
 xrandr --auto 
-xrandr --output eDP-1-1 --primary
-xrandr --output HDMI-1-1 --right-of eDP-1-1
-xrandr --output DP-1-1 --left-of eDP-1-1
+xrandr --output eDP-2 --primary
+xrandr --output HDMI-1-0 --right-of eDP-2
+xrandr --output DP-1-0 --left-of eDP-2
 
-xrandr --output eDP-1-1 --set "Broadcast RGB" "Full"
-xrandr --output HDMI-1-1 --set "Broadcast RGB" "Full"
-xrandr --output DP-1-1 --set "Broadcast RGB" "Full"
+xrandr --output eDP-2 --set "Broadcast RGB" "Full"
+xrandr --output HDMI-1-0 --set "Broadcast RGB" "Full"
+xrandr --output DP-1-0 --set "Broadcast RGB" "Full"
 
 ##### bspwm desktop settings
-bspc monitor eDP-1-1 -d  1 2 3 4 5
-bspc monitor HDMI-1-1 -d 1 2 3 4 5
-bspc monitor DP-1-1 -d 1 2 3 4 5
-bspc wm -O DP-1-1 eDP-1-1 HDMI-1-1
+bspc monitor eDP-2 -d  1 2 3 4 5
+bspc monitor HDMI-1-0 -d 1 2 3 4 5
+bspc monitor DP-1-0 -d 1 2 3 4 5
+bspc wm -O DP-1-0 eDP-2 HDMI-1-0
 
 ##### mouse xinput settings
 xinput set-prop "SynPS/2 Synaptics TouchPad" 'libinput Tapping Enabled' 1 &

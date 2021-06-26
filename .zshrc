@@ -13,9 +13,12 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 # Add .NET Core SDK tools
 export PATH=$PATH:$HOME/.dotnet/tools
 
+# Add gem binaries to path
+export PATH=$PATH:$HOME/.local/share/gem/ruby/
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/zjeffer/.oh-my-zsh"
-export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
+export ZSH_CACHE_DIR="$ZSH/cache"
 export ZSH_COMPDUMP="$ZSH_CACHE_DIR/zcompdump-$HOST-$ZSH_VERSION"
 export ZDOTDIR="$ZSH_CACHE_DIR"
 
