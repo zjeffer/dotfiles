@@ -30,6 +30,8 @@ More info below images.
 	* `display-setup-script=/etc/lightdm/display_setup.sh`
 * In `/etc/lightdm/lightdm-webkit2-greeter.conf`:
 	* `webkit_theme = litarvan`
+* `systemctl enable lightdm`
+
 ### Bootloader
 * [rEFInd](https://wiki.archlinux.org/index.php/REFInd) with [Ursa-Major theme](https://github.com/kgoettler/ursamajor-rEFInd)
 * `paru -S refind intel-ucode efibootmgr`
@@ -51,9 +53,10 @@ More info below images.
 * `sudo npm install -g neovim`
 * `python3 -m pip install --upgrade pynvim`
 * `gem install neovim`
+* In nvim: `:PlugUpdate`
 
 ### Compton
-`paru -S compton-tryone-git`
+`paru -S picom-tryone-git`
 
 ### Firefox
 * `paru -S firefox`
@@ -105,7 +108,7 @@ More info below images.
 ### GPU Drivers
 `paru -S nvidia nvidia-utils lib32-nvidia-utils`
 
-Enable DRM KMS to eliminate tearing: https://wiki.archlinux.org/index.php/NVIDIA#DRM_kernel_mode_setting
+Enable DRM KMS to eliminate tearing: https://wiki.archlinux.org/index.php/NVIDIA#DRM_kernel_mode_setting.
 Don't forget the pacman hook!
 
 ### CPU settings
