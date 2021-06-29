@@ -30,6 +30,7 @@
 .config/jupyter/
 .config/kcharselectrc
 .config/kdenlive*
+.config/ktrashrc
 .config/lsp-plugins/
 .config/mimeapps.list
 .config/npm/
@@ -68,6 +69,7 @@
 .ipython/
 .java/
 .jupyter/
+.kde4/
 .keras/
 .kodi/
 .local/
@@ -124,6 +126,7 @@ ElectronChrome/
 EnhancedDiscord/
 Fritzing/
 GIMP/
+Games/
 GeoGebra/
 GitHub Desktop/
 GitKraken/

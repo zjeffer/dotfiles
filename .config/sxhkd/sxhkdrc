@@ -194,11 +194,11 @@ XF86AudioMute
 
 ### Master Volume
 XF86AudioRaiseVolume
-	pactl set-sink-volume 0 +5%
+	pactl set-sink-volume 1 +5%
 	#amixer set Master 2.5%+,5%+
 
 XF86AudioLowerVolume
-	pactl set-sink-volume 0 -5%
+	pactl set-sink-volume 1 -5%
 	#amixer set Master 2.5%-,5%-
 
 

@@ -74,12 +74,14 @@ margin-bottom = 0
 ##############################################################################################
 ##############################################################################################
 
-[bar/custom]
+[bar/laptop]
 monitor = ${env:MONITOR}
-width = 98%
-height = 2%
-offset-x = 1%
-offset-y = 1%
+
+; 2560 - (2*33)
+width = 2494 
+height = 30
+offset-x = 33
+offset-y = 20
 
 radius-top = 5
 radius-bottom = 5
@@ -111,10 +113,49 @@ modules-left = bspwm player-mpris-tail
 modules-center = 
 modules-right = microphone pulseaudio battery cpu memory temperature nm-launcher updates-arch-combined date time powermenu-rofi
 
-
+; Only display the tray on the laptop monitor
 tray-position = right
 tray-padding = 0
 tray-background = ${colors.power}
 
 ##############################################################################################
 ##############################################################################################
+
+[bar/custom]
+monitor = ${env:MONITOR}
+; 1920 - (2*25)
+width = 1870
+height = 25
+offset-x = 25
+offset-y = 15
+
+radius-top = 5
+radius-bottom = 5
+
+underline-size = 3
+
+;override-redirect = true
+wm-restack = bspwm
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = Hack:weight=bold:size=12;3
+font-1 = Material Icons:style=Regular:pixelsize=12;4
+font-2 = Unifont:pixelsize=13;2
+font-3 = Unifont:pixelsize=13;3
+font-4 = Font Awesome 5 Free:style=Solid:pixelsize=12;2
+font-5 = Material Icons:style=Regular:pixelsize=14;4
+font-6 = PowerlineSymbols:size=18:antialias=true;5
+font-7 = Font Awesome 5 Free:style=Solid:pixelsize=12;2
+
+;The modules that wil be displayed
+modules-left = bspwm player-mpris-tail
+modules-center = 
+modules-right = microphone pulseaudio battery cpu memory temperature nm-launcher updates-arch-combined date time powermenu-rofi
+
