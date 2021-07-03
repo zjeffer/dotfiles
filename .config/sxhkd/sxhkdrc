@@ -1,7 +1,7 @@
 
 
 ########################################## wm independent hotkeys ##########################################
-#
+
 
 # gnome terminal
 super + Return
@@ -190,15 +190,15 @@ super + r
 ########################################## VOLUME ##########################################
 
 XF86AudioMute
-	pactl set-sink-mute 0 toggle
+	pactl set-sink-mute alsa_output.pci-0000_06_00.6.analog-stereo toggle
 
 ### Master Volume
 XF86AudioRaiseVolume
-	pactl set-sink-volume 1 +5%
+	pactl set-sink-volume alsa_output.pci-0000_06_00.6.analog-stereo +5%
 	#amixer set Master 2.5%+,5%+
 
 XF86AudioLowerVolume
-	pactl set-sink-volume 1 -5%
+	pactl set-sink-volume alsa_output.pci-0000_06_00.6.analog-stereo -5%
 	#amixer set Master 2.5%-,5%-
 
 

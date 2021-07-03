@@ -1,3 +1,6 @@
+# a lot of the exports are because of this:
+# https://wiki.archlinux.org/title/XDG_Base_Directory
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -101,6 +104,9 @@ export LESSHISTFILE="/dev/null"
 
 # pylint
 export PYLINTHOME="$XDG_CACHE_HOME"/pylint 
+
+# atom
+export ATOM_HOME="$XDG_DATA_HOME"/atom
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/histfile

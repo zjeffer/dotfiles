@@ -52,7 +52,7 @@ killall sxhkd 2>/dev/null
 sxhkd &>>~/.config/sxhkd/.sxhkd.err &
 
 #dunst: notification daemon
-killall dunst 2>/dev/null
+killall -w dunst 2>/dev/null
 dunst &
 
 #polybar: top bar
