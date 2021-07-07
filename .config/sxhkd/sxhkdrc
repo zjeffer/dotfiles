@@ -55,7 +55,10 @@ ctrl + shift + Escape
 super + Escape
 	~/.config/bspwm/bspwmrc &>>/home/zjeffer/.config/bspwm/.reload.err
 
-#
+XF86Calculator
+    kcalc &
+
+
 ########################################## bspwm hotkeys ##########################################
 #
 
