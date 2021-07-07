@@ -2,9 +2,9 @@
 
 ##### xrandr settings
 xrandr --auto 
-xrandr --output DP-4 --primary
-xrandr --output HDMI-0 --right-of DP-4
-xrandr --output DP-0 --left-of DP-4
+xrandr --output DP-4 --primary --mode 2560x1600 --rate 165.02
+xrandr --output HDMI-0 --right-of DP-4 --mode 1920x1080 --rate 60.00
+xrandr --output DP-0 --left-of DP-4 --mode 1920x1080 --rate 60.00
 
 #xrandr --output DP-4 --set "Broadcast RGB" "Full"
 #xrandr --output HDMI-0 --set "Broadcast RGB" "Full"
