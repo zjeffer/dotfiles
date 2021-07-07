@@ -2,22 +2,22 @@
 
 ##### xrandr settings
 xrandr --auto 
-xrandr --output eDP-1-2 --primary
-xrandr --output HDMI-0 --right-of eDP-1-2
-xrandr --output DP-0 --left-of eDP-1-2
+xrandr --output DP-4 --primary
+xrandr --output HDMI-0 --right-of DP-4
+xrandr --output DP-0 --left-of DP-4
 
-#xrandr --output eDP-1-2 --set "Broadcast RGB" "Full"
+#xrandr --output DP-4 --set "Broadcast RGB" "Full"
 #xrandr --output HDMI-0 --set "Broadcast RGB" "Full"
 #xrandr --output DP-0 --set "Broadcast RGB" "Full"
 
 ##### bspwm desktop settings
-bspc monitor eDP-1-2 -d  1 2 3 4 5
+bspc monitor DP-4 -d  1 2 3 4 5
 bspc monitor HDMI-0 -d 1 2 3 4 5
 bspc monitor DP-0 -d 1 2 3 4 5
-bspc wm -O DP-0 eDP-1-2 HDMI-0
+bspc wm -O DP-0 DP-4 HDMI-0
 
 ##### bspc configurations
-bspc config -m eDP-1-2 window_gap 33
+bspc config -m DP-4 window_gap 33
 bspc config -m HDMI-0 window_gap 25
 bspc config -m DP-0 window_gap 25
 

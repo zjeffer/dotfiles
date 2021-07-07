@@ -185,7 +185,13 @@ super + r
 	bspc config -d focused bottom_padding 0; \
 	bspc config -d focused window_gap 25
 
+######################################## BRIGHTNESS #######################################
 
+XF86MonBrightnessUp
+    light -A 20
+
+XF86MonBrightnessDown
+    light -U 20
 
 ########################################## VOLUME ##########################################
 
@@ -201,7 +207,9 @@ XF86AudioLowerVolume
 	pactl set-sink-volume alsa_output.pci-0000_06_00.6.analog-stereo -5%
 	#amixer set Master 2.5%-,5%-
 
-
+XF86AudioMicMute
+    pactl set-source-mute alsa_input.pci-0000_06_00.6.analog-stereo toggle
+    
 ########################################## MEDIA KEYS ##########################################
 
 XF86AudioPlay
