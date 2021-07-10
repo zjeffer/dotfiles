@@ -330,7 +330,6 @@ pulseaudio-ctl/
 pywal/
 qt5ct/
 ranger/colorschemes/_*
-redshift.conf
 s-tui/
 sddmthemeinstallerrc
 session/
