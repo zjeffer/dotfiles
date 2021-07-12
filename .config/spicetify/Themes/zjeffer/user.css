@@ -111,16 +111,26 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     border-radius: 4px;
     padding: 0 10px;
     margin: 0 5px 0 -10px;
+    color: var(--spice-main);
 }
 
-.main-navBar-navBarLinkActive {
-    background: var(--spice-button);
+/* Don't change the text color when hoverin over playlists */
+.main-rootlist-textWrapper:focus, 
+.main-rootlist-textWrapper:hover {
+    color: unset;
 }
 
+
+/* Sidebar links when selected */
 .main-navBar-navBarLinkActive, 
-.main-navBar-navBarLinkActive:focus, 
+.main-navBar-navBarLinkActive:focus,
 .main-navBar-navBarLinkActive:hover,
 .main-collectionLinkButton-collectionLinkButton.main-collectionLinkButton-selected {
+    background: var(--spice-button);
+    color: var(--spice-main);
+}
+
+.main-collectionLinkButton-selected > .main-rootlist-statusIcons * {
     color: var(--spice-main);
 }
 
@@ -174,7 +184,7 @@ div.GlueDropTarget.personal-library >*.active {
 }
 
 .link-subtle {
-    /* color: var(--spice-text); */
+    transition: none;
 }
 
 /** Footer with playback & buttons */
@@ -193,12 +203,18 @@ div.GlueDropTarget.personal-library >*.active {
     bottom: calc(var(--player-bar-height) - 8px);
 }
 
-/* The playback buttons */
+/* The progress bar and volume slider*/
+.progress-bar__fg {
+    background-color: var(--spice-button);
+}
+
+/* The playback button container */
 .player-controls__buttons {
     margin-bottom: 0;
     width: unset;
 }
 
+/* Size of playback buttons and margin between buttons */
 .player-controls__buttons > button {
     --button-size: var(--player-button-size) !important;   
     margin-right: calc(var(--button-size)/4);
@@ -212,6 +228,7 @@ div.GlueDropTarget.personal-library >*.active {
     color: var(--spice-text);
 }
 
+/* Make svg's inside button containers bigger */
 .player-controls__buttons > button > svg {
     transform: scale(1.25);
 }
