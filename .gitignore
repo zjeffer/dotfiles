@@ -2,6 +2,7 @@
 *.log
 .Xauthority
 .aspnet/
+.atom/
 .azuredatastudio/
 .bash_logout
 .bash_profile
