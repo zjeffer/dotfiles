@@ -106,6 +106,7 @@
 .vscode/
 .vsdbg/
 .wget-hsts
+.wine/
 .xbindkeysrc
 .xprofile
 .xsession-errors
