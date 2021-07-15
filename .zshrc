@@ -89,9 +89,6 @@ export ADB_VENDOR_KEY="$XDG_CONFIG_HOME"/android
 #wget
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 
-#default WINE prefix
-export WINEPREFIX=/media/SamsungSSD/wine/
-
 #rust cargo
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 
@@ -107,6 +104,9 @@ export PYLINTHOME="$XDG_CACHE_HOME"/pylint
 
 # atom
 export ATOM_HOME="$XDG_DATA_HOME"/atom
+
+# hardware acceleration in firefox
+export MOZ_DISABLE_RDD_SANDBOX=1
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/histfile

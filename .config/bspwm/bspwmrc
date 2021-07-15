@@ -45,6 +45,8 @@ bspc rule -a SimpleScreenRecorder state=floating
 bspc rule -a 'processing-core-PApplet' state=floating focus=off
 bspc rule -a 'Tk' state=floating
 bspc rule -a 'Toplevel' state=floating
+# for origin & other wine programs
+bspc rule -a "Wine" state=floating focus=off
 
 ##### run programs:
 #sxhkd: keyboard shortcut daemon
@@ -70,7 +72,6 @@ killall -qw picom 2>/dev/null; picom --experimental-backends --config ~/.config/
 killall nm-applet 2>/dev/null
 nm-applet &
 
-
 #libinput-gestures: touchpad gestures
 libinput-gestures-setup restart
 
@@ -78,8 +79,6 @@ libinput-gestures-setup restart
 killall xcape 2>/dev/null
 xcape -e 'Super_L=Super_L|space' &
 
-#devmon: Automounts and unmounts optical and removable drives
-#devmon &
 
 #feh: set desktop background
 ~/.fehbg &
