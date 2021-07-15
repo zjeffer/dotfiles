@@ -106,7 +106,9 @@ export PYLINTHOME="$XDG_CACHE_HOME"/pylint
 export ATOM_HOME="$XDG_DATA_HOME"/atom
 
 # hardware acceleration in firefox
-export MOZ_DISABLE_RDD_SANDBOX=1
+#export MOZ_DISABLE_RDD_SANDBOX=1
+#export MOZ_X11_EGL=1
+
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/histfile
