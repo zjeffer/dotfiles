@@ -133,6 +133,7 @@ alias dmesg='sudo dmesg -H --color'
 alias gs='git status'
 alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
 alias yay='paru'
+alias less='less -I '
 
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
