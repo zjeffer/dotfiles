@@ -19,8 +19,9 @@ FORMAT_TAG_REGEX = re.compile(r'(?P<format>[wt])(?P<formatlen>\d+)')
 SAFE_TAG_REGEX = re.compile(r'[{}]')
 
 class PlayerManager:
-    def __init__(self, blacklist = [], connect = True):
-        self.blacklist = blacklist
+    def __init__(self, filter_list, block_mode = True, connect = True):
+        self.filter_list = filter_list
+        self.block_mode = block_mode
         self._connect = connect
         self._session_bus = dbus.SessionBus()
         self.players = {}
@@ -55,6 +56,8 @@ class PlayerManager:
         else:
             # If we don't know this player, get its name and add it
             bus_name = self.getBusNameFromOwner(sender)
+            if bus_name is None:
+                return
             self.addPlayer(bus_name, sender)
             player = self.players[sender]
             player.onPropertiesChanged(interface, properties, signature)
@@ -76,7 +79,12 @@ class PlayerManager:
                 return player_bus_name
 
     def busNameIsAPlayer(self, bus_name):
-        return bus_name.startswith('org.mpris.MediaPlayer2') and bus_name.split('.')[3] not in self.blacklist
+        if bus_name.startswith('org.mpris.MediaPlayer2') is False:
+            return False
+        name = bus_name.split('.')[3]
+        if self.block_mode is True:
+            return name not in self.filter_list
+        return name in self.filter_list
 
     def refreshPlayerList(self):
         player_bus_names = [ bus_name for bus_name in self._session_bus.list_names() if self.busNameIsAPlayer(bus_name) ]
@@ -264,41 +272,34 @@ class Player:
 
     def _parseMetadata(self):
         if self._metadata != None:
-            artist = _getProperty(self._metadata, 'xesam:artist', [''])
-            if artist != None and len(artist):
-                self.metadata['artist'] = re.sub(SAFE_TAG_REGEX, """\1\1""", artist[0])
-            else:
-                artists = _getProperty(self._metadata, 'xesam:artists', [''])
-                if artists != None and len(artists):
-                    # Note: This only grabs the first artist
-                    self.metadata['artist'] = re.sub(SAFE_TAG_REGEX, """\1\1""", artists[0])
-                else:
-                    self.metadata['artist'] = '';
-            self.metadata['album']  = re.sub(SAFE_TAG_REGEX, """\1\1""", _getProperty(self._metadata, 'xesam:album', ''))
-            self.metadata['title']  = re.sub(SAFE_TAG_REGEX, """\1\1""", _getProperty(self._metadata, 'xesam:title', ''))
-            self.metadata['track']  = _getProperty(self._metadata, 'xesam:trackNumber', '')
-            length = str(_getProperty(self._metadata, 'xesam:length', ''))
-            if not len(length):
-                length = str(_getProperty(self._metadata, 'mpris:length', ''))
-            if len(length):
-                self.metadata['length'] = int(length)
-            else:
-                self.metadata['length'] = 0
-            self.metadata['genre']    = _getProperty(self._metadata, 'xesam:genre', '')
-            self.metadata['disc']     = _getProperty(self._metadata, 'xesam:discNumber', '')
-            self.metadata['date']     = re.sub(SAFE_TAG_REGEX, """\1\1""", _getProperty(self._metadata, 'xesam:contentCreated', ''))
-            self.metadata['year']     = re.sub(SAFE_TAG_REGEX, """\1\1""", self.metadata['date'][0:4])
-            self.metadata['url']      = _getProperty(self._metadata, 'xesam:url', '')
-            self.metadata['filename'] = os.path.basename(self.metadata['url'])
-            cover = _getProperty(self._metadata, 'xesam:artUrl', '')
-            if not len(cover):
-                cover = _getProperty(self._metadata, 'mpris:artUrl', '')
-            if len(cover):
-                self.metadata['cover'] = re.sub(SAFE_TAG_REGEX, """\1\1""", cover)
-            else:
-                self.metadata['cover'] = ''
-
-            self.metadata['duration'] = _getDuration(self.metadata['length'])
+            # Obtain properties from _metadata
+            _artist     = _getProperty(self._metadata, 'xesam:artist', [''])
+            _album      = _getProperty(self._metadata, 'xesam:album', '')
+            _title      = _getProperty(self._metadata, 'xesam:title', '')
+            _track      = _getProperty(self._metadata, 'xesam:trackNumber', '')
+            _genre      = _getProperty(self._metadata, 'xesam:genre', [''])
+            _disc       = _getProperty(self._metadata, 'xesam:discNumber', '')
+            _length     = _getProperty(self._metadata, 'xesam:length', 0) or _getProperty(self._metadata, 'mpris:length', 0)
+            _length_int = _length if type(_length) is int else int(float(_length))
+            _date       = _getProperty(self._metadata, 'xesam:contentCreated', '')
+            _year       = _date[0:4] if len(_date) else ''
+            _url        = _getProperty(self._metadata, 'xesam:url', '')
+            _cover      = _getProperty(self._metadata, 'xesam:artUrl', '') or _getProperty(self._metadata, 'mpris:artUrl', '')
+            _duration   = _getDuration(_length_int)
+            # Update metadata
+            self.metadata['artist']     = re.sub(SAFE_TAG_REGEX, """\1\1""", _metadataGetFirstItem(_artist))
+            self.metadata['album']      = re.sub(SAFE_TAG_REGEX, """\1\1""", _metadataGetFirstItem(_album))
+            self.metadata['title']      = re.sub(SAFE_TAG_REGEX, """\1\1""", _metadataGetFirstItem(_title))
+            self.metadata['track']      = _track
+            self.metadata['genre']      = re.sub(SAFE_TAG_REGEX, """\1\1""", _metadataGetFirstItem(_genre))
+            self.metadata['disc']       = _disc
+            self.metadata['date']       = re.sub(SAFE_TAG_REGEX, """\1\1""", _date)
+            self.metadata['year']       = re.sub(SAFE_TAG_REGEX, """\1\1""", _year)
+            self.metadata['url']        = _url
+            self.metadata['filename']   = os.path.basename(_url)
+            self.metadata['length']     = _length_int
+            self.metadata['cover']      = re.sub(SAFE_TAG_REGEX, """\1\1""", _metadataGetFirstItem(_cover))
+            self.metadata['duration']   = _duration
 
     def onMetadataChanged(self, track_id, metadata):
         self.refreshMetadata()
@@ -455,6 +456,14 @@ def _getDuration(t: int):
         seconds = t / 1000000
         return time.strftime("%M:%S", time.gmtime(seconds))
 
+def _metadataGetFirstItem(_value):
+    if type(_value) is list:
+        # Returns the string representation of the first item on _value if it has at least one item.
+        # Returns an empty string if _value is empty.
+        return str(_value[0]) if len(_value) else ''
+    else:
+        # If _value isn't a list just return the string representation of _value.
+        return str(_value)
 
 class CleanSafeDict(dict):
     def __missing__(self, key):
@@ -480,7 +489,11 @@ parser.add_argument('command', help="send the given command to the active player
                     choices=[ 'play', 'pause', 'play-pause', 'stop', 'previous', 'next', 'status', 'list', 'current', 'metadata', 'raise' ],
                     default=None,
                     nargs='?')
-parser.add_argument('-b', '--blacklist', help="ignore a player by it's bus name. Can be be given multiple times (e.g. -b vlc -b audacious)",
+parser.add_argument('-b', '--blacklist', help="ignore a player by it's bus name. Can be given multiple times (e.g. -b vlc -b audacious)",
+                    action='append',
+                    metavar="BUS_NAME",
+                    default=[])
+parser.add_argument('-w', '--whitelist', help="permit a player by it's bus name like --blacklist. will block --blacklist if given",
                     action='append',
                     metavar="BUS_NAME",
                     default=[])
@@ -501,10 +514,13 @@ ICON_PAUSED = args.icon_paused
 ICON_STOPPED = args.icon_stopped
 ICON_NONE = args.icon_none
 
+block_mode = len(args.whitelist) == 0
+filter_list = args.blacklist if block_mode else args.whitelist
+
 if args.command is None:
-    PlayerManager(blacklist = args.blacklist)
+    PlayerManager(filter_list = filter_list, block_mode = block_mode)
 else:
-    player_manager = PlayerManager(blacklist = args.blacklist, connect = False)
+    player_manager = PlayerManager(filter_list = filter_list, block_mode = block_mode, connect = False)
     current_player = player_manager.getCurrentPlayer()
     if args.command == 'play' and current_player:
         current_player.play()
