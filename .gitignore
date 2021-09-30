@@ -45,6 +45,7 @@
 .config/ranger/commands*
 .config/ranger/rifle.conf
 .config/ranger/scope.sh
+.config/rpcs3/
 .config/simplescreenrecorder/
 .config/spicetify/Backup/*
 .config/spicetify/CustomApps/*
@@ -73,6 +74,7 @@
 .kde4/
 .keras/
 .kodi/
+.kube/
 .local/
 .microsoft/
 .mono/
@@ -98,6 +100,7 @@
 .steampid
 .templateengine/
 .thunderbird/
+.tsh/
 .vmware/
 .vnc/
 .vpython*

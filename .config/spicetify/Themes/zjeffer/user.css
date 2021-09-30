@@ -215,7 +215,8 @@ div.GlueDropTarget.personal-library >*.active {
 }
 
 /* Size of playback buttons and margin between buttons */
-.player-controls__buttons > button {
+.player-controls__buttons > button,
+.player-controls__buttons > div > button {
     --button-size: var(--player-button-size) !important;   
     margin-right: calc(var(--button-size)/4);
     margin-left: calc(var(--button-size)/4); 
@@ -229,7 +230,7 @@ div.GlueDropTarget.personal-library >*.active {
 }
 
 /* Make svg's inside button containers bigger */
-.player-controls__buttons > button > svg {
+.player-controls__buttons svg {
     transform: scale(1.25);
 }
 

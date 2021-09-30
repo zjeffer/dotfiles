@@ -58,7 +58,10 @@ configuration {
     selected-active-background:  @nord2;
 }
 
-
+element-text, element-icon {
+    background-color: transparent;
+    text-color:       inherit;
+}
 
 //----------------------
 // Style

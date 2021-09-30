@@ -27,9 +27,9 @@ super + shift + z
 super + q
 	code &
 
-# dolphin 
+# thunar 
 super + x
-	dolphin &
+	thunar &
 
 #spectacle
 Print

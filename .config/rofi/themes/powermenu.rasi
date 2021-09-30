@@ -14,6 +14,16 @@ configuration {
 }
 
 
+element-text, element-icon {
+    background-color: transparent;
+    text-color:       inherit;
+}
+
+element-icon {
+    horizontal-align:   0.5;
+    vertical-align:     0.5;
+}
+
 
 * {
     /* Fonts */
