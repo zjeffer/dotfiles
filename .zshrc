@@ -107,6 +107,9 @@ export PYLINTHOME="$XDG_CACHE_HOME"/pylint
 # atom
 export ATOM_HOME="$XDG_DATA_HOME"/atom
 
+# pylint.d
+export PYLINTHOME="$XDG_CACHE_HOME"/pylint
+
 # hardware acceleration in firefox
 #export MOZ_DISABLE_RDD_SANDBOX=1
 #export MOZ_X11_EGL=1
