@@ -51,16 +51,15 @@ super + a
 ctrl + shift + Escape
 	ksysguard &
 
-# make sxhkd reload its configuration files and restart polybar
-super + Escape
-	~/.config/bspwm/bspwmrc &>>/home/zjeffer/.config/bspwm/.reload.err
-
 XF86Calculator
 	kcalc &
 
 
 ########################################## bspwm hotkeys ##########################################
-#
+
+# make sxhkd reload its configuration files and restart polybar
+super + Escape
+	~/.config/bspwm/bspwmrc &>>/home/zjeffer/.config/bspwm/.reload.err
 
 # quit bspwm normally
 super + alt + Escape
@@ -180,7 +179,7 @@ super + alt + shift + {Left, Down, Up, Right}
 super + {minus,equal}
 	bspc config -d focused window_gap {25, 0}
 
-#reset
+#reset padding & window size
 super + r
 	bspc config -d focused left_padding 0; \
 	bspc config -d focused right_padding 0; \
@@ -190,51 +189,35 @@ super + r
 
 ######################################## BRIGHTNESS #######################################
 
-XF86MonBrightnessUp
-	light -A 20
+# change brightness
+XF86MonBrightness{Up,Down}
+	light -S {-10,10}
 
-XF86MonBrightnessDown
-	light -U 20
 
 ########################################## VOLUME ##########################################
 
+# Mute volume
 XF86AudioMute
-	pactl set-sink-mute alsa_output.pci-0000_06_00.6.analog-stereo toggle
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-### Master Volume
-XF86AudioRaiseVolume
-	pactl set-sink-volume alsa_output.pci-0000_06_00.6.analog-stereo +5%
-	#amixer set Master 2.5%+,5%+
+# Change master Volume
+XF86Audio{Raise,Lower}Volume
+	pactl set-sink-volume @DEFAULT_SINK@ {+5%, -5%}
 
-XF86AudioLowerVolume
-	pactl set-sink-volume alsa_output.pci-0000_06_00.6.analog-stereo -5%
-	#amixer set Master 2.5%-,5%-
-
+# Mute microphone
 XF86AudioMicMute
-	pactl set-source-mute alsa_input.pci-0000_06_00.6.analog-stereo toggle
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
 	
 ########################################## MEDIA KEYS ##########################################
 
-XF86AudioPlay
-	~/.config/activePlayer/control.sh play-pause
+# Media control
+XF86Audio{Play,Prev,Next,Stop}
+	~/.config/activePlayer/control.sh {play-pause,prev,next,stop}
 
-XF86AudioNext
-	~/.config/activePlayer/control.sh next
-
-XF86AudioPrev
-	~/.config/activePlayer/control.sh previous
-
-XF86AudioStop
-	~/.config/activePlayer/control.sh stop
-
-shift + XF86AudioNext
-	~/.config/activePlayer/control.sh skipForward
-
-shift + XF86AudioPrev
-	~/.config/activePlayer/control.sh skipBackward
-
-ctrl + shift + super + m
-	pulseaudio-ctl mute-input
+# Fastforward/Rewind x seconds
+shift + XF86Audio{Next,Prev}
+	~/.config/activePlayer/control.sh {skipForward, skipBackward}
 
 
 ########################################## LOCK ##########################################
