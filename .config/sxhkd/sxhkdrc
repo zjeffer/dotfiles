@@ -31,9 +31,9 @@ super + q
 super + x
 	thunar &
 
-#spectacle
+#screenshots
 Print
-	spectacle &
+    flameshot launcher &	
 
 #discord
 super + d
