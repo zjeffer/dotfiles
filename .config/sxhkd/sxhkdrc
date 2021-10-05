@@ -21,7 +21,7 @@ super + z
 
 # chromium
 super + shift + z
-    chromium &
+	chromium &
 
 #sublime
 super + q
@@ -37,7 +37,7 @@ Print
 
 #discord
 super + d
-    discord &
+	discord &
 
 #scrot
 super + Print
@@ -56,7 +56,7 @@ super + Escape
 	~/.config/bspwm/bspwmrc &>>/home/zjeffer/.config/bspwm/.reload.err
 
 XF86Calculator
-    kcalc &
+	kcalc &
 
 
 ########################################## bspwm hotkeys ##########################################
@@ -191,10 +191,10 @@ super + r
 ######################################## BRIGHTNESS #######################################
 
 XF86MonBrightnessUp
-    light -A 20
+	light -A 20
 
 XF86MonBrightnessDown
-    light -U 20
+	light -U 20
 
 ########################################## VOLUME ##########################################
 
@@ -211,8 +211,8 @@ XF86AudioLowerVolume
 	#amixer set Master 2.5%-,5%-
 
 XF86AudioMicMute
-    pactl set-source-mute alsa_input.pci-0000_06_00.6.analog-stereo toggle
-    
+	pactl set-source-mute alsa_input.pci-0000_06_00.6.analog-stereo toggle
+	
 ########################################## MEDIA KEYS ##########################################
 
 XF86AudioPlay
@@ -240,4 +240,4 @@ ctrl + shift + super + m
 ########################################## LOCK ##########################################
 
 super + l
-    light-locker-command -l
+	light-locker-command -l
