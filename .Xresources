@@ -1,7 +1,7 @@
 Xft.dpi: 96
 
-Xcursor.size: 16
-Xcursor.theme: breeze-light
+Xcursor.size: 24
+Xcursor.theme: capitaine-cursors-light
 
 
 #define nord0 #2E3440
