@@ -114,10 +114,18 @@ span.artist-artistVerifiedBadge-badge svg:nth-child(1) {
     color: var(--spice-main);
 }
 
-/* Don't change the text color when hoverin over playlists */
-.main-rootlist-textWrapper:focus, 
-.main-rootlist-textWrapper:hover {
-    color: unset;
+/* Text color of titles in album/playlist */
+.main-trackList-trackListRow .main-trackList-rowTitle,
+.main-trackList-trackListRow:focus .main-trackList-rowTitle,
+.main-trackList-trackListRow .main-trackList-rowMarker,
+.main-trackList-trackListRow:focus .main-trackList-rowMarker{
+    color: var(--spice-text) !important;
+}
+
+/* Text color when hovering over a row */
+.main-trackList-trackListRow:hover .main-trackList-rowTitle,
+.main-trackList-trackListRow:hover .main-trackList-rowMarker {
+    color: var(--spice-button) !important;
 }
 
 

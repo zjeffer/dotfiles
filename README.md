@@ -44,7 +44,7 @@ More info below images.
 * [powerlevel10k](https://github.com/romkatv/powerlevel10k#get-started)
 
 ### Pacman/paru
-* Get `paru` from [here](https://github.com/Jguer/paru)
+* Get `paru` from [here](https://github.com/Morganamilo/paru)
 * Uncomment `Color` in `/etc/pacman.conf`
 * Enable the multilib repo in `/etc/pacman.conf`
 
