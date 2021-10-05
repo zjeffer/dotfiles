@@ -56,7 +56,7 @@ More info below images.
 * In nvim: `:PlugUpdate`
 
 ### Compton
-`paru -S picom-tryone-git`
+`paru -S picom-git`
 
 ### Firefox
 * `paru -S firefox`

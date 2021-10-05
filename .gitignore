@@ -4,6 +4,7 @@
 .aspnet/
 .atom/
 .azuredatastudio/
+.bash_history
 .bash_logout
 .bash_profile
 .bashrc
