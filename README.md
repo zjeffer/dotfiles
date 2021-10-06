@@ -105,6 +105,10 @@ More info below images.
 * Fix permissions: [Solution](https://github.com/khanhas/spicetify-cli/wiki/Installation#spotify-installed-from-aur)
 * Set spotify data file to folder on different drive: [Solution](https://community.spotify.com/t5/Desktop-Linux/Spotify-downloads-to-the-wrong-folder/m-p/4854706/highlight/true#M19161)
 
+### Polybar
+* `paru -S polybar-git`
+* `paru -S pacman-contrib` for the checkupdates binary
+
 ### Mouse driver (Logitech G502)
 `paru -S piper-git`
 

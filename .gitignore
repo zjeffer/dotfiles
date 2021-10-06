@@ -35,6 +35,7 @@
 .config/ktrashrc
 .config/lsp-plugins/
 .config/mimeapps.list
+.config/nomacs/
 .config/npm/
 .config/nvidia/
 .config/nvim/plugged/

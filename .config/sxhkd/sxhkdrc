@@ -52,7 +52,7 @@ ctrl + shift + Escape
 	ksysguard &
 
 XF86Calculator
-	kcalc &
+	gnome-calculator &
 
 
 ########################################## bspwm hotkeys ##########################################
