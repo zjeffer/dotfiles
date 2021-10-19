@@ -191,7 +191,7 @@ super + r
 
 # change brightness
 XF86MonBrightness{Up,Down}
-	light -S {-10,10}
+	light -{A,U} 10
 
 
 ########################################## VOLUME ##########################################
@@ -213,7 +213,7 @@ XF86AudioMicMute
 
 # Media control
 XF86Audio{Play,Prev,Next,Stop}
-	~/.config/activePlayer/control.sh {play-pause,prev,next,stop}
+	~/.config/activePlayer/control.sh {play-pause,previous,next,stop}
 
 # Fastforward/Rewind x seconds
 shift + XF86Audio{Next,Prev}
