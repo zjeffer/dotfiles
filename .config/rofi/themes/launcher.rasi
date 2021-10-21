@@ -11,7 +11,7 @@ configuration {
     show-icons:                     true;
     display-drun: 					"🔍";
     display-calc:	                "🖩";
-    lines:                          10;
+    //lines:                          10;
 }
 
 * {
