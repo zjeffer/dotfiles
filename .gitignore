@@ -25,6 +25,7 @@
 .config/azuredatastudio/
 .config/balena-etcher/
 .config/enchant/
+.config/flameshot/
 .config/flashpoint-launcher/
 .config/glade.conf
 .config/godot/
