@@ -224,3 +224,13 @@ shift + XF86Audio{Next,Prev}
 
 super + l
 	light-locker-command -l
+
+
+########################################## DUNST #########################################
+
+# close one dunst notification
+ctrl+space
+    dunstctl close
+
+ctrl+shift+KP_Add
+    dunstctl history-pop
