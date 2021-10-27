@@ -229,7 +229,7 @@ super + l
 ########################################## DUNST #########################################
 
 # close one dunst notification
-ctrl+space
+ctrl+alt+space
     dunstctl close
 
 ctrl+shift+KP_Add
