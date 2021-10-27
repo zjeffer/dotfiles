@@ -57,6 +57,7 @@
 .config/spicetify/Extracted/*
 .config/spicetify/Raw/*
 .config/tuxedo-control-center/
+.config/vue/
 .config/wget/
 .config/wireshark/
 .directory
