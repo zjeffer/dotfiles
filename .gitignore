@@ -27,6 +27,7 @@
 .config/enchant/
 .config/flameshot/
 .config/flashpoint-launcher/
+.config/git/
 .config/glade.conf
 .config/godot/
 .config/gwe/
