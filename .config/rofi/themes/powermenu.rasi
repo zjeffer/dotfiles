@@ -32,7 +32,7 @@ element-icon {
     /* Spacing */
     listview-spacing: 10px;
     window-padding: 10px;
-    element-padding: 20px 28px 16px -10px;
+    element-padding: 20px 28px 16px 8px;
 
     /* Colors */
     accent:           #a3be8c;
