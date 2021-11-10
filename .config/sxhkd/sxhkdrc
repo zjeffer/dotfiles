@@ -49,7 +49,7 @@ super + a
 
 #system monitor
 ctrl + shift + Escape
-	ksysguard &
+	gnome-system-monitor &
 
 XF86Calculator
 	gnome-calculator &
