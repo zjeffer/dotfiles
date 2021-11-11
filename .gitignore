@@ -5,6 +5,7 @@
 .aspnet/
 .atom/
 .azuredatastudio/
+.azureml/
 .bash_history
 .bash_logout
 .bash_profile
@@ -73,6 +74,7 @@
 .gnome/
 .gnupg/
 .gtkrc-2.0
+.hackmd/
 .histfile
 .icons/
 .ipython/
@@ -125,6 +127,7 @@
 .zcompdump
 .zcompdump-127-5.8
 .zcompdump-Arch-5.8
+.zotero/
 .zsh_history
 Android Open Source Project/
 Atom/
