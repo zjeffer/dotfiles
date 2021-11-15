@@ -4,6 +4,7 @@
 .Xauthority
 .aspnet/
 .atom/
+.azure/
 .azuredatastudio/
 .azureml/
 .bash_history
