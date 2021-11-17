@@ -14,6 +14,7 @@
 .cache/
 .cargo/
 .cmake/
+.conda/
 .config/Code - OSS
 .config/Code/
 .config/Element/
@@ -30,6 +31,7 @@
 .config/enchant/
 .config/flameshot/
 .config/flashpoint-launcher/
+.config/gcloud/
 .config/git/
 .config/glade.conf
 .config/godot/
