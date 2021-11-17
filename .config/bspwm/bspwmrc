@@ -2,24 +2,24 @@
 
 ##### xrandr settings
 xrandr --auto 
+
+for monitor in $(xrandr -q | grep " connected" | cut -d ' ' -f1); do
+    xrandr --output "$monitor"
+    xrandr --output "$monitor" --set "Broadcast RGB" "Full"
+    bspc monitor "$monitor" -d 1 2 3 4 5
+    bspc config -m "$monitor" window_gap 25
+done
+
 xrandr --output DP-4 --primary --mode 2560x1600 --rate 165.02
 xrandr --output HDMI-0 --right-of DP-4 --mode 1920x1080 --rate 60.00
 xrandr --output DP-2 --left-of DP-4 --mode 1920x1080 --rate 60.00
 
-#xrandr --output DP-4 --set "Broadcast RGB" "Full"
-#xrandr --output HDMI-0 --set "Broadcast RGB" "Full"
-#xrandr --output DP-2 --set "Broadcast RGB" "Full"
-
 ##### bspwm desktop settings
-bspc monitor DP-4 -d  1 2 3 4 5
-bspc monitor HDMI-0 -d 1 2 3 4 5
-bspc monitor DP-2 -d 1 2 3 4 5
 bspc wm -O DP-2 DP-4 HDMI-0
 
 ##### bspc configurations
 bspc config -m DP-4 window_gap 33
-bspc config -m HDMI-0 window_gap 25
-bspc config -m DP-2 window_gap 25
+
 
 bspc config border_width	 3
 bspc config normal_border_color	 \#3b4252
@@ -60,7 +60,9 @@ killall -w dunst 2>/dev/null
 dunst &
 
 #polybar: top bar
-killall polybar 2>/dev/null
+killall -w polybar 2>/dev/null
+# kill the player-mpris script processes
+pgrep -f player-mpris | xargs kill
 ~/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
 
 #activePlayer: keeps the current active player in a file, so it can be played using mouse keys
