@@ -50,7 +50,19 @@ bspc rule -a 'Gnome-calculator' state=floating
 bspc rule -a "Wine" state=floating focus=off
 bspc rule -a "explorer.exe" state=fullscreen
 
+#feh: set desktop background
+~/.fehbg &
+
 ##### run programs:
+
+#nm-applet
+killall nm-applet 2>/dev/null
+nm-applet &
+
+#xcape: set left super key to super+space, used for bringing up application launcher
+killall xcape 2>/dev/null
+xcape -e 'Super_L=Super_L|space' &
+
 #sxhkd: keyboard shortcut daemon
 killall sxhkd 2>/dev/null
 sxhkd &>>~/.config/sxhkd/.sxhkd.err &
@@ -60,7 +72,7 @@ killall -w dunst 2>/dev/null
 dunst &
 
 #polybar: top bar
-killall -w polybar 2>/dev/null
+killall -9 -w polybar 2>/dev/null
 # kill the player-mpris script processes
 pgrep -f player-mpris | xargs kill
 ~/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
@@ -70,20 +82,8 @@ killall mediaplayers.sh 2>/dev/null
 ~/.config/activePlayer/mediaplayers.sh 2>~/.config/activePlayer/.mediaplayer.err &
 
 #picom: compositor
-killall -qw picom 2>/dev/null; picom --experimental-backends --config ~/.config/picom/picom.conf &>>~/.config/picom/.picom.err &
-
-#nm-applet
-killall nm-applet 2>/dev/null
-nm-applet &
+killall -9 -qw picom 2>/dev/null; picom --experimental-backends --config ~/.config/picom/picom.conf &>>~/.config/picom/.picom.err &
 
 #libinput-gestures: touchpad gestures
 libinput-gestures-setup restart
-
-#xcape: set left super key to super+space, used for bringing up application launcher
-killall xcape 2>/dev/null
-xcape -e 'Super_L=Super_L|space' &
-
-
-#feh: set desktop background
-~/.fehbg &
 
