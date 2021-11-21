@@ -27,6 +27,7 @@
 .config/VSCodium/
 .config/azuredatastudio/
 .config/balena-etcher/
+.config/conda/
 .config/cutechess/
 .config/enchant/
 .config/flameshot/
