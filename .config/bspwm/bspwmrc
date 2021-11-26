@@ -20,7 +20,6 @@ bspc wm -O DP-2 DP-4 HDMI-0
 ##### bspc configurations
 bspc config -m DP-4 window_gap 33
 
-
 bspc config border_width	 3
 bspc config normal_border_color	 \#3b4252
 bspc config focused_border_color \#5e81ac
@@ -72,9 +71,9 @@ killall -w dunst 2>/dev/null
 dunst &
 
 #polybar: top bar
-killall -9 -w polybar 2>/dev/null
+killall -w polybar 2>/dev/null
 # kill the player-mpris script processes
-pgrep -f player-mpris | xargs kill
+#pgrep -f player-mpris | xargs kill
 ~/.config/polybar/launch.sh 2>~/.config/polybar/.polybar.err &
 
 #activePlayer: keeps the current active player in a file, so it can be played using mouse keys
@@ -82,7 +81,7 @@ killall mediaplayers.sh 2>/dev/null
 ~/.config/activePlayer/mediaplayers.sh 2>~/.config/activePlayer/.mediaplayer.err &
 
 #picom: compositor
-killall -9 -qw picom 2>/dev/null; picom --experimental-backends --config ~/.config/picom/picom.conf &>>~/.config/picom/.picom.err &
+killall -9 -qw picom 2>/dev/null; picom --config ~/.config/picom/picom.conf &>>~/.config/picom/.picom.err &
 
 #libinput-gestures: touchpad gestures
 libinput-gestures-setup restart
