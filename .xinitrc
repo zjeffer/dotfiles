@@ -57,6 +57,4 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
 export SSH_AUTO_SOCK
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-exec light-locker &
-
 exec bspwm 2>>~/.config/bspwm/.bspwm.err
