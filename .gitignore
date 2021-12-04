@@ -84,6 +84,7 @@
 .ipython/
 .java/
 .jupyter/
+.kaggle/
 .kde4/
 .keras/
 .kodi/
