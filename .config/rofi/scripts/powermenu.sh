@@ -27,7 +27,7 @@ case $chosen in
         reboot
         ;;
     $lock)
-        light-locker-command -l 
+        betterlockscreen -l dimblur
         ;;
     $suspend)
         systemctl suspend
