@@ -223,7 +223,7 @@ shift + XF86Audio{Next,Prev}
 ########################################## LOCK ##########################################
 
 super + l
-	betterlockscreen -l dimblur --display 1
+	betterlockscreen -l dimblur
 
 
 ########################################## DUNST #########################################
