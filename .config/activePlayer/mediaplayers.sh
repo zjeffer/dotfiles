@@ -5,27 +5,31 @@ get_players(){
 }
 
 get_status(){
-    echo `qdbus $1 /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlaybackStatus`
+    echo `qdbus $1 /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlaybackStatus 2>&1`
 }
 
 while true ; do
+    refreshPlayers=0
     for player in $(get_players) ; do
         if [[ $(get_status $player) == 'Playing' ]]; then
 			echo $player > ~/.config/activePlayer/currentPlaying.txt
-			bool=0
+			refreshPlayers=0
             break
         elif [[ $(get_status $player) == 'Stopped' ]]; then
             # if a player is stopped, we don't want to start it again
-            # often if i close firefox, the player will be marked as stopped while it should actually be deleted
-			bool=1
+			refreshPlayers=1
 		fi
     done
+    # if the current player does not exist anymore, look for a new one
+    currentPlayer=`cat ~/.config/activePlayer/currentPlaying.txt`
+    if [[ $(get_status $currentPlayer) == *"does not exist"* ]]; then
+        refreshPlayers=1
+    fi
     # if a player is stopped, search for the next paused player
-	if [[ $bool == 1 ]]; then
+	if [[ $refreshPlayers == 1 ]]; then
         for player in $(get_players) ; do
             if [[ $(get_status $player) == 'Paused' ]]; then
 				echo "$player" > ~/.config/activePlayer/currentPlaying.txt
-				bool=0
 				break
 			fi
 		done
