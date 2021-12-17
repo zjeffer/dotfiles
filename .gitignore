@@ -107,6 +107,7 @@
 .python_history
 .rubberband.wisdom.d
 .rubberband.wisdom.d/
+.sheepit.conf
 .sqlsecrets/
 .ssh/
 .steam/
