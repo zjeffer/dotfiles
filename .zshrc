@@ -60,63 +60,55 @@ export ARCHFLAGS="-arch x86_64"
 #ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-#####        CLEAN UP HOME FOLDER       ######
-#nvidia shader cache: instead of ~/.nv/, choose different folder:
+##########################        CLEAN UP HOME FOLDER       ##########################
+# nvidia
 export __GL_SHADER_DISK_CACHE_PATH=/tmp/zjeffer/nvidia/
-
 alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
-
-#cuda cache path
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
-
-#npm
+# npm
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
-
-#java
+# java
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
-
 #sqlite
 export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
 alias sqlite3='sqlite3 -init "$XDG_CONFIG_HOME"/sqlite3/sqliterc'
-
 #GTK2
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
-
 #android
 export ANDROID_SDK_HOME="$XDG_CONFIG_HOME"/android
 export ANDROID_AVD_HOME="$XDG_DATA_HOME"/android/
 export ANDROID_EMULATOR_HOME="$XDG_DATA_HOME"/android/
 export ADB_VENDOR_KEY="$XDG_CONFIG_HOME"/android
-
 #wget
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
-
 #rust cargo
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
-
 # jupyter / ipython
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
-
 # disable less history file in ~/
 export LESSHISTFILE="/dev/null"
-
 # pylint
 export PYLINTHOME="$XDG_CACHE_HOME"/pylint 
-
 # atom
 export ATOM_HOME="$XDG_DATA_HOME"/atom
-
 # pylint.d
 export PYLINTHOME="$XDG_CACHE_HOME"/pylint
-
 # conda
 export CONDARC="$XDG_CONFIG_HOME/conda/condarc"
-
-# hardware acceleration in firefox
-#export MOZ_DISABLE_RDD_SANDBOX=1
-#export MOZ_X11_EGL=1
-
+# azure
+export AZURE_CONFIG_DIR=$XDG_DATA_HOME/azure 
+# docker
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker 
+# gnupg
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+alias gpg2='gpg2 --homedir $GNUPGHOME'
+# nuget
+export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
+# wine
+export WINEPREFIX="$HOME/Games/Wine"
+# gradle
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/histfile
