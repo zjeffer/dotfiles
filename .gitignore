@@ -24,6 +24,7 @@
 .config/PulseEffects/
 .config/QtProject*
 .config/Raspberry Pi/
+.config/StorageExplorer/
 .config/VSCodium/
 .config/azuredatastudio/
 .config/balena-etcher/
@@ -57,6 +58,7 @@
 .config/ranger/rifle.conf
 .config/ranger/scope.sh
 .config/rpcs3/
+.config/sheepit/
 .config/simplescreenrecorder/
 .config/spicetify/Backup/*
 .config/spicetify/CustomApps/*
@@ -77,6 +79,7 @@
 .gitignore
 .gnome/
 .gnupg/
+.gradle/
 .gtkrc-2.0
 .hackmd/
 .histfile
