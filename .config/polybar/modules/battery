@@ -6,30 +6,26 @@ full-at = 94
 poll-interval = 1
 
 time-format = %H:%M
-label-charging = %percentage%%
-label-discharging = %percentage%% %time%
-;label-full = 
-label-full =
-;label-charging-underline = #5f0
+label-charging = %percentage:2%%
+label-discharging = %percentage:2%% %time%
 label-discharging-padding = 1
 label-charging-padding = 1
 
 format-charging = <label-charging>
-format-discharging = <label-discharging>  
-format-full = <label-full>
+format-discharging = <label-discharging>
+format-full = <label-charging>
 
 format-charging-prefix = %{T7}%{T-}
 format-charging-prefix-foreground = ${colors.nord0}
 format-charging-prefix-background = ${colors.background}
-format-charging-suffix = %{T7}%{T-}
-format-charging-suffix-foreground = ${colors.background}
-format-charging-suffix-background = ${colors.nord0}
 format-charging-background = ${colors.nord0}
 
 format-discharging-prefix = %{T7}%{T-}
 format-discharging-prefix-foreground = ${colors.nord0}
 format-discharging-prefix-background = ${colors.background}
-format-discharging-suffix = %{T7}%{T-}
-format-discharging-suffix-foreground = ${colors.background}
-format-discharging-suffix-background = ${colors.nord0}
 format-discharging-background = ${colors.nord0}
+
+format-full-prefix = %{T7}%{T-}
+format-full-prefix-foreground = ${colors.nord0}
+format-full-prefix-background = ${colors.background}
+format-full-background = ${colors.nord0}

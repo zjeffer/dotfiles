@@ -7,6 +7,6 @@ label = %percentage:2%%
 label-padding = 1 
 format-prefix = %{T7}%{T-}
 format-prefix-foreground = ${colors.cpu}
-format-prefix-background = ${colors.background}
+format-prefix-background = ${colors.nord0}
 
 format-background = ${colors.cpu}
