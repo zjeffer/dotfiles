@@ -8,12 +8,14 @@ poll-interval = 1
 time-format = %H:%M
 label-charging = %percentage:2%%
 label-discharging = %percentage:2%% %time%
+label-full = %percentage:2%%
 label-discharging-padding = 1
 label-charging-padding = 1
+label-full-padding = 1
 
 format-charging = <label-charging>
 format-discharging = <label-discharging>
-format-full = <label-charging>
+format-full = <label-full>
 
 format-charging-prefix = %{T7}%{T-}
 format-charging-prefix-foreground = ${colors.nord0}
