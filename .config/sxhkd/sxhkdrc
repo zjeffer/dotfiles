@@ -13,7 +13,7 @@ super + shift + Return
 
 # program launcher
 super + space
-	~/.config/rofi/scripts/launcher.sh &
+	~/.config/rofi/bin/launcher_colorful &
 
 # firefox
 super + z

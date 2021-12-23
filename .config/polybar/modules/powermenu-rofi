@@ -5,5 +5,5 @@ content = %{T8}%{T-}
 content-foreground = ${colors.background}
 content-padding = 1
 
-click-left = /home/zjeffer/.config/rofi/scripts/powermenu.sh &
+click-left = /home/zjeffer/.config/rofi/bin/powermenu &
 

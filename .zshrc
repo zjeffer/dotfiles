@@ -141,7 +141,7 @@ bindkey "^[[3~" delete-char
 bindkey "^[[5~" delete-char
 
 
-export SUDO_ASKPASS=~/.config/rofi/scripts/askpass/askpass.sh
+export SUDO_ASKPASS=~/.config/rofi/askpass/askpass.sh
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 
