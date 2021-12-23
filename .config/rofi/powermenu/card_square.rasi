@@ -20,7 +20,7 @@ configuration {
 
 window {
     transparency:                   "real";
-    background-color:               @background;
+    background-color:               @window;
     text-color:                     @foreground;
     border-radius:                  0px;
     height:                         28.5%;
@@ -78,7 +78,7 @@ element {
     background-color:               @background-alt;
     text-color:                     @foreground;
     orientation:                    horizontal;
-    border-radius:                  0%;
+    border-radius:                  6px;
 }
 
 element-text {
@@ -108,7 +108,7 @@ element selected {
     background-color:               @selected;
     text-color:                     @foreground;
     border:                  		0% 0% 0% 0.2%;
-    border-radius:                  0%;
+    border-radius:                  6px;
     border-color:                  	@border;
 }
 
