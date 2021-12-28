@@ -37,8 +37,9 @@ bspc config honor_size_hints 	 false
 ##### bspc rules
 bspc rule -a Screenkey manage=off
 bspc rule -a spectacle floating=on follow=on
-bspc rule -a 'Friends List' state=floating
-bspc rule -a 'Steam - News' state=floating
+bspc rule -a 'Steam' focus=off
+bspc rule -a 'Friends List' state=floating focus=off
+bspc rule -a 'Steam - News' state=floating focus=off
 bspc rule -a 'Citrix maximized probe window' state=floating
 bspc rule -a SimpleScreenRecorder state=floating
 bspc rule -a 'processing-core-PApplet' state=floating focus=off
