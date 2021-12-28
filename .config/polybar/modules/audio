@@ -1,6 +1,6 @@
 [module/pulseaudio]
 type = internal/pulseaudio
-sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+sink = alsa_output.pci-0000_06_00.6.analog-stereo
 
 format-volume = <bar-volume>
 format-muted-foreground = ${colors.foreground}
@@ -35,5 +35,5 @@ bar-volume-empty-foreground = ${colors.foreground}
 type = custom/script
 exec = $HOME/.config/polybar/scripts/microphone/microphone.sh
 
-click-left = pulseaudio-ctl mute-input
-interval = 1
+click-left = pactl set-source-mute $(pactl get-default-source) 1
+interval = 0.5
