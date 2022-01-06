@@ -121,7 +121,7 @@ SAVEHIST=1000
 
 # Aliases
 alias ls='ls --color=auto'
-alias la='ls -la'
+alias la='ls -lah'
 alias ll='ls -l'
 alias free='free -h'
 alias df='df -h'
