@@ -32,6 +32,7 @@
 .config/conda/
 .config/cutechess/
 .config/discordcanary/
+.config/docker/
 .config/easyeffects/
 .config/enchant/
 .config/flameshot/
