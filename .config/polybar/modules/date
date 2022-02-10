@@ -8,10 +8,10 @@ label = %date%
 label-padding-left = 1
 ;label-underline = #ddd
 
-format-prefix = %{T7}%{T-}
+format-prefix = %{T6}%{T-}
 format-prefix-foreground = ${colors.date}
 format-prefix-background = ${colors.wifi}
-format-suffix = %{T7}%{T-}
+format-suffix = %{T6}%{T-}
 format-suffix-foreground = ${colors.date}
 format-suffix-background = ${colors.date}
 format-background = ${colors.date}

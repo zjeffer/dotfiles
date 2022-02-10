@@ -17,17 +17,17 @@ format-charging = <label-charging>
 format-discharging = <label-discharging>
 format-full = <label-full>
 
-format-charging-prefix = %{T7}%{T-}
+format-charging-prefix = %{T6}%{T-}
 format-charging-prefix-foreground = ${colors.nord0}
 format-charging-prefix-background = ${colors.background}
 format-charging-background = ${colors.nord0}
 
-format-discharging-prefix = %{T7}%{T-}
+format-discharging-prefix = %{T6}%{T-}
 format-discharging-prefix-foreground = ${colors.nord0}
 format-discharging-prefix-background = ${colors.background}
 format-discharging-background = ${colors.nord0}
 
-format-full-prefix = %{T7}%{T-}
+format-full-prefix = %{T6}%{T-}
 format-full-prefix-foreground = ${colors.nord0}
 format-full-prefix-background = ${colors.background}
 format-full-background = ${colors.nord0}

@@ -1,7 +1,7 @@
 [module/powermenu-rofi]
 type = custom/text
 content-background = ${colors.power}
-content = %{T8}%{T-}
+content = %{T7}%{T-}
 content-foreground = ${colors.background}
 content-padding = 1
 

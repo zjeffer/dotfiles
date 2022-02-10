@@ -5,7 +5,7 @@ sink = alsa_output.pci-0000_06_00.6.analog-stereo
 format-volume = <bar-volume>
 format-muted-foreground = ${colors.foreground}
 label-muted = 
-label-muted-font = 6
+label-muted-font = 5
 label-padding = 1
 
 
@@ -25,9 +25,9 @@ bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
 bar-volume-fill = ─
-bar-volume-fill-font = 2
+bar-volume-fill-font = 3
 bar-volume-empty = ─
-bar-volume-empty-font = 2
+bar-volume-empty-font = 3
 bar-volume-empty-foreground = ${colors.foreground}
 
 [module/microphone]

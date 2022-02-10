@@ -8,10 +8,10 @@ click-middle = ~/.config/polybar/scripts/nm-applet/applet.sh --ssid &
 
 
 label-padding-left = 1
-format-prefix = %{T7}%{T-}
+format-prefix = %{T6}%{T-}
 format-prefix-foreground = ${colors.wifi}
 format-prefix-background = ${colors.temp}
-format-suffix = %{T7}%{T-}
+format-suffix = %{T6}%{T-}
 format-suffix-foreground = ${colors.wifi}
 format-suffix-background = ${colors.wifi}
 format-background = ${colors.wifi}

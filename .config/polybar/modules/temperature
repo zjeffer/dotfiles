@@ -6,12 +6,12 @@ warn-temperature = 90
 
 label-padding = 1
 label-warn-padding = 1
-format-prefix = %{T7}%{T-}
+format-prefix = %{T6}%{T-}
 format-prefix-foreground = ${colors.temp}
 format-prefix-background = ${colors.ram}
 format-background = ${colors.temp}
 
-format-warn-prefix = %{T7}%{T-}
+format-warn-prefix = %{T6}%{T-}
 format-warn-prefix-foreground = ${colors.temp}
 format-warn-prefix-background = ${colors.ram}
 format-warn-background = ${colors.temp}

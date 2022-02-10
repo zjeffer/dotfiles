@@ -3,9 +3,10 @@ type = internal/memory
 interval = 1
 ;format-underline = #28f
 label = %percentage_used:2%%
+label-font = 1
 
 label-padding = 1
-format-prefix = %{T7}%{T-}
+format-prefix = %{T6}%{T-}
 format-prefix-foreground = ${colors.ram}
 format-prefix-background = ${colors.cpu}
 

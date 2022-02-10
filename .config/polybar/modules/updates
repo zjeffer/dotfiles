@@ -5,7 +5,7 @@ interval = 600
 label = %output%
 click-left = gnome-terminal -- paru -Syyu & 2>>~/.config/polybar/.polybar.err 
 
-format-suffix = %{T7}%{T-}
+format-suffix = %{T6}%{T-}
 format-suffix-foreground = ${colors.wifi}
 format-suffix-background = ${colors.wifi}
 format-background = ${colors.wifi}
