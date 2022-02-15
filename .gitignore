@@ -55,6 +55,7 @@
 .config/nvidia/
 .config/nvim/plugged/
 .config/obs-studio/
+.config/openttd/
 .config/polybar/scripts/nm-applet/curr_ssid
 .config/qalculate/
 .config/ranger/colorschemes/__init__.py
