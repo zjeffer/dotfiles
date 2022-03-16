@@ -1,6 +1,7 @@
 *.err
 *.log
 .BitwigStudio/
+.This War of Mine/
 .Xauthority
 .aspnet/
 .atom/
