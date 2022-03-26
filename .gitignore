@@ -27,6 +27,7 @@
 .config/QtProject*
 .config/Raspberry Pi/
 .config/StorageExplorer/
+.config/Ultralytics/
 .config/VSCodium/
 .config/azuredatastudio/
 .config/balena-etcher/
