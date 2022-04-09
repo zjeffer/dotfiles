@@ -39,6 +39,10 @@ Print
 super + d
 	discord-canary --no-sandbox & 
 
+#slack
+super + shift + d
+    slack
+
 #scrot
 super + Print
 	scrot -q 100 '%Y-%m-%d_%H:%M_scrot.png' -e 'mv $f ~/Pictures/Screenshots/'
