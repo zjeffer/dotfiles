@@ -44,7 +44,7 @@ bspc rule -a SimpleScreenRecorder state=floating
 bspc rule -a 'processing-core-PApplet' state=floating focus=off
 bspc rule -a 'Tk' state=floating
 bspc rule -a 'Toplevel' state=floating
-bspc rule -a 'Gnome-calculator' state=floating
+bspc rule -a 'gnome-calculator' state=floating
 # for origin & other wine programs
 bspc rule -a "Wine" state=floating focus=off
 bspc rule -a "explorer.exe" state=fullscreen
