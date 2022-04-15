@@ -1,0 +1,2 @@
+[module/tray]
+type = internal/tray
