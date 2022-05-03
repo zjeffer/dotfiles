@@ -49,6 +49,7 @@
 .config/kcharselectrc
 .config/kdenlive*
 .config/ktrashrc
+.config/lc0/
 .config/lsp-plugins/
 .config/mimeapps.list
 .config/mume/
