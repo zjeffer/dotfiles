@@ -110,6 +110,9 @@ export WINEPREFIX="$HOME/Games/Wine"
 # gradle
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 
+##########################        END OF CLEANUP ~/       ##########################
+
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/histfile
 HISTSIZE=1000
@@ -131,9 +134,10 @@ alias sudo='sudo -A '
 alias feh='feh --auto-zoom'
 alias dmesg='sudo dmesg -H --color'
 alias gs='git status'
-alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias yay='paru'
 alias less='less -I '
+alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
 
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
@@ -151,4 +155,5 @@ export LESSHISTFILE=-
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
