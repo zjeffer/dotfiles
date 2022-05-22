@@ -48,6 +48,7 @@ bspc rule -a 'gnome-calculator' state=floating
 # for origin & other wine programs
 bspc rule -a "Wine" state=floating focus=off
 bspc rule -a "explorer.exe" state=fullscreen
+bspc rule -a "Matplotlib" state=floating focus=off
 
 #feh: set desktop background
 ~/.fehbg &
