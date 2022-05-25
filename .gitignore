@@ -26,9 +26,12 @@
 .config/PulseEffects/
 .config/QtProject*
 .config/Raspberry Pi/
+.config/SideQuest/
 .config/StorageExplorer/
 .config/Ultralytics/
 .config/VSCodium/
+.config/Valve/
+.config/alvr/
 .config/azuredatastudio/
 .config/balena-etcher/
 .config/conda/
@@ -59,6 +62,8 @@
 .config/nvim/plugged/
 .config/obs-studio/
 .config/openttd/
+.config/openvr/
+.config/openxr/
 .config/polybar/scripts/nm-applet/curr_ssid
 .config/qalculate/
 .config/ranger/colorschemes/__init__.py
@@ -66,6 +71,7 @@
 .config/ranger/commands*
 .config/ranger/rifle.conf
 .config/ranger/scope.sh
+.config/rncbc.org/
 .config/rpcs3/
 .config/sheepit/
 .config/simplescreenrecorder/
