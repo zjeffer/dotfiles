@@ -67,6 +67,7 @@
 .config/openxr/
 .config/polybar/scripts/nm-applet/curr_ssid
 .config/qalculate/
+.config/qt6ct/
 .config/ranger/colorschemes/__init__.py
 .config/ranger/colorschemes/__pycache__/
 .config/ranger/commands*
@@ -123,6 +124,7 @@
 .nv/
 .nvidia-settings-rc
 .oh-my-zsh/
+.paradoxlauncher
 .pki/
 .processing/
 .pulse-cookie
