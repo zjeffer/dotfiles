@@ -11,16 +11,20 @@ case $1 in
 	'stop')
 		cmd='/org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop';;
 	'skipForward')
+		# skip 5 second forward
 		cmd='/org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Seek 5000000';;
 	'skipBackward')
+		# skip 5 second backward
 		cmd='/org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Seek -5000000';;
 	*)
 esac
 
 #Send command to qdbus
 if [[ `qdbus | egrep -i 'org.mpris.MediaPlayer2|plasma-browser-integration' | wc -l` -eq 1 ]]; then
+	# if only one player is detected
 	qdbus `qdbus | egrep -i 'org.mpris.MediaPlayer2|plasma-browser-integration'` $cmd
 else
+	# if multiple players are detected, interact with the most recent active player
 	qdbus `cat ~/.config/activePlayer/currentPlaying.txt` $cmd
 fi
 
