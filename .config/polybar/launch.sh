@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Terminate already running bar instances
-killall polybar 2>/dev/null
+killall -9 -w polybar 2>/dev/null
 
 # kill all player scripts
 pkill -f 'player-mpris-tail.py'
@@ -14,7 +14,7 @@ for m in $(polybar --list-monitors | cut -d":" -f1); do
     if [ "$m" = "DP-4" ] || [ "$m" = "eDP-1" ]; then
         bar_type="laptop"
     else
-        bar_type="custom"
+        bar_type="external"
 	fi 
-    MONITOR=$m polybar --log=trace -r $bar_type 2>&1 | ts "%Y-%m-%dT%H:%M:%S%z" >> "$log_file" &
+    MONITOR=$m polybar --log=trace -r $bar_type 2>&1 | ts "%Y-%m-%dT%H:%M:%S%z" > $HOME/.config/polybar/.polybar.$m.err &
 done
