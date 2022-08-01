@@ -6,7 +6,6 @@ xrandr --auto
 for monitor in $(xrandr -q | grep " connected" | cut -d ' ' -f1); do
     xrandr --output "$monitor" --set "Broadcast RGB" "Full"
     bspc monitor "$monitor" -d 1 2 3 4 5
-    bspc config -m "$monitor" window_gap 25
 done
 
 xrandr --output DP-4 --primary --mode 2560x1600 --rate 165.02
@@ -15,9 +14,7 @@ xrandr --output DP-2 --left-of DP-4 --mode 1920x1080 --rate 60.00
 
 ##### bspwm desktop settings
 bspc wm -O DP-2 DP-4 HDMI-0
-
-##### bspc configurations
-bspc config -m DP-4 window_gap 33
+bspc config window_gap 10
 
 bspc config border_width	 3
 bspc config normal_border_color	 \#3b4252

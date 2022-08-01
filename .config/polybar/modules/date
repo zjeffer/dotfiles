@@ -2,16 +2,21 @@
 type = internal/date
 interval = 5
 
-date = %a %d-%m-%y
+date = %a %d/%m/%y
 
 label = %date%
 label-padding-left = 1
-;label-underline = #ddd
+label-padding-right = 2
+label-font = 1
 
-format-prefix = %{T6}%{T-}
-format-prefix-foreground = ${colors.date}
-format-prefix-background = ${colors.wifi}
-format-suffix = %{T6}%{T-}
-format-suffix-foreground = ${colors.date}
-format-suffix-background = ${colors.date}
-format-background = ${colors.date}
+format = <label>
+format-foreground = ${colors.text}
+format-background = ${colors.background}
+format-underline = ${colors.date}
+
+format-prefix = "📅"
+format-prefix-padding-left = 2
+format-prefix-padding-right = 1
+format-prefix-foreground = ${colors.text}
+format-prefix-background = ${colors.background}
+format-prefix-font = 7

@@ -1,13 +1,17 @@
 [module/memory]
 type = internal/memory
-interval = 1
-;format-underline = #28f
-label = %percentage_used:2%%
-label-font = 1
+interval = 0.5
 
-label-padding = 1
-format-prefix = %{T6}%{T-}
-format-prefix-foreground = ${colors.ram}
-format-prefix-background = ${colors.cpu}
+format-prefix = " "
+format-prefix-foreground = ${colors.text}
+format-prefix-background = ${colors.background-dark}
+format-prefix-font = 9
 
-format-background = ${colors.ram}
+label = "%percentage_used:2%%"
+label-padding-left = 1
+label-padding-right = 2
+label-foreground = ${colors.text}
+label-background = ${colors.background-dark}
+label-font = 9
+
+format-underline = ${colors.ram}

@@ -1,0 +1,20 @@
+[module/battery-arrow]
+type = custom/text
+content = ""
+content-foreground = ${colors.background-dark}
+content-background = ${colors.background}
+content-font = 6
+
+[module/date-arrow]
+type = custom/text
+content = ""
+content-foreground = ${colors.background}
+content-background = ${colors.background-dark}
+content-font = 6
+
+[module/tray-arrow]
+type = custom/text
+content = ""
+content-foreground = ${colors.background-light}
+content-background = ${colors.background}
+content-font = 6

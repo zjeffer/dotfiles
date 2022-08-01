@@ -1,33 +1,42 @@
 [module/battery]
 type = internal/battery
+
+full-at = 95
 battery = BAT0
 adapter = ADP0
-full-at = 94
-poll-interval = 1
 
-time-format = %H:%M
-label-charging = %percentage:2%%
-label-discharging = %percentage:2%% %time%
-label-full = %percentage:2%%
-label-discharging-padding = 1
-label-charging-padding = 1
-label-full-padding = 1
+poll-interval = 5
 
-format-charging = <label-charging>
-format-discharging = <label-discharging>
-format-full = <label-full>
+format-charging = "<ramp-capacity> <label-charging>"
+format-discharging = "<ramp-capacity> <label-discharging>"
+format-full = "<ramp-capacity> <label-full>"
 
-format-charging-prefix = %{T6}%{T-}
-format-charging-prefix-foreground = ${colors.nord0}
-format-charging-prefix-background = ${colors.background}
-format-charging-background = ${colors.nord0}
+format-charging-font = 9
+format-discharging-font = 9
+format-full-font = 9
 
-format-discharging-prefix = %{T6}%{T-}
-format-discharging-prefix-foreground = ${colors.nord0}
-format-discharging-prefix-background = ${colors.background}
-format-discharging-background = ${colors.nord0}
+format-charging-padding = 1
+format-discharging-padding = 1
+format-full-padding = 1
 
-format-full-prefix = %{T6}%{T-}
-format-full-prefix-foreground = ${colors.nord0}
-format-full-prefix-background = ${colors.background}
-format-full-background = ${colors.nord0}
+
+format-charging-background = ${colors.background-dark}
+format-discharging-background = ${colors.background-dark}
+format-full-background = ${colors.background-dark}
+
+format-full-underline = ${colors.battery}
+format-charging-underline = ${colors.battery}
+format-discharging-underline = ${colors.battery}
+
+label-charging = "%percentage%%  ﮣ "
+label-discharging = "%percentage%%  ﮤ "
+label-full = "%percentage%%"
+
+ramp-capacity-0 = ""
+ramp-capacity-1 = ""
+ramp-capacity-2 = ""
+ramp-capacity-3 = ""
+ramp-capacity-4 = ""
+
+bar-capacity-width = 10
+

@@ -13,19 +13,19 @@ type = internal/bspwm
 label-focused = 
 label-focused-foreground = ${colors.nord11}
 label-focused-background = ${colors.primary}
-label-focused-padding = 1
+label-focused-padding = 2
 
 label-occupied = 
-label-occupied-padding = 1
-label-occupied-foreground = ${colors.foreground}
+label-occupied-foreground = ${colors.text}
 label-occupied-background = ${colors.background}
+label-occupied-padding = 2
 
 label-urgent = 
-label-urgent-foreground = ${colors.foreground}
+label-urgent-foreground = ${colors.text}
 label-urgent-background = ${colors.background}
-label-urgent-padding = 1
+label-urgent-padding = 2
 
 label-empty = 
-label-empty-foreground = ${colors.foreground}
-label-empty-background = ${colors.nord0}
-label-empty-padding = 1
+label-empty-foreground = ${colors.text}
+label-empty-background = ${colors.background-dark}
+label-empty-padding = 2

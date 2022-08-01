@@ -1,12 +1,16 @@
 [module/cpu]
 type = internal/cpu
-interval = 1
-format = <label>
-label = %percentage:2%%
+interval = 0.5
 
-label-padding = 1 
-format-prefix = %{T6}%{T-}
-format-prefix-foreground = ${colors.cpu}
-format-prefix-background = ${colors.nord0}
+format-prefix = " ﬙"
+format-prefix-foreground = ${colors.text}
+format-prefix-background = ${colors.background-dark}
+format-prefix-font = 5
 
-format-background = ${colors.cpu}
+label = "%percentage:2%%"
+label-padding = 1
+label-foreground = ${colors.text}
+label-background = ${colors.background-dark}
+label-font = 9
+
+format-underline = ${colors.cpu}

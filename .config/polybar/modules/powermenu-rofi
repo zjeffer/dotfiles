@@ -1,9 +1,12 @@
 [module/powermenu-rofi]
 type = custom/text
-format-background = ${colors.power}
-format = %{T7}%{T-}
-format-foreground = ${colors.background}
-format-padding = 1
+
+label-background = ${colors.power}
+label = ""
+label-foreground = ${colors.background}
+label-font = 8
+label-padding-left = 1
+label-padding-right = 3
 
 click-left = /home/zjeffer/.config/rofi/bin/powermenu &
 

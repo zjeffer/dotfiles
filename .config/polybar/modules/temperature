@@ -1,28 +1,23 @@
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
-warn-temperature = 90
-
-
-label-padding = 1
-label-warn-padding = 1
-format-prefix = %{T6}%{T-}
-format-prefix-foreground = ${colors.temp}
-format-prefix-background = ${colors.ram}
-format-background = ${colors.temp}
-
-format-warn-prefix = %{T6}%{T-}
-format-warn-prefix-foreground = ${colors.temp}
-format-warn-prefix-background = ${colors.ram}
-format-warn-background = ${colors.temp}
-format-warn-foreground = #73151E
-
-format = <label>
-format-warn = <label-warn>
-
-label = %temperature-c%
-;label-underline = #fb0
-label-warn = %temperature-c%
-;label-warn-underline = #f00
 
 hwmon-path = /sys/class/hwmon/hwmon4/temp1_input
+
+thermal-zone = 0
+warn-temperature = 150 ;never use warn label
+interval = 1
+
+format-prefix = " 🌡"
+format-prefix-foreground = ${colors.text}
+format-prefix-background = ${colors.background-dark}
+format-prefix-font = 9
+
+label = "%temperature-c%"
+label-padding-left = 1
+label-padding-right = 2
+label-foreground = ${colors.text}
+label-background = ${colors.background-dark}
+label-font = 9
+
+format-underline = ${colors.temp}
+

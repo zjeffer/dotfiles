@@ -16,5 +16,5 @@ for m in $(polybar --list-monitors | cut -d":" -f1); do
     else
         bar_type="external"
 	fi 
-    MONITOR=$m polybar --log=trace -r $bar_type 2>&1 | ts "%Y-%m-%dT%H:%M:%S%z" > $HOME/.config/polybar/.polybar.$m.err &
+    MONITOR=$m polybar -r $bar_type 2>&1 | ts "%Y-%m-%dT%H:%M:%S%z" > $HOME/.config/polybar/.polybar.$m.err &
 done
