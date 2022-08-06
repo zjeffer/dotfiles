@@ -29,6 +29,9 @@ bspc config automatic_scheme 	 alternate
 bspc config pointer_motion_interval 17
 bspc config external_rules_command "/home/zjeffer/.config/bspwm/rules/vlc.sh"
 bspc config honor_size_hints 	 true
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+bspc config merge_overlapping_monitors true
 
 ##### bspc rules
 bspc rule -a Screenkey manage=off
@@ -46,6 +49,7 @@ bspc rule -a 'gnome-calculator' state=floating
 bspc rule -a "Wine" state=floating focus=off
 bspc rule -a "explorer.exe" state=fullscreen
 bspc rule -a "Matplotlib" state=floating focus=off
+bspc rule -a "flameshot" state=floating
 
 #feh: set desktop background
 ~/.fehbg &
