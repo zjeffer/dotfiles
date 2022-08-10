@@ -55,6 +55,7 @@
 .config/ktrashrc
 .config/lc0/
 .config/lsp-plugins/
+.config/mictray/
 .config/mimeapps.list
 .config/mume/
 .config/nomacs/
