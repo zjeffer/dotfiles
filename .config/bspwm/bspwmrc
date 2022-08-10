@@ -88,3 +88,6 @@ killall -9 -qw picom 2>/dev/null; picom --config ~/.config/picom/picom.conf &>>~
 #libinput-gestures: touchpad gestures
 libinput-gestures-setup restart
 
+# microphone tray icon
+killall -9 mictray 2>/dev/null; mictray &
+
