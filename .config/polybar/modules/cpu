@@ -2,10 +2,10 @@
 type = internal/cpu
 interval = 0.5
 
-format-prefix = " ﬙"
+format-prefix = " "
 format-prefix-foreground = ${colors.text}
 format-prefix-background = ${colors.background-dark}
-format-prefix-font = 5
+format-prefix-font = 9
 
 label = "%percentage:2%%"
 label-padding = 1
