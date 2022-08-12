@@ -4,7 +4,7 @@
 xrandr --auto 
 
 for monitor in $(xrandr -q | grep " connected" | cut -d ' ' -f1); do
-    xrandr --output "$monitor" --set "Broadcast RGB" "Full"
+    #xrandr --output "$monitor" --set "Broadcast RGB" "Full"
     bspc monitor "$monitor" -d 1 2 3 4 5
 done
 
