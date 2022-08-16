@@ -1,20 +1,20 @@
 [module/battery-arrow]
 type = custom/text
-content = ""
-content-foreground = ${colors.background-dark}
-content-background = ${colors.background}
-content-font = 6
+format = ""
+format-foreground = ${colors.background-dark}
+format-background = ${colors.background}
+format-font = 6
 
 [module/date-arrow]
 type = custom/text
-content = ""
-content-foreground = ${colors.background}
-content-background = ${colors.background-dark}
-content-font = 6
+format = ""
+format-foreground = ${colors.background}
+format-background = ${colors.background-dark}
+format-font = 6
 
 [module/tray-arrow]
 type = custom/text
-content = ""
-content-foreground = ${colors.background-light}
-content-background = ${colors.background}
-content-font = 6
+format = ""
+format-foreground = ${colors.background-light}
+format-background = ${colors.background}
+format-font = 6

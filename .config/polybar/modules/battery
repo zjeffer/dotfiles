@@ -6,6 +6,7 @@ battery = BAT0
 adapter = ADP0
 
 poll-interval = 5
+time-format = %H:%M
 
 format-charging = "<ramp-capacity> <label-charging>"
 format-discharging = "<ramp-capacity> <label-discharging>"
@@ -28,8 +29,8 @@ format-full-underline = ${colors.battery}
 format-charging-underline = ${colors.battery}
 format-discharging-underline = ${colors.battery}
 
-label-charging = "%percentage%%  ﮣ "
-label-discharging = "%percentage%%  ﮤ "
+label-charging = "%percentage%%"
+label-discharging = "%percentage%% %time%"
 label-full = "%percentage%%"
 
 ramp-capacity-0 = ""
