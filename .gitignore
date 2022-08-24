@@ -144,6 +144,7 @@
 .templateengine/
 .thunderbird/
 .tsh/
+.vcpkg/
 .vmware/
 .vnc/
 .vpython*
