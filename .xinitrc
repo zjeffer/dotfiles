@@ -53,6 +53,8 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_CONFIG_DIRS=/etc/xdg
 
+export VULKAN_SDK=/usr/lib/vulkansdk/x86_64/
+
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh) 
 export SSH_AUTO_SOCK
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
