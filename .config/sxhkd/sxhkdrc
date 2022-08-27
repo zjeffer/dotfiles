@@ -58,6 +58,9 @@ ctrl + shift + Escape
 XF86Calculator
 	gnome-calculator &
 
+# eww dashboard widget
+super + v
+    ~/.config/eww/dashboard/launch_dashboard
 
 ########################################## bspwm hotkeys ##########################################
 
