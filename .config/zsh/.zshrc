@@ -109,6 +109,8 @@ export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
 export WINEPREFIX="$HOME/Games/Wine"
 # gradle
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+# rustup
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
 ##########################        END OF CLEANUP ~/       ##########################
 
