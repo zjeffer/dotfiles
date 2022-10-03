@@ -44,7 +44,7 @@ fi
 #intellij
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_QPA_PLATFORMTHEME=qt6ct
 export DESKTOP_SESSION=gnome
 
 export XDG_CONFIG_HOME=$HOME/.config
