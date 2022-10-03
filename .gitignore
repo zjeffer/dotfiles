@@ -18,6 +18,7 @@
 .cargo/
 .cmake/
 .conda/
+.config/Awesomeness/
 .config/Code - OSS
 .config/Code/
 .config/Doxygen.org/
