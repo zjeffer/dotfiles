@@ -149,8 +149,6 @@ bindkey "^[[5~" delete-char
 
 export SUDO_ASKPASS=~/.config/rofi/askpass/askpass.sh
 
-export QT_QPA_PLATFORMTHEME=qt5ct
-
 #less history file
 export LESSHISTSIZE=0
 export LESSHISTFILE=-
