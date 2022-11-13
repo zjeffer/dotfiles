@@ -20,9 +20,9 @@ case $1 in
 esac
 
 #Send command to qdbus
-if [[ `qdbus | egrep -i 'org.mpris.MediaPlayer2|plasma-browser-integration' | wc -l` -eq 1 ]]; then
+if [[ `qdbus | grep -E -i 'org.mpris.MediaPlayer2|plasma-browser-integration' | wc -l` -eq 1 ]]; then
 	# if only one player is detected
-	qdbus `qdbus | egrep -i 'org.mpris.MediaPlayer2|plasma-browser-integration'` $cmd
+	qdbus `qdbus | grep -E -i 'org.mpris.MediaPlayer2|plasma-browser-integration'` $cmd
 else
 	# if multiple players are detected, interact with the most recent active player
 	qdbus `cat ~/.config/activePlayer/currentPlaying.txt` $cmd
