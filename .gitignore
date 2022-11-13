@@ -88,6 +88,7 @@
 .config/spicetify/Extracted/*
 .config/spicetify/Raw/*
 .config/systemd/user/xdg-document-portal.service.d/
+.config/topgrade.toml
 .config/tuxedo-control-center/
 .config/vue/
 .config/wget/
