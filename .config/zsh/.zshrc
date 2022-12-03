@@ -151,7 +151,15 @@ export SUDO_ASKPASS=~/.config/rofi/askpass/askpass.sh
 
 #less history file
 export LESSHISTSIZE=0
-export LESSHISTFILE=-
+export LESSHISTFILE=
+
+# wayland
+if [[ -z "${XDG_SESSION_TYPE}" ]]; then
+    if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+        # Enable Wayland for Firefox
+        export MOZ_ENABLE_WAYLAND=1
+    fi
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
