@@ -84,9 +84,7 @@ button:hover {
 #wireplumber,
 #custom-media,
 #tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
+#custom-power
 #mpd {
     padding: 0 10px;
     color: #ffffff;

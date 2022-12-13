@@ -9,14 +9,15 @@
 
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces"],
-    "modules-center": ["custom/media"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "clock", "tray"],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "clock", "custom/power", "tray"],
 
     // Modules configuration
     "wlr/workspaces": {
+        "max-length" : 10,
+        "format": "{icon}",
         "on-click": "activate",
-        "all-outputs": false,
-        "format": "{name} {icon}",
+        "active-only": false,
         "format-icons": {
             "urgent": "",
             "active": "",
@@ -58,9 +59,14 @@
 
     "clock": {
         "timezone": "Europe/Brussels",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
+        "format": "{:%H:%M}"
     },
+
+    // "custom/date": {
+    //     "timezone": "Europe/Brussels",
+    //     "format": "{:%Y:%m:%d}"
+    // },
 
     "cpu": {
         "format": "{usage}% ",
@@ -132,8 +138,20 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "$HOME/.config/polybar/scripts/player/player-mpris-tail.py 2>/dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+
+    "custom/power": {
+        "format":"⏻",
+        "on-click": "nwgbar",
+        "tooltip": false
+    },
+
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
     }
 }
 

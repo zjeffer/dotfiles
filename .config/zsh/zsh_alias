@@ -73,7 +73,6 @@ alias free='free -h'
 alias df='df -h'
 alias ka='killall'
 alias vim='nvim'
-#alias sudo='sudo -A '
 alias feh='feh --auto-zoom'
 alias dmesg='sudo dmesg -H --color'
 alias gs='git status'
@@ -82,3 +81,7 @@ alias yay='paru'
 alias less='less -I '
 alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
 
+
+## Use askpass popup when sudo is called:
+#alias sudo='sudo -A '
+#export SUDO_ASKPASS=~/.config/rofi/askpass/askpass.sh
