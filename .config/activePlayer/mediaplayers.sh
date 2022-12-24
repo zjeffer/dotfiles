@@ -2,7 +2,7 @@
 
 get_players(){
     # gets a list of MPRIS compatible players
-    echo `qdbus | egrep -i 'org.mpris.MediaPlayer2|plasma.browser_integration'`
+    echo `qdbus | grep -E -i 'org.mpris.MediaPlayer2|plasma.browser_integration'`
 }
 
 get_status(){
