@@ -39,22 +39,26 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-
-
-#intellij
+# tiling wm stuff
 export _JAVA_AWT_WM_NONREPARENTING=1
-
 export QT_QPA_PLATFORMTHEME=qt6ct
 export DESKTOP_SESSION=gnome
 
+# XDG
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_CONFIG_DIRS=/etc/xdg
 
+export MOZ_DISABLE_RDD_SANDBOX=1
+
 export VULKAN_SDK=/usr/lib/vulkansdk/x86_64/
 
+# hardware acceleration
+export LIBVA_DRIVER_NAME=nvidia
+
+# gui keyring unlocking
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh) 
 export SSH_AUTO_SOCK
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
