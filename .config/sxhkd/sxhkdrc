@@ -194,6 +194,10 @@ super + r
 	bspc config -d focused bottom_padding 0; \
 	bspc config -d focused window_gap 10
 
+# forward and back with mouse buttons
+~alt + XF86Audio{Raise,Lower}Volume
+    xdotool key --clearmodifiers XF86{Forward,Back}
+
 ######################################## BRIGHTNESS #######################################
 
 # change brightness
