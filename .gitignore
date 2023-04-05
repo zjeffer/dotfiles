@@ -47,6 +47,7 @@
 .config/flashpoint-launcher/
 .config/fontforge/
 .config/gcloud/
+.config/gh/
 .config/git/
 .config/glade.conf
 .config/godot/
@@ -95,6 +96,9 @@
 .config/wireshark/
 .config/xdg-terminals.list
 .config/xournalpp/
+.config/xsettingsd/
+.config/yarn/
+.designer/
 .directory
 .dmrc
 .docker/
@@ -139,6 +143,7 @@
 .python_history
 .rubberband.wisdom.d
 .rubberband.wisdom.d/
+.rustup/
 .sheepit.conf
 .sqlsecrets/
 .ssh/
@@ -149,6 +154,7 @@
 .thunderbird/
 .tsh/
 .vcpkg/
+.viminfo
 .vmware/
 .vnc/
 .vpython*

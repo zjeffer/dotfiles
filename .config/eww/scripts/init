@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+pkill eww
+eww daemon
+
+# MONITOR=$(hyprctl monitors -j | jq ".[0].name")
+MONITORS=$(hyprctl monitors | grep "^Monitor " | cut -d ' ' -f2)
+
+for m in $MONITORS; do
+    if [[ $m == 'eDP-1' ]]; then
+        eww open bar0
+        # eww update main_monitor=0
+    elif [[ $m == 'DP-2' ]]; then
+        eww open bar1
+        # eww update main_monitor=1
+    elif [[ $m == 'HDMI-A-1' ]]; then
+        eww open bar2
+        # eww update main_monitor=2
+    fi
+done
+
+# eww update wallpaper=$(~/Pictures/wallpaper.png)
