@@ -44,7 +44,7 @@
   # Right prompt on the last prompt line (where you are typing your commands) gets
   # automatically hidden when the input line reaches it. Right prompt above the
   # last prompt line gets hidden if it would overlap with left prompt.
-  typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
   # typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
   #   # =========================[ Line #1 ]=========================
   #   status                  # exit code of the last command
@@ -911,6 +911,8 @@
   # If set to "false", won't show virtualenv if pyenv is already shown.
   # If set to "if-different", won't show virtualenv if it's the same as pyenv.
   typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_WITH_PYENV=false
+  # Python virtual environment names
+  typeset -g POWERLEVEL9K_VIRTUALENV_GENERIC_NAMES=(virtualenv venv .venv env)
   # Separate environment name from Python version only with a space.
   typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
   # Custom icon.
