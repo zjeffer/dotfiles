@@ -71,6 +71,8 @@ bindkey "^[[5~" delete-char
 # aliases and expots to clean up ~ folder
 source ~/.config/zsh/zsh_alias
 
+export HISTSIZE=10000000
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
