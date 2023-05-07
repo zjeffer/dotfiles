@@ -2,7 +2,7 @@
 type = internal/memory
 interval = 0.5
 
-format-prefix = " ﬙"
+format-prefix = " "
 format-prefix-foreground = ${colors.text}
 format-prefix-background = ${colors.background-dark}
 format-prefix-font = 5
