@@ -57,6 +57,9 @@ fi
 #Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
+# nvidia-vaapi-driver envvar
+export NVD_BACKEND=direct
+
 #ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
