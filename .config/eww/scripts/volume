@@ -43,9 +43,10 @@ function update {
 function type_icon {
     SINK=$(pactl get-default-sink)
     if [[ $SINK == *'bluez_output'* ]]; then
-        echo "󰋋"
+        echo ""
     else
-        echo "󰓃"
+        # echo "󰓃"
+        echo "󰋋"
     fi
 }
 

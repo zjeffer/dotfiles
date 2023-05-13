@@ -105,10 +105,10 @@
       (box
         :space-evenly false
         :spacing 8
-        (label  :class "icon bt-headphones"
-          :text speaker_type_icon
-          :visible {speaker_type_icon != "󰓃"}
-        )
+        ; (label  :class "icon bt-headphones"
+        ;   :text speaker_type_icon
+        ;   :visible {speaker_type_icon != "󰓃"}
+        ; )
         (eventbox   :onscroll "${EWW_CONFIG_DIR}/scripts/volume {}"
           (label  :class "volume icon"
             :tooltip "Level: ${volume_level}%"
@@ -127,7 +127,7 @@
           (label :class "icon ${battery.state}"
           :text {battery.icon})
           (label :text "${battery.percent}%"
-            :visible {battery.state != "charged" && battery.state != "charging"}
+            :visible {battery.state != "charged"}
           ))
       )
     )
@@ -170,7 +170,7 @@
       :class "righBar"
       :space-evenly false
       :halign "end"
-      (panel_colorpicker)
+      ; (panel_colorpicker)
       (panel_system-indicators)
       (panel_notifications)
       (panel_powermenu)

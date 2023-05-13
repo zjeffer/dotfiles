@@ -138,7 +138,7 @@
             :css "cpu"
             :tip "CPU ${round(EWW_CPU.avg,0)}%"
             :data {EWW_CPU.avg}
-            :icon "﬙"
+            :icon "󰘚"
         )
         (sysprogress
             :css "ram"
@@ -296,7 +296,7 @@
                             :onclick "${EWW_CONFIG_DIR}/scripts/player ${player.player} loop"
                             :class "loop ${player.loop}"
                             :visible {player.loop != "null"}
-                            (label :class "icon" :text "ﯩ"))
+                            (label :class "icon" :text "󰑐"))
                     )
                 )
             )
