@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+SLEEP_TIME=1.2
+
 get_current_monitor() {
     local MONITORS=$(hyprctl monitors | grep "^Monitor " | cut -d ' ' -f2)
     for m in $MONITORS; do
@@ -28,7 +30,7 @@ else
 
     if [[ $(get_osd_state) -eq 'closed' ]]; then eww open osd0; fi
 
-    sleep 1
+    sleep $SLEEP_TIME
 
     if [[ $(get_osd_state) -eq 'open' ]]; then eww close osd0; fi
 fi

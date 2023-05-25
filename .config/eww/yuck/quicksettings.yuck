@@ -341,7 +341,7 @@
             (quick_sliders)
             (quick_toggles)
             (box
-                (quick_toggles_grid)
+                ; (quick_toggles_grid)
                 (syslevels)
             )
             (label :text media_pos :visible false) ;so it is active

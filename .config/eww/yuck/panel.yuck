@@ -15,7 +15,9 @@
   ))
 
 (defwidget panel_workspaces [] (box :class "button-bin"
-    (eventbox :class "button workspaces"
+    (eventbox 
+      :class "button workspaces"
+      :onscroll "${EWW_CONFIG_DIR}/scripts/workspaces {}"
       (box
         :space-evenly false
         (for workspace in workspaces
@@ -157,10 +159,10 @@
       :class "leftBar"
       :space-evenly false
       ; (panel_launcher)
-      (panel_clock)
+      
       (panel_workspaces)
       (label :visible false :text active_workspace);needs so active_workspace gets updated
-      (panel_window)
+      ; (panel_window) ; 
     )
     (box
       :class "centerBar"
@@ -172,7 +174,8 @@
       :halign "end"
       ; (panel_colorpicker)
       (panel_system-indicators)
-      (panel_notifications)
+      ; (panel_notifications)
+      (panel_clock)
       (panel_powermenu)
     )
   ))

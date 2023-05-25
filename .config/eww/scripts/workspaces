@@ -36,7 +36,19 @@ function monitor_empty {
     done
 }
 
+function up {
+    # TODO
+    return 0
+}
+
+function down {
+    # TODO
+    return 0
+}
+
 if [[ $1 == 'get' ]]; then get; fi
 if [[ $1 == 'active' ]]; then active; fi
 if [[ $1 == 'monitor-empty' ]]; then monitor_empty; fi
 if [[ $1 == 'active-empty' ]]; then active_ws_empty; fi
+if [[ $1 == 'up' ]]; then up; fi
+if [[ $1 == 'down' ]]; then down; fi

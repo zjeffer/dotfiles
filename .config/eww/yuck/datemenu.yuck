@@ -73,7 +73,7 @@
     :onclick "${EWW_CONFIG_DIR}/scripts/launcher toggle_menu calendar"
     (box
         :valign "START"
-        :halign "START"
+        :halign "END"
         :orientation "v"
         :class "datemenu"
         :space-evenly false
