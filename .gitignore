@@ -92,6 +92,7 @@
 .config/systemd/user/xdg-document-portal.service.d/
 .config/topgrade.toml
 .config/tuxedo-control-center/
+.config/via-nativia/
 .config/vue/
 .config/wget/
 .config/wireshark/
