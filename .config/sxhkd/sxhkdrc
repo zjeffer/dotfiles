@@ -25,7 +25,7 @@ super + shift + z
 
 #sublime
 super + q
-	code &
+	code-insiders &
 
 # thunar 
 super + x
