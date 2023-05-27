@@ -19,6 +19,7 @@
 .cmake/
 .conda/
 .config/Awesomeness/
+.config/Code - Insiders/
 .config/Code - OSS
 .config/Code/
 .config/Doxygen.org/
@@ -160,6 +161,7 @@
 .vmware/
 .vnc/
 .vpython*
+.vscode-insiders/
 .vscode-oss/
 .vscode-react-native/
 .vscode/
