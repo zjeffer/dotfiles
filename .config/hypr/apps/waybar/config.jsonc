@@ -133,9 +133,10 @@
       // "portable": "",
       // "car": "",
       "default": [
-        "",
-        "",
-        ""
+        "", // 0  - 25
+        "", // 25 - 50
+        "", // 50 - 75
+        ""  // 75 - 100
       ]
     },
     "on-click": "pavucontrol"
@@ -151,7 +152,7 @@
       "default": "🎜"
     },
     "escape": true,
-    "exec": "$HOME/.config/hypr/apps/waybar/scripts/media-player.py" // Script in resources folder
+    "exec": "$HOME/.config/hypr/apps/waybar/scripts/media-player.py --enable-logging -v" // Script in resources folder
   },
   "custom/power": {
     "format": "⏻",

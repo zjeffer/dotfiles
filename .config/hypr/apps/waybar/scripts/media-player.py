@@ -12,7 +12,7 @@ from gi.repository import Playerctl, GLib
 logger = logging.getLogger(__name__)
 
 def signal_handler(sig, frame):
-    logger.debug("Received signal to stop, exiting")
+    logger.info("Received signal to stop, exiting")
     sys.stdout.write("\n")
     sys.stdout.flush()
     # loop.quit()
@@ -46,10 +46,10 @@ class PlayerManager:
         self.loop.run()
     
     def init_player(self, player):
-        logger.debug("Initialize player: {player}".format(player=player.name))
+        logger.info(f"Initialize new player: {player.name}")
         player = Playerctl.Player.new_from_name(player)
-        player.connect("playback-status", self.on_playback_status_changed)
-        player.connect("metadata", self.on_metadata_changed)
+        player.connect("playback-status", self.on_playback_status_changed, None)
+        player.connect("metadata", self.on_metadata_changed, None)
         self.manager.manage_player(player)
         self.on_metadata_changed(player, player.props.metadata)
 
@@ -57,7 +57,7 @@ class PlayerManager:
         return self.manager.props.player_names
 
     def write_output(self, text, player):
-        logger.info(f"Writing output: {text}")
+        logger.debug(f"Writing output: {text}")
 
         output = {"text": text,
                 "class": "custom-" + player.props.player_name,
@@ -70,12 +70,12 @@ class PlayerManager:
         sys.stdout.write("\n")
         sys.stdout.flush()
 
-    def on_playback_status_changed(self, player, status):
-        logger.info(f"Received new playback status: {status}")
+    def on_playback_status_changed(self, player, status, _=None):
+        logger.debug(f"Received new playback status: {status}")
         self.on_metadata_changed(player, player.props.metadata)
 
-    def on_metadata_changed(self, player, metadata):
-        logger.info("Received new metadata")
+    def on_metadata_changed(self, player, metadata, _=None):
+        logger.debug("Received new metadata")
         track_info = ""
 
         player_name = player.props.player_name
@@ -128,23 +128,25 @@ def parse_arguments():
     # Define for which player we"re listening
     parser.add_argument("--player")
 
+    parser.add_argument("--enable-logging", action="store_true")
+
     return parser.parse_args()
 
 def main():
     arguments = parse_arguments()
 
     # Initialize logging
-    curdir = os.path.dirname(os.path.realpath(__file__))
-    logging.basicConfig(filename=os.path.join(curdir, "media-player.log"), level=logging.DEBUG,
-                        format="%(asctime)s %(name)s %(levelname)s %(message)s")
+    if arguments.enable_logging:
+        logfile = os.path.join(os.path.dirname(os.path.realpath(__file__)), "media-player.log")
+        logging.basicConfig(filename=logfile, level=logging.DEBUG, format="%(asctime)s %(name)s %(levelname)s %(message)s")
 
     # Logging is set by default to WARN and higher.
     # With every occurrence of -v it"s lowered by one
-    # logger.setLevel(max((3 - arguments.verbose) * 10, 0))
+    logger.setLevel(max((3 - arguments.verbose) * 10, 0))
 
+    logger.info("Creating player manager")
     if arguments.player:
         logger.info(f"Filtering for player: {arguments.player}")
-    logger.info("Creating player manager")
     player = PlayerManager(arguments.player)
     player.run()
 
