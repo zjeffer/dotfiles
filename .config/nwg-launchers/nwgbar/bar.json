@@ -1,12 +1,12 @@
 [
   {
     "name": "Lock screen",
-    "exec": "betterlockscreen -l dimblur",
+    "exec": "$HOME/.config/hypr/apps/swaylock/lock.sh",
     "icon": "system-lock-screen"
   },
   {
     "name": "Logout",
-    "exec": "swaymsg exit",
+    "exec": "hyprctl dispatch exit",
     "icon": "system-log-out"
   },
   {
