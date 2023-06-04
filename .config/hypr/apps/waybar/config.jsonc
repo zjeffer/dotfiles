@@ -1,7 +1,7 @@
 {
   "layer": "top", // Waybar at top layer
   "position": "top", // Waybar position (top|bottom|left|right)
-  "height": 40, // Waybar height (to be removed for auto height)
+  "height": 32, // Waybar height (to be removed for auto height)
   "width": 0, // Waybar width (0 == auto)
   "spacing": 0, // Gaps between modules 
   // Choose the order of the modules
@@ -24,7 +24,8 @@
   // Modules configuration
   "wlr/workspaces": {
     "max-length": 10,
-    "format": "{icon}",
+    //"format": "{icon}",
+    "format": "{}",
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace r-1",
     "on-scroll-down": "hyprctl dispatch workspace r+1",
@@ -39,23 +40,53 @@
     },
     "persistent_workspaces": {
       // Laptop monitor
-      "21": ["eDP-1"],
-      "22": ["eDP-1"],
-      "23": ["eDP-1"],
-      "24": ["eDP-1"],
-      "25": ["eDP-1"],
+      "1": [
+        "eDP-1"
+      ],
+      "2": [
+        "eDP-1"
+      ],
+      "3": [
+        "eDP-1"
+      ],
+      "4": [
+        "eDP-1"
+      ],
+      "5": [
+        "eDP-1"
+      ],
       // DP-2 (left monitor)
-      "1": ["DP-2"],
-      "2": ["DP-2"],
-      "3": ["DP-2"],
-      "4": ["DP-2"],
-      "5": ["DP-2"],
+      "21": [
+        "DP-2"
+      ],
+      "22": [
+        "DP-2"
+      ],
+      "23": [
+        "DP-2"
+      ],
+      "24": [
+        "DP-2"
+      ],
+      "25": [
+        "DP-2"
+      ],
       // HDMI-A-1 (right monitor)
-      "11": ["HDMI-A-1"],
-      "12": ["HDMI-A-1"],
-      "13": ["HDMI-A-1"],
-      "14": ["HDMI-A-1"],
-      "15": ["HDMI-A-1"]
+      "11": [
+        "HDMI-A-1"
+      ],
+      "12": [
+        "HDMI-A-1"
+      ],
+      "13": [
+        "HDMI-A-1"
+      ],
+      "14": [
+        "HDMI-A-1"
+      ],
+      "15": [
+        "HDMI-A-1"
+      ]
     }
   },
   "tray": {
@@ -84,6 +115,7 @@
     "interval": 1
   },
   "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
     "critical-threshold": 95,
     "format": "{icon} {temperatureC:2}°C",
     "format-icons": [
@@ -92,16 +124,16 @@
   },
   "battery": {
     "states": {
-      "good": 95,
+      "good": 90,
       "warning": 30,
       "critical": 15
     },
     "format": "{icon} {capacity:3}%",
     "format-charging": "󰂄 {capacity:3}%",
     "format-plugged": " {capacity:3}%",
-    "format-alt": "{icon} {time} ",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
+    "format-alt": "{icon} ",
+    "format-good": "", // An empty format will hide the module
+    "format-full": "",
     "format-icons": [
       "",
       "",
@@ -136,7 +168,7 @@
         "", // 0  - 25
         "", // 25 - 50
         "", // 50 - 75
-        ""  // 75 - 100
+        "" // 75 - 100
       ]
     },
     "on-click": "pavucontrol"
@@ -145,14 +177,14 @@
     "format": "{icon} {}",
     "return-type": "json",
     "max-length": 200,
-    "on-click": "playerctl pause",
+    "on-click": "playerctl play-pause",
     "format-icons": {
       "spotify": "",
       "firefox": "󰈹",
       "default": "🎜"
     },
     "escape": true,
-    "exec": "$HOME/.config/hypr/apps/waybar/scripts/media-player.py --enable-logging -v" // Script in resources folder
+    "exec": "$HOME/.config/hypr/apps/waybar/scripts/media-player.py --enable-logging -vvv 2>&1 | tee $HOME/.config/hypr/apps/waybar/scripts/media-player.log" // Script in resources folder
   },
   "custom/power": {
     "format": "⏻",
