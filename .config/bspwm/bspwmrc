@@ -3,17 +3,25 @@
 ##### xrandr settings
 xrandr --auto 
 
-for monitor in $(xrandr -q | grep " connected" | cut -d ' ' -f1); do
-    #xrandr --output "$monitor" --set "Broadcast RGB" "Full"
+# build xrandr command, add every monitor if they are connected
+xrandr_command=""
+for monitor in $(bspc query -M --names); do
+    if [ $monitor = "DP-4" ]; then
+        xrandr_command+=" --output $monitor --primary --rate 165.02"
+    else
+        xrandr_command+=" --output $monitor --auto"
+    fi
+done
+# run it
+xrandr $xrandr_command
+
+for monitor in $(bspc query -M --names); do
     bspc monitor "$monitor" -d 1 2 3 4 5
 done
 
-xrandr --output DP-4 --primary --mode 2560x1600 --rate 165.02
-xrandr --output HDMI-0 --right-of DP-4 --mode 1920x1080 --rate 60.00
-xrandr --output DP-2 --left-of DP-4 --mode 1920x1080 --rate 60.00
-
 ##### bspwm desktop settings
-bspc wm -O DP-2 DP-4 HDMI-0
+bspc wm -O DP-2 DP-4 HDMI-0 2>/dev/null
+
 bspc config window_gap 10
 
 bspc config border_width	 3
