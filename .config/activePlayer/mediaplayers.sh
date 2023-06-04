@@ -1,5 +1,7 @@
 #!/bin/sh
 
+CURRENT_PLAYER_FILE="/tmp/current_player.txt"
+
 get_players(){
     # gets a list of MPRIS compatible players
     echo `qdbus | grep -E -i 'org.mpris.MediaPlayer2|plasma.browser_integration'`
@@ -13,7 +15,7 @@ get_status(){
 setFirstPausedPlayer() {
     for player in $(get_players) ; do
         if [[ $(get_status $player) == 'Paused' ]]; then
-            echo "$player" > ~/.config/activePlayer/currentPlaying.txt
+            echo "$player" > $CURRENT_PLAYER_FILE
             break
         fi
     done
@@ -23,7 +25,7 @@ while true ; do
     for player in $(get_players) ; do
         if [[ $(get_status $player) == 'Playing' ]]; then
             # if the player is playing, set it as the current playing player
-			echo $player > ~/.config/activePlayer/currentPlaying.txt
+			echo $player > $CURRENT_PLAYER_FILE
             break
         elif [[ $(get_status $player) == 'Stopped' ]]; then
             # if a player is stopped, we don't want to start it again
@@ -31,7 +33,7 @@ while true ; do
 		fi
     done
     # if the current player does not exist anymore, look for a new one
-    currentPlayer=`cat ~/.config/activePlayer/currentPlaying.txt`
+    currentPlayer=`cat $CURRENT_PLAYER_FILE`
     if [[ $(get_status $currentPlayer) == *"does not exist"* ]]; then
         # if a player is stopped, search for the next paused player
         setFirstPausedPlayer
