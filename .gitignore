@@ -50,6 +50,7 @@
 .config/gcloud/
 .config/gh/
 .config/git/
+.config/github-copilot/
 .config/glade.conf
 .config/godot/
 .config/gwe/
@@ -280,6 +281,7 @@ filetypesrc
 filezilla/
 gconf/
 ghb/
+git/
 go/
 gtk-2.0/
 gtk-3.0/
