@@ -38,54 +38,8 @@
       "persistent": ""
     },
     "persistent_workspaces": {
-      // Laptop monitor
-      "21": [
-        "eDP-1"
-      ],
-      "22": [
-        "eDP-1"
-      ],
-      "23": [
-        "eDP-1"
-      ],
-      "24": [
-        "eDP-1"
-      ],
-      "25": [
-        "eDP-1"
-      ],
-      // DP-2 (left monitor)
-      "1": [
-        "DP-2"
-      ],
-      "2": [
-        "DP-2"
-      ],
-      "3": [
-        "DP-2"
-      ],
-      "4": [
-        "DP-2"
-      ],
-      "5": [
-        "DP-2"
-      ],
-      // HDMI-A-1 (right monitor)
-      "11": [
-        "HDMI-A-1"
-      ],
-      "12": [
-        "HDMI-A-1"
-      ],
-      "13": [
-        "HDMI-A-1"
-      ],
-      "14": [
-        "HDMI-A-1"
-      ],
-      "15": [
-        "HDMI-A-1"
-      ]
+      "*": 3,
+      "eDP-1": 5
     }
   },
   "tray": {
