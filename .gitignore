@@ -91,6 +91,7 @@
 .config/spicetify/Extracted/
 .config/spicetify/Extracted/*
 .config/spicetify/Raw/*
+.config/sqlitebrowser/
 .config/systemd/user/xdg-document-portal.service.d/
 .config/topgrade.toml
 .config/tuxedo-control-center/
