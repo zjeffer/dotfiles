@@ -17,26 +17,26 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
-    xrdb -merge $sysresources
+	xrdb -merge $sysresources
 fi
 
 if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
+	xmodmap $sysmodmap
 fi
 
 if [ -f "$userresources" ]; then
-    xrdb -merge "$userresources"
+	xrdb -merge "$userresources"
 fi
 
 if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
+	xmodmap "$usermodmap"
 fi
 
-if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+	for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
+		[ -x "$f" ] && . "$f"
+	done
+	unset f
 fi
 
 # tiling wm stuff
@@ -58,8 +58,11 @@ export VULKAN_SDK=/usr/lib/vulkansdk/x86_64/
 # hardware acceleration
 export LIBVA_DRIVER_NAME=nvidia
 
+# fix bug with slow starting of applictions
+dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+
 # gui keyring unlocking
-eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh) 
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export SSH_AUTO_SOCK
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
