@@ -110,6 +110,7 @@
 .dotnet/
 .factorio/
 .fehbg
+.gdbinit
 .gem/
 .gephi/
 .ghidra/
