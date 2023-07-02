@@ -38,8 +38,7 @@
       "persistent": ""
     },
     "persistent_workspaces": {
-      "*": 3,
-      "eDP-1": 5
+      "*": 5
     }
   },
   "tray": {
