@@ -97,7 +97,7 @@ class PlayerManager:
             return None
 
     def show_most_important_player(self):
-        logger.info("\n\nShowing most important player")
+        logger.debug("Showing most important player")
         # show the currently playing player
         # or else show the first paused player
         # or else show nothing
@@ -134,7 +134,7 @@ class PlayerManager:
             logger.debug(f"Other player {current_playing.props.player_name} is playing, skipping")
 
     def on_player_appeared(self, _, player):
-        logger.info(f"\n\nPlayer has appeared: {player.name}")
+        logger.info(f"Player has appeared: {player.name}")
         if player is not None and (self.selected_player is None or player.name == self.selected_player):
             self.init_player(player)
         else:
