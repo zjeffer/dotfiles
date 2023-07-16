@@ -41,9 +41,7 @@ class PlayerManager:
     def init_players(self):
         for player in self.manager.props.player_names:
             if self.selected_player is not None and self.selected_player != player.name:
-                logger.debug("{player} is not the filtered player, skipping it"
-                             .format(player=player.name)
-                             )
+                logger.debug(f"{player.name} is not the filtered player, skipping it")
                 continue
             self.init_player(player)
 
@@ -142,7 +140,7 @@ class PlayerManager:
                 "New player appeared, but it's not the selected player, skipping")
 
     def on_player_vanished(self, _, player):
-        logger.info("Player has vanished")
+        logger.info(f"Player {player.props.player_name} has vanished")
         self.show_most_important_player()
 
 def parse_arguments():
@@ -170,7 +168,7 @@ def main():
                             format="%(asctime)s %(name)s %(levelname)s:%(lineno)d %(message)s")
 
     # Logging is set by default to WARN and higher.
-    # With every occurrence of -v it"s lowered by one
+    # With every occurrence of -v it's lowered by one
     logger.setLevel(max((3 - arguments.verbose) * 10, 0))
 
     logger.info("Creating player manager")

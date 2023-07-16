@@ -24,7 +24,7 @@
   // Modules configuration
   "wlr/workspaces": {
     //"format": "{icon}",
-    "format": "{}",
+    "format": "{icon}",
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace r-1",
     "on-scroll-down": "hyprctl dispatch workspace r+1",
@@ -35,7 +35,7 @@
       "urgent": "",
       "active": "",
       "default": "",
-      "persistent": ""
+      "persistent": ""
     },
     "persistent_workspaces": {
       "*": 5
