@@ -6,7 +6,7 @@
   "spacing": 0, // Gaps between modules 
   // Choose the order of the modules
   "modules-left": [
-    "wlr/workspaces",
+    "hyprland/workspaces",
     "custom/media"
   ],
   "modules-right": [
@@ -22,21 +22,17 @@
     "tray"
   ],
   // Modules configuration
-  "wlr/workspaces": {
-    //"format": "{icon}",
+  "hyprland/workspaces": {
     "format": "{icon}",
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace r-1",
-    "on-scroll-down": "hyprctl dispatch workspace r+1",
-    "active-only": false,
-    "all-outputs": false,
-    "sort-by-number": true,
     "format-icons": {
       "urgent": "",
       "active": "",
       "default": "",
       "persistent": ""
     },
+    "on-scroll-up": "hyprctl dispatch workspace r-1",
+    "on-scroll-down": "hyprctl dispatch workspace r+1",
+    "all-outputs": false,
     "persistent_workspaces": {
       "*": 5
     }
@@ -47,12 +43,12 @@
   },
   "clock": {
     "timezone": "Europe/Brussels",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
+    "tooltip-format": "<tt><big>{calendar}</big></tt>",
     "format": "󰥔 {:%H:%M}"
   },
   "custom/date": {
     "timezone": "Europe/Brussels",
-    "exec": "date +'%Y-%m-%d'",
+    "exec": "date +'%a %Y-%m-%d'",
     "format": "󰃭 {}",
     "interval": 1,
     "tooltip": false
