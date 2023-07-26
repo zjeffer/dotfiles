@@ -136,6 +136,6 @@
   },
   "custom/power": {
     "format": "⏻",
-    "on-click": "nwgbar"
+    "on-click": "nwgbar -layer-shell-exclusive-zone -1"
   }
 }
