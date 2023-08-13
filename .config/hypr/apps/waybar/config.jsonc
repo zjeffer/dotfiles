@@ -80,8 +80,8 @@
     "format-charging": "󰂄 {capacity:3}%",
     "format-plugged": " {capacity:3}%",
     "format-alt": "{icon} ",
-    "format-good": "", // An empty format will hide the module
-    "format-full": "",
+    "format-good": "{icon} {capacity:3}%",
+    "format-full": "{icon} {capacity:3}%",
     "format-icons": [
       "",
       "",

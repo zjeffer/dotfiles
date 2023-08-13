@@ -3,3 +3,5 @@
 -- Add any additional options here
 
 vim.opt.relativenumber = false
+-- Disable conceal
+vim.opt.conceallevel = 0
