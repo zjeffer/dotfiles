@@ -1,11 +1,11 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Hack, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-family: FontAwesome, Hack;
+    font-size: 16px;
 }
 
 window#waybar {
-    background-color: rgba(46, 52, 64, 0.8);
+    background-color: rgba(46, 52, 64, 0.9);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -29,44 +29,56 @@ window#waybar.termite {
 }
 
 window#waybar.chromium {
-    background-color: #000000;
+    background-color: black;
     border: none;
 }
 
-button {
+/**************/
+/* Workspaces */
+/**************/
+
+#workspaces {
+    margin-right: 8px;
+}
+
+/* non-empty workspaces */
+#workspaces button {
+    background-color: #4c566a;
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
+
+    color: #d8dee9;
+    transition: all 0.2s ease;
+
     border: none;
     border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    transition-duration: .1s;
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+#workspaces button:hover {
+    /* transition-duration: .1s; */
+    color: #eceff4;
+    box-shadow: inset 0 -2px #ffffff;
+    /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+    text-shadow: inherit;
 }
 
-#workspaces button {
-    padding: 0 5px;
-    background-color: #ffffff;
-    color: #2e3440;
-}
-
+/* empty workspaces */
 #workspaces button.persistent {
-    background-color: #d8dee9;
-    color: #4c566a;
+    background-color: #2e3440;
 }
 
-#workspaces button.active {
-    box-shadow: inset 0 -4px #4c566a;
-    background-color: #ffffff;
+/* active or visible workspaces */
+#workspaces button.active,
+#workspaces button.visible {
+    background-color: #4c566a;
+    box-shadow: inset 0 -4px #eceff4;
 }
 
 #workspaces button.urgent {
-    background-color: #bf616a;
+    color: #bf616a;
 }
+
+/**************/
 
 #mode {
     background-color: #64727D;
@@ -88,22 +100,27 @@ button:hover {
 #tray,
 #custom-power,
 #mpd {
-    padding: 0 18px;
-    color: #ffffff;
+    border-radius: 8px;
+    padding: 0 12px 0 12px;
+    margin: 5px 5px 5px 0;
 }
 
-#window,
-#workspaces {
-    margin: 0;
+#custom-power {
+    border: none;
+    border-radius: 0;
+    margin-right: 5px;
+
+    /* the power icon seems to be off-center, need to adjust: */
+    padding: 0px 16px 0px 10px; 
 }
 
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
+.modules-left>widget:first-child>#workspaces {
     margin-left: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
+.modules-right>widget:last-child>#workspaces {
     margin-right: 0;
 }
 
@@ -112,20 +129,22 @@ button:hover {
 }
 
 #custom-date {
+    color: black;
     background-color: #b48ead;
 }
 
 #battery {
+    color: black;
     background-color: #ebcb8b;
-    color: #000000;
 }
 
 @keyframes blink {
     to {
         background-color: #ffffff;
-        color: #000000;
+        color: black;
     }
 }
+
 #battery.critical:not(.charging) {
     background-color: #bf616a;
     color: #ffffff;
@@ -137,17 +156,17 @@ button:hover {
 }
 
 label:focus {
-    background-color: #000000;
+    background-color: black;
 }
 
 #cpu {
     background-color: #bf616a;
-    color: #000000;
+    color: black;
 }
 
 #memory {
     background-color: #a3be8c;
-    color: #000000;
+    color: black;
 }
 
 /* #disk {
@@ -168,12 +187,12 @@ label:focus {
 
 #pulseaudio {
     background-color: #d8dee9;
-    color: #000000;
+    color: black;
 }
 
 /* #wireplumber {
     background-color: #fff0f5;
-    color: #000000;
+    color: black;
 } */
 
 /* #wireplumber.muted {
@@ -183,7 +202,6 @@ label:focus {
 #custom-media {
     background-color: #66cc99;
     color: #2a5c45;
-    min-width: 100px;
 }
 
 #custom-media.custom-spotify {
@@ -191,12 +209,21 @@ label:focus {
 }
 
 #custom-media.custom-vlc {
+    color: black;
     background-color: #ffa000;
 }
 
+#custom-media.custom-jellyfin {
+    /* https://jellyfin.org/docs/general/contributing/branding */
+    color: #000B25;
+    background-color: #AA5CC3;
+}
+
+
+
 #temperature {
     background-color: #d08770;
-    color: #000000;
+    color: black;
 }
 
 #temperature.critical {
@@ -207,11 +234,11 @@ label:focus {
     background-color: #eceff4;
 }
 
-#tray > .passive {
+#tray>.passive {
     -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #bf616a;
 }
@@ -252,7 +279,7 @@ label:focus {
 
 /* #keyboard-state {
     background: #97e1ad;
-    color: #000000;
+    color: black;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;

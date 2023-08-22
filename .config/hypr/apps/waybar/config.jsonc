@@ -1,7 +1,7 @@
 {
   "layer": "top", // Waybar at top layer
   "position": "top", // Waybar position (top|bottom|left|right)
-  "height": 32, // Waybar height (to be removed for auto height)
+  "height": 40, // Waybar height (to be removed for auto height)
   "width": 0, // Waybar width (0 == auto)
   "spacing": 0, // Gaps between modules 
   // Choose the order of the modules
@@ -18,12 +18,12 @@
     "network",
     "custom/date",
     "clock",
-    "custom/power",
-    "tray"
+    "tray",
+    "custom/power"
   ],
   // Modules configuration
   "hyprland/workspaces": {
-    "format": "{icon}",
+    "format": "{name}",
     "format-icons": {
       "urgent": "",
       "active": "",
@@ -44,7 +44,8 @@
   "clock": {
     "timezone": "Europe/Brussels",
     "tooltip-format": "<tt><big>{calendar}</big></tt>",
-    "format": "󰥔 {:%H:%M}"
+    "format": "󰥔 {:%H:%M}",
+    "interval": 5
   },
   "custom/date": {
     "timezone": "Europe/Brussels",
