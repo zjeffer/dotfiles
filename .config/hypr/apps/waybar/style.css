@@ -5,10 +5,12 @@
 }
 
 window#waybar {
-    background-color: rgba(46, 52, 64, 0.9);
+    background-color: rgba(46, 52, 64, 0.8);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
+    border: none;
+    border-radius: 0;
 }
 
 window#waybar.hidden {
@@ -98,8 +100,8 @@ window#waybar.chromium {
 #wireplumber,
 #custom-media,
 #tray,
-#custom-power,
 #mpd {
+    background-color: #2e3440;
     border-radius: 8px;
     padding: 0 12px 0 12px;
     margin: 5px 5px 5px 0;
@@ -125,17 +127,15 @@ window#waybar.chromium {
 }
 
 #clock {
-    background-color: #64727D;
+    color: #eceff4;
 }
 
 #custom-date {
-    color: black;
-    background-color: #b48ead;
+    color: #b48ead;
 }
 
 #battery {
-    color: black;
-    background-color: #ebcb8b;
+    color: #ebcb8b;
 }
 
 @keyframes blink {
@@ -160,13 +160,11 @@ label:focus {
 }
 
 #cpu {
-    background-color: #bf616a;
-    color: black;
+    color: #bf616a;
 }
 
 #memory {
-    background-color: #a3be8c;
-    color: black;
+    color: #a3be8c;
 }
 
 /* #disk {
@@ -178,26 +176,16 @@ label:focus {
 } */
 
 #network {
-    background-color: #2980b9;
+    color: #5e81ac;
 }
 
 #network.disconnected {
-    background-color: #bf616a;
+    color: #bf616a;
 }
 
 #pulseaudio {
-    background-color: #d8dee9;
-    color: black;
+    color: #d8dee9;
 }
-
-/* #wireplumber {
-    background-color: #fff0f5;
-    color: black;
-} */
-
-/* #wireplumber.muted {
-    background-color: #bf616a;
-} */
 
 #custom-media {
     background-color: #66cc99;
@@ -219,19 +207,16 @@ label:focus {
     background-color: #AA5CC3;
 }
 
-
-
 #temperature {
-    background-color: #d08770;
-    color: black;
+    color: #d08770;
 }
 
 #temperature.critical {
-    background-color: #d08770;
+    color: #bf616a;
 }
 
 #tray {
-    background-color: #eceff4;
+    color: #eceff4;
 }
 
 #tray>.passive {
