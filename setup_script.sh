@@ -7,6 +7,16 @@
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #
 #############################################################################
 
+
+echo -e "\nWARNING!! This will remove all files in ~/.config/ that match with the files in .config/ and replace them with symlinks to the files in .config/.\n"
+read -rep "Are you sure you want to continue? [y/N] "
+if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+	echo "Aborting..."
+	exit 1
+fi
+
+echo -e "Setting up config files..."
+
 # for every file in .config/,
 # remove the file in ~/.config/
 # and link it to the file in .config/
@@ -22,3 +32,5 @@ for file in $(ls -ap | grep -v /); do
 	echo "Linking $file to ~/$file"
 	ln -sf $(pwd)/$file ~/$file
 done
+
+echo -e "\nDone!"
