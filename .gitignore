@@ -1,3 +1,4 @@
-*.log
 *.err
+*.log
+.config/cava/shaders/
 __pycache__/
