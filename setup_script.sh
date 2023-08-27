@@ -8,7 +8,7 @@
 #############################################################################
 
 
-echo -e "\nWARNING!! This will remove all files in ~/.config/ that match with the files in .config/ and replace them with symlinks to the files in .config/.\n"
+echo -e "\nWARNING!! This will remove all files in ~/.config/ that match with the files in .config/ and replace them with symlinks to the files in .config/. Make sure you have backups!\n"
 read -rep "Are you sure you want to continue? [y/N] "
 if [[ ! $REPLY =~ ^[Yy]$ ]]; then
 	echo "Aborting..."
