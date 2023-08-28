@@ -1,16 +1,14 @@
 # dotfiles
 
-These are my dotfiles for my bspwm rice, using Arch Linux
+These are my dotfiles for my Hyprland rice, using Arch Linux
 
 More info below images.
 
-![](https://i.imgur.com/7zpJ2LV.png )
-![](https://i.imgur.com/SyDqUAx.png )
-![](https://i.imgur.com/J96wPsY.png )
-![](https://i.imgur.com/zbRIV7P.png )
-![](https://i.imgur.com/lJjJqPO.png )
-![](https://i.imgur.com/tzLfn8v.png )
-![](https://i.imgur.com/msiNUed.png )
+![](img/1.png)
+![](img/2.png)
+![](img/3.png)
+![](img/4.png)
+![](img/5.png)
 
 # Special thanks
 
@@ -18,19 +16,27 @@ More info below images.
 * `/r/unixporn`: http://www.reddit.com/r/unixporn and their discord
 * The Nord theme creators at https://www.nordtheme.com
 
-# Packages
-### Bspwm
-`paru -S bspwm-git sxhkd-git feh xorg xorg-server xorg-xinit xinit-xsession`
+# Configuration
 
-### LightDM
-* `paru -S lightdm lightdm-webkit2-greeter lightdm-theme-litarvan`
-* In `/etc/lightdm/lightdm.conf`:
-	* `greeter-session=lightdm-webkit2-greeter`
-	* `session-wrapper=/etc/lightdm/Xsession`
-	* `display-setup-script=/etc/lightdm/display_setup.sh`
-* In `/etc/lightdm/lightdm-webkit2-greeter.conf`:
-	* `webkit_theme = litarvan`
-* `systemctl enable lightdm`
+To use my config, there is a script `./setup_script.sh` that will symlink all the config files in this repo to ~/.config. 
+Warning! This will remove any existing files and folders in ~/.config that are also in this repo.
+
+# Packages
+### Hyprland
+`paru -S hyprland-nvidia-git`
+
+Read the Hyprland wiki: https://wiki.hyprland.org/Getting-Started/Master-Tutorial/
+
+### Utilities
+* Notifications: `paru -S dunst`
+* Screenshots: `paru -S grimblast-git slurp grim`
+* Screen sharing: `paru -S pipewire wireplumber xdg-desktop-portal xdg-desktop-portal-hyprland-git`
+* Fix fonts and find new fonts: `paru -S nerdfix`
+* Authentication agent: `paru -S polkit polkit-gnome gnome-keyring`
+* Qt Wayland support: `paru -S qt5-wayland qt6-wayland`
+
+### Login/display manager: SDDM
+`paru -S sddm-git sddm-theme-deepin-git`
 
 ### Bootloader
 * [rEFInd](https://wiki.archlinux.org/index.php/REFInd) with [Ursa-Major theme](https://github.com/kgoettler/ursamajor-rEFInd)
@@ -45,18 +51,13 @@ More info below images.
 
 ### Pacman/paru
 * Get `paru` from [here](https://github.com/Morganamilo/paru)
-* Uncomment `Color` in `/etc/pacman.conf`
-* Enable the multilib repo in `/etc/pacman.conf`
+* In `/etc/pacman.conf`:
+	* Uncomment `Color`
+	* Set ParallelDownloads = 20
+	* Enable the multilib repo
 
 ### Vim
-* `paru -S vim vim-plug neovim`
-* `sudo npm install -g neovim`
-* `python3 -m pip install --upgrade pynvim`
-* `gem install neovim`
-* In nvim: `:PlugUpdate`
-
-### Compton
-`paru -S picom-git`
+`paru -S vim neovim powerline`
 
 ### Firefox
 * `paru -S firefox`
@@ -69,7 +70,7 @@ More info below images.
 * Enable GFX webrender:
 	* Go to about:config, set `gfx.webrender.all` to `true`.
 ### Terminal
-`paru -S gnome-terminal` 
+`paru -S kitty-git kitty-shell-integration-git kitty-terminfo-git` 
 
 ### File manager
 * `paru -S thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman gvfs ntfs-3g tumbler`
@@ -78,8 +79,8 @@ More info below images.
 
 ### Media
 * `paru -S vlc vlc-pause-click-plugin`
-* `paru -S qt5-tools` (needed for qdbus commands)
-* `paru -S pulseaudio pulseaudio-ctl pulseaudio-alsa alsa-libs pavucontrol`
+* `paru -S qt6-tools` (needed for qdbus commands)
+* `paru -S pipewire-pulse pulseaudio pulseaudio-ctl pulseaudio-alsa alsa-lib pavucontrol`
 
 #### Fix pulseaudio volume adjust delay
 * https://community.spotify.com/t5/Desktop-Linux/Delay-when-changing-volume/m-p/1843731#M2065
@@ -93,11 +94,9 @@ More info below images.
 
 ### Themes
 * `paru -S nordic-polar-theme-git nordic-theme-git`
-* [Nord theme in gnome-terminal](https://github.com/arcticicestudio/nord-gnome-terminal)
 * [Nord theme in vim](https://github.com/arcticicestudio/nord-vim)
-* `paru -S qt5-styleplugins`
-* `paru -S xcursor-breeze` for Breeze (light and dark) cursor theme
-* `paru -S plasma-browser-integration` for media control in the browser
+* `paru -S qt5ct qt6ct`
+* `paru -S capitaine-cursors`
 * `paru -S lxappearance` to set the global theme, icon theme and cursor theme.
 
 ### Spotify
@@ -105,9 +104,8 @@ More info below images.
 * Fix permissions: [Solution](https://github.com/khanhas/spicetify-cli/wiki/Installation#spotify-installed-from-aur)
 * Set spotify data file to folder on different drive: [Solution](https://community.spotify.com/t5/Desktop-Linux/Spotify-downloads-to-the-wrong-folder/m-p/4854706/highlight/true#M19161)
 
-### Polybar
-* `paru -S polybar-git`
-* `paru -S pacman-contrib` for the checkupdates binary
+### Waybar
+`paru -S waybar-hyprland-git`
 
 ### Mouse driver (Logitech G502)
 `paru -S piper-git`
@@ -144,8 +142,8 @@ Don't forget the pacman hook!
 * ttf-unifont
 * noto-fonts
 * noto-fonts-emoji
-* nerd-fonts-hermit
 * powerline-fonts
-
+* otf-font-awesome
+* gnu-free-fonts
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fzjeffer%2Fdotfiles&count_bg=%235E81AC&title_bg=%23555555&icon=&icon_color=%235E81AC&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
