@@ -64,8 +64,13 @@ window#waybar.chromium {
     text-shadow: inherit;
 }
 
-/* empty workspaces */
+/* non-empty persistent workspaces */
 #workspaces button.persistent {
+    background-color: #4c566a;
+}
+
+/* empty persistent workspaces */
+#workspaces button.empty {
     background-color: #2e3440;
 }
 

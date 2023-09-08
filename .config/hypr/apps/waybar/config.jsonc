@@ -33,6 +33,7 @@
     "on-scroll-up": "hyprctl dispatch workspace r-1",
     "on-scroll-down": "hyprctl dispatch workspace r+1",
     "all-outputs": false,
+    "show-special": false,
     "persistent_workspaces": {
       "*": 5
     }
