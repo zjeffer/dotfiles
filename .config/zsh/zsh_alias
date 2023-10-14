@@ -80,7 +80,6 @@ alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias yay='paru'
 alias less='less -I '
 alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
-alias code='code-insiders'
 
 # for proper ssh access with kitty
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
