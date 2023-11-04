@@ -23,7 +23,7 @@
   ],
   // Modules configuration
   "hyprland/workspaces": {
-    "format": "{icon}",
+    "format": "{name}",
     "format-icons": {
       "urgent": "",
       "active": "",
@@ -98,7 +98,7 @@
     "format-ethernet": "󰈀",
     "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
     "format-linked": " ",
-    "format-disconnected": " ",
+    "format-disconnected": "󰤯 ",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
