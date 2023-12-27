@@ -23,7 +23,7 @@
   ],
   // Modules configuration
   "hyprland/workspaces": {
-    "format": "{name}",
+    "format": "{icon}",
     "format-icons": {
       "urgent": "",
       "active": "",
