@@ -23,7 +23,7 @@
   ],
   // Modules configuration
   "hyprland/workspaces": {
-    "format": "{icon}",
+    "format": "{name}",
     "format-icons": {
       "urgent": "",
       "active": "",
@@ -102,18 +102,16 @@
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
+    "scroll-step": 1, // %, can be a float
     "format": "{volume:2}% {icon} {format_source}",
     "format-bluetooth": "{volume:2}% {icon}  {format_source}",
     "format-source": "",
     "format-source-muted": "",
     "format-icons": {
-      // "headphone": "",
-      // "hands-free": "󰂑",
-      // "headset": "󰂑",
-      // "phone": "",
-      // "portable": "",
-      // "car": "",
+       "analog": "",
+       "hdmi": "󰓃",
+       "headphone": "",
+       "headset": "󰋎",
       "default": [
         "", // 0  - 25
         "", // 25 - 50
@@ -121,7 +119,8 @@
         "" // 75 - 100
       ]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "on-click-middle": "$HOME/.config/hypr/apps/waybar/scripts/switch_audio_output.sh"
   },
   "custom/media": {
     "format": "{icon} {}",
