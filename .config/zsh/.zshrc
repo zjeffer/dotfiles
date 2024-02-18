@@ -70,7 +70,18 @@ bindkey "^[[5~" delete-char
 # aliases and expots to clean up ~ folder
 source ~/.config/zsh/zsh_alias
 
-export HISTSIZE=10000000
+
+### HISTORY SETTINGS ###
+#set history size
+export HISTSIZE=1000000
+#save history after logout
+export SAVEHIST=1000000
+#append into history file
+setopt INC_APPEND_HISTORY
+#save only one command if 2 common are same and consistent
+setopt HIST_IGNORE_DUPS
+#add timestamp for each entry
+setopt EXTENDED_HISTORY
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
