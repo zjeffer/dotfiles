@@ -12,6 +12,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$PATH:$HOME/.local/share/cargo/bin
 
 # Add .NET Core SDK tools
 export PATH=$PATH:$HOME/.dotnet/tools
