@@ -1,3 +1,0 @@
-plugins = [
-    { git = "https://github.com/zjeffer/split-monitor-workspaces", branch = "main", name = "split-monitor-workspaces" }
-]
