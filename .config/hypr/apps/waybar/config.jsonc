@@ -34,9 +34,9 @@
     "on-scroll-down": "hyprctl dispatch workspace r+1",
     "all-outputs": false,
     "show-special": false,
-    // "persistent_workspaces": {
-    //   "*": 5
-    // }
+    "persistent_workspaces": {
+      "*": 5
+    }
   },
   "tray": {
     "icon-size": 21,
