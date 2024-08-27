@@ -1,7 +1,8 @@
 Xft.dpi: 96
 
-Xcursor.size: 28
-Xcursor.theme: capitaine-cursors-light
+Xcursor.size: 24
+# Xcursor.theme: Nordzy-cursors-white
+# Xcursor.theme: capitaine-cursors-light
 
 
 #define nord0 #2E3440
