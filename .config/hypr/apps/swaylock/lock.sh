@@ -8,4 +8,4 @@ fi
 # pause all players
 playerctl --all-players pause
 
-swaylock --image $HOME/Pictures/Wallpapers//wallpaper_blurred.png
+swaylock --image $HOME/Pictures/Wallpapers/wallpaper_blurred.png
