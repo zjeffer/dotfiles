@@ -34,7 +34,7 @@
     "on-scroll-down": "hyprctl dispatch workspace r+1",
     "all-outputs": false,
     "show-special": false,
-    "persistent_workspaces": {
+    "persistent-workspaces": {
       "*": 5
     }
   },
@@ -65,7 +65,7 @@
     "interval": 1
   },
   "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon8/temp1_input",
     "critical-threshold": 95,
     "format": "{icon} {temperatureC:2}°C",
     "format-icons": [
@@ -93,7 +93,7 @@
     ]
   },
   "network": {
-    "interface": "wlp4s0", // (Optional) To force the use of this interface
+    "interface": "wlp0s20f3", // (Optional) To force the use of this interface
     "format-wifi": "󰤨 ",
     "format-ethernet": "󰈀",
     "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
