@@ -1,6 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
 CURRENT_PLAYER_FILE="/tmp/current_player.txt"
+touch $CURRENT_PLAYER_FILE
 
 get_players(){
     # gets a list of MPRIS compatible players

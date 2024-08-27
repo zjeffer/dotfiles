@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 CURRENT_PLAYER_FILE="/tmp/current_player.txt"
 
@@ -27,7 +27,7 @@ if [[ `qdbus | grep -E -i 'org.mpris.MediaPlayer2|plasma-browser-integration' | 
 	qdbus `qdbus | grep -E -i 'org.mpris.MediaPlayer2|plasma-browser-integration'` $cmd
 else
 	# if multiple players are detected, interact with the most recent active player
-	qdbus `cat /tmp/current_player.txt` $cmd
+	qdbus `cat $CURRENT_PLAYER_FILE` $cmd
 fi
 
 unset cmd
