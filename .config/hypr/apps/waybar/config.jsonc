@@ -122,7 +122,7 @@
     "on-click-middle": "$HOME/.config/hypr/apps/waybar/scripts/switch_audio_output.sh"
   },
   "custom/media": {
-    "format": "{icon} {}",
+    "format": "{icon} {text}",
     "return-type": "json",
     "max-length": 200,
     "on-click": "playerctl play-pause",
