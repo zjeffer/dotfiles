@@ -1,4 +1,32 @@
-# File to save aliases and exports to clean up ~ folder
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_DATA_DIRS=/usr/local/share:/usr/share
+export XDG_CONFIG_DIRS=/etc/xdg
+
+# PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$PATH:$HOME/.local/share/cargo/bin
+export PATH=$PATH:$HOME/.dotnet/tools          # .NET Core SDK tools
+export PATH=$PATH:$HOME/.local/share/gem/ruby/ # Ruby gem binaries
+
+export MANPATH="/usr/local/man:$MANPATH"
+
+export LANG=en_US.UTF-8
+export EDITOR='nvim'
+export ARCHFLAGS="-arch x86_64"
+# export NVD_BACKEND=direct # nvidia-vaapi-driver envvar
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# aliases and expots to clean up ~ folder
+source ~/.config/zsh/aliases.sh
+
+### DISTRIBUTED COMPILATION ###
+# export PATH="/usr/lib/distcc/bin:$PATH"
+export DISCTCC_HOSTS="localhost/16,cpp,lzo 192.168.129.40/6,cpp,lzo"
+export DISTCC_LOG="/tmp/distcc.log"
+# export CC="distcc gcc"
+# export CXX="distcc g++"
 
 
 ##########################        CLEAN UP HOME FOLDER       ##########################
@@ -54,37 +82,3 @@ export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
 ##########################        END OF CLEANUP ~/       ##########################
-
-
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.cache/histfile
-HISTSIZE=1000
-SAVEHIST=1000
-# End of lines configured by zsh-newuser-install
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-# Aliases
-alias ls='ls --color=auto'
-alias la='ls -lah'
-alias ll='ls -l'
-alias free='free -h'
-alias df='df -h'
-alias ka='killall'
-alias vim='nvim'
-alias nvim='nvim'
-alias feh='feh --auto-zoom'
-alias dmesg='sudo dmesg -H --color'
-alias gs='git status'
-alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
-alias yay='paru'
-alias less='less -I '
-alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
-
-source $XDG_CONFIG_HOME/zsh/gh-copilot-alias.sh
-
-# for proper ssh access with kitty
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
-
-
