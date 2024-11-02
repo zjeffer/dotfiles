@@ -20,6 +20,7 @@ alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 alias yay='paru'
 alias less='less -I '
 alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
+alias discord='discord --no-sandbox'
 
 source $XDG_CONFIG_HOME/zsh/gh-copilot-alias.sh
 
