@@ -114,6 +114,7 @@ window#waybar.chromium {
 #wireplumber,
 #custom-media,
 #tray,
+#custom-notification,
 #mpd {
     background-color: #2e3440;
     border-radius: 8px;
@@ -128,6 +129,10 @@ window#waybar.chromium {
 
     /* the power icon seems to be off-center, need to adjust: */
     padding: 0px 16px 0px 10px;
+}
+
+#custom-notification {
+    font-family: "NotoSansMono Nerd Font";
 }
 
 /* If workspaces is the leftmost module, omit left margin */
