@@ -41,16 +41,19 @@
     }
   },
   "notification-visibility": {
-    "example-name": {
-      "state": "muted",
+    "Spotify": {
+      "state": "transient",
       "urgency": "Low",
-      "app-name": "example-app-swaync"
+      "app-name": "Spotify"
     }
   },
   "widgets": [
     "inhibitors",
     "title",
     "dnd",
+    "menubar#label",
+    "volume",
+    "mpris",
     "notifications"
   ],
   "widget-config": {
@@ -74,6 +77,60 @@
     "mpris": {
       "image-size": 96,
       "image-radius": 12
+    },
+    "volume": {
+      "label": ""
+    },
+    "menubar#label": {
+      "menu#power-buttons": {
+        "label": "", 
+        "position": "right",
+        "actions": [ 
+          {
+            "label": " Reboot",
+            "command": "systemctl reboot"
+          },
+          {
+            "label": " Lock",
+            "command": "hyprlock"
+          },
+          {
+            "label": " Logout",
+            "command": "hyprctl dispatch exit"
+          },
+          {
+            "label": " Shut down",
+            "command": "systemctl poweroff"
+          }
+        ]
+      },
+      "menu#powermode-buttons": {
+        "label": "", 
+        "position": "left",
+        "actions": [ 
+          {
+            "label": "Performance",
+            "command": "powerprofilesctl set performance"
+          },
+          {
+            "label": "Balanced",
+            "command": "powerprofilesctl set balanced"
+          },
+          {
+            "label": "Powersaver",
+            "command": "powerprofilesctl set power-saver"
+          }
+        ]
+      },
+      "buttons#topbar-buttons": {
+        "position": "left",
+        "actions": [
+          {
+            "label": "",
+            "command": "grim"
+          }
+        ]
+      }
     },
     "buttons-grid": {
       "actions": [

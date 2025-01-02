@@ -11,6 +11,11 @@
 @define-color text-color rgb(255, 255, 255);
 @define-color text-color-disabled rgb(150, 150, 150);
 @define-color bg-selected rgb(0, 128, 255);
+
+* {
+  color: @text-color;
+}
+
 .notification-row {
   outline: none;
 }
