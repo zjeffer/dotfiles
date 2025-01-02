@@ -10,7 +10,7 @@ local config = wezterm.config_builder()
 config.color_scheme = 'AdventureTime'
 
 
-config.enable_wayland = false
+config.enable_wayland = true
 
 -- and finally, return the configuration to wezterm
 return config
