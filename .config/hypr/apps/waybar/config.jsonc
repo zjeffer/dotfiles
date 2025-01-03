@@ -3,7 +3,7 @@
   "position": "top", // Waybar position (top|bottom|left|right)
   "height": 40, // Waybar height (to be removed for auto height)
   "width": 0, // Waybar width (0 == auto)
-  "spacing": 0, // Gaps between modules 
+  "spacing": 0, // Gaps between modules
   // Choose the order of the modules
   "modules-left": [
     "hyprland/workspaces",
@@ -19,6 +19,7 @@
     "custom/date",
     "clock",
     "tray",
+    "custom/notification",
     "custom/power"
   ],
   // Modules configuration
@@ -138,5 +139,25 @@
   "custom/power": {
     "format": "⏻",
     "on-click": "nwgbar -layer-shell-exclusive-zone -1"
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
   }
 }
