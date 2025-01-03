@@ -1,5 +1,4 @@
-# a lot of the exports are because of this:
-# https://wiki.archlinux.org/title/XDG_Base_Directory
+source $HOME/.zshenv
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -9,16 +8,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-export PATH=$PATH:$HOME/.local/share/cargo/bin
-
-# Add .NET Core SDK tools
-export PATH=$PATH:$HOME/.dotnet/tools
-
-# Add gem binaries to path
-export PATH=$PATH:$HOME/.local/share/gem/ruby/
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/zjeffer/.oh-my-zsh"
@@ -41,24 +30,16 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-#User configuration
-export DEFAULT_USER = zjeffer prompt_context(){}
-export MANPATH="/usr/local/man:$MANPATH"
-
-#You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
-#Preferred editor
-export EDITOR='nvim'
-
-#Compilation flags
-export ARCHFLAGS="-arch x86_64"
-
-# nvidia-vaapi-driver envvar
-export NVD_BACKEND=direct
-
-#ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
+### HISTORY SETTINGS ###
+export HISTFILE=~/.cache/histfile
+export HISTSIZE=1000000 # history size
+export SAVEHIST=1000000 # save history after logout
+# append into history file
+setopt INC_APPEND_HISTORY
+# save only one command if 2 common are same and consistent
+setopt HIST_IGNORE_DUPS
+# add timestamp for each entry
+setopt EXTENDED_HISTORY
 
 ############ If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -67,22 +48,6 @@ bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 bindkey "^[[3~" delete-char
 bindkey "^[[5~" delete-char
-
-# aliases and expots to clean up ~ folder
-source ~/.config/zsh/zsh_alias
-
-
-### HISTORY SETTINGS ###
-#set history size
-export HISTSIZE=1000000
-#save history after logout
-export SAVEHIST=1000000
-#append into history file
-setopt INC_APPEND_HISTORY
-#save only one command if 2 common are same and consistent
-setopt HIST_IGNORE_DUPS
-#add timestamp for each entry
-setopt EXTENDED_HISTORY
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
