@@ -23,20 +23,18 @@
   ],
   // Modules configuration
   "hyprland/workspaces": {
-    "format": "{name}",
+    "format": "{icon}",
     "format-icons": {
       "urgent": "",
-      "active": "",
-      "default": "",
-      "persistent": ""
+      "active": "", // focused workspace on current monitor 
+      "visible": "", // focused workspace on other monitors
+      "default": "",
+      "empty": "" // persistent
     },
     "on-scroll-up": "hyprctl dispatch workspace r-1",
     "on-scroll-down": "hyprctl dispatch workspace r+1",
     "all-outputs": false,
-    "show-special": false,
-    "persistent-workspaces": {
-      "*": 5
-    }
+    "show-special": false
   },
   "tray": {
     "icon-size": 21,
@@ -104,7 +102,9 @@
   "pulseaudio": {
     "scroll-step": 1, // %, can be a float
     "format": "{volume:2}% {icon} {format_source}",
+    "format-muted": "{volume:2}% 󰝟 {format_source}",
     "format-bluetooth": "{volume:2}% {icon}  {format_source}",
+    "format-bluetooth-muted": "{volume:2}% 󰝟  {format_source}",
     "format-source": "",
     "format-source-muted": "",
     "format-icons": {
