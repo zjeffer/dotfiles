@@ -23,7 +23,7 @@ source ~/.config/zsh/aliases.sh
 
 ##########################        CLEAN UP HOME FOLDER       ##########################
 # nvidia
-export __GL_SHADER_DISK_CACHE_PATH=/tmp/zjeffer/nvidia/
+export __GL_SHADER_DISK_CACHE_PATH="/tmp/$USER/nvidia/"
 alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 # npm

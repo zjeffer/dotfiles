@@ -253,5 +253,6 @@
   },
   "terminal_title_flag": "",
   "theme": "default",
+  "terminal": "kitty",
   "timeout": 0
 }
