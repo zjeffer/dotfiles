@@ -12,6 +12,7 @@ alias free='free -h'
 alias df='df -h'
 alias ka='killall'
 alias vim='nvim'
+alias nvim='nvim'
 alias feh='feh --auto-zoom'
 alias dmesg='sudo dmesg -H --color'
 alias gs='git status'
@@ -24,6 +25,6 @@ alias discord='discord --no-sandbox'
 source $XDG_CONFIG_HOME/zsh/gh-copilot-alias.sh
 
 # for proper ssh access with kitty
-# [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 
