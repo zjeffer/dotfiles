@@ -6,6 +6,7 @@ export XDG_CONFIG_DIRS=/etc/xdg
 
 # PATH
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
 export PATH=$PATH:$HOME/.local/share/cargo/bin
 export PATH=$PATH:$HOME/.dotnet/tools          # .NET Core SDK tools
 export PATH=$PATH:$HOME/.local/share/gem/ruby/ # Ruby gem binaries
