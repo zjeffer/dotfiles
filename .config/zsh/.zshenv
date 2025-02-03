@@ -67,8 +67,6 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 alias gpg2='gpg2 --homedir $GNUPGHOME'
 # nuget
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
-# wine
-export WINEPREFIX="$HOME/Games/Wine"
 # gradle
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 # rustup
