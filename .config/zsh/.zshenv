@@ -17,13 +17,14 @@ export EDITOR='nvim'
 export ARCHFLAGS="-arch x86_64"
 # export NVD_BACKEND=direct # nvidia-vaapi-driver envvar
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+export TERMINAL="wezterm"
 
 # aliases and expots to clean up ~ folder
 source ~/.config/zsh/aliases.sh
 
 ### DISTRIBUTED COMPILATION ###
 # export PATH="/usr/lib/distcc/bin:$PATH"
-export DISCTCC_HOSTS="localhost/16,cpp,lzo 192.168.129.40/6,cpp,lzo"
+export DISCTCC_HOSTS="localhost/16,cpp,lzo 192.168.0.2/6,cpp,lzo"
 export DISTCC_LOG="/tmp/distcc.log"
 # export CC="distcc gcc"
 # export CXX="distcc g++"
