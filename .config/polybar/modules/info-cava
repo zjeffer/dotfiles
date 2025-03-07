@@ -1,4 +1,0 @@
-[module/info-cava]
-type = custom/script
-exec = ~/.config/polybar/scripts/info-cava/info-cava.py -b 5 -e eceff4,d8dee9 -c average 2> info-cava.log
-tail = true

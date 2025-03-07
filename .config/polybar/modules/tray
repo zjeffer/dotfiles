@@ -1,8 +1,0 @@
-[module/tray]
-type = internal/tray
-
-; Only display the tray on the laptop monitor
-format-padding = 0
-format-background = ${colors.background-light}
-
-tray-background = ${colors.background-light}

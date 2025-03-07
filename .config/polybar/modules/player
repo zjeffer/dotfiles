@@ -1,7 +1,0 @@
-[module/player-mpris-tail]
-type = custom/script
-exec = ~/.config/polybar/scripts/player/player-mpris-tail.py -b playerctld -f '%{A1:~/.config/polybar/scripts/player/player-mpris-tail.py previous:}%{A}  %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py play-pause:}%{T4}{icon-reversed}%{T-}%{A}  %{A1:~/.config/polybar/scripts/player/player-mpris-tail.py next:}%{A}   {:artist:t55:{artist}:}{:artist: - :}{:t55:{title}:}{:-title:t55:{filename}:}' --icon-playing= --icon-paused= --icon-stopped=''
-##Optional icon:  %{T6}%{T-}
-tail = true
-label = %output%
-label-padding-left = 3
