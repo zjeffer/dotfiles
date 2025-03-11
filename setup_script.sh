@@ -26,8 +26,8 @@ for file in .config/*; do
 	ln -s $(pwd)/$file ~/.config/$(basename $file)
 done
 
-# do the same but for every file in this folder, excluding the folders:
-for file in $(ls -ap | grep -v /); do
+# do the same for specific files in .
+for file in .clang-tidy .face .Xresources; do
 	rm -rf ~/$file
 	echo "Linking $file to ~/$file"
 	ln -sf $(pwd)/$file ~/$file

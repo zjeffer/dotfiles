@@ -9,6 +9,7 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/.local/share/cargo/bin
 export PATH=$PATH:$HOME/.dotnet/tools          # .NET Core SDK tools
 export PATH=$PATH:$HOME/.local/share/gem/ruby/ # Ruby gem binaries
+export PATH=$PATH:/opt/cuda/bin/               # CUDA & nvcc
 
 export MANPATH="/usr/local/man:$MANPATH"
 
