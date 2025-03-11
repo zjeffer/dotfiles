@@ -10,7 +10,7 @@ fi
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/zjeffer/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CACHE_DIR="$ZSH/cache"
 export ZSH_COMPDUMP="$ZSH_CACHE_DIR/zcompdump-$HOST-$ZSH_VERSION"
 export ZDOTDIR="$ZSH_CACHE_DIR"
