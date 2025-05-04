@@ -82,5 +82,8 @@ export WINEPREFIX="$HOME/Games/Wine"
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 # rustup
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+# golang
+export GOPATH="$XDG_DATA_HOME"/go
+export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 
 ##########################        END OF CLEANUP ~/       ##########################
