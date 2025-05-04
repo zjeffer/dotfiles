@@ -21,7 +21,7 @@ window#waybar {
 #workspaces {
     border-radius: 8px;
     padding: 0 3px 0 8px;
-    /* 3+5 = total of 8px of space between the workspaces and the custom-media module*/
+    /* 3+5 = total of 8px of space between the workspaces and the media module*/
     margin: 5px 5px 5px 0;
     transition: all 0.2s ease;
 }
@@ -100,6 +100,7 @@ window#waybar {
 #network,
 #pulseaudio,
 #wireplumber,
+#mpris,
 #custom-media,
 #tray,
 #custom-notification,
@@ -198,25 +199,38 @@ label:focus {
     color: #d8dee9;
 }
 
+#mpris,
 #custom-media {
     background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
     color: black;
-    background-color: #ffa000;
 }
 
-#custom-media.custom-jellyfin {
+#mpris.firefox,
+#custom-media.firefox {
+    background-color: #FF9500;
+    color: black;
+}
+
+#mpris.spotify,
+#custom-media.spotify {
+    background-color: #66cc99;
+    color: #191414;
+}
+
+#mpris.vlc,
+#custom-media.vlc {
+    background-color: #E85E00;
+    color: black;
+}
+
+#mpris.jellyfin,
+#custom-media.jellyfin {
     /* https://jellyfin.org/docs/general/contributing/branding */
     color: #000B25;
     background-color: #AA5CC3;
 }
+
+
 
 #temperature {
     color: #d08770;

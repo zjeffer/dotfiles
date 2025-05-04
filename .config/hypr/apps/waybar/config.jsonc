@@ -8,6 +8,7 @@
   // Choose the order of the modules
   "modules-left": [
     "hyprland/workspaces",
+    // "mpris"
     "custom/media"
   ],
   "modules-right": [
@@ -65,7 +66,7 @@
     "interval": 1
   },
   "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
     "critical-threshold": 95,
     "format": "{icon} {temperatureC:2}°C",
     "format-icons": [
@@ -108,10 +109,10 @@
     "format-source": "",
     "format-source-muted": "",
     "format-icons": {
-       "analog": "",
-       "hdmi": "󰓃",
-       "headphone": "",
-       "headset": "󰋎",
+      "analog": "",
+      "hdmi": "󰓃",
+      "headphone": "",
+      "headset": "󰋎",
       "default": [
         "", // 0  - 25
         "", // 25 - 50
@@ -134,6 +135,23 @@
     },
     "escape": true,
     "exec": "$HOME/.config/hypr/apps/waybar/scripts/media-player.py --enable-logging -vvv 2>&1 | tee $HOME/.config/hypr/apps/waybar/scripts/media-player.log" // Script in resources folder
+  },
+  "mpris": {
+    "format": "{player_icon} {status_icon} {dynamic}",
+    "format-paused": "{player_icon} {status_icon} {dynamic}",
+    "tooltip-format": "{album}",
+    "player-icons": {
+      "default": "🎜",
+      "firefox": "󰈹",
+      "spotify": ""
+    },
+    "status-icons": {
+      "playing": "",
+      "paused": ""
+    },
+    // "interval": 1,
+    "dynamic-order": ["artist", "title"]
+    // "ignored-players": ["firefox"]
   },
   "custom/power": {
     "format": "⏻",
