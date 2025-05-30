@@ -2,7 +2,7 @@
   "activation_mode": {
     "labels": "jkl;asdf"
   },
-  "app_launch_prefix": "",
+  "app_launch_prefix": "uwsm app -- ",
   "as_window": false,
   "builtins": {
     "ai": {
