@@ -26,10 +26,6 @@ alias g='git'
 
 source $XDG_CONFIG_HOME/zsh/gh-copilot-alias.sh
 
-if [ -f $XDG_CONFIG_HOME/zsh/barco_aliases.sh ]; then
-  source $XDG_CONFIG_HOME/zsh/barco_aliases.sh
-fi
-
 # for proper ssh access with kitty
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 

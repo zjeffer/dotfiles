@@ -87,3 +87,10 @@ export GOPATH="$XDG_DATA_HOME"/go
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 
 ##########################        END OF CLEANUP ~/       ##########################
+
+
+if [ -f $XDG_CONFIG_HOME/zsh/barco_aliases.sh ]; then
+  source $XDG_CONFIG_HOME/zsh/barco_aliases.sh
+fi
+
+
