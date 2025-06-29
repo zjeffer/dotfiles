@@ -23,10 +23,16 @@ export TERMINAL="wezterm"
 # aliases and expots to clean up ~ folder
 source ~/.config/zsh/aliases.sh
 
+# sccache & ccache
+export RUSTC_WRAPPER=sccache
+export PATH="/usr/lib/ccache/bin:$PATH"
+
 ### DISTRIBUTED COMPILATION ###
+# uncomment to enable distcc
 # export PATH="/usr/lib/distcc/bin:$PATH"
-export DISCTCC_HOSTS="localhost/16,cpp,lzo 192.168.0.2/6,cpp,lzo"
+export DISTCC_HOSTS="localhost/32,cpp,lzo 192.168.0.2/6,cpp,lzo"
 export DISTCC_LOG="/tmp/distcc.log"
+# export CCACHE_PREFIX=distcc
 # export CC="distcc gcc"
 # export CXX="distcc g++"
 
@@ -39,7 +45,7 @@ export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 # npm
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 # java
-export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+# export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 #sqlite
 export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
 alias sqlite3='sqlite3 -init "$XDG_CONFIG_HOME"/sqlite3/sqliterc'
