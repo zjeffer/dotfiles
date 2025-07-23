@@ -13,6 +13,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
+@import                          "./shared/colors.rasi"
+@import                          "./shared/fonts.rasi"
 * {
     /* Resolution : 1920x1080 */
     mainbox-spacing:             100px;
@@ -122,7 +124,7 @@ element-text {
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
-    vertical-align:              0.5;
+    // vertical-align:              0.5; // this is commented because of an alignment bug?
     horizontal-align:            0.5;
 }
 element selected.normal {
