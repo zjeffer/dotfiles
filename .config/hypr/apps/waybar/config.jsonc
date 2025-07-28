@@ -138,7 +138,7 @@
   },
   "custom/power": {
     "format": "⏻",
-    "on-click": "nwgbar -layer-shell-exclusive-zone -1"
+    "on-click": "~/.config/rofi/powermenu/type-4/powermenu.sh",
   },
   "custom/notification": {
     "tooltip": false,
