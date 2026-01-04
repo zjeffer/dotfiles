@@ -1,6 +1,7 @@
 *.err
 *.log
 .config/cava/shaders/
+.config/fish/fish_variables*
 .config/spicetify/Backup/
 .config/spicetify/Extracted/
 __pycache__/
