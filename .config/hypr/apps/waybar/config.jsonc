@@ -32,10 +32,10 @@
       "active": "", // focused workspace on current monitor 
       "visible": "", // focused workspace on other monitors
       "default": "",
-      "empty": "" // persistent
+      "persistent": ""
     },
-    "on-scroll-up": "hyprctl dispatch workspace r-1",
-    "on-scroll-down": "hyprctl dispatch workspace r+1",
+    "on-scroll-up": "hyprctl dispatch split-cycleworkspaces -1",
+    "on-scroll-down": "hyprctl dispatch split-cycleworkspaces +1",
     "all-outputs": false,
     "show-special": false
   },
