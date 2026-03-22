@@ -23,9 +23,8 @@ export TERMINAL="wezterm"
 # aliases and expots to clean up ~ folder
 source ~/.config/zsh/aliases.sh
 
-# sccache & ccache
+# sccache
 export RUSTC_WRAPPER=sccache
-export PATH="/usr/lib/ccache/bin:$PATH"
 
 ### DISTRIBUTED COMPILATION ###
 # uncomment to enable distcc
