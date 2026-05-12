@@ -5,3 +5,8 @@ if status is-interactive
 
     bind alt-backspace backward-kill-word 
 end
+
+
+function kill_teams
+    killall -s SIGKILL teams-for-linux
+end
