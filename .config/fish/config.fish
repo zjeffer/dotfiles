@@ -1,4 +1,4 @@
-bass source ~/.config/zsh/.zshenv
+bass source ~/.config/fish/exports.sh
 if status is-interactive
     # Commands to run in interactive sessions can go here
     set fish_greeting
