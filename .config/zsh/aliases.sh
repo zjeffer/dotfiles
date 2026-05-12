@@ -19,6 +19,12 @@ alias less='less -I '
 alias yarn='yarn --use-yarnrc $XDG_CONFIG_HOME/yarn/config'
 alias discord='discord --no-sandbox'
 
+# git 
+alias gs='git status'
+alias gd='git diff'
+alias gl='git pull'
+alias g='git'
+
 source $XDG_CONFIG_HOME/zsh/gh-copilot-alias.sh
 
 if [ -f $XDG_CONFIG_HOME/zsh/barco_aliases.sh ]; then
