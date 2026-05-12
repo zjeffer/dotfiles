@@ -19,6 +19,7 @@
     "custom/date",
     "clock",
     "tray",
+    "custom/cato",
     "custom/notification",
     "custom/power"
   ],
@@ -27,7 +28,7 @@
     "format": "{icon}",
     "format-icons": {
       "urgent": "",
-      "active": "", // focused workspace on current monitor 
+      "active": "", // focused workspace on current monitor
       "visible": "", // focused workspace on other monitors
       "default": "",
       "empty": "" // persistent
@@ -64,9 +65,10 @@
     "interval": 1
   },
   "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon8/temp1_input",
+    "hwmon-path": "/sys/class/thermal/thermal_zone11/temp",
     "critical-threshold": 95,
     "format": "{icon} {temperatureC:2}°C",
+    "interval": 1,
     "format-icons": [
       ""
     ]
@@ -124,7 +126,7 @@
     "on-click-middle": "$HOME/.config/hypr/apps/waybar/scripts/switch_audio_output.sh"
   },
   "custom/media": {
-    "format": "{icon} {}",
+    "format": "{icon} {text}",
     "return-type": "json",
     "max-length": 200,
     "on-click": "playerctl play-pause",
@@ -138,7 +140,23 @@
   },
   "custom/power": {
     "format": "⏻",
-    "on-click": "~/.config/rofi/powermenu/type-4/powermenu.sh",
+    "on-click": "~/.config/rofi/powermenu/type-4/powermenu.sh"
+  },
+  "custom/cato": {
+    "format": "{icon}",
+    "format-icons": {
+      "connected": "󰌘",
+      "connecting": "󰌙",
+      "disconnected": "󰌙",
+      "disconnecting": "󰌙",
+      "loading": "󰌙",
+      "error": "󰤫"
+    },
+    "return-type": "json",
+    "exec-if": "which cato-sdp",
+    "exec": "$HOME/.config/hypr/apps/waybar/scripts/cato.sh --poll",
+    "on-click": "$HOME/.config/hypr/apps/waybar/scripts/cato.sh --toggle",
+    "escape": true
   },
   "custom/notification": {
     "tooltip": false,

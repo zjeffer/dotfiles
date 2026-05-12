@@ -102,6 +102,7 @@ window#waybar {
 #wireplumber,
 #custom-media,
 #tray,
+#custom-cato,
 #custom-notification,
 #mpd {
     background-color: #2e3440;
@@ -239,60 +240,43 @@ label:focus {
     background-color: #bf616a;
 }
 
-/* #idle_inhibitor {
-    background-color: #2d3436;
-} */
+#custom-cato {
+    padding: 0 12px 0 8px; /* for some reason i need 8 on the right to center the icon */
+}
 
-/* #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
-} */
-
-/* #mpd {
+#custom-cato.connected {
     background-color: #66cc99;
     color: #2a5c45;
 }
 
-#mpd.disconnected {
+#custom-cato.connecting,
+#custom-cato.disconnecting {
+    background-color: #8d8d8d;
+    color: #ffffff;
+    /* blink */
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-cato.disconnected {
+    background-color: #2e3440;
+    color: #ffffff;
+}
+
+#custom-cato.loading {
+    background-color: #8d8d8d;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-cato.error {
     background-color: #bf616a;
+    color: #ffffff;
 }
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
-} */
-
-/* #language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-} */
-
-/* #keyboard-state {
-    background: #97e1ad;
-    color: black;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-	background-color: transparent;
-} */
