@@ -1,7 +1,7 @@
 -- File dialogs
-hl.window_rule({ match = { title = "^(Open Folder)$" },             float = true })
-hl.window_rule({ match = { title = "^(Open File)$" },               float = true })
-hl.window_rule({ match = { title = "^(Save As)$" },                 float = true })
+hl.window_rule({ match = { title = "^(Open Folder)$" }, float = true })
+hl.window_rule({ match = { title = "^(Open File)$" }, float = true })
+hl.window_rule({ match = { title = "^(Save As)$" }, float = true })
 hl.window_rule({ match = { title = "^(File Operation Progress)$" }, float = true })
 hl.window_rule({ match = { title = "^(Firefox — Sharing Indicator)$" }, float = true })
 
@@ -25,22 +25,22 @@ hl.window_rule({
 })
 
 -- Opacity
-hl.window_rule({ match = { class = "[gG]nome-terminal.*" },              opacity = 0.85 })
-hl.window_rule({ match = { initial_class = "org.wezfurlong.wezterm" },    opacity = 0.85 })
-hl.window_rule({ match = { class = "kitty" },                            opacity = 0.85 })
-hl.window_rule({ match = { initial_title = "^(Spotify( Premium)?)$" },    opacity = 0.90 })
+hl.window_rule({ match = { class = "[gG]nome-terminal.*" }, opacity = 0.85 })
+hl.window_rule({ match = { initial_class = "org.wezfurlong.wezterm" }, opacity = 0.85 })
+hl.window_rule({ match = { class = "kitty" }, opacity = 0.85 })
+hl.window_rule({ match = { initial_title = "^(Spotify( Premium)?)$" }, opacity = 0.90 })
 hl.window_rule({
     name    = "VSCode",
     match   = { class = "^([cC]ode(-[Ii]nsiders)?)$" },
     opacity = 0.90,
 })
-hl.window_rule({ match = { initial_class = "dev.zed.Zed" },  opacity = 0.90 })
-hl.window_rule({ match = { class = "[Tt]hunar" },            opacity = 0.80 })
-hl.window_rule({ match = { class = "[Dd]unst" },             opacity = 0.70 })
-hl.window_rule({ match = { class = "[Dd]iscord" },           opacity = 0.95 })
+hl.window_rule({ match = { initial_class = "dev.zed.Zed" }, opacity = 0.90 })
+hl.window_rule({ match = { class = "[Tt]hunar" }, opacity = 0.80 })
+hl.window_rule({ match = { class = "[Dd]unst" }, opacity = 0.70 })
+hl.window_rule({ match = { class = "[Dd]iscord" }, opacity = 0.95 })
 
 -- Network Manager
-hl.window_rule({ match = { class = "nm-connection-editor" },       float = true })
+hl.window_rule({ match = { class = "nm-connection-editor" }, float = true })
 hl.window_rule({ match = { class = "nm-openconnect-auth-dialog" }, float = true })
 
 -- ProtonVPN
@@ -92,15 +92,33 @@ hl.window_rule({
 hl.window_rule({ match = { class = "gimp" }, suppress_event = "activatefocus" })
 
 -- Edge popup (no-focus overlay)
+-- hl.window_rule({
+--     name             = "Edge Popup",
+--     match            = { class = "^$", title = "^$" },
+--     float            = true,
+--     no_initial_focus = true,
+--     no_focus         = true,
+--     no_anim          = true,
+--     no_shadow        = true,
+--     border_size      = 0,
+--     rounding         = 0,
+--     stay_focused     = true,
+-- })
+
+
+-- Forza Horizon 5 has 2 windows that often both steal focus
+-- We want to only focus the main window (which has a title and class)
 hl.window_rule({
-    name             = "Edge Popup",
-    match            = { class = "^$", title = "^$" },
-    float            = true,
+    name             = "Forza Horizon 5",
+    match            = { class = "steam_app_1551360", title = "" },
     no_initial_focus = true,
     no_focus         = true,
     no_anim          = true,
     no_shadow        = true,
+    float            = true,
+    persistent_size  = true,
     border_size      = 0,
     rounding         = 0,
-    stay_focused     = true,
+    max_size         = { 1, 1 },
+    render_unfocused = true,
 })

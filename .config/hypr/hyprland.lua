@@ -4,13 +4,13 @@ local config_folder = "./configs"
 require(config_folder .. ".env")
 require(config_folder .. ".monitors")
 require(config_folder .. ".general")
+require(config_folder .. ".plugins")
 require(config_folder .. ".decoration")
 require(config_folder .. ".animations")
 require(config_folder .. ".input")
 require(config_folder .. ".keybinds")
 require(config_folder .. ".window_rules")
 require(config_folder .. ".workspace_rules")
-require(config_folder .. ".plugins")
 
 
 -- Autostart
@@ -21,7 +21,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
     hl.exec_cmd("hyprpaper --config $HYPR_FOLDER/hyprpaper.conf")
     hl.exec_cmd("nm-applet")
-    hl.exec_cmd("hyprpm reload -n")
     hl.exec_cmd("ydotoold")
     hl.exec_cmd("bash $APP_FOLDER/waybar/launch.sh")
     hl.exec_cmd("swayosd-server")

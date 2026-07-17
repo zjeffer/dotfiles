@@ -49,7 +49,11 @@ hl.config({
 	},
 })
 
--- render = {
---     cm_fs_passthrough = 0,
---     cm_auto_hdr       = 0,
--- }
+
+-- unscale XWayland
+hl.config({
+  xwayland = {
+    force_zero_scaling = true
+  }
+})
+

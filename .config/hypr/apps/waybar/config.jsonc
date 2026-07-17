@@ -34,8 +34,8 @@
       "default": "",
       "persistent": ""
     },
-    "on-scroll-up": "hyprctl dispatch split-cycleworkspaces -1",
-    "on-scroll-down": "hyprctl dispatch split-cycleworkspaces +1",
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace = \"r-1\"})'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace = \"r+1\"})'",
     "all-outputs": false,
     "show-special": false
   },

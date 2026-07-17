@@ -4,13 +4,13 @@ local config_folder = "./configs"
 require(config_folder .. ".env")
 require(config_folder .. ".monitors")
 require(config_folder .. ".general")
+require(config_folder .. ".plugins")
 require(config_folder .. ".decoration")
 require(config_folder .. ".animations")
 require(config_folder .. ".input")
 require(config_folder .. ".keybinds")
 require(config_folder .. ".window_rules")
 require(config_folder .. ".workspace_rules")
-require(config_folder .. ".plugins")
 
 
 -- Autostart

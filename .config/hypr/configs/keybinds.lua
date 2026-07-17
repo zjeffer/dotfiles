@@ -12,7 +12,7 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))
 
 -- Reload Hyprland and notify waybar
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(
-    "hyprctl reload && hyprpm reload -f -n && sleep 0.2 && touch -m " .. APP_FOLDER .. "/waybar/config.jsonc"
+    "hyprctl reload && sleep 0.2 && touch -m " .. APP_FOLDER .. "/waybar/config.jsonc"
 ))
 
 -- Applications
@@ -52,14 +52,6 @@ hl.bind(mainMod .. " + G", hl.dsp.group.toggle())
 
 -- Hyprspace
 -- hl.bind(mainMod .. " + grave", hl.dsp.exec_cmd("hyprctl dispatch overview:toggle all"))
-
--- Plugin: split-monitor-workspaces — switch and move windows (workspaces 1-5)
-local smw = hl.plugin.split_monitor_workspaces
-for i = 1, 5 do
-    local key = tostring(i)
-    hl.bind(mainMod .. " + " .. key, function() return smw.workspace(i) end)
-    hl.bind(mainMod .. " + SHIFT + " .. key, function() return smw.move_to_workspace_silent(i) end)
-end
 
 -- Navigate workspaces with brackets
 hl.bind(mainMod .. " + bracketleft", hl.dsp.focus({ workspace = "r-1" }))
@@ -111,3 +103,7 @@ hl.define_submap("passthru", function()
     hl.bind(mainMod .. " + I", hl.dsp.submap("reset"))
 end)
 hl.bind(mainMod .. " + O", hl.dsp.submap("passthru"))
+
+
+hl.bind(mainMod .. " + M", hl.dsp.window.fullscreen_state({internal = 1, client = 0, action="toggle"}))
+
