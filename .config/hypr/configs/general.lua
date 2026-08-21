@@ -36,7 +36,7 @@ hl.config({
 		disable_logs   = false,
 		disable_time   = false,
 		error_limit    = 2,
-		error_position = 2, -- bottom
+		error_position = 1, -- bottom
 	},
 
 	opengl = {
