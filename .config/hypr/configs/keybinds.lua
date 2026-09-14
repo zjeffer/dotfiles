@@ -16,11 +16,12 @@ hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(
 ))
 
 -- Applications
-hl.bind("SUPER_L", hl.dsp.exec_cmd("killall rofi || ~/.config/rofi/launchers/type-2/launcher.sh -show drun"), { release = true })
+hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd("killall rofi || ~/.config/rofi/launchers/type-2/launcher.sh -show drun"), { release = true })
 hl.bind(mainMod .. " + return", hl.dsp.exec_cmd("wezterm --config-file ~/.config/wezterm/wezterm.lua"))
 hl.bind(mainMod .. " + CTRL + return", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + SHIFT + return", hl.dsp.workspace.toggle_special())
-hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("firefox"))
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("~/.local/bin/start-edge"))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("~/.local/bin/start-teams"))
 hl.bind(mainMod .. " + SHIFT + Z", hl.dsp.exec_cmd("chromium"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("thunar"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("/usr/bin/spotify --ozone-platform-hint=wayland"))

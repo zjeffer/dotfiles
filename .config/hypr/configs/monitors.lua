@@ -2,25 +2,16 @@
 -- Re-generate with nwg-displays or edit manually.
 
 hl.monitor({
-	output   = "desc:AOC Q27G4 18DQ9HA026322",
-	mode     = "2560x1440@180",
-	position = "0x0",
-	scale    = "1",
-	bitdepth = 10,
+    output = "desc:Dell Inc. DELL U2715H GH85D5A90NHS",
+    mode = "2560x1440@59.95",
+    position = "2560x0",
+    scale = 1.0,
+    vrr = 0
 })
-
 hl.monitor({
-	output   = "desc:AOC Q27G4 2S6R6HA023496",
-	mode     = "2560x1440@180",
-	position = "2560x0",
-	scale    = "1",
-	bitdepth = 10,
-})
-
-hl.monitor({
-	output   = "desc:DENON Ltd. DENON-AVR 0x01010101",
-	mode     = "1920x1080@60",
-	position = "0x-1",
-	scale    = "1",
-	mirror   = "DP-1",
+    output = "desc:Dell Inc. DELL U2715H GH85D5A90KHS",
+    mode = "2560x1440@59.95",
+    position = "0x0",
+    scale = 1.0,
+    vrr = 0
 })
