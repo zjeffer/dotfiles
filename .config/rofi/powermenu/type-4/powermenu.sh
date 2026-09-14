@@ -81,7 +81,7 @@ run_cmd() {
 chosen="$(run_rofi)"
 case ${chosen} in
     $shutdown)
-		run_cmd --shutdown
+		run_cmd --logout # no shutdown on build servers
         ;;
     $reboot)
 		run_cmd --reboot
