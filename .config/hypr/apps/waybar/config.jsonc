@@ -34,8 +34,8 @@
       "default": "",
       "persistent": ""
     },
-    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace = \"r-1\"})'",
-    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace = \"r+1\"})'",
+    "on-scroll-up": "ydotool key 183:1 183:0", // F13
+    "on-scroll-down": "ydotool key 184:1 184:0", // F14
     "all-outputs": false,
     "show-special": false
   },
@@ -104,10 +104,10 @@
   },
   "pulseaudio": {
     "scroll-step": 1, // %, can be a float
-    "format": "{volume:2}% {icon} {format_source}",
+    "format": "{volume:2}% {icon}{format_source}",
     "format-muted": "{volume:2}% 󰝟 {format_source}",
     "format-bluetooth": "{volume:2}% {icon}  {format_source}",
-    "format-source": "",
+    "format-source": " ",
     "format-source-muted": "",
     "format-icons": {
       "analog": "",
@@ -151,7 +151,10 @@
       "paused": ""
     },
     // "interval": 1,
-    "dynamic-order": ["artist", "title"]
+    "dynamic-order": [
+      "artist",
+      "title"
+    ]
     // "ignored-players": ["firefox"]
   },
   "custom/power": {

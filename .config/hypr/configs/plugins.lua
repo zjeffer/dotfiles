@@ -53,8 +53,9 @@ end
 -- Cycle workspaces on the current monitor.
 hl.bind(mainMod .. " + mouse_down", smw.cycle_workspaces("next"))
 hl.bind(mainMod .. " + mouse_up", smw.cycle_workspaces("prev"))
-
--- Register dispatchers so that hyprctl can call them
+-- Waybar doesn't have access to the smw module, so let's use ydotool and these unused function keys to work around that
+hl.bind("code:191", smw.cycle_workspaces("prev")) -- F13
+hl.bind("code:192", smw.cycle_workspaces("next")) -- F14
 
 -- Move orphaned windows (not assigned to any mapped workspace) to the current workspace.
 hl.bind(mainMod .. " + K", smw.grab_rogue_windows())
